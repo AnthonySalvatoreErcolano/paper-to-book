@@ -16,8 +16,7 @@
 \setmathfont[range={bfit/{latin,Latin}}]{texgyretermes-bolditalic.otf}
 \newfontfamily\symbolfont{Latin Modern Math}\newcommand{\checkmk}{{\symbolfont ✓}}\newcommand{\crossmk}{{\symbolfont ✗}}
 \usepackage{emptypage}
-\usepackage[perpage,hang,flushmargin]{footmisc}
-\renewcommand{\footnotelayout}{\scriptsize\raggedright}
+\usepackage{footmisc}  % note numbers run on through each chapter
 \usepackage{microtype}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{longtable,booktabs,array,calc}
@@ -44,20 +43,27 @@
 % ---- source notes: a marker in the text, the note at the foot of the page ----
 % Notes raised inside a box are queued and set when the outermost box closes, so they
 % land at the foot of the page instead of inside the box.
+% Markers are grey numbers in brackets, on the line (never raised, so never mistaken for an
+% exponent), always placed in front of what they refer to, followed by a clear gap.
+% The note at the foot of the page starts with the same bracketed number.
 \newcount\bdepth
 \newcounter{pendingnotes}
 \makeatletter
+\renewcommand\@makefntext[1]{\noindent\scriptsize\raggedright
+  \makebox[2.2em][l]{\normalfont\textcolor{srcgray}{[\@thefnmark]}}#1}
+\newcommand{\srcmark}{\stepcounter{footnote}\protected@xdef\@thefnmark{\thefootnote}%
+  \mbox{\normalfont\textcolor{srcgray}{\footnotesize[\thefootnote]}}\hspace{0.9em}\ignorespaces}
 \newcommand{\bpush}{\global\advance\bdepth 1\relax}
 \newcommand{\bpop}{\global\advance\bdepth -1\relax\ifnum\bdepth=0 \flushsrcnotes\fi}
-\newcommand{\srcnote}[1]{\footnotemark\stepcounter{pendingnotes}%
+\newcommand{\srcnote}[1]{\srcmark\stepcounter{pendingnotes}%
   \expandafter\gdef\csname pnote@\arabic{pendingnotes}\endcsname{#1}%
-  \expandafter\xdef\csname pnum@\arabic{pendingnotes}\endcsname{\arabic{footnote}}}
+  \expandafter\xdef\csname pnum@\arabic{pendingnotes}\endcsname{\arabic{footnote}}\ignorespaces}
 \newcommand{\flushsrcnotes}{\ifnum\value{pendingnotes}>0 \@tempcnta=0
   \loop\advance\@tempcnta 1
     \footnotetext[\csname pnum@\the\@tempcnta\endcsname]{\csname pnote@\the\@tempcnta\endcsname}%
   \ifnum\@tempcnta<\value{pendingnotes}\repeat
   \setcounter{pendingnotes}{0}\fi}
-\newcommand{\srccitenote}[1]{\ifnum\bdepth=0 \footnote{#1}\else\srcnote{#1}\fi}
+\newcommand{\srccitenote}[1]{\ifnum\bdepth=0 \srcmark\footnotetext[\arabic{footnote}]{#1}\ignorespaces\else\srcnote{#1}\fi}
 \makeatother
 \newcommand{\srcok}[3]{\textcolor{srcgray}{\textsf{Source:} \texttt{#1}\ifx&#2&\else, #2\fi}}
 \newcommand{\srcbad}[1]{\textcolor{unsourced}{\textbf{\textsf{LEDGER CHECK FAILED}} (#1)}}
@@ -137,8 +143,11 @@ statements marked \textsf{Lean \checkmk} are verified against Lean's mathlib.\pa
 \tableofcontents
 \chapter*{How to read this book}\addcontentsline{toc}{chapter}{How to read this book}
 The chapters build, in order, everything the paper uses that goes beyond the assumed background.
-Each definition, theorem and quotation carries a small number referring to a note at the foot
-of the page, saying where it comes from:
+Each definition, theorem and quotation, and each paragraph that cites a source, begins with a
+small grey number in brackets, such as \textcolor{srcgray}{\footnotesize[1]}, referring to the note
+with the same number at the foot of the page. The note says where it comes from. These numbers
+are never part of the mathematics; they always stand in front of what they refer to, set apart by
+a space. The notes may say:
 \begin{itemize}
 \item \srcok{source}{§} --- quoted from a retrieved source, and the quotation was checked automatically;
 \item \leanok{name} --- the statement matches a declaration in Lean's mathlib that compiles;
@@ -157,10 +166,9 @@ the proof into an algorithm. In the paper's own words:
 
 \bpush\begin{bquote}
 
-Fermat's two squares theorem, dated back to 1640, states that a prime
-\(n\) that is one more than a multiple of \(4\) can be uniquely
-expressed as a sum of odd and even
-squares\unskip\srcnote{\srcok{paper}{§1}{C1-16}}
+\srcnote{\srcok{paper}{§1}{C1-16}}Fermat's two squares theorem, dated
+back to 1640, states that a prime \(n\) that is one more than a multiple
+of \(4\) can be uniquely expressed as a sum of odd and even squares
 
 \end{bquote}\bpop
 
@@ -174,8 +182,8 @@ Throughout, a \emph{number} means a natural number
 
 \bpush\begin{bquote}
 
-The set of natural numbers is denoted by \(\mathbb{N}\), counting from
-\(0\)\unskip\srcnote{\srcok{paper}{§1.3}{C1-18}}
+\srcnote{\srcok{paper}{§1.3}{C1-18}}The set of natural numbers is
+denoted by \(\mathbb{N}\), counting from \(0\)
 
 \end{bquote}\bpop
 
@@ -197,9 +205,8 @@ A number \(m\) is \textbf{divisible} by a nonzero number \(d\) if
 
 \bpush\begin{bquote}
 
-An integer n is divisible by a nonzero integer m if there exists an
-integer k such that n = k m
-.\unskip\srcnote{\srcok{wp-divisor}{Definition}{L001}}
+\srcnote{\srcok{wp-divisor}{Definition}{L001}}An integer n is divisible
+by a nonzero integer m if there exists an integer k such that n = k m .
 
 \end{bquote}\bpop
 
@@ -210,13 +217,13 @@ number \(k\) has \(3k = 13\). Every number \(m \geq 1\) is divisible by
 
 \bpush\begin{bquote}
 
-1, −1, n and − n are known as the trivial divisors of
-n\unskip\srcnote{\srcok{wp-divisor}{Terminology}{C1-01}}
+\srcnote{\srcok{wp-divisor}{Terminology}{C1-01}}1, −1, n and − n are
+known as the trivial divisors of n
 
 \end{bquote}\bpop
 
-A number greater than \(1\) with a divisor other than these is called
-\emph{composite} \unskip\srccitenote{\srccite{wp-divisor}{Terminology}}.
+\srccitenote{\srccite{wp-divisor}{Terminology}}A number greater than
+\(1\) with a divisor other than these is called \emph{composite}.
 
 \bpush\begin{bremark}
 
@@ -225,12 +232,12 @@ the divisor, and from here on we use its letters (§1.3):
 
 \bpush\begin{bquote}
 
-We write
+\srcnote{\srcok{paper}{§1.3}{C1-17}}We write
 \HOLinline{\HOLFreeVar{n}\;\HOLConst{\ensuremath{\mid}}\;\HOLFreeVar{m}}
 when \(n\) divides \(m\), which is equivalent to
 \HOLinline{\HOLFreeVar{m}\;\ensuremath{\equiv}\;\HOLNumLit{0}\;\ensuremath{(}\ensuremath{\bmod}\;\HOLFreeVar{n}\ensuremath{)}}
 when
-\HOLinline{\HOLFreeVar{n}\;\HOLSymConst{\HOLTokenNotEqual{}}\;\HOLNumLit{0}}.\unskip\srcnote{\srcok{paper}{§1.3}{C1-17}}
+\HOLinline{\HOLFreeVar{n}\;\HOLSymConst{\HOLTokenNotEqual{}}\;\HOLNumLit{0}}.
 
 \end{bquote}\bpop
 
@@ -257,17 +264,17 @@ Most numbers don't divide each other exactly; what is left over is the
 
 \bpush\begin{bquote}
 
-Given two integers a and b , with b ≠ 0 , there exist unique integers q
-and r such that a = b q + r , and 0 ≤ r \textless{} \textbar{} b
-\textbar{}\unskip\srcnote{\srcok{wp-euclidean-division}{Division theorem}{L002}}
+\srcnote{\srcok{wp-euclidean-division}{Division theorem}{L002}}Given two
+integers a and b , with b ≠ 0 , there exist unique integers q and r such
+that a = b q + r , and 0 ≤ r \textless{} \textbar{} b \textbar{}
 
 \end{bquote}\bpop
 
 \bpush\begin{bexample}
 
-Dividing \(17\) by \(3\): the quotient is \(5\) and the remainder is
-\(2\), since \(17 = 3 \cdot 5 + 2\) and \(2 < 3\).
-\unskip\srccitenote{\srccite{wp-euclidean-division}{Intuitive example}}
+\srccitenote{\srccite{wp-euclidean-division}{Intuitive example}}Dividing
+\(17\) by \(3\): the quotient is \(5\) and the remainder is \(2\), since
+\(17 = 3 \cdot 5 + 2\) and \(2 < 3\).
 
 \end{bexample}\bpop
 
@@ -292,11 +299,12 @@ remainder as \(m \operatorname{mod} n\):
 
 \bpush\begin{bquote}
 
-The integer quotient and remainder of \(m\) divided by \(n\) are written
-as \HOLinline{\HOLFreeVar{m}\;\HOLConst{\HOLConst{div}}\;\HOLFreeVar{n}}
+\srcnote{\srcok{paper}{§1.3}{C1-05}}The integer quotient and remainder
+of \(m\) divided by \(n\) are written as
+\HOLinline{\HOLFreeVar{m}\;\HOLConst{\HOLConst{div}}\;\HOLFreeVar{n}}
 and
 \HOLinline{\HOLFreeVar{m}\;\HOLConst{\HOLConst{mod}}\;\HOLFreeVar{n}},
-respectively.\unskip\srcnote{\srcok{paper}{§1.3}{C1-05}}
+respectively.
 
 \end{bquote}\bpop
 
@@ -334,16 +342,16 @@ even or odd is called its \textbf{parity}.
 
 \bpush\begin{bquote}
 
-An even number is an integer of the form x = 2 k where k is an integer;
-{[} 4 {]} an odd number is an integer of the form x = 2 k +
-1\unskip\srcnote{\srcok{wp-parity}{Definition}{C1-06}}
+\srcnote{\srcok{wp-parity}{Definition}{C1-06}}An even number is an
+integer of the form x = 2 k where k is an integer; {[} 4 {]} an odd
+number is an integer of the form x = 2 k + 1
 
 \end{bquote}\bpop
 
 \bpush\begin{bquote}
 
-parity is the property of an integer of whether it is even or
-odd\unskip\srcnote{\srcok{wp-parity}{lead}{C1-20}}
+\srcnote{\srcok{wp-parity}{lead}{C1-20}}parity is the property of an
+integer of whether it is even or odd
 
 \end{bquote}\bpop
 
@@ -375,9 +383,9 @@ numbers and, from Chapter 5 on, of the \emph{sizes of sets}:
 
 \bpush\begin{bquote}
 
-The theory behind involves involutions on a finite set, especially the
-parity of the number of fixed points in the
-involutions.\unskip\srcnote{\srcok{paper}{Abstract}{C1-19}}
+\srcnote{\srcok{paper}{Abstract}{C1-19}}The theory behind involves
+involutions on a finite set, especially the parity of the number of
+fixed points in the involutions.
 
 \end{bquote}\bpop
 
@@ -396,8 +404,8 @@ The paper's notation section (§1.3) writes \(\mathsf{even}\ n\) and
 
 \bpush\begin{bquote}
 
-prime n means it is a prime, and even n or odd n denotes its
-parity\unskip\srcnote{\srcok{paper}{§1.3}{C1-08}}
+\srcnote{\srcok{paper}{§1.3}{C1-08}}prime n means it is a prime, and
+even n or odd n denotes its parity
 
 \end{bquote}\bpop
 
@@ -417,14 +425,14 @@ product of two smaller numbers.
 
 \bpush\begin{bquote}
 
-A prime number (or a prime ) is a natural number greater than 1 that is
-not a product of two smaller natural
-numbers.\unskip\srcnote{\srcok{wp-prime}{lead}{L005}}
+\srcnote{\srcok{wp-prime}{lead}{L005}}A prime number (or a prime ) is a
+natural number greater than 1 that is not a product of two smaller
+natural numbers.
 
 \end{bquote}\bpop
 
-The \emph{divisors} of \(n\) are the numbers that divide it evenly
-\unskip\srccitenote{\srccite{wp-prime}{Definition and examples}}. Primes
+\srccitenote{\srccite{wp-prime}{Definition and examples}}The
+\emph{divisors} of \(n\) are the numbers that divide it evenly. Primes
 are exactly the numbers greater than \(1\) with no divisors except the
 trivial ones:
 
@@ -459,9 +467,9 @@ it is not prime.
 
 \bpush\begin{bexample}
 
-\(7\) is prime: none of \(2, 3, 4, 5, 6\) divides it
-\unskip\srccitenote{\srccite{wp-prime}{Definition and examples}}. The
-primes below \(30\) are \(2, 3, 5, 7, 11, 13, 17, 19, 23, 29\).
+\srccitenote{\srccite{wp-prime}{Definition and examples}}\(7\) is prime:
+none of \(2, 3, 4, 5, 6\) divides it. The primes below \(30\) are
+\(2, 3, 5, 7, 11, 13, 17, 19, 23, 29\).
 
 \end{bexample}\bpop
 
@@ -475,9 +483,9 @@ The only even prime is \(2\).
 
 \bpush\begin{bquote}
 
-The only even prime is
+\srcnote{\srcok{paper}{§2}{C1-12}}The only even prime is
 \HOLinline{\HOLNumLit{2}\;\HOLSymConst{=}\;\HOLNumLit{1}\ensuremath{{\sp{\HOLNumLit{2}}}}\;\HOLSymConst{\ensuremath{+}}\;\HOLNumLit{1}\ensuremath{{\sp{\HOLNumLit{2}}}}},
-a sum of two squares.\unskip\srcnote{\srcok{paper}{§2}{C1-12}}
+a sum of two squares.
 
 \end{bquote}\bpop
 
@@ -530,8 +538,8 @@ A \textbf{square number} (or perfect square) is the square
 
 \bpush\begin{bquote}
 
-a square number or perfect square is an integer that is the square of an
-integer\unskip\srcnote{\srcok{wp-square-number}{lead}{L006}}
+\srcnote{\srcok{wp-square-number}{lead}{L006}}a square number or perfect
+square is an integer that is the square of an integer
 
 \end{bquote}\bpop
 
@@ -549,9 +557,10 @@ The paper writes \(\mathsf{square}\ n\) for ``\(n\) is a square''
 
 \bpush\begin{bquote}
 
-For a natural number \(n \in \mathbb{N}\),
-\HOLinline{\HOLConst{square}\;\HOLFreeVar{n}} means it is a square:
-\HOLinline{\HOLSymConst{\HOLTokenExists{}}\HOLBoundVar{k}.\;\HOLFreeVar{n}\;\HOLSymConst{=}\;\HOLBoundVar{k}\HOLSymConst{\ensuremath{\sp{2}}}}\unskip\srcnote{\srcok{paper}{§1.3}{C1-15}}
+\srcnote{\srcok{paper}{§1.3}{C1-15}}For a natural number
+\(n \in \mathbb{N}\), \HOLinline{\HOLConst{square}\;\HOLFreeVar{n}}
+means it is a square:
+\HOLinline{\HOLSymConst{\HOLTokenExists{}}\HOLBoundVar{k}.\;\HOLFreeVar{n}\;\HOLSymConst{=}\;\HOLBoundVar{k}\HOLSymConst{\ensuremath{\sp{2}}}}
 
 \end{bquote}\bpop
 

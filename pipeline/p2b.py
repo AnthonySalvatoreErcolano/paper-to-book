@@ -631,6 +631,7 @@ def cmd_build(a):
               .replace("%%BODY%%", "\n".join(body))
               .replace("%%PAPER%%", paper_part)
               .replace("%%SOURCES%%", sources_tex(d, ent, ledger, sources)))
+    check_markers("\n".join(body))
     (bdir / "book.tex").write_text(tex, encoding="utf-8")
     for _ in range(3):                                       # contents, references, index
         r = subprocess.run(["xelatex", "-interaction=nonstopmode", "-halt-on-error", "book.tex"],
@@ -639,6 +640,22 @@ def cmd_build(a):
             die("xelatex failed:\n" + r.stdout[-3000:])
         subprocess.run(["makeindex", "-q", "book.idx"], cwd=bdir, capture_output=True)
     print(f"wrote {(bdir / 'book.pdf').relative_to(ROOT)}")
+
+
+MARKER = re.compile(r"\\(srcnote|srccitenote)\{")
+ALLOWED_BEFORE = re.compile(r"(^|\n|\\begin\{\w+\}(\[[^\]]*\])?|\\label\{[^}]*\}|\\bpush|\\item(\[[^\]]*\])?)\s*$")
+
+
+def check_markers(tex):
+    """A source marker may only open a block or a paragraph, never follow text or a formula
+    (a raised or trailing number after maths reads as an exponent)."""
+    bad = []
+    for m in MARKER.finditer(tex):
+        before = tex[max(0, m.start() - 120):m.start()]
+        if not ALLOWED_BEFORE.search(before):
+            bad.append(" ".join(tex[max(0, m.start() - 60):m.start() + 20].split()))
+    if bad:
+        die("source markers placed after text (they must open a block or paragraph):\n  " + "\n  ".join(bad[:10]))
 
 
 def paper_part_tex(d, book, m, paper_pdf, chapters):

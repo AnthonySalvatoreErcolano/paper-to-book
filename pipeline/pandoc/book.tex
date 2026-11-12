@@ -16,8 +16,7 @@
 \setmathfont[range={bfit/{latin,Latin}}]{texgyretermes-bolditalic.otf}
 \newfontfamily\symbolfont{Latin Modern Math}\newcommand{\checkmk}{{\symbolfont ✓}}\newcommand{\crossmk}{{\symbolfont ✗}}
 \usepackage{emptypage}
-\usepackage[perpage,hang,flushmargin]{footmisc}
-\renewcommand{\footnotelayout}{\scriptsize\raggedright}
+\usepackage{footmisc}  % note numbers run on through each chapter
 \usepackage{microtype}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{longtable,booktabs,array,calc}
@@ -44,20 +43,27 @@
 % ---- source notes: a marker in the text, the note at the foot of the page ----
 % Notes raised inside a box are queued and set when the outermost box closes, so they
 % land at the foot of the page instead of inside the box.
+% Markers are grey numbers in brackets, on the line (never raised, so never mistaken for an
+% exponent), always placed in front of what they refer to, followed by a clear gap.
+% The note at the foot of the page starts with the same bracketed number.
 \newcount\bdepth
 \newcounter{pendingnotes}
 \makeatletter
+\renewcommand\@makefntext[1]{\noindent\scriptsize\raggedright
+  \makebox[2.2em][l]{\normalfont\textcolor{srcgray}{[\@thefnmark]}}#1}
+\newcommand{\srcmark}{\stepcounter{footnote}\protected@xdef\@thefnmark{\thefootnote}%
+  \mbox{\normalfont\textcolor{srcgray}{\footnotesize[\thefootnote]}}\hspace{0.9em}\ignorespaces}
 \newcommand{\bpush}{\global\advance\bdepth 1\relax}
 \newcommand{\bpop}{\global\advance\bdepth -1\relax\ifnum\bdepth=0 \flushsrcnotes\fi}
-\newcommand{\srcnote}[1]{\footnotemark\stepcounter{pendingnotes}%
+\newcommand{\srcnote}[1]{\srcmark\stepcounter{pendingnotes}%
   \expandafter\gdef\csname pnote@\arabic{pendingnotes}\endcsname{#1}%
-  \expandafter\xdef\csname pnum@\arabic{pendingnotes}\endcsname{\arabic{footnote}}}
+  \expandafter\xdef\csname pnum@\arabic{pendingnotes}\endcsname{\arabic{footnote}}\ignorespaces}
 \newcommand{\flushsrcnotes}{\ifnum\value{pendingnotes}>0 \@tempcnta=0
   \loop\advance\@tempcnta 1
     \footnotetext[\csname pnum@\the\@tempcnta\endcsname]{\csname pnote@\the\@tempcnta\endcsname}%
   \ifnum\@tempcnta<\value{pendingnotes}\repeat
   \setcounter{pendingnotes}{0}\fi}
-\newcommand{\srccitenote}[1]{\ifnum\bdepth=0 \footnote{#1}\else\srcnote{#1}\fi}
+\newcommand{\srccitenote}[1]{\ifnum\bdepth=0 \srcmark\footnotetext[\arabic{footnote}]{#1}\ignorespaces\else\srcnote{#1}\fi}
 \makeatother
 \newcommand{\srcok}[3]{\textcolor{srcgray}{\textsf{Source:} \texttt{#1}\ifx&#2&\else, #2\fi}}
 \newcommand{\srcbad}[1]{\textcolor{unsourced}{\textbf{\textsf{LEDGER CHECK FAILED}} (#1)}}
@@ -137,8 +143,11 @@ statements marked \textsf{Lean \checkmk} are verified against Lean's mathlib.\pa
 \tableofcontents
 \chapter*{How to read this book}\addcontentsline{toc}{chapter}{How to read this book}
 The chapters build, in order, everything the paper uses that goes beyond the assumed background.
-Each definition, theorem and quotation carries a small number referring to a note at the foot
-of the page, saying where it comes from:
+Each definition, theorem and quotation, and each paragraph that cites a source, begins with a
+small grey number in brackets, such as \textcolor{srcgray}{\footnotesize[1]}, referring to the note
+with the same number at the foot of the page. The note says where it comes from. These numbers
+are never part of the mathematics; they always stand in front of what they refer to, set apart by
+a space. The notes may say:
 \begin{itemize}
 \item \srcok{source}{§} --- quoted from a retrieved source, and the quotation was checked automatically;
 \item \leanok{name} --- the statement matches a declaration in Lean's mathlib that compiles;

@@ -100,7 +100,7 @@ function Div(el)
   local open = "\\bpush\\begin{" .. env .. "}" .. (title and ("[" .. esc(title) .. "]") or "")
   if el.identifier ~= "" then open = open .. "\\label{" .. el.identifier .. "}" end
   local notetex = #notes > 0 and ("\\srcnote{" .. table.concat(notes, " \\enspace\\textperiodcentered\\enspace ") .. "}") or nil
-  -- a quotation gets its marker at the end of the quoted text; other blocks right after their heading
+  -- every marker goes in front: after a block's heading, or opening the first line of a quotation
   if notetex and cls ~= "quote" then open = open .. notetex end
   local blocks = {texb(open)}
   -- index the term a definition introduces (its first bold text)
@@ -125,32 +125,47 @@ function Div(el)
   end
   for _, b in ipairs(el.content) do table.insert(blocks, b) end
   if notetex and cls == "quote" then
-    local last = blocks[#blocks]
-    if last and (last.t == "Para" or last.t == "Plain") then
-      table.insert(last.content, pandoc.RawInline("latex", "\\unskip" .. notetex))
-    else
-      table.insert(blocks, texb(notetex))
+    local placed = false
+    for k = 2, #blocks do
+      local b = blocks[k]
+      if b.t == "Para" or b.t == "Plain" then
+        table.insert(b.content, 1, pandoc.RawInline("latex", notetex))
+        placed = true
+        break
+      end
     end
+    if not placed then blocks[1] = texb(blocks[1].text .. notetex) end
   end
   table.insert(blocks, texb("\\end{" .. env .. "}\\bpop"))
   return blocks
 end
 
--- [@L0012] cites a ledger entry's source inline
-function Cite(c)
-  local out = {}
-  for _, ci in ipairs(c.citations) do
-    local id = ci.id
-    local sid = status.src[id]
-    if sid and status.ledger_ok[id] then
-      table.insert(out, "\\srccite{" .. esc(sid) .. "}{" .. esc(status.loc[id] or "") .. "}")
-    elseif sid then
-      table.insert(out, "\\srcbad{" .. esc(id) .. "}")
-    else
-      table.insert(out, "\\textcolor{unsourced}{[no ledger entry " .. esc(id) .. "]}")
-    end
+-- [@L0012] cites a ledger entry's source. Citations are taken out of the sentence and one
+-- marker is put at the start of the paragraph, so a marker can never sit after a formula.
+local function cite_text(id)
+  local sid = status.src[id]
+  if sid and status.ledger_ok[id] then
+    return "\\srccite{" .. esc(sid) .. "}{" .. esc(status.loc[id] or "") .. "}"
+  elseif sid then
+    return "\\srcbad{" .. esc(id) .. "}"
   end
-  return tex("\\unskip\\srccitenote{" .. table.concat(out, "; ") .. "}")
+  return "\\textcolor{unsourced}{[no ledger entry " .. esc(id) .. "]}"
 end
 
-return {{Meta = Meta}, {Div = Div, Cite = Cite}}
+local function lift_cites(el)
+  local found, out = {}, {}
+  for _, x in ipairs(el.content) do
+    if x.t == "Cite" then
+      for _, ci in ipairs(x.citations) do table.insert(found, cite_text(ci.id)) end
+      if #out > 0 and (out[#out].t == "Space" or out[#out].t == "SoftBreak") then table.remove(out) end
+    else
+      table.insert(out, x)
+    end
+  end
+  if #found == 0 then return nil end
+  table.insert(out, 1, pandoc.RawInline("latex", "\\srccitenote{" .. table.concat(found, "; ") .. "}"))
+  el.content = out
+  return el
+end
+
+return {{Meta = Meta}, {Para = lift_cites, Plain = lift_cites}, {Div = Div}}
