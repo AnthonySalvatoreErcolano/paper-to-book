@@ -1,7 +1,13 @@
 {
- "checked": "2026-11-12T17:04:09Z",
+ "checked": "2026-11-12T17:18:53Z",
  "build_ok": true,
  "files": {
+  "Ch01.lean": {
+   "ok": true,
+   "errors": [],
+   "sorry": [],
+   "warnings": []
+  },
   "Names.lean": {
    "ok": true,
    "errors": [],
@@ -10,6 +16,11 @@
   }
  },
  "names": {
+  "Book.Windmills.Ch01.division": true,
+  "Book.Windmills.Ch01.even_iff_mod": true,
+  "Book.Windmills.Ch01.even_or_odd": true,
+  "Book.Windmills.Ch01.odd_prime_mod_four": true,
+  "Book.Windmills.Ch01.prime_even_eq_two": true,
   "Dvd.dvd": true,
   "Equiv.Perm": true,
   "Equiv.Perm.card_fixedPoints_modEq": true,
@@ -28,10 +39,10 @@
   "IsSquare": true,
   "Nat.ModEq": true,
   "Nat.Prime": true,
+  "Nat.Prime.eq_one_or_self_of_dvd": true,
   "Nat.Prime.sq_add_sq": true,
   "Nat.div_add_mod": true,
   "Nat.iterate": true,
-  "Nat.sub_eq_zero_of_le": true,
   "Odd": true,
   "Set.Finite": true
  }
