@@ -593,7 +593,8 @@ def cmd_build(a):
         "ledger_ok": sorted(k for k, v in ledger.items() if v["ok"]),
         "ledger_source": {k: e.get("source", "") for k, e in ent.items()},
         "ledger_locator": {k: e.get("locator", "") for k, e in ent.items()},
-        "ledger_quote": {k: e.get("quote", "") for k, e in ent.items()},
+        # hex-encoded: pandoc reads metadata as Markdown, which would eat the quotes' $…$ maths
+        "ledger_quote": {k: e.get("quote", "").encode("utf-8").hex() for k, e in ent.items()},
         "source_label": sources,
         "lean_ok": sorted(k for k, v in (lean.get("names") or {}).items() if v),
         "lean_checked": sorted((lean.get("names") or {}).keys()),

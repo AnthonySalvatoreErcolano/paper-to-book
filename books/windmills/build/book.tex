@@ -127,9 +127,9 @@ the proof into an algorithm. In the paper's own words:
 
 \begin{bquote}\srcmargin{\srcok{paper}{§1}{C1-16}}
 
-Fermat's two squares theorem, dated back to 1640, states that a prime n
-that is one more than a multiple of 4 can be uniquely expressed as a sum
-of odd and even squares
+Fermat's two squares theorem, dated back to 1640, states that a prime
+\(n\) that is one more than a multiple of \(4\) can be uniquely
+expressed as a sum of odd and even squares
 
 \end{bquote}
 
@@ -143,7 +143,8 @@ Throughout, a \emph{number} means a natural number
 
 \begin{bquote}\srcmargin{\srcok{paper}{§1.3}{C1-18}}
 
-The set of natural numbers is denoted by \mathbb{N}, counting from 0
+The set of natural numbers is denoted by \(\mathbb{N}\), counting from
+\(0\)
 
 \end{bquote}
 
@@ -191,7 +192,12 @@ the divisor, and from here on we use its letters (§1.3):
 
 \begin{bquote}\srcmargin{\srcok{paper}{§1.3}{C1-17}}
 
-We write when n divides m, which is equivalent to when .
+We write
+\HOLinline{\HOLFreeVar{n}\;\HOLConst{\ensuremath{\mid}}\;\HOLFreeVar{m}}
+when \(n\) divides \(m\), which is equivalent to
+\HOLinline{\HOLFreeVar{m}\;\ensuremath{\equiv}\;\HOLNumLit{0}\;\ensuremath{(}\ensuremath{\bmod}\;\HOLFreeVar{n}\ensuremath{)}}
+when
+\HOLinline{\HOLFreeVar{n}\;\HOLSymConst{\HOLTokenNotEqual{}}\;\HOLNumLit{0}}.
 
 \end{bquote}
 
@@ -253,8 +259,11 @@ remainder as \(m \operatorname{mod} n\):
 
 \begin{bquote}\srcmargin{\srcok{paper}{§1.3}{C1-05}}
 
-The integer quotient and remainder of m divided by n are written as and
-, respectively.
+The integer quotient and remainder of \(m\) divided by \(n\) are written
+as \HOLinline{\HOLFreeVar{m}\;\HOLConst{\HOLConst{div}}\;\HOLFreeVar{n}}
+and
+\HOLinline{\HOLFreeVar{m}\;\HOLConst{\HOLConst{mod}}\;\HOLFreeVar{n}},
+respectively.
 
 \end{bquote}
 
@@ -412,7 +421,9 @@ The only even prime is \(2\).
 
 \begin{bquote}\srcmargin{\srcok{paper}{§2}{C1-12}}
 
-The only even prime is , a sum of two squares.
+The only even prime is
+\HOLinline{\HOLNumLit{2}\;\HOLSymConst{=}\;\HOLNumLit{1}\ensuremath{{\sp{\HOLNumLit{2}}}}\;\HOLSymConst{\ensuremath{+}}\;\HOLNumLit{1}\ensuremath{{\sp{\HOLNumLit{2}}}}},
+a sum of two squares.
 
 \end{bquote}
 
@@ -484,7 +495,9 @@ The paper writes \(\mathsf{square}\ n\) for ``\(n\) is a square''
 
 \begin{bquote}\srcmargin{\srcok{paper}{§1.3}{C1-15}}
 
-For a natural number n \in \mathbb{N}, means it is a square:
+For a natural number \(n \in \mathbb{N}\),
+\HOLinline{\HOLConst{square}\;\HOLFreeVar{n}} means it is a square:
+\HOLinline{\HOLSymConst{\HOLTokenExists{}}\HOLBoundVar{k}.\;\HOLFreeVar{n}\;\HOLSymConst{=}\;\HOLBoundVar{k}\HOLSymConst{\ensuremath{\sp{2}}}}
 
 \end{bquote}
 

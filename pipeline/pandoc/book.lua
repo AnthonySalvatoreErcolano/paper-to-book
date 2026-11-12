@@ -38,7 +38,9 @@ function Meta(m)
   for k, v in pairs(p.ledger_locator or {}) do status.loc[k] = str(v) end
   for k, v in pairs(p.source_label or {}) do status.label[k] = str(v) end
   status.quote = {}
-  for k, v in pairs(p.ledger_quote or {}) do status.quote[k] = str(v) end
+  for k, v in pairs(p.ledger_quote or {}) do
+    status.quote[k] = str(v):gsub("%x%x", function(h) return string.char(tonumber(h, 16)) end)
+  end
   return m
 end
 
