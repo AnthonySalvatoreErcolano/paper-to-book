@@ -1,5 +1,164 @@
 # Review: Chapter 1, "Whole Numbers"
 
+## Third pass
+
+Checked only the changed passages and ledger entries. Ledger: 111 entries, 111 verified, 0 failing.
+
+- **N1: resolved.** The sentence now reads "Primes are exactly the numbers greater than $1$ with
+  no divisors except the trivial ones." This is correct, and it matches the proposition.
+- **N2: resolved.** The sentence now reads "A number greater than $1$ with a divisor other than
+  these is called *composite*". This excludes $0$ and $1$, and for natural numbers it agrees
+  with C1-02 ("A nonzero integer with at least one non-trivial divisor").
+- **N3: resolved.** The proof of `#prop-prime-divisors` now covers both missing pieces:
+  - The cases $0$ and $1$: every positive number divides $0$, and $1$ has a single positive
+    divisor.
+  - The step $a \le p$, via $b \ge 1$ as $p \ne 0$, followed by $1 < a < p$ and $1 < b < p$.
+
+  The forward direction leaves "$a$ is positive" implicit, which is immediate since $p = ab \ne 0$.
+  The proof is complete at the stated level.
+- **N4: resolved.** C1-14 has been removed from `ledger.jsonl`, and no chapter references it.
+  `build/status.json` still lists it, but that file is a stale build artefact and is regenerated
+  at build.
+- **Item 16: resolved.** C1-20 ("parity is the property of an integer of whether it is even or
+  odd", wp-parity lead) matches the source text and covers the word "parity". `#def-parity` now
+  carries `ledger=C1-06,C1-20`. `book.lua`'s `ledger_tag` splits on commas, so both entries
+  render. The extra quote block is fine.
+- **New issues:** none found in the changed passages.
+
+Third-pass verdict: pass (pending the Lean and checks reports from CI)
+
+---
+
+
+## Second pass
+
+Re-reviewed: the revised `chapters/01-whole-numbers.md`, `ledger.jsonl` (new entries C1-16 to
+C1-19, and C1-05, C1-12, C1-15 re-copied with their HOL macros), `Ch01.lean`,
+`checks/ch01_examples.py`, the new `derived=` rule in CLAUDE.md, and the HOL macro definitions in
+`pipeline/pandoc/book.tex` and `book.lua`.
+
+Gates:
+- `p2b.py ledger windmills`: 111 entries, 111 verified, 0 failing.
+- Checks: 15 of 15 pass, run locally with a pure-Python stand-in for sympy. They have not run in
+  CI yet.
+- Lean: excluded from this pass at the coordinator's request.
+- Quote rendering: I passed C1-05, C1-12, C1-15 and C1-17 through `pandoc -f markdown+tex_math_dollars -t latex`
+  and compiled them with the macros in `book.tex` lines 43-59. They compile without errors and
+  print in full ("... written as m div n and m mod n, respectively."; "The only even prime is 2 =
+  1² + 1², a sum of two squares."; "square n means it is a square: ∃k. n = k²"; "We write n | m
+  ... when n ≠ 0.").
+
+### First-pass items
+
+1. **resolved.** The sentence now reads "Every number $m \geq 1$ is divisible by $1$ and by
+   itself". This is consistent with the nonzero-divisor definition.
+2. **resolved.** `lean=Nat.prime_def` (`Prime p ↔ 2 ≤ p ∧ ∀ m, m ∣ p → m = 1 ∨ m = p`) matches "p
+   is prime iff its positive divisors are exactly $1$ and $p$ (so $p \ge 2$)". The `0 ∣ p` case
+   is excluded by `2 ≤ p`.
+3. **not assessed** (Lean results come from CI).
+4. **resolved.** The opening now describes the paper as a theorem of Fermat about primes and
+   squares, backed by C1-16 (§1: "states that a prime $n$ that is one more than a multiple of
+   $4$ can be uniquely expressed as a sum of odd and even squares"). "Turns the proof into an
+   algorithm" is not covered by C1-16, but the abstract states it ("This gives an algorithm to
+   compute the two squares", already L086). Suggestion: cite it.
+5. **resolved.** The claim is now `#prop-dvd-mod`, with the hypothesis $n \ne 0$, `derived=L001,L002`,
+   a proof, and `lean=...dvd_iff_mod`. See the derived-use assessment below. The Lean statement
+   holds for all `n`, so it is stronger than the chapter's statement and implies it.
+6. **resolved.** The new remark explains that mathlib allows divisor $0$, with $0 \mid m \iff m = 0$
+   (matches mathlib `zero_dvd_iff : 0 ∣ a ↔ a = 0`), and that the definitions agree for $d \ne 0$.
+7. **resolved.** `lean=` now lists both `division` and `division_unique`.
+8. **resolved.** `#thm-even-odd` now uses `derived=L002,C1-06` instead of the unsupporting C1-07
+   quote, has a complete proof (below), and lists all four Lean names.
+9. **resolved.** `odd_prime_mod_four` now takes `(ho : Odd p)`, matching "odd prime". The `p ≠ 2`
+   form is kept as a separate name and is not attached.
+10. **resolved.** C1-05, C1-12 and C1-15 now quote the full sentences, including the HOL parts,
+    and they render (see Gates). C1-12 is now also shown as a quote block under
+    `#thm-only-even-prime`.
+11. **resolved.** "Number" is now defined as "a natural number $0, 1, 2, 3, \dots$, as in the
+    paper", backed by C1-18. "Changes nothing" became "we only ever apply them to natural
+    numbers", and the division theorem is now proved directly in the naturals, so the
+    specialisation from integers is no longer needed.
+12. **resolved, with a new issue (N2).** "In the same way, a number greater than $1$ is composite
+    exactly when it is not prime" follows from the proof of `#prop-prime-divisors`.
+13. **resolved.** The remark adopts the paper's letters ($n \mid m$, divisor $n$). The theorem
+    uses $m = nq + r$ and the paper's $m \operatorname{div} n$. Exercise 2 uses $n \mid a$. Only
+    the definition keeps $d \mid m$, and the remark says so explicitly.
+14. **resolved.** Existence is now proved by repeated subtraction. It stays in the naturals
+    ($r - n$ is taken only when $r \ge n$), and termination ("a number can only get smaller
+    finitely many times") is at the stated level. Uniqueness is done in the naturals with
+    $r \le r'$ WLOG. Each step checks: $nq = nq' + (r'-r) \Rightarrow q \ge q'$ (as $n > 0$),
+    $r' - r = n(q-q')$, $r' - r \le r' < n$, so $r' = r$, then $q = q'$ by cancelling $n \ne 0$.
+    No negative numbers are used.
+15. **resolved.** The second paragraph of the proof gives the converse directions explicitly.
+16. **partly resolved.** The "Equivalently ... [@L003]" sentence has been removed, which is fine:
+    its one later use, "an even number has $2 \mid n$", is immediate from $n = 2k = k \cdot 2$.
+    However, "Whether a number is even or odd is called its **parity**" in `#def-parity` is
+    still not in the C1-06 quote. **suggestion:** add the wp-parity lead ("parity is the
+    property of an integer of whether it is even or odd") as a ledger entry.
+17. **resolved.** Backed by C1-19 (abstract: "especially the parity of the number of fixed points
+    in the involutions"). "From Chapter 5 on" matches map.json (`involution-parity` → chapter 5).
+18. **resolved.** The exercise now says "Both are prime", and the check `isprime(29) and isprime(61)`
+    was added.
+19. **resolved for `Even`/`Odd`** (new remark, accurate: mathlib `Even n := ∃ r, n = r + r`,
+    `Odd n := ∃ k, n = 2*k+1`). There is still no note for `Nat.Prime := Irreducible p`, but
+    `#prop-prime-divisors` now points to `Nat.prime_def`, which bridges the two definitions.
+    Acceptable.
+
+### Derived results (`derived=`)
+
+- **`#prop-dvd-mod` (derived=L001,L002): genuine and complete.** The forward direction is
+  $m = kn = nk + 0$ with $0 < n$, so the remainder is $0$ by uniqueness (L002). The converse is
+  that $r = 0$ gives $m = nq$, so $n \mid m$ by L001. No source states this with `mod`: C1-17
+  states it with congruence, which is a different notion not yet introduced, so `derived=` is
+  appropriate.
+- **`#thm-even-odd` (derived=L002,C1-06): genuine and complete.** Existence: division by $2$
+  gives $r \in \{0,1\}$. Converse: $2k = 2k + 0$ and $2k+1$ are already divisions by 2, so the
+  remainder is determined by uniqueness. This gives both "exactly when" claims and "not both".
+  No source states "not both".
+
+### New issues introduced by the revision
+
+N1. **error**, prose before `#prop-prime-divisors`: "Primes are exactly the numbers with no
+    divisors except the trivial ones." This is false for $1$. The trivial divisors of $1$ are $1$
+    and $1$, so $1$ has no other divisors, yet it is not prime. (For $0$, trivial divisors are now
+    defined only for $m \ge 1$.) The proposition itself is stated correctly ("exactly two positive
+    divisors ... so $p \ge 2$"). Fix: "Primes are exactly the numbers greater than $1$ with no
+    divisors except the trivial ones."
+
+N2. **should-fix**, *Divisibility*: "A number with a divisor other than these is called
+    *composite* [@C1-02]." Since the first pass, the "greater than 1" qualifier has gone and the
+    source's "nonzero" was never carried over. Read literally, $0$ qualifies, because every
+    nonzero number divides $0$. The source excludes it: C1-02 says "A nonzero integer with at
+    least one non-trivial divisor is known as a composite number". Also, "these" (the trivial
+    divisors) are defined only for $m \ge 1$ in the previous sentence. Fix: "A number $m \ge 1$
+    with a divisor other than these ...".
+
+N3. **should-fix**, `proof` of `#prop-prime-divisors`: the proposition is stated for every number $p$,
+    but the proof assumes $p > 1$ in both directions. Two things are missing:
+    (a) The cases $p \in \{0, 1\}$. Neither is prime by definition, and neither has exactly two
+        positive divisors: $1$ has one, and $0$ has infinitely many, since every nonzero number
+        divides $0$. One sentence covers both.
+    (b) In the converse, the step "$p = ab$ with $1 < a < p$" needs $a \le p$, which holds because
+        $b \ge 1$ since $p \ne 0$. It also needs $a \ne 0$, which holds because divisors are
+        nonzero. Neither is said.
+    The proposition is sourced (C1-09), so this is a proof-completeness issue, not a sourcing one.
+
+N4. **suggestion**, ledger: C1-14 ("For a natural number $n \in \mathbb{N}$,") is no longer used by
+    the chapter and supports nothing on its own. C1-15 now contains it. Consider removing it.
+
+No other new problems found. The numbers added or changed (none beyond the 61 primality check)
+are correct and covered by the script. `dvd_iff_mod` (`Nat.mod_eq_zero_of_dvd`,
+`Nat.dvd_of_mod_eq_zero`) and the new `odd_prime_mod_four` (`Nat.odd_iff` + `omega`) state the
+same as, or more than, the chapter. Notation is now consistent with paper §1.3.
+
+Second-pass verdict: pass after fixes (N1, N2, N3; then the chapter can go to the user once Lean
+and checks report from CI)
+
+---
+
+# First pass
+
+
 Reviewer: independent agent (did not see the writing session). Files reviewed:
 `chapters/01-whole-numbers.md`, `ledger.jsonl` (entries L001-L006, C1-01 to C1-15) with their
 sources, `lean/Books/Windmills/Ch01.lean`, `checks/ch01_examples.py`, paper §1.3 and §2

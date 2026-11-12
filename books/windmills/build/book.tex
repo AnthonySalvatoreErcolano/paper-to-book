@@ -182,8 +182,8 @@ number \(k\) has \(3k = 13\). Every number \(m \geq 1\) is divisible by
 
 \end{bquote}
 
-A number with a divisor other than these is called \emph{composite}
-\srccite{wp-divisor}{Terminology}.
+A number greater than \(1\) with a divisor other than these is called
+\emph{composite} \srccite{wp-divisor}{Terminology}.
 
 \begin{bremark}
 
@@ -213,7 +213,7 @@ holds only when \(m = 0\). For \(d \ne 0\) the two definitions agree.
 Most numbers don't divide each other exactly; what is left over is the
 \emph{remainder}.
 
-\begin{btheorem}\label{thm-division}\srcmargin{\srcok{wp-euclidean-division}{Division theorem}{L002}\\[2pt]\leanok{Book.Windmills.Ch01.division}\\\leanpending{Book.Windmills.Ch01.division\_unique}}
+\begin{btheorem}\label{thm-division}\srcmargin{\srcok{wp-euclidean-division}{Division theorem}{L002}\\[2pt]\leanok{Book.Windmills.Ch01.division}\\\leanok{Book.Windmills.Ch01.division\_unique}}
 
 \textbf{Division with remainder.} Given numbers \(m\) and \(n\) with
 \(n \neq 0\), there are unique numbers \(q\) (the \emph{quotient}) and
@@ -271,7 +271,7 @@ For example, \(17 \operatorname{div} 3 = 5\) and
 \(17 \operatorname{mod} 3 = 2\). Dividing leaves nothing over exactly
 when \(n\) divides \(m\):
 
-\begin{bproposition}\label{prop-dvd-mod}\srcmargin{\derivedtag{\texttt{wp-divisor}, \texttt{wp-euclidean-division}}\\[2pt]\leanpending{Book.Windmills.Ch01.dvd\_iff\_mod}}
+\begin{bproposition}\label{prop-dvd-mod}\srcmargin{\derivedtag{\texttt{wp-divisor}, \texttt{wp-euclidean-division}}\\[2pt]\leanok{Book.Windmills.Ch01.dvd\_iff\_mod}}
 
 For \(n \ne 0\): \(\ n \mid m\) if and only if
 \(m \operatorname{mod} n = 0\).
@@ -289,7 +289,7 @@ remainder is \(0\). Conversely, if the remainder is \(0\), then
 \hypertarget{even-and-odd}{%
 \section{Even and odd}\label{even-and-odd}}
 
-\begin{bdefinition}\label{def-parity}\srcmargin{\srcok{wp-parity}{Definition}{C1-06}\\[2pt]\leanok{Even}\\\leanok{Odd}}
+\begin{bdefinition}\label{def-parity}\srcmargin{\srcok{wp-parity}{Definition}{C1-06}\\\srcok{wp-parity}{lead}{C1-20}\\[2pt]\leanok{Even}\\\leanok{Odd}}
 
 \index{even}
 
@@ -306,7 +306,13 @@ An even number is an integer of the form x = 2 k where k is an integer;
 
 \end{bquote}
 
-\begin{btheorem}\label{thm-even-odd}\srcmargin{\derivedtag{\texttt{wp-euclidean-division}, \texttt{wp-parity}}\\[2pt]\leanok{Book.Windmills.Ch01.even\_or\_odd}\\\leanpending{Book.Windmills.Ch01.not\_even\_and\_odd}\\\leanok{Book.Windmills.Ch01.even\_iff\_mod}\\\leanpending{Book.Windmills.Ch01.odd\_iff\_mod}}
+\begin{bquote}\srcmargin{\srcok{wp-parity}{lead}{C1-20}}
+
+parity is the property of an integer of whether it is even or odd
+
+\end{bquote}
+
+\begin{btheorem}\label{thm-even-odd}\srcmargin{\derivedtag{\texttt{wp-euclidean-division}, \texttt{wp-parity}}\\[2pt]\leanok{Book.Windmills.Ch01.even\_or\_odd}\\\leanok{Book.Windmills.Ch01.not\_even\_and\_odd}\\\leanok{Book.Windmills.Ch01.even\_iff\_mod}\\\leanok{Book.Windmills.Ch01.odd\_iff\_mod}}
 
 Every number is either even or odd, and not both. A number \(n\) is even
 exactly when \(n \operatorname{mod} 2 = 0\), and odd exactly when
@@ -381,9 +387,9 @@ not a product of two smaller natural numbers.
 
 The \emph{divisors} of \(n\) are the numbers that divide it evenly
 \srccite{wp-prime}{Definition and examples}. Primes are exactly the
-numbers with no divisors except the trivial ones:
+numbers greater than \(1\) with no divisors except the trivial ones:
 
-\begin{bproposition}\label{prop-prime-divisors}\srcmargin{\srcok{wp-prime}{Definition and examples}{C1-09}\\[2pt]\leanpending{Nat.prime\_def}}
+\begin{bproposition}\label{prop-prime-divisors}\srcmargin{\srcok{wp-prime}{Definition and examples}{C1-09}\\[2pt]\leanok{Nat.prime\_def}}
 
 A number \(p\) is prime if and only if it has exactly two positive
 divisors, \(1\) and \(p\) (so in particular \(p \ge 2\)).
@@ -392,11 +398,20 @@ divisors, \(1\) and \(p\) (so in particular \(p \ge 2\)).
 
 \begin{proof}
 
-If \(p > 1\) is a product \(ab\) of two numbers smaller than \(p\), then
-\(a \ne 1\) (else \(b = p\)) and \(a \ne p\), so \(a\) is a third
-divisor. Conversely, if \(p > 1\) has a divisor \(a\) other than \(1\)
-and \(p\), then \(p = ab\) with \(1 < a < p\), and then \(1 < b < p\)
-too, so \(p\) is a product of two smaller numbers.
+First, \(0\) and \(1\) are not prime (the definition needs \(p > 1\)),
+and neither has exactly the two positive divisors \(1\) and \(p\): every
+positive number divides \(0\), and \(1\) has the single positive divisor
+\(1\). So take \(p > 1\).
+
+If \(p\) is a product \(ab\) of two numbers smaller than \(p\), then
+\(a \ne 1\) (else \(b = p\), which is not smaller) and \(a \ne p\), so
+\(a\) is a positive divisor other than \(1\) and \(p\).
+
+Conversely, suppose \(p\) has a positive divisor \(a\) other than \(1\)
+and \(p\), say \(p = ab\). Then \(b \ge 1\) (as \(p \ne 0\)), so
+\(a \le p\); since \(a \ne p\) and \(a \ne 1\), we have \(1 < a < p\).
+Then \(b = p / a\) satisfies \(1 < b < p\) as well, so \(p\) is a
+product of two smaller numbers.
 
 \end{proof}
 
@@ -563,7 +578,7 @@ Square numbers & Chapter~1 & p.~2 of the paper\\
 Every source used, as retrieved for this book. The identifiers in the margins refer to this list.
 \begin{description}\item[\texttt{ml-function-basic}] https://leanprover-community.github.io/mathlib4\_docs/Mathlib/Logic/Function/Basic.html. \url{https://leanprover-community.github.io/mathlib4_docs/Mathlib/Logic/Function/Basic.html} --- 1 of 1 quotations verified (retrieved 2026-11-12).
 \item[\texttt{ml-periodic}] https://leanprover-community.github.io/mathlib4\_docs/Mathlib/Dynamics/PeriodicPts/Defs.html. \url{https://leanprover-community.github.io/mathlib4_docs/Mathlib/Dynamics/PeriodicPts/Defs.html} --- 3 of 3 quotations verified (retrieved 2026-11-12).
-\item[\texttt{paper}] Windmills of the minds: an algorithm for Fermat's Two Squares Theorem. \url{arXiv:2112.02556} --- 49 of 49 quotations verified (retrieved 2026-11-12).
+\item[\texttt{paper}] Windmills of the minds: an algorithm for Fermat's Two Squares Theorem. \url{arXiv:2112.02556} --- 48 of 48 quotations verified (retrieved 2026-11-12).
 \item[\texttt{wp-bijection}] https://en.wikipedia.org/wiki/Bijection. \url{https://en.wikipedia.org/wiki/Bijection} --- 1 of 1 quotations verified (retrieved 2026-11-12).
 \item[\texttt{wp-cardinality}] https://en.wikipedia.org/wiki/Cardinality. \url{https://en.wikipedia.org/wiki/Cardinality} --- 2 of 2 quotations verified (retrieved 2026-11-12).
 \item[\texttt{wp-cartesian}] https://en.wikipedia.org/wiki/Cartesian\_product. \url{https://en.wikipedia.org/wiki/Cartesian_product} --- 1 of 1 quotations verified (retrieved 2026-11-12).
@@ -581,7 +596,7 @@ Every source used, as retrieved for this book. The identifiers in the margins re
 \item[\texttt{wp-loop-invariant}] https://en.wikipedia.org/wiki/Loop\_invariant. \url{https://en.wikipedia.org/wiki/Loop_invariant} --- 2 of 2 quotations verified (retrieved 2026-11-12).
 \item[\texttt{wp-modular}] https://en.wikipedia.org/wiki/Modular\_arithmetic. \url{https://en.wikipedia.org/wiki/Modular_arithmetic} --- 3 of 3 quotations verified (retrieved 2026-11-12).
 \item[\texttt{wp-orbit}] https://en.wikipedia.org/wiki/Orbit\_(dynamics). \url{https://en.wikipedia.org/wiki/Orbit_(dynamics)} --- 1 of 1 quotations verified (retrieved 2026-11-12).
-\item[\texttt{wp-parity}] https://en.wikipedia.org/wiki/Parity\_(mathematics). \url{https://en.wikipedia.org/wiki/Parity_(mathematics)} --- 4 of 4 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-parity}] https://en.wikipedia.org/wiki/Parity\_(mathematics). \url{https://en.wikipedia.org/wiki/Parity_(mathematics)} --- 5 of 5 quotations verified (retrieved 2026-11-12).
 \item[\texttt{wp-periodic-point}] https://en.wikipedia.org/wiki/Periodic\_point. \url{https://en.wikipedia.org/wiki/Periodic_point} --- 3 of 3 quotations verified (retrieved 2026-11-12).
 \item[\texttt{wp-permutation}] https://en.wikipedia.org/wiki/Permutation. \url{https://en.wikipedia.org/wiki/Permutation} --- 2 of 2 quotations verified (retrieved 2026-11-12).
 \item[\texttt{wp-prime}] https://en.wikipedia.org/wiki/Prime\_number. \url{https://en.wikipedia.org/wiki/Prime_number} --- 4 of 4 quotations verified (retrieved 2026-11-12).

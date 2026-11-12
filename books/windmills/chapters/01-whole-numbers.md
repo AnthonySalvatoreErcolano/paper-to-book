@@ -40,7 +40,8 @@ two are its *trivial* divisors:
 ::: {.quote ledger=C1-01}
 :::
 
-A number with a divisor other than these is called *composite* [@C1-02].
+A number greater than $1$ with a divisor other than these is called *composite*
+[@C1-02].
 
 ::: remark
 The paper writes $n \mid m$ for "$n$ divides $m$", with $n$ as the divisor, and from
@@ -104,12 +105,15 @@ Conversely, if the remainder is $0$, then $m = nq$, so $n \mid m$.
 
 ## Even and odd
 
-::: {.definition #def-parity ledger=C1-06 lean=Even,Odd}
+::: {.definition #def-parity ledger=C1-06,C1-20 lean=Even,Odd}
 A number is **even** if it has the form $2k$, and **odd** if it has the form $2k + 1$,
 for some number $k$. Whether a number is even or odd is called its **parity**.
 :::
 
 ::: {.quote ledger=C1-06}
+:::
+
+::: {.quote ledger=C1-20}
 :::
 
 ::: {.theorem #thm-even-odd derived=L002,C1-06 lean=Book.Windmills.Ch01.even_or_odd,Book.Windmills.Ch01.not_even_and_odd,Book.Windmills.Ch01.even_iff_mod,Book.Windmills.Ch01.odd_iff_mod}
@@ -157,7 +161,7 @@ numbers.
 :::
 
 The *divisors* of $n$ are the numbers that divide it evenly [@C1-11]. Primes are
-exactly the numbers with no divisors except the trivial ones:
+exactly the numbers greater than $1$ with no divisors except the trivial ones:
 
 ::: {.proposition #prop-prime-divisors ledger=C1-09 lean=Nat.prime_def}
 A number $p$ is prime if and only if it has exactly two positive divisors, $1$ and $p$
@@ -165,10 +169,17 @@ A number $p$ is prime if and only if it has exactly two positive divisors, $1$ a
 :::
 
 ::: proof
-If $p > 1$ is a product $ab$ of two numbers smaller than $p$, then $a \ne 1$ (else
-$b = p$) and $a \ne p$, so $a$ is a third divisor. Conversely, if $p > 1$ has a divisor
-$a$ other than $1$ and $p$, then $p = ab$ with $1 < a < p$, and then $1 < b < p$ too,
-so $p$ is a product of two smaller numbers.
+First, $0$ and $1$ are not prime (the definition needs $p > 1$), and neither has
+exactly the two positive divisors $1$ and $p$: every positive number divides $0$, and
+$1$ has the single positive divisor $1$. So take $p > 1$.
+
+If $p$ is a product $ab$ of two numbers smaller than $p$, then $a \ne 1$ (else $b = p$,
+which is not smaller) and $a \ne p$, so $a$ is a positive divisor other than $1$ and $p$.
+
+Conversely, suppose $p$ has a positive divisor $a$ other than $1$ and $p$, say
+$p = ab$. Then $b \ge 1$ (as $p \ne 0$), so $a \le p$; since $a \ne p$ and $a \ne 1$, we
+have $1 < a < p$. Then $b = p / a$ satisfies $1 < b < p$ as well, so $p$ is a product of
+two smaller numbers.
 :::
 
 In the same way, a number greater than $1$ is composite exactly when it is not prime.

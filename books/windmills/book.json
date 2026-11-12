@@ -16,8 +16,11 @@
   "stage": 5,
   "map_approved": true,
   "chapters_approved": [],
-  "note": "map approved (natural-number subtraction removed: basic arithmetic assumed); writing chapter 1",
+  "note": "chapter 1 at checkpoint 2: ledger 111/111, Lean 33/33 names, checks 15/15, review pass (3 rounds)",
   "map_artifact": "https://claude.ai/artifact/SQVR4s8gYRDQJrzgUggAae",
-  "map_approved_on": "2026-11-12"
+  "map_approved_on": "2026-11-12",
+  "chapters_awaiting": [
+   "01-whole-numbers"
+  ]
  }
 }

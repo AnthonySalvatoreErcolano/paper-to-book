@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-12T17:26:23Z",
+ "checked": "2026-11-12T17:29:47Z",
  "entries": {
   "L001": {
    "ok": true,
@@ -946,15 +946,6 @@
    "from": null,
    "to": null
   },
-  "C1-14": {
-   "ok": true,
-   "problems": [],
-   "kind": "fact",
-   "source": "paper",
-   "node": "square",
-   "from": null,
-   "to": null
-  },
   "C1-15": {
    "ok": true,
    "problems": [],
@@ -996,6 +987,15 @@
    "problems": [],
    "kind": "fact",
    "source": "paper",
+   "node": "parity",
+   "from": null,
+   "to": null
+  },
+  "C1-20": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-parity",
    "node": "parity",
    "from": null,
    "to": null
