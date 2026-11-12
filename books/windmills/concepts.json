@@ -1,0 +1,655 @@
+{
+ "paper": {
+  "id": "paper",
+  "type": "arxiv",
+  "ref": "2112.02556",
+  "why": "the paper",
+  "fetched": "2026-11-12T16:50:50Z",
+  "files": {
+   "arxiv-meta.xml": "424b0d3929e40309bc4901656f2c2551cc20ab9bc175be7ae9a3888f50e9651b",
+   "paper.pdf": "de9776849704a0922bad41714921a8e3f5b658415594354a25163e6f448f7f2d",
+   "source.bin": "cd9f229f7f7ed7b37ced5cab214ac6e52999352176b37e5b8635ccf16894ef84"
+  },
+  "license": "http://creativecommons.org/licenses/by/4.0/",
+  "title": "Windmills of the minds: an algorithm for Fermat's Two Squares Theorem",
+  "authors": [
+   "Hing Lun Chan"
+  ],
+  "latex": [
+   "src/windmills.tex"
+  ]
+ },
+ "environments": [
+  {
+   "kind": "theorem",
+   "label": "\\textbf{Two Squares Theorem}",
+   "line": 629,
+   "text": "\\label{thm:fermat-two-squares-thm} \\script{twoSquares}{619} A prime $n$ can be expressed uniquely as a sum of odd and even squares if and only if \\HOLinline{\\HOLFreeVar{n}\\;\\HOLSymConst{=}\\;\\HOLNumLit{4}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{k}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLNumLit{1}} for some $k$. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{prime}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;(\\HOLFreeVar{n}\\;\\ensuremath{\\equiv}\\;\\HOLNumLit{1}\\;\\ensuremath{(}\\ensuremath{\\bmod}\\;\\HOLNumLit{4}\\ensuremath{)}\\;\\HOLSymConst{\\HOLTokenEquiv{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\HOLSymConst{\\HOLTokenUnique{}}(\\HOLBoundVar{u}\\HOLSymConst{,}\\HOLBoundVar{v}).\\;\\HOLConst{\\HOLConst{odd}}\\;\\HOLBoundVar{u}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLConst{\\HOLConst{even}}\\;\\HOLBoundVar{v}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{=}\\;\\HOLBoundVar{u}\\HOLSymConst{\\ensuremath{\\sp{2}}}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLBoundVar{v}\\HOLSymConst{\\ensuremath{\\sp{2}}}) \\end{HOLmath}"
+  },
+  {
+   "kind": "definition",
+   "label": "",
+   "line": 695,
+   "text": "\\label{def:windmill-def} A windmill consists of a central square with four identical rectangular arms. \\begin{HOLmath} \\;\\;\\HOLConst{windmill}\\;\\HOLFreeVar{x}\\;\\HOLFreeVar{y}\\;\\HOLFreeVar{z}\\;\\HOLTokenDefEquality{}\\;\\HOLFreeVar{x}\\HOLSymConst{\\ensuremath{\\sp{2}}}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLNumLit{4}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{y}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{z} \\end{HOLmath}"
+  },
+  {
+   "kind": "definition",
+   "label": "",
+   "line": 714,
+   "text": "\\label{def:mills-def} \\noindent The mills of a number is its set of windmills. \\begin{HOLmath} \\;\\;\\HOLConst{mills}\\;\\HOLFreeVar{n}\\;\\HOLTokenDefEquality{}\\;\\HOLTokenLeftbrace{}(\\HOLBoundVar{x}\\HOLSymConst{,}\\HOLBoundVar{y}\\HOLSymConst{,}\\HOLBoundVar{z})\\;\\HOLTokenBar{}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{=}\\;\\HOLConst{windmill}\\;\\HOLBoundVar{x}\\;\\HOLBoundVar{y}\\;\\HOLBoundVar{z}\\HOLTokenRightbrace{} \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 736,
+   "text": "\\label{thm:mills-finite} \\script{windmill}{714} The number of windmills for a number $n$ is finite if and only if $n$ is not a square. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{\\HOLConst{finite}}\\;(\\HOLConst{mills}\\;\\HOLFreeVar{n})\\;\\HOLSymConst{\\HOLTokenEquiv{}}\\;\\HOLSymConst{\\HOLTokenNeg{}}\\HOLConst{square}\\;\\HOLFreeVar{n} \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 800,
+   "text": "\\label{thm:mills-trivial-prime} \\script{windmill}{428} For a prime of the form \\HOLinline{\\HOLNumLit{4}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{k}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLNumLit{1}}, the only windmill with the first and second parameters equal is \\HOLinline{\\HOLConst{windmill}\\;\\HOLNumLit{1}\\;\\HOLNumLit{1}\\;\\HOLFreeVar{k}}. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{prime}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{n}\\;\\ensuremath{\\equiv}\\;\\HOLNumLit{1}\\;\\ensuremath{(}\\ensuremath{\\bmod}\\;\\HOLNumLit{4}\\ensuremath{)}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\HOLSymConst{\\HOLTokenForall{}}\\HOLBoundVar{x}\\;\\HOLBoundVar{z}.\\;\\HOLFreeVar{n}\\;\\HOLSymConst{=}\\;\\HOLConst{windmill}\\;\\HOLBoundVar{x}\\;\\HOLBoundVar{x}\\;\\HOLBoundVar{z}\\;\\HOLSymConst{\\HOLTokenEquiv{}}\\;\\HOLBoundVar{x}\\;\\HOLSymConst{=}\\;\\HOLNumLit{1}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLBoundVar{z}\\;\\HOLSymConst{=}\\;\\HOLFreeVar{n}\\;\\HOLConst{\\HOLConst{div}}\\;\\HOLNumLit{4} \\end{HOLmath}"
+  },
+  {
+   "kind": "definition",
+   "label": "",
+   "line": 832,
+   "text": "\\label{def:involute-pairs-fixes-def} The pairs and fixes of an involution $f$ on a set $S$. \\begin{HOLmath} \\;\\;\\HOLConst{pairs}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\;\\HOLTokenDefEquality{}\\;\\HOLTokenLeftbrace{}\\HOLBoundVar{x}\\;\\HOLTokenBar{}\\;\\HOLBoundVar{x}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{f}\\;\\HOLBoundVar{x}\\;\\HOLSymConst{\\HOLTokenNotEqual{}}\\;\\HOLBoundVar{x}\\HOLTokenRightbrace{}\\\\ \\;\\;\\HOLConst{fixes}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\;\\HOLTokenDefEquality{}\\;\\HOLTokenLeftbrace{}\\HOLBoundVar{x}\\;\\HOLTokenBar{}\\;\\HOLBoundVar{x}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{f}\\;\\HOLBoundVar{x}\\;\\HOLSymConst{=}\\;\\HOLBoundVar{x}\\HOLTokenRightbrace{}\\\\ \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 847,
+   "text": "\\label{thm:involute-two-fixes-both-odd} \\script{involuteFix}{1182} If two involutions act on the same finite set $S$, their fixes have the same parity. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{\\HOLConst{finite}}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{f}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{g}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;(\\HOLConst{\\HOLConst{odd}}\\;\\ensuremath{|}\\HOLConst{fixes}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\ensuremath{|}\\;\\HOLSymConst{\\HOLTokenEquiv{}}\\;\\HOLConst{\\HOLConst{odd}}\\;\\ensuremath{|}\\HOLConst{fixes}\\;\\HOLFreeVar{g}\\;\\HOLFreeVar{S}\\ensuremath{|}) \\end{HOLmath}"
+  },
+  {
+   "kind": "definition",
+   "label": "",
+   "line": 867,
+   "text": "\\label{def:flip-def} The flip map for a triple. \\begin{HOLmath} \\;\\;\\HOLConst{flip}\\;(\\HOLFreeVar{x}\\HOLSymConst{,}\\HOLFreeVar{y}\\HOLSymConst{,}\\HOLFreeVar{z})\\;\\HOLTokenDefEquality{}\\;(\\HOLFreeVar{x}\\HOLSymConst{,}\\HOLFreeVar{z}\\HOLSymConst{,}\\HOLFreeVar{y}) \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 893,
+   "text": "\\label{thm:flip-involute-mills} \\script{windmill}{933} The flip map is an involution on the set of windmills. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{flip}\\;\\HOLConst{involute}\\;\\HOLConst{mills}\\;\\HOLFreeVar{n} \\end{HOLmath}"
+  },
+  {
+   "kind": "definition",
+   "label": "",
+   "line": 953,
+   "text": "\\label{def:zagier-def} The Zagier map for a triple. \\begin{HOLmath} \\;\\;\\HOLConst{zagier}\\;(\\HOLFreeVar{x}\\HOLSymConst{,}\\HOLFreeVar{y}\\HOLSymConst{,}\\HOLFreeVar{z})\\;\\HOLTokenDefEquality{}\\\\ \\;\\;\\;\\;\\HOLKeyword{if}\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenLt{}}\\;\\HOLFreeVar{y}\\;\\HOLSymConst{\\ensuremath{-}}\\;\\HOLFreeVar{z}\\;\\HOLKeyword{then}\\;(\\HOLFreeVar{x}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLNumLit{2}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{z}\\HOLSymConst{,}\\HOLFreeVar{z}\\HOLSymConst{,}\\HOLFreeVar{y}\\;\\HOLSymConst{\\ensuremath{-}}\\;\\HOLFreeVar{z}\\;\\HOLSymConst{\\ensuremath{-}}\\;\\HOLFreeVar{x})\\\\ \\;\\;\\;\\;\\HOLKeyword{else}\\;\\HOLKeyword{if}\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenLt{}}\\;\\HOLNumLit{2}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{y}\\;\\HOLKeyword{then}\\;(\\HOLNumLit{2}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{y}\\;\\HOLSymConst{\\ensuremath{-}}\\;\\HOLFreeVar{x}\\HOLSymConst{,}\\HOLFreeVar{y}\\HOLSymConst{,}\\HOLFreeVar{x}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLFreeVar{z}\\;\\HOLSymConst{\\ensuremath{-}}\\;\\HOLFreeVar{y})\\\\ \\;\\;\\;\\;\\HOLKeyword{else}\\;(\\HOLFreeVar{x}\\;\\HOLSymConst{\\ensuremath{-}}\\;\\HOLNumLit{2}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{y}\\HOLSymConst{,}\\HOLFreeVar{x}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLFreeVar{z}\\;\\HOLSymConst{\\ensuremath{-}}\\;\\HOLFreeVar{y}\\HOLSymConst{,}\\HOLFreeVar{y}) \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 1293,
+   "text": "\\label{thm:zagier-involute-mills-prime} \\script{windmill}{1475} The Zagier map is an involution on \\HOLinline{\\HOLConst{mills}\\;\\HOLFreeVar{n}} for a prime $n$. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{prime}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{\\HOLTokenImp{}}\\;\\HOLConst{zagier}\\;\\HOLConst{involute}\\;\\HOLConst{mills}\\;\\HOLFreeVar{n} \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 1368,
+   "text": "\\label{thm:zagier-fixes-prime} \\script{twoSquares}{162} A prime of the form \\HOLinline{\\HOLNumLit{4}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{k}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLNumLit{1}} has only $(1,1,k)$ fixed by the Zagier map. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{prime}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{n}\\;\\ensuremath{\\equiv}\\;\\HOLNumLit{1}\\;\\ensuremath{(}\\ensuremath{\\bmod}\\;\\HOLNumLit{4}\\ensuremath{)}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\HOLConst{fixes}\\;\\HOLConst{zagier}\\;(\\HOLConst{mills}\\;\\HOLFreeVar{n})\\;\\HOLSymConst{=}\\;\\HOLTokenLeftbrace{}(\\HOLNumLit{1}\\HOLSymConst{,}\\HOLNumLit{1}\\HOLSymConst{,}\\HOLFreeVar{n}\\;\\HOLConst{\\HOLConst{div}}\\;\\HOLNumLit{4})\\HOLTokenRightbrace{} \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "\\textbf{Two Squares Existence}",
+   "line": 1379,
+   "text": "\\label{thm:fermat-two-squares-exists} \\script{twoSquares}{441} A prime of the form \\HOLinline{\\HOLNumLit{4}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{k}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLNumLit{1}} is a sum of two squares of different parity. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{prime}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{n}\\;\\ensuremath{\\equiv}\\;\\HOLNumLit{1}\\;\\ensuremath{(}\\ensuremath{\\bmod}\\;\\HOLNumLit{4}\\ensuremath{)}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\HOLSymConst{\\HOLTokenExists{}}(\\HOLBoundVar{u}\\HOLSymConst{,}\\HOLBoundVar{v}).\\;\\HOLConst{\\HOLConst{odd}}\\;\\HOLBoundVar{u}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLConst{\\HOLConst{even}}\\;\\HOLBoundVar{v}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{=}\\;\\HOLBoundVar{u}\\HOLSymConst{\\ensuremath{\\sp{2}}}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLBoundVar{v}\\HOLSymConst{\\ensuremath{\\sp{2}}} \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "\\textbf{Two Squares Uniquenss}",
+   "line": 1411,
+   "text": "\\label{thm:fermat-two-squares-unique} \\script{twoSquares}{205} If a prime $n$ can be expressed as a sum of two squares, the expression is unique up to commutativity. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{prime}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{=}\\;\\HOLFreeVar{a}\\HOLSymConst{\\ensuremath{\\sp{2}}}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLFreeVar{b}\\HOLSymConst{\\ensuremath{\\sp{2}}}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{=}\\;\\HOLFreeVar{c}\\HOLSymConst{\\ensuremath{\\sp{2}}}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLFreeVar{d}\\HOLSymConst{\\ensuremath{\\sp{2}}}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\HOLTokenLeftbrace{}\\HOLFreeVar{a};\\;\\HOLFreeVar{b}\\HOLTokenRightbrace{}\\;\\HOLSymConst{=}\\;\\HOLTokenLeftbrace{}\\HOLFreeVar{c};\\;\\HOLFreeVar{d}\\HOLTokenRightbrace{} \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 1423,
+   "text": "\\label{thm:mod-4-not-squares} \\script{helperTwosq}{419} A number of the form \\HOLinline{\\HOLNumLit{4}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{k}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLNumLit{3}} cannot be expressed as a sum of two squares. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLFreeVar{n}\\;\\ensuremath{\\equiv}\\;\\HOLNumLit{3}\\;\\ensuremath{(}\\ensuremath{\\bmod}\\;\\HOLNumLit{4}\\ensuremath{)}\\;\\HOLSymConst{\\HOLTokenImp{}}\\;\\HOLSymConst{\\HOLTokenForall{}}\\HOLBoundVar{u}\\;\\HOLBoundVar{v}.\\;\\HOLFreeVar{n}\\;\\HOLSymConst{\\HOLTokenNotEqual{}}\\;\\HOLBoundVar{u}\\HOLSymConst{\\ensuremath{\\sp{2}}}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLBoundVar{v}\\HOLSymConst{\\ensuremath{\\sp{2}}} \\end{HOLmath}"
+  },
+  {
+   "kind": "definition",
+   "label": "",
+   "line": 1535,
+   "text": "\\label{def:two-sq-def} Computing the flip fixed point of \\HOLinline{\\HOLFreeVar{n}\\;\\HOLSymConst{=}\\;\\HOLNumLit{4}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{k}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLNumLit{1}} using a \\HOLConst{WHILE} loop. \\begin{HOLmath} \\;\\;\\HOLConst{two_sq}\\;\\HOLFreeVar{n}\\;\\HOLTokenDefEquality{}\\\\ \\;\\;\\;\\;\\HOLConst{WHILE}\\;((\\HOLSymConst{\\HOLTokenNeg{}})\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLConst{found})\\;(\\HOLConst{zagier}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLConst{flip})\\;(\\HOLNumLit{1}\\HOLSymConst{,}\\HOLNumLit{1}\\HOLSymConst{,}\\HOLFreeVar{n}\\;\\HOLConst{\\HOLConst{div}}\\;\\HOLNumLit{4}),\\\\ \\quad\\textrm{where} \\;\\;\\HOLConst{found}\\;(\\HOLFreeVar{x}\\HOLSymConst{,}\\HOLFreeVar{y}\\HOLSymConst{,}\\HOLFreeVar{z})\\;\\HOLTokenDefEquality{}\\;\\HOLFreeVar{y}\\;\\HOLSymConst{=}\\;\\HOLFreeVar{z} \\end{HOLmath}"
+  },
+  {
+   "kind": "definition",
+   "label": "",
+   "line": 1563,
+   "text": "\\label{def:period-def} The period of function iteration of an element is the least nonzero index for the element iterate to wrap around, otherwise zero. \\begin{HOLmath} \\;\\;\\HOLConst{\\HOLConst{period}}\\;\\HOLFreeVar{\\varphi}\\;\\HOLFreeVar{x}\\;\\HOLTokenDefEquality{}\\\\ \\;\\;\\;\\;\\HOLKeyword{case}\\;\\HOLConst{OLEAST}\\;\\HOLBoundVar{k}.\\;\\HOLNumLit{0}\\;\\HOLSymConst{\\HOLTokenLt{}}\\;\\HOLBoundVar{k}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{\\varphi}\\ensuremath{\\sp{\\HOLBoundVar{k}}(\\HOLFreeVar{x})}\\;\\HOLSymConst{=}\\;\\HOLFreeVar{x}\\;\\HOLKeyword{of}\\\\ \\;\\;\\;\\;\\HOLTokenBar{}\\;\\HOLConst{\\HOLConst{none}}\\;\\ensuremath{\\triangleright}\\;\\HOLNumLit{0}\\\\ \\;\\;\\;\\;\\HOLTokenBar{}\\;\\HOLConst{\\HOLConst{some}}\\;\\HOLBoundVar{k}\\;\\ensuremath{\\triangleright}\\;\\HOLBoundVar{k} \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 1587,
+   "text": "\\label{thm:iterate-period-mod} \\script{iteration}{653} For a nonzero period $p$ of $x$, $x$ is fixed by the $k$-th iterate of $\\varphi$ if and only if $k$ is a multiple of period~$p$. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLNumLit{0}\\;\\HOLSymConst{\\HOLTokenLt{}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{=}\\;\\HOLConst{\\HOLConst{period}}\\;\\HOLFreeVar{\\varphi}\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;(\\HOLFreeVar{\\varphi}\\ensuremath{\\sp{\\HOLFreeVar{k}}(\\HOLFreeVar{x})}\\;\\HOLSymConst{=}\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenEquiv{}}\\;\\HOLFreeVar{k}\\;\\ensuremath{\\equiv}\\;\\HOLNumLit{0}\\;\\ensuremath{(}\\ensuremath{\\bmod}\\;\\HOLFreeVar{p}\\ensuremath{)}) \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 1619,
+   "text": "\\label{thm:involute-period-1} \\script{iterateCompose}{558} When $f$ fixes $x$, the period for $x$ is $1$ if and only if \\HOLinline{\\HOLFreeVar{g}} also fixes $x$. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLFreeVar{f}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{g}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\\\ \\;\\;\\;\\;\\;\\HOLFreeVar{p}\\;\\HOLSymConst{=}\\;\\HOLConst{\\HOLConst{period}}\\;(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;(\\HOLFreeVar{p}\\;\\HOLSymConst{=}\\;\\HOLNumLit{1}\\;\\HOLSymConst{\\HOLTokenEquiv{}}\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLFreeVar{g}\\;\\HOLFreeVar{S}) \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 1632,
+   "text": "\\label{thm:involute-mod-period} \\script{iterateCompose}{401} The $i$-th iterate of (\\HOLinline{\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g}}) equals the $j$-th iterate of (\\HOLinline{\\HOLFreeVar{g}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{f}}) if and only if (\\HOLinline{\\HOLFreeVar{i}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLFreeVar{j}}) is a multiple of period $p$. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{\\HOLConst{finite}}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{f}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{g}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\\\ \\;\\;\\;\\;\\;\\HOLFreeVar{p}\\;\\HOLSymConst{=}\\;\\HOLConst{\\HOLConst{period}}\\;(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;((\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\ensuremath{\\sp{\\HOLFreeVar{i}}(\\HOLFreeVar{x})}\\;\\HOLSymConst{=}\\;(\\HOLFreeVar{g}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{f})\\ensuremath{\\sp{\\HOLFreeVar{j}}(\\HOLFreeVar{x})}\\;\\HOLSymConst{\\HOLTokenEquiv{}}\\;\\HOLFreeVar{i}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLFreeVar{j}\\;\\ensuremath{\\equiv}\\;\\HOLNumLit{0}\\;\\ensuremath{(}\\ensuremath{\\bmod}\\;\\HOLFreeVar{p}\\ensuremath{)}) \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 1645,
+   "text": "\\label{thm:involute-two-fix-orbit-1} \\script{iterateCompose}{583} When $f$ fixes $x$, the $i$-th and $j$-th iterate of (\\HOLinline{\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g}}) differ by one $f$ application if and only if (\\HOLinline{\\HOLFreeVar{i}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLFreeVar{j}}) is a multiple of period $p$. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{\\HOLConst{finite}}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{f}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{g}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\\\ \\;\\;\\;\\;\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{=}\\;\\HOLConst{\\HOLConst{period}}\\;(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;((\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\ensuremath{\\sp{\\HOLFreeVar{i}}(\\HOLFreeVar{x})}\\;\\HOLSymConst{=}\\;\\HOLFreeVar{f}\\;((\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\ensuremath{\\sp{\\HOLFreeVar{j}}(\\HOLFreeVar{x})})\\;\\HOLSymConst{\\HOLTokenEquiv{}}\\;\\HOLFreeVar{i}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLFreeVar{j}\\;\\ensuremath{\\equiv}\\;\\HOLNumLit{0}\\;\\ensuremath{(}\\ensuremath{\\bmod}\\;\\HOLFreeVar{p}\\ensuremath{)}) \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 1657,
+   "text": "\\label{thm:involute-two-fix-orbit-2} \\script{iterateCompose}{689} When $f$ fixes $x$, the $i$-th and $j$-th iterate of (\\HOLinline{\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g}}) differ by one \\HOLinline{\\HOLFreeVar{g}} application if and only if (\\HOLinline{\\HOLFreeVar{i}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLFreeVar{j}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLNumLit{1}}) is a multiple of period $p$. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{\\HOLConst{finite}}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{f}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{g}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\\\ \\;\\;\\;\\;\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{=}\\;\\HOLConst{\\HOLConst{period}}\\;(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;((\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\ensuremath{\\sp{\\HOLFreeVar{i}}(\\HOLFreeVar{x})}\\;\\HOLSymConst{=}\\;\\HOLFreeVar{g}\\;((\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\ensuremath{\\sp{\\HOLFreeVar{j}}(\\HOLFreeVar{x})})\\;\\HOLSymConst{\\HOLTokenEquiv{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\HOLFreeVar{i}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLFreeVar{j}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLNumLit{1}\\;\\ensuremath{\\equiv}\\;\\HOLNumLit{0}\\;\\ensuremath{(}\\ensu"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 1874,
+   "text": "\\label{thm:involute-two-fixes-even} \\script{iterateCompose}{884} When $f$ fixes $x$, and (\\HOLinline{\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g}}) has an even period $p$ for $x$, then $f$ also fixes \\HOLinline{(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\ensuremath{\\sp{\\HOLFreeVar{p}\\;\\HOLConst{div}\\;2}(\\HOLFreeVar{x})}}, which is not $x$ itself. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{\\HOLConst{finite}}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{f}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{g}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\\\ \\;\\;\\;\\;\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{=}\\;\\HOLConst{\\HOLConst{period}}\\;(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenConj{}}\\\\ \\;\\;\\;\\;\\;\\HOLFreeVar{y}\\;\\HOLSymConst{=}\\;(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\ensuremath{\\sp{\\HOLFreeVar{p}\\;\\HOLConst{div}\\;2}(\\HOLFreeVar{x})}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLConst{\\HOLConst{even}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\HOLFreeVar{y}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{y}\\;\\HOLSymConst{\\HOLTokenNotEqual{}}\\;\\HOLFreeVar{x} \\end{HOLmath}"
+  },
+  {
+   "kind": "corollary",
+   "label": "",
+   "line": 1902,
+   "text": "\\label{cor:involute-fix-singleton-odd} \\script{iterateCompute}{1009} If $f$ fixes only a single $x$, then \\HOLinline{\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g}} has an odd period for $x$. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{\\HOLConst{finite}}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{f}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{g}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\\\ \\;\\;\\;\\;\\;\\HOLConst{fixes}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{=}\\;\\HOLTokenLeftbrace{}\\HOLFreeVar{x}\\HOLTokenRightbrace{}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{=}\\;\\HOLConst{\\HOLConst{period}}\\;(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\HOLConst{\\HOLConst{odd}}\\;\\HOLFreeVar{p} \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 2023,
+   "text": "\\label{thm:involute-two-fixes-odd} \\script{iterateCompose}{980} When $f$ fixes $x$, and (\\HOLinline{\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g}}) has an odd period $p$ for $x$, then \\HOLinline{\\HOLFreeVar{g}} fixes \\HOLinline{(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\ensuremath{\\sp{\\HOLFreeVar{p}\\;\\HOLConst{div}\\;2}(\\HOLFreeVar{x})}}, which is not $x$ itself if and only if \\HOLinline{\\HOLFreeVar{p}\\;\\HOLSymConst{\\HOLTokenNotEqual{}}\\;\\HOLNumLit{1}}. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{\\HOLConst{finite}}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{f}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{g}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\\\ \\;\\;\\;\\;\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{=}\\;\\HOLConst{\\HOLConst{period}}\\;(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenConj{}}\\\\ \\;\\;\\;\\;\\;\\HOLFreeVar{y}\\;\\HOLSymConst{=}\\;(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\ensuremath{\\sp{\\HOLFreeVar{p}\\;\\HOLConst{div}\\;2}(\\HOLFreeVar{x})}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLConst{\\HOLConst{odd}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\HOLFreeVar{y}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLFreeVar{g}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTo"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 2059,
+   "text": "\\label{thm:involute-two-fixes-even-odd} \\script{iterateCompose}{1100} When $f$ fixes $x$, the $j$-th iterate of (\\HOLinline{\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g}}) from $x$ is a fixed point of either $f$ or \\HOLinline{\\HOLFreeVar{g}} if and only if $j$ is half of the period $p$. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{\\HOLConst{finite}}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{f}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{g}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\\\ \\;\\;\\;\\;\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{=}\\;\\HOLConst{\\HOLConst{period}}\\;(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLConst{\\HOLConst{even}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\HOLSymConst{\\HOLTokenForall{}}\\HOLBoundVar{j}.\\;\\HOLNumLit{0}\\;\\HOLSymConst{\\HOLTokenLt{}}\\;\\HOLBoundVar{j}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLBoundVar{j}\\;\\HOLSymConst{\\HOLTokenLt{}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;\\;((\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\ensuremath{\\sp{\\HOLBoundVar{j}}(\\HOLFreeVar{x})}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenEquiv{}}\\;\\HOLBoundVar{j}\\;\\HOLSymC"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 2097,
+   "text": "\\label{thm:iterate-while-thm} \\script{iterateCompute}{922} The \\HOLinline{\\HOLConst{WHILE}} loop delivers the first body iterate that fails the guard test. \\begin{HOLmath} \\HOLTokenTurnstile{}(\\HOLSymConst{\\HOLTokenForall{}}\\HOLBoundVar{j}.\\;\\HOLBoundVar{j}\\;\\HOLSymConst{\\HOLTokenLt{}}\\;\\HOLFreeVar{k}\\;\\HOLSymConst{\\HOLTokenImp{}}\\;\\HOLFreeVar{G}\\;(\\HOLFreeVar{B}\\ensuremath{\\sp{\\HOLBoundVar{j}}(\\HOLFreeVar{x})}))\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLSymConst{\\HOLTokenNeg{}}\\HOLFreeVar{G}\\;(\\HOLFreeVar{B}\\ensuremath{\\sp{\\HOLFreeVar{k}}(\\HOLFreeVar{x})})\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\HOLConst{WHILE}\\;\\HOLFreeVar{G}\\;\\HOLFreeVar{B}\\;\\HOLFreeVar{x}\\;\\HOLSymConst{=}\\;\\HOLFreeVar{B}\\ensuremath{\\sp{\\HOLFreeVar{k}}(\\HOLFreeVar{x})} \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 2114,
+   "text": "\\label{thm:involute-involute-fixes-while} \\script{iterateCompose}{1536} For two involutions $f$ and \\HOLinline{\\HOLFreeVar{g}}, if $f$ fixes $x$ with an odd period, a WHILE loop with \\HOLinline{\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g}} from $x$ can reach a fixed point of \\HOLinline{\\HOLFreeVar{g}}. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{\\HOLConst{finite}}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{f}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{g}\\;\\HOLConst{involute}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\\\ \\;\\;\\;\\;\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLFreeVar{f}\\;\\HOLFreeVar{S}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{=}\\;\\HOLConst{\\HOLConst{period}}\\;(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLConst{\\HOLConst{odd}}\\;\\HOLFreeVar{p}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\HOLConst{WHILE}\\;(\\HOLTokenLambda{}\\HOLBoundVar{t}.\\;\\HOLFreeVar{g}\\;\\HOLBoundVar{t}\\;\\HOLSymConst{\\HOLTokenNotEqual{}}\\;\\HOLBoundVar{t})\\;(\\HOLFreeVar{f}\\;\\HOLSymConst{\\HOLTokenCompose}\\;\\HOLFreeVar{g})\\;\\HOLFreeVar{x}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLFreeVar{g}\\;\\HOLFreeVar{S} \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 2158,
+   "text": "\\label{thm:two-sq-thm} \\script{twoSquares}{840} For a prime of the form \\HOLinline{\\HOLNumLit{4}\\HOLSymConst{\\ensuremath{}}\\HOLFreeVar{k}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLNumLit{1}}, the two squares algorithm of Definiton~\\ref{def:two-sq-def} gives a flip fixed point. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{prime}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{n}\\;\\ensuremath{\\equiv}\\;\\HOLNumLit{1}\\;\\ensuremath{(}\\ensuremath{\\bmod}\\;\\HOLNumLit{4}\\ensuremath{)}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;\\HOLConst{two_sq}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{\\HOLTokenIn{}}\\;\\HOLConst{fixes}\\;\\HOLConst{flip}\\;(\\HOLConst{mills}\\;\\HOLFreeVar{n}) \\end{HOLmath}"
+  },
+  {
+   "kind": "definition",
+   "label": "",
+   "line": 2186,
+   "text": "\\label{def:two-squares-def} Compute the two squares for Fermat's two squares theorem. \\begin{HOLmath} \\;\\;\\HOLConst{two_squares}\\;\\HOLFreeVar{n}\\;\\HOLTokenDefEquality{}\\;(\\HOLKeyword{let}\\;(\\HOLBoundVar{x}\\HOLSymConst{,}\\HOLBoundVar{y}\\HOLSymConst{,}\\HOLBoundVar{z})\\;=\\;\\HOLConst{two_sq}\\;\\HOLFreeVar{n}\\;\\HOLKeyword{in}\\;(\\HOLBoundVar{x}\\HOLSymConst{,}\\HOLBoundVar{y}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLBoundVar{z})) \\end{HOLmath}"
+  },
+  {
+   "kind": "theorem",
+   "label": "",
+   "line": 2196,
+   "text": "\\label{thm:two-squares-thm} \\script{twoSquares}{1041} The algorithm by Definition~\\ref{def:two-squares-def} gives indeed Fermat's two squares. \\begin{HOLmath} \\HOLTokenTurnstile{}\\HOLConst{prime}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{\\HOLTokenConj{}}\\;\\HOLFreeVar{n}\\;\\ensuremath{\\equiv}\\;\\HOLNumLit{1}\\;\\ensuremath{(}\\ensuremath{\\bmod}\\;\\HOLNumLit{4}\\ensuremath{)}\\;\\HOLSymConst{\\HOLTokenImp{}}\\\\ \\;\\;\\;\\;\\;\\;\\;(\\HOLKeyword{let}\\;(\\HOLBoundVar{u}\\HOLSymConst{,}\\HOLBoundVar{v})\\;=\\;\\HOLConst{two_squares}\\;\\HOLFreeVar{n}\\;\\HOLKeyword{in}\\;\\HOLFreeVar{n}\\;\\HOLSymConst{=}\\;\\HOLBoundVar{u}\\HOLSymConst{\\ensuremath{\\sp{2}}}\\;\\HOLSymConst{\\ensuremath{+}}\\;\\HOLBoundVar{v}\\HOLSymConst{\\ensuremath{\\sp{2}}}) \\end{HOLmath}"
+  }
+ ],
+ "emphasised": [
+  {
+   "term": "[script]",
+   "line": 102
+  },
+  {
+   "term": "e.g.",
+   "line": 109
+  },
+  {
+   "term": "i.e.",
+   "line": 110
+  },
+  {
+   "term": "etc.",
+   "line": 111
+  },
+  {
+   "term": "Two Squares Theorem",
+   "line": 629
+  },
+  {
+   "term": "Two Squares Existence",
+   "line": 1379
+  },
+  {
+   "term": "Two Squares Uniquenss",
+   "line": 1411
+  },
+  {
+   "term": "Input",
+   "line": 1522
+  },
+  {
+   "term": "Output",
+   "line": 1523
+  },
+  {
+   "term": "Method",
+   "line": 1524
+  },
+  {
+   "term": "orbit",
+   "line": 1558
+  },
+  {
+   "term": "period",
+   "line": 1559
+  },
+  {
+   "term": "defined",
+   "line": 2302
+  },
+  {
+   "term": "A Mathematician's Apology",
+   "line": 2375
+  },
+  {
+   "term": "Location of $\\dots$",
+   "line": 2430
+  },
+  {
+   "term": "Script: (name)Script.sml",
+   "line": 2430
+  },
+  {
+   "term": "Name of theorem or definition",
+   "line": 2431
+  },
+  {
+   "term": "Line \\#",
+   "line": 2431
+  }
+ ],
+ "citations": [
+  {
+   "key": "Zagier-1990-acm",
+   "line": 457,
+   "context": "of odd and even squares (Section~\\ref{sec:sum-of-two-squares}, Theorem~\\ref{thm:fermat-two-squares-thm}). Of the many proofs of this classical number theory result, this one-sentence proof by Zagier~\\cite{Zagier-1990-acm} caused a sensation in 1990: \\bigskip \\begin{mquote} \\textit{ \\\\ The involuti"
+  },
+  {
+   "key": "Wiedijk-2020",
+   "line": 487,
+   "context": "lone. Even knowing involution, a self-inverse function, and fixed points, those values unchanged by a function, the proof is not obvious at a glance! Listed as number 20 in Formalizing 100 Theorems~\\cite{Wiedijk-2020}, there are many formal proofs of this theorem. Some are based on textbook proof"
+  },
+  {
+   "key": "Thery-2004",
+   "line": 490,
+   "context": "e{Wiedijk-2020}, there are many formal proofs of this theorem. Some are based on textbook proofs, others follow the ideas in Zagier's proof. All show the existence of the two squares, only a few (Coq~\\cite{Thery-2004} and Lean~\\cite{Hughes-2019}) include the uniqueness part. Therefore, a formalis"
+  },
+  {
+   "key": "Hughes-2019",
+   "line": 490,
+   "context": "many formal proofs of this theorem. Some are based on textbook proofs, others follow the ideas in Zagier's proof. All show the existence of the two squares, only a few (Coq~\\cite{Thery-2004} and Lean~\\cite{Hughes-2019}) include the uniqueness part. Therefore, a formalisation of this one-sentence p"
+  },
+  {
+   "key": "Heath-Brown-1984-acm",
+   "line": 494,
+   "context": "rcise is a path of discovery due to recent progress in understanding this proof. As Don Zagier remarked after the one sentence, his proof was a condensed version of a 1984 proof by Roger Heath-Brown~\\cite{Heath-Brown-1984-acm}, who in turn acknowledged prior work in number theory taken up by Joseph Liouvi"
+  },
+  {
+   "key": "Williams-2010-alt",
+   "line": 494,
+   "context": "the one sentence, his proof was a condensed version of a 1984 proof by Roger Heath-Brown~\\cite{Heath-Brown-1984-acm}, who in turn acknowledged prior work in number theory taken up by Joseph Liouville~\\cite{Williams-2010-alt}. This one-sentence proof invokes two involutions: the second one is obvious, bu"
+  },
+  {
+   "key": "Trimble-Lama-2008",
+   "line": 495,
+   "context": "ph Liouville~\\cite{Williams-2010-alt}. This one-sentence proof invokes two involutions: the second one is obvious, but the first one in Equation~\\eqref{eqn:zagier-map} has been called ``black magic''~\\cite{Trimble-Lama-2008}. The algebraic formulation of this involution has been given a geometric interp"
+  },
+  {
+   "key": "Spivak-2007",
+   "line": 495,
+   "context": "in Equation~\\eqref{eqn:zagier-map} has been called ``black magic''~\\cite{Trimble-Lama-2008}. The algebraic formulation of this involution has been given a geometric interpretation by Alexander Spivak~\\cite{Spivak-2007} in 2007. These are the windmills (Section~\\ref{sec:windmills}). They explain wh"
+  },
+  {
+   "key": "Zagier-2013-acm",
+   "line": 496,
+   "context": "to identify fixed points of each other. Moreover, this provides an algorithm to find the two squares in Fermat's theorem. Thus the one-sentence proof can be made constructive, as elucidated by Zagier~\\cite{Zagier-2013-acm} in 2013. \\subsection{Contribution} \\label{sec:contribution} This paper gives t"
+  },
+  {
+   "key": "Harrison-2010",
+   "line": 502,
+   "context": "algorithm to compute the two squares in Fermat's two squares theorem, by following a constructive version of Zagier's proof in HOL4. As noted before, Zagier's proof has been formalised, in HOL Light~\\cite{Harrison-2010}, in NASA PVS~\\cite{Narkawicz-2012-acm} and in Coq~\\cite{Dubach-Muehlboeck-2021-"
+  },
+  {
+   "key": "Narkawicz-2012-acm",
+   "line": 502,
+   "context": "es in Fermat's two squares theorem, by following a constructive version of Zagier's proof in HOL4. As noted before, Zagier's proof has been formalised, in HOL Light~\\cite{Harrison-2010}, in NASA PVS~\\cite{Narkawicz-2012-acm} and in Coq~\\cite{Dubach-Muehlboeck-2021-acm}, although not in this constructive"
+  },
+  {
+   "key": "Dubach-Muehlboeck-2021-acm",
+   "line": 502,
+   "context": "y following a constructive version of Zagier's proof in HOL4. As noted before, Zagier's proof has been formalised, in HOL Light~\\cite{Harrison-2010}, in NASA PVS~\\cite{Narkawicz-2012-acm} and in Coq~\\cite{Dubach-Muehlboeck-2021-acm}, although not in this constructive form. All the ideas used in this paper can"
+  },
+  {
+   "key": "Shiu-1996",
+   "line": 505,
+   "context": "ite{Harrison-2010}, in NASA PVS~\\cite{Narkawicz-2012-acm} and in Coq~\\cite{Dubach-Muehlboeck-2021-acm}, although not in this constructive form. All the ideas used in this paper can be found in Shiu~\\cite{Shiu-1996} and Zagier~\\cite{Zagier-2013-acm}. The novel feature of this work is an elegan"
+  },
+  {
+   "key": "Zagier-2013-acm",
+   "line": 505,
+   "context": "PVS~\\cite{Narkawicz-2012-acm} and in Coq~\\cite{Dubach-Muehlboeck-2021-acm}, although not in this constructive form. All the ideas used in this paper can be found in Shiu~\\cite{Shiu-1996} and Zagier~\\cite{Zagier-2013-acm}. The novel feature of this work is an elegant and pictorial approach for our f"
+  },
+  {
+   "key": "Dubach-Muehlboeck-2021-acm",
+   "line": 1247,
+   "context": ", as the geometry for the mind is different. Altogether there are five cases, as analysed in Table~\\ref{tbl:zagier-map}, and illustrated in Figure~\\ref{fig:zagier-map}.\\footnote{Dubach and Muehlboeck~\\cite{Dubach-Muehlboeck-2021-acm} also identified five types for windmills.} Although five cases of Zagier map h"
+  },
+  {
+   "key": "Harrison-2010",
+   "line": 1402,
+   "context": "FreeVar{v}\\HOLSymConst{\\ensuremath{\\sp{2}}}}. Evidently \\HOLinline{\\HOLFreeVar{v}} is even, and $u$ is odd since $n$ is odd. \\end{proof} \\noindent Current formalisations of Zagier's proof (HOL Light~\\cite{Harrison-2010}, NASA PVS~\\cite{Narkawicz-2012-acm} and Coq~\\cite{Dubach-Muehlboeck-2021-acm}),"
+  },
+  {
+   "key": "Narkawicz-2012-acm",
+   "line": 1402,
+   "context": "ath{\\sp{2}}}}. Evidently \\HOLinline{\\HOLFreeVar{v}} is even, and $u$ is odd since $n$ is odd. \\end{proof} \\noindent Current formalisations of Zagier's proof (HOL Light~\\cite{Harrison-2010}, NASA PVS~\\cite{Narkawicz-2012-acm} and Coq~\\cite{Dubach-Muehlboeck-2021-acm}), or its close relative Heath-Brown's"
+  },
+  {
+   "key": "Dubach-Muehlboeck-2021-acm",
+   "line": 1402,
+   "context": "e{\\HOLFreeVar{v}} is even, and $u$ is odd since $n$ is odd. \\end{proof} \\noindent Current formalisations of Zagier's proof (HOL Light~\\cite{Harrison-2010}, NASA PVS~\\cite{Narkawicz-2012-acm} and Coq~\\cite{Dubach-Muehlboeck-2021-acm}), or its close relative Heath-Brown's proof (Mizar~\\cite{Riccardi-2009} and Pro"
+  },
+  {
+   "key": "Riccardi-2009",
+   "line": 1402,
+   "context": "rrent formalisations of Zagier's proof (HOL Light~\\cite{Harrison-2010}, NASA PVS~\\cite{Narkawicz-2012-acm} and Coq~\\cite{Dubach-Muehlboeck-2021-acm}), or its close relative Heath-Brown's proof (Mizar~\\cite{Riccardi-2009} and ProofPower~\\cite{Arthan-2016}), stop at just showing the existence of two s"
+  },
+  {
+   "key": "Arthan-2016",
+   "line": 1402,
+   "context": "of (HOL Light~\\cite{Harrison-2010}, NASA PVS~\\cite{Narkawicz-2012-acm} and Coq~\\cite{Dubach-Muehlboeck-2021-acm}), or its close relative Heath-Brown's proof (Mizar~\\cite{Riccardi-2009} and ProofPower~\\cite{Arthan-2016}), stop at just showing the existence of two squares for the primes in \\text{Fer"
+  },
+  {
+   "key": "Wiedijk-2020",
+   "line": 1403,
+   "context": "at just showing the existence of two squares for the primes in \\text{Fermat's} Theorem~\\ref{thm:fermat-two-squares-thm}, most likely because this already meets the Formalizing 100 Theorems challenge~\\cite{Wiedijk-2020}. See also related work in Section~\\ref{sec:related-work}. \\subsection{Uniquen"
+  },
+  {
+   "key": "Thery-2004",
+   "line": 1421,
+   "context": "nLeftbrace{}\\HOLFreeVar{c};\\;\\HOLFreeVar{d}\\HOLTokenRightbrace{} \\end{HOLmath} \\end{theorem} \\noindent The proof is purely number-theoretic, which has also been formalised by Laurent Th{\\'e}ry in Coq~\\cite{Thery-2004}. Moreover, we have: \\begin{theorem} \\label{thm:mod-4-not-squares} \\script{helpe"
+  },
+  {
+   "key": "Wagon-1990-acm",
+   "line": 2245,
+   "context": "e. Although there are better ways to test a square than the square-root test, they are not simple to implement. Don Zagier, after his one-sentence proof, referred to an effective algorithm by Wagon~\\cite{Wagon-1990-acm} to compute the two squares. The algorithm requires finding a quadratic non-resi"
+  },
+  {
+   "key": "Thery-2004",
+   "line": 2344,
+   "context": "three systems, both Heath-Brown's proof and Zagier's proof are treated in two systems. Only two formal proofs include the uniqueness part (see Theorem~\\ref{thm:fermat-two-squares-unique}): Th{\\'e}ry~\\cite{Thery-2004} proved by algebraic identities and divisibility, and Hughes~\\cite{Hughes-2019}"
+  },
+  {
+   "key": "Hughes-2019",
+   "line": 2344,
+   "context": "systems. Only two formal proofs include the uniqueness part (see Theorem~\\ref{thm:fermat-two-squares-unique}): Th{\\'e}ry~\\cite{Thery-2004} proved by algebraic identities and divisibility, and Hughes~\\cite{Hughes-2019} proved by unique factorisation of Gaussian integers. Recently, Dubach and Mueh"
+  },
+  {
+   "key": "Dubach-Muehlboeck-2021-acm",
+   "line": 2346,
+   "context": "que}): Th{\\'e}ry~\\cite{Thery-2004} proved by algebraic identities and divisibility, and Hughes~\\cite{Hughes-2019} proved by unique factorisation of Gaussian integers. Recently, Dubach and Muehlboeck~\\cite{Dubach-Muehlboeck-2021-acm} formalised Zagier's proof using involutions in Coq's Mathematical Components Li"
+  },
+  {
+   "key": "Christopher-2016-acm",
+   "line": 2346,
+   "context": "ated their proof using the windmills as per this paper, and extended the use of involutions on the same set to formalise also an integer-partition proof of Fermat's two squares theorem by Christopher~\\cite{Christopher-2016-acm}. A summary of these formal proofs, in chronological order, is given in Table~\\"
+  },
+  {
+   "key": "Thery-2004",
+   "line": 2359,
+   "context": "us authors in different theorem provers.} \\label{tbl:chronology-formalise-two-squares} \\begin{tabular}{llll} Year & Author(s)[reference] & Theorem Prover & Comment\\\\ \\hline 2004 & Laurent Th{\\'e}ry~\\cite{Thery-2004} & Coq & Gaussian integers, with uniqueness\\\\ 2007 & Roelof Oosterhuis~\\cite{Oos"
+  },
+  {
+   "key": "Oosterhuis-2007",
+   "line": 2360,
+   "context": "\\begin{tabular}{llll} Year & Author(s)[reference] & Theorem Prover & Comment\\\\ \\hline 2004 & Laurent Th{\\'e}ry~\\cite{Thery-2004} & Coq & Gaussian integers, with uniqueness\\\\ 2007 & Roelof Oosterhuis~\\cite{Oosterhuis-2007} & Isabelle & Euler's proof with infinite descent\\\\ 2009 & Marco Riccardi~\\cite{"
+  },
+  {
+   "key": "Riccardi-2009",
+   "line": 2361,
+   "context": "urent Th{\\'e}ry~\\cite{Thery-2004} & Coq & Gaussian integers, with uniqueness\\\\ 2007 & Roelof Oosterhuis~\\cite{Oosterhuis-2007} & Isabelle & Euler's proof with infinite descent\\\\ 2009 & Marco Riccardi~\\cite{Riccardi-2009} & Mizar & Heath-Brown's proof with involutions\\\\ 2010 & John Harrison~\\cite{Har"
+  },
+  {
+   "key": "Harrison-2010",
+   "line": 2362,
+   "context": "f Oosterhuis~\\cite{Oosterhuis-2007} & Isabelle & Euler's proof with infinite descent\\\\ 2009 & Marco Riccardi~\\cite{Riccardi-2009} & Mizar & Heath-Brown's proof with involutions\\\\ 2010 & John Harrison~\\cite{Harrison-2010} & HOL Light & Zagier's proof with involutions\\\\ 2012 & Anthony Narkawicz~\\cite{"
+  },
+  {
+   "key": "Narkawicz-2012-acm",
+   "line": 2363,
+   "context": "Marco Riccardi~\\cite{Riccardi-2009} & Mizar & Heath-Brown's proof with involutions\\\\ 2010 & John Harrison~\\cite{Harrison-2010} & HOL Light & Zagier's proof with involutions\\\\ 2012 & Anthony Narkawicz~\\cite{Narkawicz-2012-acm} & NASA PVS & Zagier's proof with involutions\\\\ 2015 & Mario Carneiro~\\cite{Carn"
+  },
+  {
+   "key": "Carneiro-2015",
+   "line": 2364,
+   "context": "n Harrison~\\cite{Harrison-2010} & HOL Light & Zagier's proof with involutions\\\\ 2012 & Anthony Narkawicz~\\cite{Narkawicz-2012-acm} & NASA PVS & Zagier's proof with involutions\\\\ 2015 & Mario Carneiro~\\cite{Carneiro-2015} & MetaMath & Gaussian integers\\\\ 2016 & Rob Arthan~\\cite{Arthan-2016} & ProofPo"
+  },
+  {
+   "key": "Arthan-2016",
+   "line": 2365,
+   "context": "tions\\\\ 2012 & Anthony Narkawicz~\\cite{Narkawicz-2012-acm} & NASA PVS & Zagier's proof with involutions\\\\ 2015 & Mario Carneiro~\\cite{Carneiro-2015} & MetaMath & Gaussian integers\\\\ 2016 & Rob Arthan~\\cite{Arthan-2016} & ProofPower & Heath-Brown's proof with involutions\\\\ 2019 & Chris Hughes~\\cite"
+  },
+  {
+   "key": "Hughes-2019",
+   "line": 2366,
+   "context": "nvolutions\\\\ 2015 & Mario Carneiro~\\cite{Carneiro-2015} & MetaMath & Gaussian integers\\\\ 2016 & Rob Arthan~\\cite{Arthan-2016} & ProofPower & Heath-Brown's proof with involutions\\\\ 2019 & Chris Hughes~\\cite{Hughes-2019} & Lean & Principal Ideal Ring of Gaussian integers, with uniqueness\\\\ 2021 & Du"
+  },
+  {
+   "key": "Dubach-Muehlboeck-2021-acm",
+   "line": 2367,
+   "context": "n-2016} & ProofPower & Heath-Brown's proof with involutions\\\\ 2019 & Chris Hughes~\\cite{Hughes-2019} & Lean & Principal Ideal Ring of Gaussian integers, with uniqueness\\\\ 2021 & Dubach and Muehlboeck~\\cite{Dubach-Muehlboeck-2021-acm} & Coq & Zagier's and Christopher's proofs with involutions\\\\ \\end{tabular} \\end"
+  },
+  {
+   "key": "Hardy-1940-acm",
+   "line": 2375,
+   "context": "fs with involutions\\\\ \\end{tabular} \\end{table*} \\section{Conclusion} \\label{sec:conclusion} About Fermat's two squares theorem, G. H. Hardy wrote in his 1940 essay \\emph{A Mathematician's Apology}~\\cite[Section 13]{Hardy-1940-acm}: \\bigskip \\begin{mquote}[1em] \\textit{This is Fermat's theorem, which is rank"
+  },
+  {
+   "key": "Shiu-1996",
+   "line": 2392,
+   "context": "here $p$ is the orbit period. One can exploit the symmetry in permutation orbits, especially for permutations arising from two involutions, to improve the algorithm, as shown in the analysis by Shiu~\\cite{Shiu-1996}. In HOL4, this direction can start from the algebra of group theory in Chan an"
+  },
+  {
+   "key": "Chan-Norrish-cpp-2012",
+   "line": 2393,
+   "context": "ions arising from two involutions, to improve the algorithm, as shown in the analysis by Shiu~\\cite{Shiu-1996}. In HOL4, this direction can start from the algebra of group theory in Chan and Norrish~\\cite{Chan-Norrish-cpp-2012}. A formal analysis of the performance of the algorithm for two squares describe"
+  },
+  {
+   "key": "Chan-ANU-2019-acm",
+   "line": 2394,
+   "context": "and Norrish~\\cite{Chan-Norrish-cpp-2012}. A formal analysis of the performance of the algorithm for two squares described in Definition~\\ref{def:two-sq-def} can be modelled using an approach in Chan~\\cite{Chan-ANU-2019-acm}. \\ifdefined\\READY \\section*{Acknowledgements} \\label{sec:acknowledgements} \\a"
+  }
+ ],
+ "bibliography": [
+  {
+   "file": "src/windmills.bbl",
+   "text": "%%% -*-BibTeX-*-\n%%% Do NOT edit. File created by BibTeX with style\n%%% ACM-Reference-Format-Journals [18-Jan-2012].\n\n\\begin{thebibliography}{22}\n\n%%% ====================================================================\n%%% NOTE TO THE USER: you can override these defaults by providing\n%%% customized versions of any of these macros before the \\bibliography\n%%% command.  Each of them MUST provide its own final punctuation,\n%%% except for \\shownote{}, \\showDOI{}, and \\showURL{}.  The latter two\n%%% do not use final punctuation, in order to avoid confusing it with\n%%% the Web address.\n%%%\n%%% To suppress output of a particular field, define its macro to expand\n%%% to an empty string, or better, \\unskip, like this:\n%%%\n%%% \\newcommand{\\showDOI}[1]{\\unskip}   % LaTeX syntax\n%%%\n%%% \\def \\showDOI #1{\\unskip}           % plain TeX syntax\n%%%\n%%% ====================================================================\n\n\\ifx \\showCODEN    \\undefined \\def \\showCODEN     #1{\\unskip}     \\fi\n\\ifx \\showDOI      \\undefined \\def \\showDOI       #1{#1}\\fi\n\\ifx \\showISBNx    \\undefined \\def \\showISBNx     #1{\\unskip}     \\fi\n\\ifx \\showISBNxiii \\undefined \\def \\showISBNxiii  #1{\\unskip}     \\fi\n\\ifx \\showISSN     \\undefined \\def \\showISSN      #1{\\unskip}     \\fi\n\\ifx \\showLCCN     \\undefined \\def \\showLCCN      #1{\\unskip}     \\fi\n\\ifx \\shownote     \\undefined \\def \\shownote      #1{#1}          \\fi\n\\ifx \\showarticletitle \\undefined \\def \\showarticletitle #1{#1}   \\fi\n\\ifx \\showURL      \\undefined \\def \\showURL       {\\relax}        \\fi\n% The following commands are used for tagged output and should be\n% invisible to TeX\n\\providecommand\\bibfield[2]{#2}\n\\providecommand\\bibinfo[2]{#2}\n\\providecommand\\natexlab[1]{#1}\n\\providecommand\\showeprint[2][]{arXiv:#2}\n\n\\bibitem[\\protect\\citeauthoryear{Arthan}{Arthan}{2016}]%\n        {Arthan-2016}\n\\bibfield{author}{\\bibinfo{person}{Rob Arthan}.}\n  \\bibinfo{year}{2016}\\natexlab{}.\n\\newblock \\bibinfo{title}{{Mathematical Case Studies: Some Number Theory}}.\n\\newblock \\bibinfo{howpublished}{Supplementary ProofPower Examples}.\n\\newblock\n\\newblock\n\\shownote{Available from\n  \\url{http://www.lemma-one.com/ProofPower/examples/wrk074.pdf}, accessed 22\n  August, 2021.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Carneiro}{Carneiro}{2015}]%\n        {Carneiro-2015}\n\\bibfield{author}{\\bibinfo{person}{Mario Carneiro}.}\n  \\bibinfo{year}{2015}\\natexlab{}.\n\\newblock \\bibinfo{title}{{Theorem 2sq}}.\n\\newblock \\bibinfo{howpublished}{Metamath 100 proof}.\n\\newblock\n\\newblock\n\\shownote{Available from \\url{http://us.metamath.org/mpeuni/2sq.html}, accessed\n  22 August, 2021.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Chan}{Chan}{2019}]%\n        {Chan-ANU-2019-acm}\n\\bibfield{author}{\\bibinfo{person}{Hing~Lun Chan}.}\n  \\bibinfo{year}{2019}\\natexlab{}.\n\\newblock \\emph{\\bibinfo{title}{Primality Testing is Polynomial-time: a\n  Mechanised Verification of the {AKS} Algorithm}}.\n\\newblock {PhD}. \\bibinfo{school}{Australian National University},\n  \\bibinfo{address}{Canberra, Australia}.\n\\newblock\n\\urldef\\tempurl%\n\\url{https://doi.org/10.25911/5F58B06CA124E}\n\\showDOI{\\tempurl}\n\n\n\\bibitem[\\protect\\citeauthoryear{Chan and Norrish}{Chan and Norrish}{2012}]%\n        {Chan-Norrish-cpp-2012}\n\\bibfield{author}{\\bibinfo{person}{Hing~Lun Chan} {and}\n  \\bibinfo{person}{Michael Norrish}.} \\bibinfo{year}{2012}\\natexlab{}.\n\\newblock \\showarticletitle{{A String of Pearls: Proofs of Fermat's Little\n  Theorem}}. In \\bibinfo{booktitle}{\\emph{Proceedings of Certified Programs and\n  Proofs}} \\emph{(\\bibinfo{series}{LNCS}, \\bibinfo{number}{7679})},\n  \\bibfield{editor}{\\bibinfo{person}{Chris Hawblitzel} {and}\n  \\bibinfo{person}{Dale Miller}} (Eds.). \\bibinfo{publisher}{Springer},\n  \\bibinfo{pages}{188--207}.\n\\newblock\n\\showISBNx{978-3-642-35307-9}\n\\urldef\\tempurl%\n\\url{https://doi.org/10.1007/978-3-642-35308-6_16}\n\\showDOI{\\tempurl}\n\n\n\\bibitem[\\protect\\citeauthoryear{Christopher}{Christopher}{2016}]%\n        {Christopher-2016-acm}\n\\bibfield{author}{\\bibinfo{person}{A.~David Christopher}.}\n  \\bibinfo{year}{2016}\\natexlab{}.\n\\newblock \\showarticletitle{{A partition-theoretic proof of Fermat's Two\n  Squares Theorem}}.\n\\newblock \\bibinfo{journal}{\\emph{Discrete Mathematics}} \\bibinfo{volume}{339},\n  \\bibinfo{number}{4} (\\bibinfo{date}{06 April} \\bibinfo{year}{2016}),\n  \\bibinfo{pages}{1410--1411}.\n\\newblock\n\\urldef\\tempurl%\n\\url{https://doi.org/10.1016/j.disc.2015.12.002}\n\\showDOI{\\tempurl}\n\n\n\\bibitem[\\protect\\citeauthoryear{Dubach and Muehlboeck}{Dubach and\n  Muehlboeck}{2021}]%\n        {Dubach-Muehlboeck-2021-acm}\n\\bibfield{author}{\\bibinfo{person}{Guillaume Dubach} {and}\n  \\bibinfo{person}{Fabian Muehlboeck}.} \\bibinfo{year}{2021}\\natexlab{}.\n\\newblock \\showarticletitle{{Formal verification of Zagier's one-sentence\n  proof}}.\n\\newblock  (\\bibinfo{date}{24 April} \\bibinfo{year}{2021}).\n\\newblock\n\\newblock\n\\shownote{In arXiv: \\url{https://arxiv.org/abs/2103.11389}, accessed 22 August,\n  2021.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Hardy}{Hardy}{1940}]%\n        {Hardy-1940-acm}\n\\bibfield{author}{\\bibinfo{person}{Godfrey~H. Hardy}.}\n  \\bibinfo{year}{1940}\\natexlab{}.\n\\newblock \\bibinfo{booktitle}{\\emph{{A Mathematician's Apology}}}.\n\\newblock \\bibinfo{publisher}{Cambridge University Press}.\n\\newblock\n\\showISBNx{9781107295599}\n\\urldef\\tempurl%\n\\url{https://doi.org/10.1017/CBO9781139644112}\n\\showDOI{\\tempurl}\n\n\n\\bibitem[\\protect\\citeauthoryear{Harrison}{Harrison}{2010}]%\n        {Harrison-2010}\n\\bibfield{author}{\\bibinfo{person}{John Harrison}.}\n  \\bibinfo{year}{2010}\\natexlab{}.\n\\newblock \\bibinfo{title}{{Representation of primes $\\equiv 1\\pmod{4}$ as sum\n  of $2$ squares.}}\n\\newblock \\bibinfo{howpublished}{Formalizing 100 Theorems in HOL Light}.\n\\newblock\n\\newblock\n\\shownote{Available from\n  \\url{https://github.com/jrh13/hol-light/blob/master/100/two_squares.ml},\n  accessed 22 August, 2021.}\n\n\\newpage\n\\bibitem[\\protect\\citeauthoryear{Heath-Brown}{Heath-Brown}{1984}]%\n        {Heath-Brown-1984-acm}\n\\bibfield{author}{\\bibinfo{person}{Roger Heath-Brown}.}\n  \\bibinfo{year}{1984}\\natexlab{}.\n\\newblock \\showarticletitle{{Fermat’s two squares theorem}}.\n\\newblock \\bibinfo{journal}{\\emph{Invariant}}  \\bibinfo{volume}{11}\n  (\\bibinfo{year}{1984}), \\bibinfo{pages}{3--5}.\n\\newblock\n\\newblock\n\\shownote{Available from \\url{https://core.ac.uk/reader/97080}, accessed 22\n  August, 2021.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Hughes}{Hughes}{2019}]%\n        {Hughes-2019}\n\\bibfield{author}{\\bibinfo{person}{Chris Hughes}.}\n  \\bibinfo{year}{2019}\\natexlab{}.\n\\newblock \\bibinfo{title}{{Sums of two squares}}.\n\\newblock \\bibinfo{howpublished}{Lean Community, 100 theorems}.\n\\newblock\n\\newblock\n\\shownote{Available from \\url{https://leanprover-community.github.io/100.html},\n  accessed 22 August, 2021.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Malter, Schleicher, and Zagier}{Malter\n  et~al\\mbox{.}}{2013}]%\n        {Zagier-2013-acm}\n\\bibfield{author}{\\bibinfo{person}{Aimeric Malter}, \\bibinfo{person}{Dierk\n  Schleicher}, {and} \\bibinfo{person}{Don Zagier}.}\n  \\bibinfo{year}{2013}\\natexlab{}.\n\\newblock \\showarticletitle{{New Looks at Old Number Theory}}.\n\\newblock \\bibinfo{journal}{\\emph{The American Mathematical Monthly}}\n  \\bibinfo{volume}{120}, \\bibinfo{number}{3} (\\bibinfo{year}{2013}),\n  \\bibinfo{pages}{243--264}.\n\\newblock\n\\urldef\\tempurl%\n\\url{https://doi.org/10.4169/amer.math.monthly.120.03.243}\n\\showDOI{\\tempurl}\n\n\n\\bibitem[\\protect\\citeauthoryear{Narkawicz}{Narkawicz}{2012}]%\n        {Narkawicz-2012-acm}\n\\bibfield{author}{\\bibinfo{person}{Anthony Narkawicz}.}\n  \\bibinfo{year}{2012}\\natexlab{}.\n\\newblock \\bibinfo{title}{{primes_sum_squares: THEORY}}.\n\\newblock \\bibinfo{howpublished}{NASA PVS Library 6.0.9}.\n\\newblock\n\\newblock\n\\shownote{In\n  \\url{https://github.com/nasa/pvslib/blob/master/numbers/primes_sum_squares.pvs},\n  accessed 22 August, 2021.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Oosterhuis}{Oosterhuis}{2007}]%\n        {Oosterhuis-2007}\n\\bibfield{author}{\\bibinfo{person}{Roelof Oosterhuis}.}\n  \\bibinfo{year}{2007}\\natexlab{}.\n\\newblock \\bibinfo{title}{{Theory TwoSquares}}.\n\\newblock \\bibinfo{howpublished}{Isabelle, Archive of Formal Proofs}.\n\\newblock\n\\showISSN{2150-914x}\n\\newblock\n\\shownote{Available from \\url{https://www.isa-afp.org/entries/SumSquares.html},\n  accessed 22 August, 2021.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Riccardi}{Riccardi}{2009}]%\n        {Riccardi-2009}\n\\bibfield{author}{\\bibinfo{person}{Marco Riccardi}.}\n  \\bibinfo{year}{2009}\\natexlab{}.\n\\newblock \\bibinfo{title}{{theorem :: NAT_5:23}}.\n\\newblock \\bibinfo{howpublished}{Formalizing 100 Theorems in Mizar}.\n\\newblock\n\\newblock\n\\shownote{Available from \\url{http://www.mizar.org/100/index.html}, accessed 22\n  August, 2021.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Shiu}{Shiu}{1996}]%\n        {Shiu-1996}\n\\bibfield{author}{\\bibinfo{person}{Peter Shiu}.}\n  \\bibinfo{year}{1996}\\natexlab{}.\n\\newblock \\showarticletitle{{Involutions associated with Sums of Two Squares}}.\n\\newblock \\bibinfo{journal}{\\emph{Publications de l'Institut\n  Math{\\'{e}}matique}}  \\bibinfo{volume}{59} (\\bibinfo{year}{1996}),\n  \\bibinfo{pages}{18--39}.\n\\newblock\n\n\n\\bibitem[\\protect\\citeauthoryear{Spivak}{Spivak}{2007}]%\n        {Spivak-2007}\n\\bibfield{author}{\\bibinfo{person}{Alexander Spivak}.}\n  \\bibinfo{year}{2007}\\natexlab{}.\n\\newblock \\showarticletitle{{Winged Squares [in Russian]}}.\n\\newblock \\bibinfo{journal}{\\emph{Popular lectures in mathematics, 2006-2007\n  academic year, Lecture 15 (165)}} (\\bibinfo{date}{10 March}\n  \\bibinfo{year}{2007}).\n\\newblock\n\\newblock\n\\shownote{Available from \\url{http://mmmf.msu.ru/lect/spivak/zagir_!.pdf},\n  accessed 22 August, 2021.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Th{\\'e}ry}{Th{\\'e}ry}{2004}]%\n        {Thery-2004}\n\\bibfield{author}{\\bibinfo{person}{Laurent Th{\\'e}ry}.}\n  \\bibinfo{year}{2004}\\natexlab{}.\n\\newblock \\bibinfo{title}{{Numbers Equal to the Sum of Two Square Numbers}}.\n\\newblock \\bibinfo{howpublished}{Formalizing 100 theorems in Coq}.\n\\newblock\n\\newblock\n\\shownote{Available from\n  \\url{https://github.com/coq-contribs/sum-of-two-square}, accessed 22 August,\n  2021.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Trimble and Lama}{Trimble and Lama}{2008}]%\n        {Trimble-Lama-2008}\n\\bibfield{author}{\\bibinfo{person}{Todd Trimble} {and} \\bibinfo{person}{Vishal\n  Lama}.} \\bibinfo{year}{2008}\\natexlab{}.\n\\newblock \\bibinfo{title}{{A proof from The Book?}}\n\\newblock \\bibinfo{howpublished}{Todd and Vishal's blog}.\n\\newblock\n\\newblock\n\\shownote{Available from\n  \\url{http://topologicalmusings.wordpress.com/2008/05/04/a-proof-from-the-book/},\n  accessed 22 August, 2021.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Wagon}{Wagon}{1990}]%\n        {Wagon-1990-acm}\n\\bibfield{author}{\\bibinfo{person}{Stan Wagon}.}\n  \\bibinfo{year}{1990}\\natexlab{}.\n\\newblock \\showarticletitle{{Editor's Corner: The Euclidean Algorithm Strikes\n  Again}}.\n\\newblock \\bibinfo{journal}{\\emph{The American Mathematical Monthly}}\n  \\bibinfo{volume}{97}, \\bibinfo{number}{2} (\\bibinfo{year}{1990}),\n  \\bibinfo{pages}{125--129}.\n\\newblock\n\\urldef\\tempurl%\n\\url{https://doi.org/10.2307/2323912}\n\\showDOI{\\tempurl}\n\n\n\\bibitem[\\protect\\citeauthoryear{Wiedijk}{Wiedijk}{2020}]%\n        {Wiedijk-2020}\n\\bibfield{author}{\\bibinfo{person}{Freek Wiedijk}.} \\bibinfo{year}{last update:\n  2020}\\natexlab{}.\n\\newblock \\bibinfo{title}{{Formalizing 100 Theorems}}.\n\\newblock\n\\newblock\n\\newblock\n\\shownote{Available from \\url{https://www.cs.ru.nl/~freek/100/}, accessed 22\n  August, 2021.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Williams}{Williams}{2010}]%\n        {Williams-2010-alt}\n\\bibfield{author}{\\bibinfo{person}{Kenneth~S. Williams}.}\n  \\bibinfo{year}{2010}\\natexlab{}.\n\\newblock \\bibinfo{booktitle}{\\emph{{Number Theory in the Spirit of\n  Liouville}}}.\n\\newblock \\bibinfo{publisher}{Cambridge University Press, Cambridge, UK}.\n\\newblock\n\\showISBNx{9780511751684}\n\\urldef\\tempurl%\n\\url{https://doi.org/10.1017/CBO9780511751684}\n\\showDOI{\\tempurl}\n\\newblock\n\\shownote{ISBN: 9780511751684.}\n\n\n\\bibitem[\\protect\\citeauthoryear{Zagier}{Zagier}{1990}]%\n        {Zagier-1990-acm}\n\\bibfield{author}{\\bibinfo{person}{Don Zagier}.}\n  \\bibinfo{year}{1990}\\natexlab{}.\n\\newblock \\showarticletitle{{A One-Sentence Proof That Every Prime $p\\equiv\n  1\\pmod{4}$ Is a Sum of Two Squares}}.\n\\newblock \\bibinfo{journal}{\\emph{The American Mathematical Monthly}}\n  \\bibinfo{volume}{97}, \\bibinfo{number}{2} (\\bibinfo{year}{1990}),\n  \\bibinfo{pages}{144}.\n\\newblock\n\\urldef\\tempurl%\n\\url{https://doi.org/10.2307/2323918}\n\\showDOI{\\tempurl}\n\n\n\\end{thebibliography}\n"
+  }
+ ],
+ "sections": [
+  {
+   "level": 1,
+   "title": "Introduction",
+   "line": 452
+  },
+  {
+   "level": 2,
+   "title": "Contribution",
+   "line": 498
+  },
+  {
+   "level": 2,
+   "title": "Overview",
+   "line": 512
+  },
+  {
+   "level": 2,
+   "title": "Notation",
+   "line": 527
+  },
+  {
+   "level": 1,
+   "title": "Sum of Two Squares",
+   "line": 599
+  },
+  {
+   "level": 2,
+   "title": "Windmills",
+   "line": 692
+  },
+  {
+   "level": 2,
+   "title": "Involution",
+   "line": 821
+  },
+  {
+   "level": 1,
+   "title": "Windmill Involutions",
+   "line": 860
+  },
+  {
+   "level": 2,
+   "title": "Flip Map",
+   "line": 864
+  },
+  {
+   "level": 2,
+   "title": "Zagier Map",
+   "line": 950
+  },
+  {
+   "level": 2,
+   "title": "Mind of a Windmill",
+   "line": 977
+  },
+  {
+   "level": 1,
+   "title": "Two Squares Theorem",
+   "line": 1355
+  },
+  {
+   "level": 2,
+   "title": "Existence of Two Squares",
+   "line": 1359
+  },
+  {
+   "level": 2,
+   "title": "Uniqueness of Two Squares",
+   "line": 1407
+  },
+  {
+   "level": 1,
+   "title": "Two Squares Algorithm",
+   "line": 1452
+  },
+  {
+   "level": 2,
+   "title": "Flip Fix Search",
+   "line": 1515
+  },
+  {
+   "level": 1,
+   "title": "Permutation Orbits",
+   "line": 1552
+  },
+  {
+   "level": 2,
+   "title": "Involution Composition",
+   "line": 1603
+  },
+  {
+   "level": 2,
+   "title": "Period Parity",
+   "line": 1671
+  },
+  {
+   "level": 2,
+   "title": "Fixed Point Period Even",
+   "line": 1775
+  },
+  {
+   "level": 2,
+   "title": "Fixed Point Period Odd",
+   "line": 1913
+  },
+  {
+   "level": 2,
+   "title": "Fixed Point Orbits",
+   "line": 2045
+  },
+  {
+   "level": 1,
+   "title": "Correctness of Algorithm",
+   "line": 2079
+  },
+  {
+   "level": 2,
+   "title": "Iterate with WHILE",
+   "line": 2107
+  },
+  {
+   "level": 2,
+   "title": "Two Squares by WHILE",
+   "line": 2155
+  },
+  {
+   "level": 2,
+   "title": "Terminating Condition",
+   "line": 2250
+  },
+  {
+   "level": 2,
+   "title": "Lessons Learnt",
+   "line": 2265
+  },
+  {
+   "level": 2,
+   "title": "Related Work",
+   "line": 2336
+  },
+  {
+   "level": 1,
+   "title": "Conclusion",
+   "line": 2372
+  },
+  {
+   "level": 1,
+   "title": "Acknowledgements",
+   "line": 2398
+  },
+  {
+   "level": 1,
+   "title": "Appendices",
+   "line": 2412
+  },
+  {
+   "level": 1,
+   "title": "Cross-reference with Proof Script",
+   "line": 2416
+  }
+ ],
+ "latex_main": "src/windmills.tex"
+}

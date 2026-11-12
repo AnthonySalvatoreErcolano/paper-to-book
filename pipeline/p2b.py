@@ -283,11 +283,12 @@ def cmd_extract(a):
 
         def line_of(pos):
             return text.count("\n", 0, pos) + 1
-        for m in re.finditer(r"\\begin\{(\w+\*?)\}(\[[^\]]*\])?(.*?)\\end\{\1\}", text, re.S):
-            env = m.group(1).rstrip("*")
-            if env in names:
-                out["environments"].append({"kind": names[env], "label": (m.group(2) or "").strip("[]"),
-                                            "line": line_of(m.start()), "text": " ".join(m.group(3).split())[:1500]})
+        for env, kind in names.items():                      # one search per environment type
+            pat = r"\\begin\{" + re.escape(env) + r"\*?\}(\[[^\]]*\])?(.*?)\\end\{" + re.escape(env) + r"\*?\}"
+            for m in re.finditer(pat, text, re.S):
+                out["environments"].append({"kind": kind, "label": (m.group(1) or "").strip("[]"),
+                                            "line": line_of(m.start()), "text": " ".join(m.group(2).split())[:1500]})
+        out["environments"].sort(key=lambda e: e["line"])
         for m in re.finditer(r"\\(?:emph|textit|textbf)\{([^{}]{3,80})\}", text):
             out["emphasised"].append({"term": " ".join(m.group(1).split()), "line": line_of(m.start())})
         for m in re.finditer(r"\\(sub)*section\*?\{([^}]*)\}", text):
