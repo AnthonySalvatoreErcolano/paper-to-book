@@ -1,0 +1,25 @@
+name: fetch
+# Downloads the sources a book has requested (books/*/requests/fetch.json) and commits them.
+on:
+  push:
+    paths: ["books/*/requests/**"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: repo-writes, cancel-in-progress: false }
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install -r pipeline/requirements.txt
+      - run: python pipeline/p2b.py fetch --all
+      - name: Commit sources
+        run: |
+          git config user.name "paper-to-book bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add books/*/sources books/*/requests
+          git diff --cached --quiet || git commit -m "fetch: retrieved requested sources"
+          git pull --rebase && git push

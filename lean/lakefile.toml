@@ -1,0 +1,11 @@
+name = "books"
+defaultTargets = ["Books"]
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+# pinned so the book's checks are reproducible; lean-toolchain matches this commit
+rev = "af6dcfbf23867d9df7ee4835e28567fe509a2677"
+
+[[lean_lib]]
+name = "Books"

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prerequisite Map</title>
+<style>
+:root {
+  --bg: #fbfaf7; --panel: #ffffff; --ink: #1d1d1b; --muted: #6b6a66; --line: #d9d6cf;
+  --base: #e8f0e6; --base-b: #8fb08a; --node: #ffffff; --node-b: #9a958a; --sel: #2f5fa8;
+  --bad: #b3261e; --ok: #2e7d4f; --edge: #b9b4aa; --edge-hi: #2f5fa8; --paper: #fff3d6; --paper-b: #c99a2e;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #171715; --panel: #1f1f1c; --ink: #ecebe6; --muted: #a29f97; --line: #3a3934;
+  --base: #23331f; --base-b: #5f8a59; --node: #24241f; --node-b: #6f6b62; --sel: #7aa7ec;
+  --bad: #ef7d73; --ok: #6cc48f; --edge: #55524b; --edge-hi: #7aa7ec; --paper: #3a2f14; --paper-b: #c99a2e; } }
+:root[data-theme="dark"] {
+  --bg: #171715; --panel: #1f1f1c; --ink: #ecebe6; --muted: #a29f97; --line: #3a3934;
+  --base: #23331f; --base-b: #5f8a59; --node: #24241f; --node-b: #6f6b62; --sel: #7aa7ec;
+  --bad: #ef7d73; --ok: #6cc48f; --edge: #55524b; --edge-hi: #7aa7ec; --paper: #3a2f14; --paper-b: #c99a2e; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 Georgia, "Times New Roman", serif; }
+header { padding: 16px 20px 10px; border-bottom: 1px solid var(--line); }
+h1 { font-size: 19px; margin: 0 0 4px; font-weight: normal; }
+.sub { color: var(--muted); font-size: 13px; }
+.stats { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; font: 12.5px system-ui, sans-serif; }
+.stats b { font-weight: 600; }
+.bad { color: var(--bad); } .ok { color: var(--ok); }
+main { display: grid; grid-template-columns: minmax(0, 1fr) 360px; min-height: calc(100vh - 92px); }
+#graph { overflow: auto; position: relative; }
+svg { display: block; }
+aside { border-left: 1px solid var(--line); background: var(--panel); padding: 16px 18px; overflow: auto; max-height: calc(100vh - 92px); position: sticky; top: 0; }
+aside h2 { font-size: 17px; margin: 0 0 6px; font-weight: normal; }
+aside .k { font: 11.5px system-ui, sans-serif; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 14px 0 4px; }
+aside blockquote { margin: 4px 0 8px; padding: 2px 0 2px 10px; border-left: 2px solid var(--line); font-style: italic; font-size: 13px; }
+aside .src { font: 11.5px system-ui, sans-serif; color: var(--muted); }
+aside code { font-size: 12px; }
+.tag { display: inline-block; font: 11px system-ui, sans-serif; padding: 1px 6px; border-radius: 9px; border: 1px solid var(--line); margin: 0 4px 4px 0; }
+.node rect { fill: var(--node); stroke: var(--node-b); stroke-width: 1; rx: 6; }
+.node.baseline rect { fill: var(--base); stroke: var(--base-b); }
+.node.paper rect { fill: var(--paper); stroke: var(--paper-b); stroke-width: 1.5; }
+.node.undefined rect { stroke: var(--bad); stroke-dasharray: 4 3; }
+.node text { font: 12px system-ui, sans-serif; fill: var(--ink); pointer-events: none; }
+.node .ch { font-size: 10px; fill: var(--muted); }
+.node { cursor: pointer; }
+.node.sel rect { stroke: var(--sel); stroke-width: 2.2; }
+.node.dim { opacity: .28; }
+.edge { fill: none; stroke: var(--edge); stroke-width: 1.1; }
+.edge.unsourced { stroke: var(--bad); stroke-dasharray: 3 3; }
+.edge.hi { stroke: var(--edge-hi); stroke-width: 2; }
+.edge.dim { opacity: .15; }
+.legend { font: 12px system-ui, sans-serif; color: var(--muted); display: flex; gap: 14px; flex-wrap: wrap; margin-top: 6px; }
+.sw { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -2px; margin-right: 4px; border: 1px solid var(--node-b); }
+button { font: 12px system-ui, sans-serif; background: transparent; color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 3px 9px; cursor: pointer; }
+@media (max-width: 820px) { main { grid-template-columns: 1fr; } aside { border-left: 0; border-top: 1px solid var(--line); max-height: none; position: static; } }
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title">Prerequisite map</h1>
+  <div class="sub" id="subtitle"></div>
+  <div class="stats" id="stats"></div>
+  <div class="legend">
+    <span><span class="sw" style="background:var(--paper);border-color:var(--paper-b)"></span>the paper's own concepts</span>
+    <span><span class="sw" style="background:var(--node)"></span>to be taught</span>
+    <span><span class="sw" style="background:var(--base);border-color:var(--base-b)"></span>assumed background</span>
+    <span><span class="sw" style="border:1px dashed var(--bad)"></span>not yet sourced</span>
+    <span>Click a concept to see its sources. Arrows point from a concept to what it needs.</span>
+  </div>
+</header>
+<main>
+  <div id="graph"></div>
+  <aside id="detail"><h2>Select a concept</h2><p class="src">Each concept and each arrow is backed by a quotation checked against a retrieved source.</p></aside>
+</main>
+<script>
+const DATA = /*__DATA__*/null;
+(function () {
+  if (!DATA) { document.getElementById('detail').textContent = 'No data.'; return; }
+  const nodes = DATA.map.nodes, byId = Object.fromEntries(nodes.map(n => [n.id, n]));
+  const rep = DATA.report.nodes || {};
+  const led = DATA.ledger || {};
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const b = DATA.book || {};
+  document.getElementById('title').textContent = (b.title || b.slug || 'Book') + ': prerequisite map';
+  document.getElementById('subtitle').textContent = 'Assumed background: ' + (b.baseline || []).join('; ');
+  const probs = DATA.report.problems || [];
+  const teach = nodes.filter(n => !n.baseline);
+  const chapters = new Set(teach.map(n => n.chapter).filter(x => x != null));
+  document.getElementById('stats').innerHTML =
+    `<span><b>${teach.length}</b> concepts to teach</span><span><b>${chapters.size}</b> chapters planned</span>` +
+    `<span><b>${nodes.length - teach.length}</b> assumed</span>` +
+    `<span class="${probs.length ? 'bad' : 'ok'}"><b>${probs.length}</b> grounding problems</span>`;
+
+  // longest-path layering: baseline at the bottom, the paper at the top
+  const level = {};
+  const depth = id => {
+    if (level[id] != null) return level[id];
+    level[id] = 0;
+    const req = (byId[id].requires || []).filter(r => byId[r]);
+    level[id] = req.length ? 1 + Math.max(...req.map(depth)) : 0;
+    return level[id];
+  };
+  nodes.forEach(n => depth(n.id));
+  const maxL = Math.max(0, ...Object.values(level));
+  const rows = [];
+  nodes.forEach(n => (rows[level[n.id]] ||= []).push(n));
+  // order within rows by the mean position of what they need (a few sweeps)
+  const pos = {};
+  rows.forEach(r => r.forEach((n, i) => pos[n.id] = i));
+  for (let s = 0; s < 4; s++) rows.forEach((r, L) => {
+    if (!L) return;
+    r.forEach(n => { const q = (n.requires || []).filter(x => pos[x] != null);
+      n._k = q.length ? q.reduce((a, x) => a + pos[x], 0) / q.length : pos[n.id]; });
+    r.sort((a, c) => a._k - c._k); r.forEach((n, i) => pos[n.id] = i);
+  });
+  const W = 168, H = 44, GX = 26, GY = 70, PAD = 30;
+  const widest = Math.max(...rows.map(r => r.length));
+  const width = PAD * 2 + widest * W + (widest - 1) * GX, height = PAD * 2 + (maxL + 1) * H + maxL * GY;
+  const xy = {};
+  rows.forEach((r, L) => {
+    const rowW = r.length * W + (r.length - 1) * GX, x0 = (width - rowW) / 2;
+    r.forEach((n, i) => xy[n.id] = { x: x0 + i * (W + GX), y: PAD + (maxL - L) * (H + GY) });
+  });
+  const svgNS = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(svgNS, 'svg');
+  svg.setAttribute('width', width); svg.setAttribute('height', height);
+  svg.innerHTML = `<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="var(--edge)"/></marker></defs>`;
+  const edges = [];
+  nodes.forEach(n => (n.requires || []).forEach(r => {
+    if (!xy[r]) return;
+    const a = xy[n.id], c = xy[r];
+    const p = document.createElementNS(svgNS, 'path');
+    const x1 = a.x + W / 2, y1 = a.y + H, x2 = c.x + W / 2, y2 = c.y, my = (y1 + y2) / 2;
+    p.setAttribute('d', `M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2 - 2}`);
+    const ok = rep[n.id] && rep[n.id].edges && rep[n.id].edges[r];
+    p.setAttribute('class', 'edge' + (ok ? '' : ' unsourced'));
+    p.setAttribute('marker-end', 'url(#ar)');
+    p.dataset.from = n.id; p.dataset.to = r;
+    svg.appendChild(p); edges.push(p);
+  }));
+  const gs = {};
+  nodes.forEach(n => {
+    const g = document.createElementNS(svgNS, 'g');
+    const st = rep[n.id] || {};
+    g.setAttribute('class', 'node' + (n.baseline ? ' baseline' : '') + (n.in_paper && n.in_paper.length ? ' paper' : '') + (st.defined ? '' : ' undefined'));
+    g.setAttribute('transform', `translate(${xy[n.id].x},${xy[n.id].y})`);
+    const title = n.title.length > 24 ? n.title.slice(0, 23) + '…' : n.title;
+    g.innerHTML = `<rect width="${W}" height="${H}"></rect><text x="${W / 2}" y="19" text-anchor="middle">${esc(title)}</text>` +
+      `<text class="ch" x="${W / 2}" y="34" text-anchor="middle">${n.baseline ? 'assumed' : (n.chapter != null ? 'Chapter ' + n.chapter : 'unplaced')}</text>`;
+    g.addEventListener('click', () => select(n.id));
+    svg.appendChild(g); gs[n.id] = g;
+  });
+  document.getElementById('graph').appendChild(svg);
+
+  const ancestors = id => { const s = new Set(); const go = x => (byId[x].requires || []).forEach(r => { if (byId[r] && !s.has(r)) { s.add(r); go(r); } }); go(id); return s; };
+  function select(id) {
+    const n = byId[id], anc = ancestors(id);
+    Object.entries(gs).forEach(([k, g]) => { g.classList.toggle('sel', k === id); g.classList.toggle('dim', k !== id && !anc.has(k)); });
+    edges.forEach(e => { const on = e.dataset.from === id || anc.has(e.dataset.from); e.classList.toggle('hi', on); e.classList.toggle('dim', !on); });
+    const ent = Object.values(led).filter(e => e.node === id || e.from === id);
+    const quote = e => `<blockquote>${esc(e.quote)}</blockquote><div class="src">${e.ok ? '<span class="ok">✓ checked</span>' : '<span class="bad">✗ ' + esc((e.problems || []).join('; ')) + '</span>'} · <code>${esc(e.source)}</code>${e.locator ? ', ' + esc(e.locator) : ''} · ${esc(e.id)}</div>`;
+    const defs = ent.filter(e => e.kind !== 'edge'), eds = ent.filter(e => e.kind === 'edge');
+    const ml = (n.mathlib || []).map(x => `<span class="tag">${DATA.lean[x] === true ? '<span class="ok">✓</span>' : DATA.lean[x] === false ? '<span class="bad">✗</span>' : '·'} <code>${esc(x)}</code></span>`).join('');
+    document.getElementById('detail').innerHTML =
+      `<h2>${esc(n.title)}</h2><div class="src">${n.baseline ? 'Assumed background' : (n.chapter != null ? 'Chapter ' + n.chapter : 'Not yet placed in a chapter')}` +
+      `${n.in_paper && n.in_paper.length ? ' · used in the paper: ' + esc(n.in_paper.join(', ')) : ''}</div>` +
+      (n.notes ? `<p>${esc(n.notes)}</p>` : '') +
+      `<div class="k">Definition / statement</div>` + (defs.length ? defs.map(quote).join('') : (n.baseline ? '<div class="src">Assumed; not taught.</div>' : '<div class="bad">No sourced definition yet.</div>')) +
+      `<div class="k">Needs</div>` + ((n.requires || []).length ? (n.requires || []).map(r => {
+          const e = eds.find(x => x.to === r);
+          return `<div><a href="#" data-go="${esc(r)}">${esc((byId[r] || {}).title || r)}</a></div>` + (e ? quote(e) : '<div class="bad src">No sourced reason for this link yet.</div>');
+        }).join('') : '<div class="src">Nothing beyond the background.</div>') +
+      (ml ? `<div class="k">Lean / mathlib</div>${ml}` : '');
+    document.querySelectorAll('[data-go]').forEach(a => a.addEventListener('click', ev => { ev.preventDefault(); select(a.dataset.go); }));
+  }
+})();
+</script>
+</body>
+</html>

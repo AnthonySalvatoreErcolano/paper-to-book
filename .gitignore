@@ -1,0 +1,11 @@
+lean/.lake/
+lean/build.log
+books/*/build/*.aux
+books/*/build/*.log
+books/*/build/*.toc
+books/*/build/*.out
+books/*/build/*.idx
+books/*/build/*.ind
+books/*/build/*.ilg
+books/*/build/status.json
+__pycache__/

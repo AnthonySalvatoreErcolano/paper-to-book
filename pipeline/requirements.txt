@@ -1,0 +1,4 @@
+pypdf>=4
+beautifulsoup4>=4.12
+requests>=2.31
+sympy>=1.12
