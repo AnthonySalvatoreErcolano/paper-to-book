@@ -64,11 +64,11 @@ local function lean_tag(names)
   local parts = {}
   for n in names:gsub("[\"']", ""):gmatch("[^,%s]+") do
     if status.lean_ok[n] then
-      table.insert(parts, "\\leanok{" .. esc(n) .. "}")
+      table.insert(parts, "\\leanok{" .. n .. "}")
     elseif status.lean_checked[n] then
-      table.insert(parts, "\\leanbad{" .. esc(n) .. "}")
+      table.insert(parts, "\\leanbad{" .. n .. "}")
     else
-      table.insert(parts, "\\leanpending{" .. esc(n) .. "}")
+      table.insert(parts, "\\leanpending{" .. n .. "}")
     end
   end
   return table.concat(parts, "\\\\")
