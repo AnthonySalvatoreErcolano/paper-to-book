@@ -3,8 +3,12 @@ import Mathlib
 import Books.Windmills.Ch01
 
 #check @Book.Windmills.Ch01.division  -- p2b:name Book.Windmills.Ch01.division
+#check @Book.Windmills.Ch01.division_unique  -- p2b:name Book.Windmills.Ch01.division_unique
+#check @Book.Windmills.Ch01.dvd_iff_mod  -- p2b:name Book.Windmills.Ch01.dvd_iff_mod
 #check @Book.Windmills.Ch01.even_iff_mod  -- p2b:name Book.Windmills.Ch01.even_iff_mod
 #check @Book.Windmills.Ch01.even_or_odd  -- p2b:name Book.Windmills.Ch01.even_or_odd
+#check @Book.Windmills.Ch01.not_even_and_odd  -- p2b:name Book.Windmills.Ch01.not_even_and_odd
+#check @Book.Windmills.Ch01.odd_iff_mod  -- p2b:name Book.Windmills.Ch01.odd_iff_mod
 #check @Book.Windmills.Ch01.odd_prime_mod_four  -- p2b:name Book.Windmills.Ch01.odd_prime_mod_four
 #check @Book.Windmills.Ch01.prime_even_eq_two  -- p2b:name Book.Windmills.Ch01.prime_even_eq_two
 #check @Dvd.dvd  -- p2b:name Dvd.dvd
@@ -25,9 +29,9 @@ import Books.Windmills.Ch01
 #check @IsSquare  -- p2b:name IsSquare
 #check @Nat.ModEq  -- p2b:name Nat.ModEq
 #check @Nat.Prime  -- p2b:name Nat.Prime
-#check @Nat.Prime.eq_one_or_self_of_dvd  -- p2b:name Nat.Prime.eq_one_or_self_of_dvd
 #check @Nat.Prime.sq_add_sq  -- p2b:name Nat.Prime.sq_add_sq
 #check @Nat.div_add_mod  -- p2b:name Nat.div_add_mod
 #check @Nat.iterate  -- p2b:name Nat.iterate
+#check @Nat.prime_def  -- p2b:name Nat.prime_def
 #check @Odd  -- p2b:name Odd
 #check @Set.Finite  -- p2b:name Set.Finite

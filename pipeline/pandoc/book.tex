@@ -38,6 +38,25 @@
 \newcommand{\leanbad}[1]{\textcolor{unsourced}{\textsf{Lean \crossmk} \texttt{\detokenize{#1}}}}
 \newcommand{\leanpending}[1]{\textcolor{srcgray}{\textsf{not yet formally checked:} \texttt{\detokenize{#1}}}}
 \newcommand{\srccite}[2]{\textcolor{srcgray}{[\texttt{#1}\ifx&#2&\else, #2\fi]}}
+\newcommand{\derivedtag}[1]{\textcolor{srcgray}{\textsf{Derived here} from #1}}
+
+% ---- the paper's HOL4 notation, so quotations from its LaTeX source print as in the paper ----
+\providecommand{\HOLinline}[1]{\ensuremath{#1}}
+\providecommand{\HOLFreeVar}[1]{\mathit{#1}}
+\providecommand{\HOLBoundVar}[1]{\mathit{#1}}
+\providecommand{\HOLConst}[1]{\textsf{#1}}
+\providecommand{\HOLSymConst}[1]{#1}
+\providecommand{\HOLNumLit}[1]{#1}
+\providecommand{\HOLKeyword}[1]{\textbf{\textsf{#1}}}
+\providecommand{\HOLFieldName}[1]{\textsf{#1}}
+\providecommand{\HOLTokenExists}{\exists}\providecommand{\HOLTokenForall}{\forall}\providecommand{\HOLTokenUnique}{\exists!}
+\providecommand{\HOLTokenConj}{\land}\providecommand{\HOLTokenDisj}{\lor}\providecommand{\HOLTokenNeg}{\lnot}
+\providecommand{\HOLTokenImp}{\Rightarrow}\providecommand{\HOLTokenEquiv}{\Leftrightarrow}\providecommand{\HOLTokenLambda}{\lambda}
+\providecommand{\HOLTokenIn}{\in}\providecommand{\HOLTokenNotIn}{\notin}\providecommand{\HOLTokenLt}{<}\providecommand{\HOLTokenLeq}{\le}
+\providecommand{\HOLTokenNotEqual}{\neq}\providecommand{\HOLTokenCompose}{\circ}\providecommand{\HOLTokenTurnstile}{\vdash}
+\providecommand{\HOLTokenDefEquality}{\mathrel{\stackrel{\scriptscriptstyle\mathrm{def}}{=}}}
+\providecommand{\HOLTokenLeftbrace}{\{}\providecommand{\HOLTokenRightbrace}{\}}\providecommand{\HOLTokenBar}{\mid}
+\providecommand{\HOLTokenEmpty}{\emptyset}
 
 % ---- environments ----
 \theoremstyle{plain}
@@ -94,6 +113,7 @@ Each definition and theorem carries a margin note saying where it comes from:
 \item \srcok{source}{§} --- quoted from a retrieved source, and the quotation was checked automatically;
 \item \leanok{name} --- the statement matches a declaration in Lean's mathlib that compiles;
 \item \leanpending{name} --- a formal counterpart exists but has not been checked yet;
+\item \derivedtag{sources} --- not stated in any source, but proved in this book from the sourced results named, with the proof given and checked in Lean;
 \item \unsourced{} or \srcbad{id} --- not backed by a checked source: treat with suspicion.
 \end{itemize}
 Shaded boxes are definitions; passages with a grey bar on the left are verbatim quotations;

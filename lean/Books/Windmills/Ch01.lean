@@ -21,6 +21,14 @@ theorem division_unique (a b q r : ℕ) (hr : r < b) (h : a = b * q + r) :
   · rw [Nat.add_comm, Nat.add_mul_div_left _ _ hb, Nat.div_eq_of_lt hr, Nat.zero_add]
   · rw [Nat.add_comm, Nat.add_mul_mod_self_left, Nat.mod_eq_of_lt hr]
 
+/-- `n ∣ m` exactly when the remainder of `m` on division by `n` is 0
+(true for every `n`; the chapter states it for `n ≠ 0`). -/
+theorem dvd_iff_mod (n m : ℕ) : n ∣ m ↔ m % n = 0 :=
+  ⟨Nat.mod_eq_zero_of_dvd, Nat.dvd_of_mod_eq_zero⟩
+
+/-- mathlib's convention for the divisor 0, mentioned in the chapter's remark. -/
+theorem zero_dvd (m : ℕ) : 0 ∣ m ↔ m = 0 := zero_dvd_iff
+
 /-- Every number is even or odd. -/
 theorem even_or_odd (n : ℕ) : Even n ∨ Odd n := Nat.even_or_odd n
 
@@ -44,8 +52,15 @@ theorem prime_even_eq_two {p : ℕ} (hp : p.Prime) (he : Even p) : p = 2 := by
   · rw [Nat.even_iff] at he
     omega
 
-/-- An odd prime leaves remainder 1 or 3 on division by 4. -/
-theorem odd_prime_mod_four {p : ℕ} (hp : p.Prime) (h2 : p ≠ 2) :
+/-- An odd prime leaves remainder 1 or 3 on division by 4 (the chapter's statement:
+"odd prime"; primality is not even needed for the conclusion, only oddness). -/
+theorem odd_prime_mod_four {p : ℕ} (_hp : p.Prime) (ho : Odd p) :
+    p % 4 = 1 ∨ p % 4 = 3 := by
+  rw [Nat.odd_iff] at ho
+  omega
+
+/-- The same, phrased as "a prime other than 2". -/
+theorem prime_ne_two_mod_four {p : ℕ} (hp : p.Prime) (h2 : p ≠ 2) :
     p % 4 = 1 ∨ p % 4 = 3 := by
   have h := hp.mod_two_eq_one_iff_ne_two.mpr h2
   omega

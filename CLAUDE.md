@@ -80,6 +80,12 @@ Classes: `definition`, `theorem`, `lemma`, `proposition`, `corollary`, `example`
 `exercise`, `quote`, `inpaper` (where the concept is used in the paper), `remark`.
 A `definition`/`theorem`/`lemma`/`proposition`/`corollary` without `ledger=` renders as UNSOURCED.
 
+A result that no source states but that the book proves (for example "every number is even or
+odd", from division with remainder) carries `derived=ID,ID` naming the ledger entries it is proved
+from, a `proof` block right after it, and a `lean=` name that the Lean report verifies. It renders
+"Derived here from …". Without a `lean=` name it still renders UNSOURCED. Use `derived=` only for
+genuine consequences; anything a source states goes through `ledger=`.
+
 ## Layout of a book
 
 ```

@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-12T17:16:51Z",
+ "checked": "2026-11-12T17:25:38Z",
  "entries": {
   "L001": {
    "ok": true,
@@ -961,6 +961,42 @@
    "kind": "fact",
    "source": "paper",
    "node": "square",
+   "from": null,
+   "to": null
+  },
+  "C1-16": {
+   "ok": true,
+   "problems": [],
+   "kind": "fact",
+   "source": "paper",
+   "node": "two-squares",
+   "from": null,
+   "to": null
+  },
+  "C1-17": {
+   "ok": true,
+   "problems": [],
+   "kind": "fact",
+   "source": "paper",
+   "node": "divisibility",
+   "from": null,
+   "to": null
+  },
+  "C1-18": {
+   "ok": true,
+   "problems": [],
+   "kind": "fact",
+   "source": "paper",
+   "node": "b-algebra",
+   "from": null,
+   "to": null
+  },
+  "C1-19": {
+   "ok": true,
+   "problems": [],
+   "kind": "fact",
+   "source": "paper",
+   "node": "parity",
    "from": null,
    "to": null
   }

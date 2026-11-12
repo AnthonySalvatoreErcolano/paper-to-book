@@ -20,6 +20,7 @@ sums = {u * u + v * v for u in range(12) for v in range(12)}
 check("3, 7, 11 are not sums of two squares", not ({3, 7, 11} & sums))
 check("squares up to 11 are 0,1,4,9", [k * k for k in range(12) if k * k <= 11] == [0, 1, 4, 9])
 # exercises (answers checked so the exercise statements are sound)
+check("29 and 61 are prime", isprime(29) and isprime(61))
 check("29 = 4*7+1, 61 = 4*15+1", divmod(29, 4) == (7, 1) and divmod(61, 4) == (15, 1))
 check("5,13,17,29,37,41 are sums of two squares", all(p in sums for p in (5, 13, 17, 29, 37, 41)))
 check("odd squares are odd (k < 10^4)", all(((2 * k + 1) ** 2) % 2 == 1 for k in range(10**4)))

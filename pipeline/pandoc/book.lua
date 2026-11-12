@@ -82,7 +82,16 @@ function Div(el)
   local notes = {}
   local lt = ledger_tag(ledger)
   if lt then table.insert(notes, lt) end
-  if THEOREMISH[cls] and (not ledger or ledger == "") then table.insert(notes, "\\unsourced") end
+  local derived = el.attributes["derived"]
+  if derived and derived ~= "" then
+    local ids = {}
+    for one in derived:gmatch("[^,%s]+") do
+      local sid = status.src[one]
+      table.insert(ids, (status.ledger_ok[one] and sid) and ("\\texttt{" .. esc(sid) .. "}") or ("\\srcbad{" .. esc(one) .. "}"))
+    end
+    table.insert(notes, "\\derivedtag{" .. table.concat(ids, ", ") .. "}")
+    if not lean or lean == "" then table.insert(notes, "\\unsourced") end   -- derived results must be Lean-checked
+  elseif THEOREMISH[cls] and (not ledger or ledger == "") then table.insert(notes, "\\unsourced") end
   local nt = lean_tag(lean)
   if nt then table.insert(notes, nt) end
   local open = "\\begin{" .. env .. "}" .. (title and ("[" .. esc(title) .. "]") or "")
