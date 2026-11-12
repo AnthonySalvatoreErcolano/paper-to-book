@@ -56,7 +56,7 @@ local function ledger_tag(id)
       table.insert(parts, "\\srcbad{" .. esc(one) .. "}")
     end
   end
-  return table.concat(parts, "\\\\")
+  return table.concat(parts, "; ")
 end
 
 local function lean_tag(names)
@@ -71,7 +71,7 @@ local function lean_tag(names)
       table.insert(parts, "\\leanpending{" .. n .. "}")
     end
   end
-  return table.concat(parts, "\\\\")
+  return table.concat(parts, "; ")
 end
 
 function Div(el)
@@ -96,9 +96,12 @@ function Div(el)
   elseif THEOREMISH[cls] and (not ledger or ledger == "") then table.insert(notes, "\\unsourced") end
   local nt = lean_tag(lean)
   if nt then table.insert(notes, nt) end
-  local open = "\\begin{" .. env .. "}" .. (title and ("[" .. esc(title) .. "]") or "")
+  -- notes go to the foot of the page: a marker here, the text queued until the outermost box closes
+  local open = "\\bpush\\begin{" .. env .. "}" .. (title and ("[" .. esc(title) .. "]") or "")
   if el.identifier ~= "" then open = open .. "\\label{" .. el.identifier .. "}" end
-  if #notes > 0 then open = open .. "\\srcmargin{" .. table.concat(notes, "\\\\[2pt]") .. "}" end
+  local notetex = #notes > 0 and ("\\srcnote{" .. table.concat(notes, " \\enspace\\textperiodcentered\\enspace ") .. "}") or nil
+  -- a quotation gets its marker at the end of the quoted text; other blocks right after their heading
+  if notetex and cls ~= "quote" then open = open .. notetex end
   local blocks = {texb(open)}
   -- index the term a definition introduces (its first bold text)
   if cls == "definition" then
@@ -121,7 +124,15 @@ function Div(el)
     end
   end
   for _, b in ipairs(el.content) do table.insert(blocks, b) end
-  table.insert(blocks, texb("\\end{" .. env .. "}"))
+  if notetex and cls == "quote" then
+    local last = blocks[#blocks]
+    if last and (last.t == "Para" or last.t == "Plain") then
+      table.insert(last.content, pandoc.RawInline("latex", "\\unskip" .. notetex))
+    else
+      table.insert(blocks, texb(notetex))
+    end
+  end
+  table.insert(blocks, texb("\\end{" .. env .. "}\\bpop"))
   return blocks
 end
 
@@ -139,7 +150,7 @@ function Cite(c)
       table.insert(out, "\\textcolor{unsourced}{[no ledger entry " .. esc(id) .. "]}")
     end
   end
-  return tex(table.concat(out, "; "))
+  return tex("\\unskip\\srccitenote{" .. table.concat(out, "; ") .. "}")
 end
 
 return {{Meta = Meta}, {Div = Div, Cite = Cite}}

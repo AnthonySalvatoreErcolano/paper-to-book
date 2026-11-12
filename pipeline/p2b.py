@@ -669,13 +669,14 @@ def paper_part_tex(d, book, m, paper_pdf, chapters):
         notes = sorted(hits.items(), key=lambda x: x[1])[:9]
         for title, ch in notes:
             guide_rows.setdefault(title, (ch, i))
-        note = r"\\".join(rf"{tex_escape(tt)} \hfill Ch.~{ch}" for tt, ch in notes) or r"\textit{}"
-        pages.append(rf"\includepdf[pages={i},scale=0.86,offset=-0.55in 0in,pagecommand={{\papernote{{{note}}}}}]{{{paper_pdf.resolve()}}}")
+        note = (r"\textbf{In this book:} " + r" \enspace\textperiodcentered\enspace ".join(
+            rf"{tex_escape(tt)} (Ch.~{ch})" for tt, ch in notes)) if notes else ""
+        pages.append(rf"\includepdf[pages={i},scale=0.88,offset=0in 0.42in,pagecommand={{\thispagestyle{{empty}}\papernote{{{note}}}}}]{{{paper_pdf.resolve()}}}")
     rows = "\n".join(rf"{tex_escape(t)} & Chapter~{c} & p.~{p} of the paper\\" for t, (c, p) in
                      sorted(guide_rows.items(), key=lambda x: (x[1][1], x[1][0])))
     return (r"\part{The Paper}" "\n" r"\chapter*{Reader's guide to the paper}\addcontentsline{toc}{chapter}{Reader's guide to the paper}"
-            "\nThe paper follows exactly as published. In the margin of each page are the concepts from this book "
-            "that appear on it, with the chapter that teaches them. The first appearance of each:\n\n"
+            "\nThe paper follows exactly as published, slightly reduced. Along the foot of each page are the concepts "
+            "from this book that appear on it, with the chapter that teaches them. The first appearance of each:\n\n"
             r"\begin{longtable}{p{0.5\textwidth}ll}" "\n" + rows + "\n" r"\end{longtable}" "\n"
             + "\n".join(pages))
 

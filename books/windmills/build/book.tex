@@ -1,12 +1,23 @@
 % paper-to-book template (filled in by pipeline/p2b.py build)
 \documentclass[11pt,letterpaper,openright]{book}
-\usepackage[inner=1in,outer=2.3in,top=1in,bottom=1in,marginparwidth=1.75in,marginparsep=0.25in]{geometry}
+\usepackage[inner=1.1in,outer=1.1in,top=1in,bottom=1in]{geometry}
 \usepackage{amsmath,amssymb,amsthm,mathtools}
 \usepackage{fontspec}
 \usepackage{unicode-math}
-\setmainfont{Latin Modern Roman}
+% one typeface throughout: TeX Gyre Termes, a free clone of Times (Times New Roman itself is
+% a licensed font). Maths symbols come from Latin Modern Math, with its letters and digits in Termes.
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Termes}
+\setmonofont{TeX Gyre Termes}
 \setmathfont{Latin Modern Math}
-\newfontfamily\symbolfont{DejaVu Sans}\newcommand{\checkmk}{{\symbolfont ✓}}\newcommand{\crossmk}{{\symbolfont ✗}}
+\setmathfont[range={up/{latin,Latin,num}}]{texgyretermes-regular.otf}
+\setmathfont[range={it/{latin,Latin}}]{texgyretermes-italic.otf}
+\setmathfont[range={bfup/{latin,Latin,num}}]{texgyretermes-bold.otf}
+\setmathfont[range={bfit/{latin,Latin}}]{texgyretermes-bolditalic.otf}
+\newfontfamily\symbolfont{Latin Modern Math}\newcommand{\checkmk}{{\symbolfont ✓}}\newcommand{\crossmk}{{\symbolfont ✗}}
+\usepackage{emptypage}
+\usepackage[perpage,hang,flushmargin]{footmisc}
+\renewcommand{\footnotelayout}{\scriptsize\raggedright}
 \usepackage{microtype}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{longtable,booktabs,array,calc}
@@ -30,14 +41,31 @@
 \definecolor{quotebar}{RGB}{170,170,170}
 
 % ---- margin tags: where each statement comes from ----
-\newcommand{\srcmargin}[1]{\marginnote{\raggedright\scriptsize #1}}
+% ---- source notes: a marker in the text, the note at the foot of the page ----
+% Notes raised inside a box are queued and set when the outermost box closes, so they
+% land at the foot of the page instead of inside the box.
+\newcount\bdepth
+\newcounter{pendingnotes}
+\makeatletter
+\newcommand{\bpush}{\global\advance\bdepth 1\relax}
+\newcommand{\bpop}{\global\advance\bdepth -1\relax\ifnum\bdepth=0 \flushsrcnotes\fi}
+\newcommand{\srcnote}[1]{\footnotemark\stepcounter{pendingnotes}%
+  \expandafter\gdef\csname pnote@\arabic{pendingnotes}\endcsname{#1}%
+  \expandafter\xdef\csname pnum@\arabic{pendingnotes}\endcsname{\arabic{footnote}}}
+\newcommand{\flushsrcnotes}{\ifnum\value{pendingnotes}>0 \@tempcnta=0
+  \loop\advance\@tempcnta 1
+    \footnotetext[\csname pnum@\the\@tempcnta\endcsname]{\csname pnote@\the\@tempcnta\endcsname}%
+  \ifnum\@tempcnta<\value{pendingnotes}\repeat
+  \setcounter{pendingnotes}{0}\fi}
+\newcommand{\srccitenote}[1]{\ifnum\bdepth=0 \footnote{#1}\else\srcnote{#1}\fi}
+\makeatother
 \newcommand{\srcok}[3]{\textcolor{srcgray}{\textsf{Source:} \texttt{#1}\ifx&#2&\else, #2\fi}}
 \newcommand{\srcbad}[1]{\textcolor{unsourced}{\textbf{\textsf{LEDGER CHECK FAILED}} (#1)}}
 \newcommand{\unsourced}{\textcolor{unsourced}{\textbf{\textsf{UNSOURCED}}}}
 \newcommand{\leanok}[1]{\textcolor{leangreen}{\textsf{Lean \checkmk} \texttt{\detokenize{#1}}}}
 \newcommand{\leanbad}[1]{\textcolor{unsourced}{\textsf{Lean \crossmk} \texttt{\detokenize{#1}}}}
 \newcommand{\leanpending}[1]{\textcolor{srcgray}{\textsf{not yet formally checked:} \texttt{\detokenize{#1}}}}
-\newcommand{\srccite}[2]{\textcolor{srcgray}{[\texttt{#1}\ifx&#2&\else, #2\fi]}}
+\newcommand{\srccite}[2]{\textcolor{srcgray}{\textsf{Source:} \texttt{#1}\ifx&#2&\else, #2\fi}}
 \newcommand{\derivedtag}[1]{\textcolor{srcgray}{\textsf{Derived here} from #1}}
 
 % ---- the paper's HOL4 notation, so quotations from its LaTeX source print as in the paper ----
@@ -82,8 +110,9 @@
 
 % ---- the paper's pages: note column on the right ----
 \newcommand{\papernote}[1]{\begin{tikzpicture}[remember picture,overlay]
-  \node[anchor=north west,text width=1.55in,font=\scriptsize\sffamily,align=left]
-    at ([xshift=-2.0in,yshift=-1.1in]current page.north east) {\textbf{In this book}\\[3pt]#1};
+  \draw[black!30,line width=0.4pt] ([xshift=1.1in,yshift=0.72in]current page.south west) -- ([xshift=-1.1in,yshift=0.72in]current page.south east);
+  \node[anchor=north,text width=6.3in,font=\scriptsize,align=center]
+    at ([yshift=0.66in]current page.south) {#1};
   \end{tikzpicture}}
 
 \pagestyle{fancy}
@@ -108,7 +137,8 @@ statements marked \textsf{Lean \checkmk} are verified against Lean's mathlib.\pa
 \tableofcontents
 \chapter*{How to read this book}\addcontentsline{toc}{chapter}{How to read this book}
 The chapters build, in order, everything the paper uses that goes beyond the assumed background.
-Each definition and theorem carries a margin note saying where it comes from:
+Each definition, theorem and quotation carries a small number referring to a note at the foot
+of the page, saying where it comes from:
 \begin{itemize}
 \item \srcok{source}{§} --- quoted from a retrieved source, and the quotation was checked automatically;
 \item \leanok{name} --- the statement matches a declaration in Lean's mathlib that compiles;
@@ -125,13 +155,14 @@ blue boxes show where the idea appears in the paper. The last part is the paper 
 The paper proves a theorem of Fermat about primes and squares, and turns
 the proof into an algorithm. In the paper's own words:
 
-\begin{bquote}\srcmargin{\srcok{paper}{§1}{C1-16}}
+\bpush\begin{bquote}
 
 Fermat's two squares theorem, dated back to 1640, states that a prime
 \(n\) that is one more than a multiple of \(4\) can be uniquely
-expressed as a sum of odd and even squares
+expressed as a sum of odd and even
+squares\unskip\srcnote{\srcok{paper}{§1}{C1-16}}
 
-\end{bquote}
+\end{bquote}\bpop
 
 To follow it you need five ideas about whole numbers: when one number
 \emph{divides} another, \emph{division with remainder}, \emph{even and
@@ -141,12 +172,12 @@ and proves the few facts about them that the paper uses.
 Throughout, a \emph{number} means a natural number
 \(0, 1, 2, 3, \dots\), as in the paper:
 
-\begin{bquote}\srcmargin{\srcok{paper}{§1.3}{C1-18}}
+\bpush\begin{bquote}
 
 The set of natural numbers is denoted by \(\mathbb{N}\), counting from
-\(0\)
+\(0\)\unskip\srcnote{\srcok{paper}{§1.3}{C1-18}}
 
-\end{bquote}
+\end{bquote}\bpop
 
 Some of the definitions quoted below are stated for all integers,
 negative ones included; we only ever apply them to natural numbers.
@@ -154,7 +185,7 @@ negative ones included; we only ever apply them to natural numbers.
 \hypertarget{divisibility}{%
 \section{Divisibility}\label{divisibility}}
 
-\begin{bdefinition}\label{def-divides}\srcmargin{\srcok{wp-divisor}{Definition}{L001}\\[2pt]\leanok{Dvd.dvd}}
+\bpush\begin{bdefinition}\label{def-divides}\srcnote{\srcok{wp-divisor}{Definition}{L001} \enspace\textperiodcentered\enspace \leanok{Dvd.dvd}}
 
 \index{divisible}
 
@@ -162,50 +193,52 @@ A number \(m\) is \textbf{divisible} by a nonzero number \(d\) if
 \(m = kd\) for some number \(k\). We then say \(d\) \emph{divides}
 \(m\), and write \(d \mid m\).
 
-\end{bdefinition}
+\end{bdefinition}\bpop
 
-\begin{bquote}\srcmargin{\srcok{wp-divisor}{Definition}{L001}}
+\bpush\begin{bquote}
 
 An integer n is divisible by a nonzero integer m if there exists an
-integer k such that n = k m .
+integer k such that n = k m
+.\unskip\srcnote{\srcok{wp-divisor}{Definition}{L001}}
 
-\end{bquote}
+\end{bquote}\bpop
 
 So \(3 \mid 12\) because \(12 = 4 \cdot 3\), but \(3 \nmid 13\): no
 number \(k\) has \(3k = 13\). Every number \(m \geq 1\) is divisible by
 \(1\) and by itself, since \(m = m \cdot 1\). These two are its
 \emph{trivial} divisors:
 
-\begin{bquote}\srcmargin{\srcok{wp-divisor}{Terminology}{C1-01}}
+\bpush\begin{bquote}
 
-1, −1, n and − n are known as the trivial divisors of n
+1, −1, n and − n are known as the trivial divisors of
+n\unskip\srcnote{\srcok{wp-divisor}{Terminology}{C1-01}}
 
-\end{bquote}
+\end{bquote}\bpop
 
 A number greater than \(1\) with a divisor other than these is called
-\emph{composite} \srccite{wp-divisor}{Terminology}.
+\emph{composite} \unskip\srccitenote{\srccite{wp-divisor}{Terminology}}.
 
-\begin{bremark}
+\bpush\begin{bremark}
 
 The paper writes \(n \mid m\) for ``\(n\) divides \(m\)'', with \(n\) as
 the divisor, and from here on we use its letters (§1.3):
 
-\begin{bquote}\srcmargin{\srcok{paper}{§1.3}{C1-17}}
+\bpush\begin{bquote}
 
 We write
 \HOLinline{\HOLFreeVar{n}\;\HOLConst{\ensuremath{\mid}}\;\HOLFreeVar{m}}
 when \(n\) divides \(m\), which is equivalent to
 \HOLinline{\HOLFreeVar{m}\;\ensuremath{\equiv}\;\HOLNumLit{0}\;\ensuremath{(}\ensuremath{\bmod}\;\HOLFreeVar{n}\ensuremath{)}}
 when
-\HOLinline{\HOLFreeVar{n}\;\HOLSymConst{\HOLTokenNotEqual{}}\;\HOLNumLit{0}}.
+\HOLinline{\HOLFreeVar{n}\;\HOLSymConst{\HOLTokenNotEqual{}}\;\HOLNumLit{0}}.\unskip\srcnote{\srcok{paper}{§1.3}{C1-17}}
 
-\end{bquote}
+\end{bquote}\bpop
 
 Lean's mathlib, which checks the statements in this book, defines
 \(d \mid m\) for every \(d\), including \(d = 0\): there \(0 \mid m\)
 holds only when \(m = 0\). For \(d \ne 0\) the two definitions agree.
 
-\end{bremark}
+\end{bremark}\bpop
 
 \hypertarget{division-with-remainder}{%
 \section{Division with remainder}\label{division-with-remainder}}
@@ -213,32 +246,32 @@ holds only when \(m = 0\). For \(d \ne 0\) the two definitions agree.
 Most numbers don't divide each other exactly; what is left over is the
 \emph{remainder}.
 
-\begin{btheorem}\label{thm-division}\srcmargin{\srcok{wp-euclidean-division}{Division theorem}{L002}\\[2pt]\leanok{Book.Windmills.Ch01.division}\\\leanok{Book.Windmills.Ch01.division_unique}}
+\bpush\begin{btheorem}\label{thm-division}\srcnote{\srcok{wp-euclidean-division}{Division theorem}{L002} \enspace\textperiodcentered\enspace \leanok{Book.Windmills.Ch01.division}; \leanok{Book.Windmills.Ch01.division_unique}}
 
 \textbf{Division with remainder.} Given numbers \(m\) and \(n\) with
 \(n \neq 0\), there are unique numbers \(q\) (the \emph{quotient}) and
 \(r\) (the \emph{remainder}) such that
 \[m = nq + r \qquad\text{and}\qquad 0 \le r < n.\]
 
-\end{btheorem}
+\end{btheorem}\bpop
 
-\begin{bquote}\srcmargin{\srcok{wp-euclidean-division}{Division theorem}{L002}}
+\bpush\begin{bquote}
 
 Given two integers a and b , with b ≠ 0 , there exist unique integers q
 and r such that a = b q + r , and 0 ≤ r \textless{} \textbar{} b
-\textbar{}
+\textbar{}\unskip\srcnote{\srcok{wp-euclidean-division}{Division theorem}{L002}}
 
-\end{bquote}
+\end{bquote}\bpop
 
-\begin{bexample}
+\bpush\begin{bexample}
 
 Dividing \(17\) by \(3\): the quotient is \(5\) and the remainder is
 \(2\), since \(17 = 3 \cdot 5 + 2\) and \(2 < 3\).
-\srccite{wp-euclidean-division}{Intuitive example}
+\unskip\srccitenote{\srccite{wp-euclidean-division}{Intuitive example}}
 
-\end{bexample}
+\end{bexample}\bpop
 
-\begin{proof}
+\bpush\begin{proof}
 
 \emph{Existence.} Start with \(r = m\) and \(q = 0\), so that
 \(m = nq + r\). While \(r \ge n\), replace \(r\) by \(r - n\) and \(q\)
@@ -252,44 +285,44 @@ so \(q \ge q'\) and \(r' - r = n(q - q')\). The left side is less than
 \(n\), and the only multiple of \(n\) less than \(n\) is \(0\). So
 \(r' = r\), and then \(q' = q\).
 
-\end{proof}
+\end{proof}\bpop
 
 The paper writes the quotient as \(m \operatorname{div} n\) and the
 remainder as \(m \operatorname{mod} n\):
 
-\begin{bquote}\srcmargin{\srcok{paper}{§1.3}{C1-05}}
+\bpush\begin{bquote}
 
 The integer quotient and remainder of \(m\) divided by \(n\) are written
 as \HOLinline{\HOLFreeVar{m}\;\HOLConst{\HOLConst{div}}\;\HOLFreeVar{n}}
 and
 \HOLinline{\HOLFreeVar{m}\;\HOLConst{\HOLConst{mod}}\;\HOLFreeVar{n}},
-respectively.
+respectively.\unskip\srcnote{\srcok{paper}{§1.3}{C1-05}}
 
-\end{bquote}
+\end{bquote}\bpop
 
 For example, \(17 \operatorname{div} 3 = 5\) and
 \(17 \operatorname{mod} 3 = 2\). Dividing leaves nothing over exactly
 when \(n\) divides \(m\):
 
-\begin{bproposition}\label{prop-dvd-mod}\srcmargin{\derivedtag{\texttt{wp-divisor}, \texttt{wp-euclidean-division}}\\[2pt]\leanok{Book.Windmills.Ch01.dvd_iff_mod}}
+\bpush\begin{bproposition}\label{prop-dvd-mod}\srcnote{\derivedtag{\texttt{wp-divisor}, \texttt{wp-euclidean-division}} \enspace\textperiodcentered\enspace \leanok{Book.Windmills.Ch01.dvd_iff_mod}}
 
 For \(n \ne 0\): \(\ n \mid m\) if and only if
 \(m \operatorname{mod} n = 0\).
 
-\end{bproposition}
+\end{bproposition}\bpop
 
-\begin{proof}
+\bpush\begin{proof}
 
 If \(m = kn\), then \(m = nk + 0\) with \(0 < n\), so by uniqueness the
 remainder is \(0\). Conversely, if the remainder is \(0\), then
 \(m = nq\), so \(n \mid m\).
 
-\end{proof}
+\end{proof}\bpop
 
 \hypertarget{even-and-odd}{%
 \section{Even and odd}\label{even-and-odd}}
 
-\begin{bdefinition}\label{def-parity}\srcmargin{\srcok{wp-parity}{Definition}{C1-06}\\\srcok{wp-parity}{lead}{C1-20}\\[2pt]\leanok{Even}\\\leanok{Odd}}
+\bpush\begin{bdefinition}\label{def-parity}\srcnote{\srcok{wp-parity}{Definition}{C1-06}; \srcok{wp-parity}{lead}{C1-20} \enspace\textperiodcentered\enspace \leanok{Even}; \leanok{Odd}}
 
 \index{even}
 
@@ -297,30 +330,32 @@ A number is \textbf{even} if it has the form \(2k\), and \textbf{odd} if
 it has the form \(2k + 1\), for some number \(k\). Whether a number is
 even or odd is called its \textbf{parity}.
 
-\end{bdefinition}
+\end{bdefinition}\bpop
 
-\begin{bquote}\srcmargin{\srcok{wp-parity}{Definition}{C1-06}}
+\bpush\begin{bquote}
 
 An even number is an integer of the form x = 2 k where k is an integer;
-{[} 4 {]} an odd number is an integer of the form x = 2 k + 1
+{[} 4 {]} an odd number is an integer of the form x = 2 k +
+1\unskip\srcnote{\srcok{wp-parity}{Definition}{C1-06}}
 
-\end{bquote}
+\end{bquote}\bpop
 
-\begin{bquote}\srcmargin{\srcok{wp-parity}{lead}{C1-20}}
+\bpush\begin{bquote}
 
-parity is the property of an integer of whether it is even or odd
+parity is the property of an integer of whether it is even or
+odd\unskip\srcnote{\srcok{wp-parity}{lead}{C1-20}}
 
-\end{bquote}
+\end{bquote}\bpop
 
-\begin{btheorem}\label{thm-even-odd}\srcmargin{\derivedtag{\texttt{wp-euclidean-division}, \texttt{wp-parity}}\\[2pt]\leanok{Book.Windmills.Ch01.even_or_odd}\\\leanok{Book.Windmills.Ch01.not_even_and_odd}\\\leanok{Book.Windmills.Ch01.even_iff_mod}\\\leanok{Book.Windmills.Ch01.odd_iff_mod}}
+\bpush\begin{btheorem}\label{thm-even-odd}\srcnote{\derivedtag{\texttt{wp-euclidean-division}, \texttt{wp-parity}} \enspace\textperiodcentered\enspace \leanok{Book.Windmills.Ch01.even_or_odd}; \leanok{Book.Windmills.Ch01.not_even_and_odd}; \leanok{Book.Windmills.Ch01.even_iff_mod}; \leanok{Book.Windmills.Ch01.odd_iff_mod}}
 
 Every number is either even or odd, and not both. A number \(n\) is even
 exactly when \(n \operatorname{mod} 2 = 0\), and odd exactly when
 \(n \operatorname{mod} 2 = 1\).
 
-\end{btheorem}
+\end{btheorem}\bpop
 
-\begin{proof}
+\bpush\begin{proof}
 
 Divide \(n\) by \(2\): \(n = 2q + r\) with \(r \in \{0, 1\}\). If
 \(r = 0\) then \(n = 2q\) is even; if \(r = 1\) then \(n = 2q + 1\) is
@@ -331,72 +366,76 @@ then that is already a division by \(2\) with remainder \(1\). By
 uniqueness of the remainder, an even number has remainder \(0\) and an
 odd number has remainder \(1\); in particular no number is both.
 
-\end{proof}
+\end{proof}\bpop
 
 Parity behaves simply under addition: even \(+\) even and odd \(+\) odd
 are even, while even \(+\) odd is odd (write the numbers as \(2a\) or
 \(2a + 1\) and add). Parity matters throughout the paper, both of
 numbers and, from Chapter 5 on, of the \emph{sizes of sets}:
 
-\begin{bquote}\srcmargin{\srcok{paper}{Abstract}{C1-19}}
+\bpush\begin{bquote}
 
 The theory behind involves involutions on a finite set, especially the
-parity of the number of fixed points in the involutions.
+parity of the number of fixed points in the
+involutions.\unskip\srcnote{\srcok{paper}{Abstract}{C1-19}}
 
-\end{bquote}
+\end{bquote}\bpop
 
-\begin{bremark}
+\bpush\begin{bremark}
 
 mathlib phrases these definitions slightly differently: \texttt{Even\ n}
 says \(n = r + r\) for some \(r\), and \texttt{Odd\ n} says
 \(n = 2k + 1\). The first is the same as \(n = 2r\).
 
-\end{bremark}
+\end{bremark}\bpop
 
-\begin{binpaper}
+\bpush\begin{binpaper}
 
 The paper's notation section (§1.3) writes \(\mathsf{even}\ n\) and
 \(\mathsf{odd}\ n\) for these two properties:
 
-\begin{bquote}\srcmargin{\srcok{paper}{§1.3}{C1-08}}
+\bpush\begin{bquote}
 
-prime n means it is a prime, and even n or odd n denotes its parity
+prime n means it is a prime, and even n or odd n denotes its
+parity\unskip\srcnote{\srcok{paper}{§1.3}{C1-08}}
 
-\end{bquote}
+\end{bquote}\bpop
 
-\end{binpaper}
+\end{binpaper}\bpop
 
 \hypertarget{prime-numbers}{%
 \section{Prime numbers}\label{prime-numbers}}
 
-\begin{bdefinition}\label{def-prime}\srcmargin{\srcok{wp-prime}{lead}{L005}\\[2pt]\leanok{Nat.Prime}}
+\bpush\begin{bdefinition}\label{def-prime}\srcnote{\srcok{wp-prime}{lead}{L005} \enspace\textperiodcentered\enspace \leanok{Nat.Prime}}
 
 \index{prime number}
 
 A \textbf{prime number} is a number greater than \(1\) that is not a
 product of two smaller numbers.
 
-\end{bdefinition}
+\end{bdefinition}\bpop
 
-\begin{bquote}\srcmargin{\srcok{wp-prime}{lead}{L005}}
+\bpush\begin{bquote}
 
 A prime number (or a prime ) is a natural number greater than 1 that is
-not a product of two smaller natural numbers.
+not a product of two smaller natural
+numbers.\unskip\srcnote{\srcok{wp-prime}{lead}{L005}}
 
-\end{bquote}
+\end{bquote}\bpop
 
 The \emph{divisors} of \(n\) are the numbers that divide it evenly
-\srccite{wp-prime}{Definition and examples}. Primes are exactly the
-numbers greater than \(1\) with no divisors except the trivial ones:
+\unskip\srccitenote{\srccite{wp-prime}{Definition and examples}}. Primes
+are exactly the numbers greater than \(1\) with no divisors except the
+trivial ones:
 
-\begin{bproposition}\label{prop-prime-divisors}\srcmargin{\srcok{wp-prime}{Definition and examples}{C1-09}\\[2pt]\leanok{Nat.prime_def}}
+\bpush\begin{bproposition}\label{prop-prime-divisors}\srcnote{\srcok{wp-prime}{Definition and examples}{C1-09} \enspace\textperiodcentered\enspace \leanok{Nat.prime_def}}
 
 A number \(p\) is prime if and only if it has exactly two positive
 divisors, \(1\) and \(p\) (so in particular \(p \ge 2\)).
 
-\end{bproposition}
+\end{bproposition}\bpop
 
-\begin{proof}
+\bpush\begin{proof}
 
 First, \(0\) and \(1\) are not prime (the definition needs \(p > 1\)),
 and neither has exactly the two positive divisors \(1\) and \(p\): every
@@ -413,88 +452,88 @@ and \(p\), say \(p = ab\). Then \(b \ge 1\) (as \(p \ne 0\)), so
 Then \(b = p / a\) satisfies \(1 < b < p\) as well, so \(p\) is a
 product of two smaller numbers.
 
-\end{proof}
+\end{proof}\bpop
 
 In the same way, a number greater than \(1\) is composite exactly when
 it is not prime.
 
-\begin{bexample}
+\bpush\begin{bexample}
 
 \(7\) is prime: none of \(2, 3, 4, 5, 6\) divides it
-\srccite{wp-prime}{Definition and examples}. The primes below \(30\) are
-\(2, 3, 5, 7, 11, 13, 17, 19, 23, 29\).
+\unskip\srccitenote{\srccite{wp-prime}{Definition and examples}}. The
+primes below \(30\) are \(2, 3, 5, 7, 11, 13, 17, 19, 23, 29\).
 
-\end{bexample}
+\end{bexample}\bpop
 
 Two facts about primes matter for the paper.
 
-\begin{btheorem}\label{thm-only-even-prime}\srcmargin{\srcok{paper}{§2}{C1-12}\\[2pt]\leanok{Book.Windmills.Ch01.prime_even_eq_two}}
+\bpush\begin{btheorem}\label{thm-only-even-prime}\srcnote{\srcok{paper}{§2}{C1-12} \enspace\textperiodcentered\enspace \leanok{Book.Windmills.Ch01.prime_even_eq_two}}
 
 The only even prime is \(2\).
 
-\end{btheorem}
+\end{btheorem}\bpop
 
-\begin{bquote}\srcmargin{\srcok{paper}{§2}{C1-12}}
+\bpush\begin{bquote}
 
 The only even prime is
 \HOLinline{\HOLNumLit{2}\;\HOLSymConst{=}\;\HOLNumLit{1}\ensuremath{{\sp{\HOLNumLit{2}}}}\;\HOLSymConst{\ensuremath{+}}\;\HOLNumLit{1}\ensuremath{{\sp{\HOLNumLit{2}}}}},
-a sum of two squares.
+a sum of two squares.\unskip\srcnote{\srcok{paper}{§2}{C1-12}}
 
-\end{bquote}
+\end{bquote}\bpop
 
-\begin{proof}
+\bpush\begin{proof}
 
 An even number \(n\) has \(2 \mid n\). If \(n\) is prime, its only
 divisors are \(1\) and \(n\), so \(n = 2\).
 
-\end{proof}
+\end{proof}\bpop
 
-\begin{btheorem}\label{thm-odd-prime-mod-4}\srcmargin{\srcok{paper}{§2}{C1-13}\\[2pt]\leanok{Book.Windmills.Ch01.odd_prime_mod_four}}
+\bpush\begin{btheorem}\label{thm-odd-prime-mod-4}\srcnote{\srcok{paper}{§2}{C1-13} \enspace\textperiodcentered\enspace \leanok{Book.Windmills.Ch01.odd_prime_mod_four}}
 
 An odd prime leaves a remainder of \(1\) or \(3\) when divided by \(4\).
 
-\end{btheorem}
+\end{btheorem}\bpop
 
-\begin{proof}
+\bpush\begin{proof}
 
 Divide the prime \(p\) by \(4\): \(p = 4q + r\) with
 \(r \in \{0, 1, 2, 3\}\). If \(r\) were \(0\) or \(2\), then
 \(p = 2(2q)\) or \(p = 2(2q + 1)\) would be even. Since \(p\) is odd,
 \(r\) is \(1\) or \(3\).
 
-\end{proof}
+\end{proof}\bpop
 
 So the odd primes fall into two families: those of the form \(4k + 1\)
 (\(5, 13, 17, 29, \dots\)) and those of the form \(4k + 3\)
 (\(3, 7, 11, 19, 23, \dots\)). The paper's theorem is about the first
 family.
 
-\begin{binpaper}
+\bpush\begin{binpaper}
 
 §2 opens with exactly these two facts: the only even prime is a sum of
 two squares, and the odd primes split by their remainder on division by
 \(4\).
 
-\end{binpaper}
+\end{binpaper}\bpop
 
 \hypertarget{squares}{%
 \section{Squares}\label{squares}}
 
-\begin{bdefinition}\label{def-square}\srcmargin{\srcok{wp-square-number}{lead}{L006}\\[2pt]\leanok{IsSquare}}
+\bpush\begin{bdefinition}\label{def-square}\srcnote{\srcok{wp-square-number}{lead}{L006} \enspace\textperiodcentered\enspace \leanok{IsSquare}}
 
 \index{square number}
 
 A \textbf{square number} (or perfect square) is the square
 \(k^2 = k \cdot k\) of a number \(k\).
 
-\end{bdefinition}
+\end{bdefinition}\bpop
 
-\begin{bquote}\srcmargin{\srcok{wp-square-number}{lead}{L006}}
+\bpush\begin{bquote}
 
 a square number or perfect square is an integer that is the square of an
-integer
+integer\unskip\srcnote{\srcok{wp-square-number}{lead}{L006}}
 
-\end{bquote}
+\end{bquote}\bpop
 
 The first few are \(0, 1, 4, 9, 16, 25, 36, 49, 64\). A \emph{sum of two
 squares} is a number of the form \(u^2 + v^2\); for instance
@@ -503,54 +542,54 @@ gives \(3\), \(7\) or \(11\) (the squares up to \(11\) are only
 \(0, 1, 4, 9\), and no two of them add up to \(3\), \(7\) or \(11\)).
 Chapter 2 explains why.
 
-\begin{binpaper}
+\bpush\begin{binpaper}
 
 The paper writes \(\mathsf{square}\ n\) for ``\(n\) is a square''
 (§1.3):
 
-\begin{bquote}\srcmargin{\srcok{paper}{§1.3}{C1-15}}
+\bpush\begin{bquote}
 
 For a natural number \(n \in \mathbb{N}\),
 \HOLinline{\HOLConst{square}\;\HOLFreeVar{n}} means it is a square:
-\HOLinline{\HOLSymConst{\HOLTokenExists{}}\HOLBoundVar{k}.\;\HOLFreeVar{n}\;\HOLSymConst{=}\;\HOLBoundVar{k}\HOLSymConst{\ensuremath{\sp{2}}}}
+\HOLinline{\HOLSymConst{\HOLTokenExists{}}\HOLBoundVar{k}.\;\HOLFreeVar{n}\;\HOLSymConst{=}\;\HOLBoundVar{k}\HOLSymConst{\ensuremath{\sp{2}}}}\unskip\srcnote{\srcok{paper}{§1.3}{C1-15}}
 
-\end{bquote}
+\end{bquote}\bpop
 
-\end{binpaper}
+\end{binpaper}\bpop
 
 \hypertarget{exercises}{%
 \section{Exercises}\label{exercises}}
 
-\begin{bexercise}
+\bpush\begin{bexercise}
 
 Find the quotient and remainder when \(29\) is divided by \(4\), and
 when \(61\) is divided by \(4\). Both are prime; which family of odd
 primes does each belong to?
 
-\end{bexercise}
+\end{bexercise}\bpop
 
-\begin{bexercise}
+\bpush\begin{bexercise}
 
 Show that if \(n \mid a\) and \(n \mid b\) then \(n \mid a + b\).
 
-\end{bexercise}
+\end{bexercise}\bpop
 
-\begin{bexercise}
+\bpush\begin{bexercise}
 
 Show that the square of an odd number is odd. (Write the number as
 \(2k + 1\).)
 
-\end{bexercise}
+\end{bexercise}\bpop
 
-\begin{bexercise}
+\bpush\begin{bexercise}
 
 Write each of \(5, 13, 17, 29, 37, 41\) as a sum of two squares.
 
-\end{bexercise}
+\end{bexercise}\bpop
 
 \part{The Paper}
 \chapter*{Reader's guide to the paper}\addcontentsline{toc}{chapter}{Reader's guide to the paper}
-The paper follows exactly as published. In the margin of each page are the concepts from this book that appear on it, with the chapter that teaches them. The first appearance of each:
+The paper follows exactly as published, slightly reduced. Along the foot of each page are the concepts from this book that appear on it, with the chapter that teaches them. The first appearance of each:
 
 \begin{longtable}{p{0.5\textwidth}ll}
 Divisibility & Chapter~1 & p.~1 of the paper\\
@@ -559,20 +598,20 @@ Prime numbers & Chapter~1 & p.~1 of the paper\\
 Division with remainder & Chapter~1 & p.~2 of the paper\\
 Square numbers & Chapter~1 & p.~2 of the paper\\
 \end{longtable}
-\includepdf[pages=1,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{Divisibility \hfill Ch.~1\\Even and odd numbers \hfill Ch.~1\\Prime numbers \hfill Ch.~1}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=2,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{Division with remainder \hfill Ch.~1\\Even and odd numbers \hfill Ch.~1\\Prime numbers \hfill Ch.~1\\Square numbers \hfill Ch.~1}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=3,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{Division with remainder \hfill Ch.~1\\Even and odd numbers \hfill Ch.~1\\Prime numbers \hfill Ch.~1\\Square numbers \hfill Ch.~1}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=4,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{Prime numbers \hfill Ch.~1\\Square numbers \hfill Ch.~1}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=5,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{\textit{}}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=6,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{\textit{}}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=7,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{Division with remainder \hfill Ch.~1\\Even and odd numbers \hfill Ch.~1\\Prime numbers \hfill Ch.~1\\Square numbers \hfill Ch.~1}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=8,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{\textit{}}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=9,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{Divisibility \hfill Ch.~1\\Division with remainder \hfill Ch.~1\\Even and odd numbers \hfill Ch.~1}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=10,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{Divisibility \hfill Ch.~1\\Division with remainder \hfill Ch.~1\\Even and odd numbers \hfill Ch.~1}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=11,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{Division with remainder \hfill Ch.~1\\Even and odd numbers \hfill Ch.~1\\Prime numbers \hfill Ch.~1}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=12,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{Division with remainder \hfill Ch.~1\\Even and odd numbers \hfill Ch.~1\\Prime numbers \hfill Ch.~1\\Square numbers \hfill Ch.~1}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=13,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{Prime numbers \hfill Ch.~1}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
-\includepdf[pages=14,scale=0.86,offset=-0.55in 0in,pagecommand={\papernote{Division with remainder \hfill Ch.~1\\Prime numbers \hfill Ch.~1\\Square numbers \hfill Ch.~1}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=1,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{\textbf{In this book:} Divisibility (Ch.~1) \enspace\textperiodcentered\enspace Even and odd numbers (Ch.~1) \enspace\textperiodcentered\enspace Prime numbers (Ch.~1)}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=2,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{\textbf{In this book:} Division with remainder (Ch.~1) \enspace\textperiodcentered\enspace Even and odd numbers (Ch.~1) \enspace\textperiodcentered\enspace Prime numbers (Ch.~1) \enspace\textperiodcentered\enspace Square numbers (Ch.~1)}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=3,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{\textbf{In this book:} Division with remainder (Ch.~1) \enspace\textperiodcentered\enspace Even and odd numbers (Ch.~1) \enspace\textperiodcentered\enspace Prime numbers (Ch.~1) \enspace\textperiodcentered\enspace Square numbers (Ch.~1)}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=4,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{\textbf{In this book:} Prime numbers (Ch.~1) \enspace\textperiodcentered\enspace Square numbers (Ch.~1)}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=5,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=6,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=7,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{\textbf{In this book:} Division with remainder (Ch.~1) \enspace\textperiodcentered\enspace Even and odd numbers (Ch.~1) \enspace\textperiodcentered\enspace Prime numbers (Ch.~1) \enspace\textperiodcentered\enspace Square numbers (Ch.~1)}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=8,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=9,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{\textbf{In this book:} Divisibility (Ch.~1) \enspace\textperiodcentered\enspace Division with remainder (Ch.~1) \enspace\textperiodcentered\enspace Even and odd numbers (Ch.~1)}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=10,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{\textbf{In this book:} Divisibility (Ch.~1) \enspace\textperiodcentered\enspace Division with remainder (Ch.~1) \enspace\textperiodcentered\enspace Even and odd numbers (Ch.~1)}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=11,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{\textbf{In this book:} Division with remainder (Ch.~1) \enspace\textperiodcentered\enspace Even and odd numbers (Ch.~1) \enspace\textperiodcentered\enspace Prime numbers (Ch.~1)}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=12,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{\textbf{In this book:} Division with remainder (Ch.~1) \enspace\textperiodcentered\enspace Even and odd numbers (Ch.~1) \enspace\textperiodcentered\enspace Prime numbers (Ch.~1) \enspace\textperiodcentered\enspace Square numbers (Ch.~1)}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=13,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{\textbf{In this book:} Prime numbers (Ch.~1)}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
+\includepdf[pages=14,scale=0.88,offset=0in 0.42in,pagecommand={\thispagestyle{empty}\papernote{\textbf{In this book:} Division with remainder (Ch.~1) \enspace\textperiodcentered\enspace Prime numbers (Ch.~1) \enspace\textperiodcentered\enspace Square numbers (Ch.~1)}}]{/home/claude/paper-to-book/books/windmills/sources/paper/paper.pdf}
 \backmatter
 \chapter{Sources}
 Every source used, as retrieved for this book. The identifiers in the margins refer to this list.
