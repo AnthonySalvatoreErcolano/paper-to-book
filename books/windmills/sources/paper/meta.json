@@ -1,0 +1,20 @@
+{
+ "id": "paper",
+ "type": "arxiv",
+ "ref": "2112.02556",
+ "why": "the paper",
+ "fetched": "2026-11-12T16:50:50Z",
+ "files": {
+  "arxiv-meta.xml": "424b0d3929e40309bc4901656f2c2551cc20ab9bc175be7ae9a3888f50e9651b",
+  "paper.pdf": "de9776849704a0922bad41714921a8e3f5b658415594354a25163e6f448f7f2d",
+  "source.bin": "cd9f229f7f7ed7b37ced5cab214ac6e52999352176b37e5b8635ccf16894ef84"
+ },
+ "license": "http://creativecommons.org/licenses/by/4.0/",
+ "title": "Windmills of the minds: an algorithm for Fermat's Two Squares Theorem",
+ "authors": [
+  "Hing Lun Chan"
+ ],
+ "latex": [
+  "src/windmills.tex"
+ ]
+}

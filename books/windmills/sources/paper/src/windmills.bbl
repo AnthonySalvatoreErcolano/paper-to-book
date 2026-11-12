@@ -1,0 +1,340 @@
+%%% -*-BibTeX-*-
+%%% Do NOT edit. File created by BibTeX with style
+%%% ACM-Reference-Format-Journals [18-Jan-2012].
+
+\begin{thebibliography}{22}
+
+%%% ====================================================================
+%%% NOTE TO THE USER: you can override these defaults by providing
+%%% customized versions of any of these macros before the \bibliography
+%%% command.  Each of them MUST provide its own final punctuation,
+%%% except for \shownote{}, \showDOI{}, and \showURL{}.  The latter two
+%%% do not use final punctuation, in order to avoid confusing it with
+%%% the Web address.
+%%%
+%%% To suppress output of a particular field, define its macro to expand
+%%% to an empty string, or better, \unskip, like this:
+%%%
+%%% \newcommand{\showDOI}[1]{\unskip}   % LaTeX syntax
+%%%
+%%% \def \showDOI #1{\unskip}           % plain TeX syntax
+%%%
+%%% ====================================================================
+
+\ifx \showCODEN    \undefined \def \showCODEN     #1{\unskip}     \fi
+\ifx \showDOI      \undefined \def \showDOI       #1{#1}\fi
+\ifx \showISBNx    \undefined \def \showISBNx     #1{\unskip}     \fi
+\ifx \showISBNxiii \undefined \def \showISBNxiii  #1{\unskip}     \fi
+\ifx \showISSN     \undefined \def \showISSN      #1{\unskip}     \fi
+\ifx \showLCCN     \undefined \def \showLCCN      #1{\unskip}     \fi
+\ifx \shownote     \undefined \def \shownote      #1{#1}          \fi
+\ifx \showarticletitle \undefined \def \showarticletitle #1{#1}   \fi
+\ifx \showURL      \undefined \def \showURL       {\relax}        \fi
+% The following commands are used for tagged output and should be
+% invisible to TeX
+\providecommand\bibfield[2]{#2}
+\providecommand\bibinfo[2]{#2}
+\providecommand\natexlab[1]{#1}
+\providecommand\showeprint[2][]{arXiv:#2}
+
+\bibitem[\protect\citeauthoryear{Arthan}{Arthan}{2016}]%
+        {Arthan-2016}
+\bibfield{author}{\bibinfo{person}{Rob Arthan}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \bibinfo{title}{{Mathematical Case Studies: Some Number Theory}}.
+\newblock \bibinfo{howpublished}{Supplementary ProofPower Examples}.
+\newblock
+\newblock
+\shownote{Available from
+  \url{http://www.lemma-one.com/ProofPower/examples/wrk074.pdf}, accessed 22
+  August, 2021.}
+
+
+\bibitem[\protect\citeauthoryear{Carneiro}{Carneiro}{2015}]%
+        {Carneiro-2015}
+\bibfield{author}{\bibinfo{person}{Mario Carneiro}.}
+  \bibinfo{year}{2015}\natexlab{}.
+\newblock \bibinfo{title}{{Theorem 2sq}}.
+\newblock \bibinfo{howpublished}{Metamath 100 proof}.
+\newblock
+\newblock
+\shownote{Available from \url{http://us.metamath.org/mpeuni/2sq.html}, accessed
+  22 August, 2021.}
+
+
+\bibitem[\protect\citeauthoryear{Chan}{Chan}{2019}]%
+        {Chan-ANU-2019-acm}
+\bibfield{author}{\bibinfo{person}{Hing~Lun Chan}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \emph{\bibinfo{title}{Primality Testing is Polynomial-time: a
+  Mechanised Verification of the {AKS} Algorithm}}.
+\newblock {PhD}. \bibinfo{school}{Australian National University},
+  \bibinfo{address}{Canberra, Australia}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.25911/5F58B06CA124E}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Chan and Norrish}{Chan and Norrish}{2012}]%
+        {Chan-Norrish-cpp-2012}
+\bibfield{author}{\bibinfo{person}{Hing~Lun Chan} {and}
+  \bibinfo{person}{Michael Norrish}.} \bibinfo{year}{2012}\natexlab{}.
+\newblock \showarticletitle{{A String of Pearls: Proofs of Fermat's Little
+  Theorem}}. In \bibinfo{booktitle}{\emph{Proceedings of Certified Programs and
+  Proofs}} \emph{(\bibinfo{series}{LNCS}, \bibinfo{number}{7679})},
+  \bibfield{editor}{\bibinfo{person}{Chris Hawblitzel} {and}
+  \bibinfo{person}{Dale Miller}} (Eds.). \bibinfo{publisher}{Springer},
+  \bibinfo{pages}{188--207}.
+\newblock
+\showISBNx{978-3-642-35307-9}
+\urldef\tempurl%
+\url{https://doi.org/10.1007/978-3-642-35308-6_16}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Christopher}{Christopher}{2016}]%
+        {Christopher-2016-acm}
+\bibfield{author}{\bibinfo{person}{A.~David Christopher}.}
+  \bibinfo{year}{2016}\natexlab{}.
+\newblock \showarticletitle{{A partition-theoretic proof of Fermat's Two
+  Squares Theorem}}.
+\newblock \bibinfo{journal}{\emph{Discrete Mathematics}} \bibinfo{volume}{339},
+  \bibinfo{number}{4} (\bibinfo{date}{06 April} \bibinfo{year}{2016}),
+  \bibinfo{pages}{1410--1411}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.1016/j.disc.2015.12.002}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Dubach and Muehlboeck}{Dubach and
+  Muehlboeck}{2021}]%
+        {Dubach-Muehlboeck-2021-acm}
+\bibfield{author}{\bibinfo{person}{Guillaume Dubach} {and}
+  \bibinfo{person}{Fabian Muehlboeck}.} \bibinfo{year}{2021}\natexlab{}.
+\newblock \showarticletitle{{Formal verification of Zagier's one-sentence
+  proof}}.
+\newblock  (\bibinfo{date}{24 April} \bibinfo{year}{2021}).
+\newblock
+\newblock
+\shownote{In arXiv: \url{https://arxiv.org/abs/2103.11389}, accessed 22 August,
+  2021.}
+
+
+\bibitem[\protect\citeauthoryear{Hardy}{Hardy}{1940}]%
+        {Hardy-1940-acm}
+\bibfield{author}{\bibinfo{person}{Godfrey~H. Hardy}.}
+  \bibinfo{year}{1940}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{A Mathematician's Apology}}}.
+\newblock \bibinfo{publisher}{Cambridge University Press}.
+\newblock
+\showISBNx{9781107295599}
+\urldef\tempurl%
+\url{https://doi.org/10.1017/CBO9781139644112}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Harrison}{Harrison}{2010}]%
+        {Harrison-2010}
+\bibfield{author}{\bibinfo{person}{John Harrison}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \bibinfo{title}{{Representation of primes $\equiv 1\pmod{4}$ as sum
+  of $2$ squares.}}
+\newblock \bibinfo{howpublished}{Formalizing 100 Theorems in HOL Light}.
+\newblock
+\newblock
+\shownote{Available from
+  \url{https://github.com/jrh13/hol-light/blob/master/100/two_squares.ml},
+  accessed 22 August, 2021.}
+
+\newpage
+\bibitem[\protect\citeauthoryear{Heath-Brown}{Heath-Brown}{1984}]%
+        {Heath-Brown-1984-acm}
+\bibfield{author}{\bibinfo{person}{Roger Heath-Brown}.}
+  \bibinfo{year}{1984}\natexlab{}.
+\newblock \showarticletitle{{Fermat’s two squares theorem}}.
+\newblock \bibinfo{journal}{\emph{Invariant}}  \bibinfo{volume}{11}
+  (\bibinfo{year}{1984}), \bibinfo{pages}{3--5}.
+\newblock
+\newblock
+\shownote{Available from \url{https://core.ac.uk/reader/97080}, accessed 22
+  August, 2021.}
+
+
+\bibitem[\protect\citeauthoryear{Hughes}{Hughes}{2019}]%
+        {Hughes-2019}
+\bibfield{author}{\bibinfo{person}{Chris Hughes}.}
+  \bibinfo{year}{2019}\natexlab{}.
+\newblock \bibinfo{title}{{Sums of two squares}}.
+\newblock \bibinfo{howpublished}{Lean Community, 100 theorems}.
+\newblock
+\newblock
+\shownote{Available from \url{https://leanprover-community.github.io/100.html},
+  accessed 22 August, 2021.}
+
+
+\bibitem[\protect\citeauthoryear{Malter, Schleicher, and Zagier}{Malter
+  et~al\mbox{.}}{2013}]%
+        {Zagier-2013-acm}
+\bibfield{author}{\bibinfo{person}{Aimeric Malter}, \bibinfo{person}{Dierk
+  Schleicher}, {and} \bibinfo{person}{Don Zagier}.}
+  \bibinfo{year}{2013}\natexlab{}.
+\newblock \showarticletitle{{New Looks at Old Number Theory}}.
+\newblock \bibinfo{journal}{\emph{The American Mathematical Monthly}}
+  \bibinfo{volume}{120}, \bibinfo{number}{3} (\bibinfo{year}{2013}),
+  \bibinfo{pages}{243--264}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.4169/amer.math.monthly.120.03.243}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Narkawicz}{Narkawicz}{2012}]%
+        {Narkawicz-2012-acm}
+\bibfield{author}{\bibinfo{person}{Anthony Narkawicz}.}
+  \bibinfo{year}{2012}\natexlab{}.
+\newblock \bibinfo{title}{{primes_sum_squares: THEORY}}.
+\newblock \bibinfo{howpublished}{NASA PVS Library 6.0.9}.
+\newblock
+\newblock
+\shownote{In
+  \url{https://github.com/nasa/pvslib/blob/master/numbers/primes_sum_squares.pvs},
+  accessed 22 August, 2021.}
+
+
+\bibitem[\protect\citeauthoryear{Oosterhuis}{Oosterhuis}{2007}]%
+        {Oosterhuis-2007}
+\bibfield{author}{\bibinfo{person}{Roelof Oosterhuis}.}
+  \bibinfo{year}{2007}\natexlab{}.
+\newblock \bibinfo{title}{{Theory TwoSquares}}.
+\newblock \bibinfo{howpublished}{Isabelle, Archive of Formal Proofs}.
+\newblock
+\showISSN{2150-914x}
+\newblock
+\shownote{Available from \url{https://www.isa-afp.org/entries/SumSquares.html},
+  accessed 22 August, 2021.}
+
+
+\bibitem[\protect\citeauthoryear{Riccardi}{Riccardi}{2009}]%
+        {Riccardi-2009}
+\bibfield{author}{\bibinfo{person}{Marco Riccardi}.}
+  \bibinfo{year}{2009}\natexlab{}.
+\newblock \bibinfo{title}{{theorem :: NAT_5:23}}.
+\newblock \bibinfo{howpublished}{Formalizing 100 Theorems in Mizar}.
+\newblock
+\newblock
+\shownote{Available from \url{http://www.mizar.org/100/index.html}, accessed 22
+  August, 2021.}
+
+
+\bibitem[\protect\citeauthoryear{Shiu}{Shiu}{1996}]%
+        {Shiu-1996}
+\bibfield{author}{\bibinfo{person}{Peter Shiu}.}
+  \bibinfo{year}{1996}\natexlab{}.
+\newblock \showarticletitle{{Involutions associated with Sums of Two Squares}}.
+\newblock \bibinfo{journal}{\emph{Publications de l'Institut
+  Math{\'{e}}matique}}  \bibinfo{volume}{59} (\bibinfo{year}{1996}),
+  \bibinfo{pages}{18--39}.
+\newblock
+
+
+\bibitem[\protect\citeauthoryear{Spivak}{Spivak}{2007}]%
+        {Spivak-2007}
+\bibfield{author}{\bibinfo{person}{Alexander Spivak}.}
+  \bibinfo{year}{2007}\natexlab{}.
+\newblock \showarticletitle{{Winged Squares [in Russian]}}.
+\newblock \bibinfo{journal}{\emph{Popular lectures in mathematics, 2006-2007
+  academic year, Lecture 15 (165)}} (\bibinfo{date}{10 March}
+  \bibinfo{year}{2007}).
+\newblock
+\newblock
+\shownote{Available from \url{http://mmmf.msu.ru/lect/spivak/zagir_!.pdf},
+  accessed 22 August, 2021.}
+
+
+\bibitem[\protect\citeauthoryear{Th{\'e}ry}{Th{\'e}ry}{2004}]%
+        {Thery-2004}
+\bibfield{author}{\bibinfo{person}{Laurent Th{\'e}ry}.}
+  \bibinfo{year}{2004}\natexlab{}.
+\newblock \bibinfo{title}{{Numbers Equal to the Sum of Two Square Numbers}}.
+\newblock \bibinfo{howpublished}{Formalizing 100 theorems in Coq}.
+\newblock
+\newblock
+\shownote{Available from
+  \url{https://github.com/coq-contribs/sum-of-two-square}, accessed 22 August,
+  2021.}
+
+
+\bibitem[\protect\citeauthoryear{Trimble and Lama}{Trimble and Lama}{2008}]%
+        {Trimble-Lama-2008}
+\bibfield{author}{\bibinfo{person}{Todd Trimble} {and} \bibinfo{person}{Vishal
+  Lama}.} \bibinfo{year}{2008}\natexlab{}.
+\newblock \bibinfo{title}{{A proof from The Book?}}
+\newblock \bibinfo{howpublished}{Todd and Vishal's blog}.
+\newblock
+\newblock
+\shownote{Available from
+  \url{http://topologicalmusings.wordpress.com/2008/05/04/a-proof-from-the-book/},
+  accessed 22 August, 2021.}
+
+
+\bibitem[\protect\citeauthoryear{Wagon}{Wagon}{1990}]%
+        {Wagon-1990-acm}
+\bibfield{author}{\bibinfo{person}{Stan Wagon}.}
+  \bibinfo{year}{1990}\natexlab{}.
+\newblock \showarticletitle{{Editor's Corner: The Euclidean Algorithm Strikes
+  Again}}.
+\newblock \bibinfo{journal}{\emph{The American Mathematical Monthly}}
+  \bibinfo{volume}{97}, \bibinfo{number}{2} (\bibinfo{year}{1990}),
+  \bibinfo{pages}{125--129}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.2307/2323912}
+\showDOI{\tempurl}
+
+
+\bibitem[\protect\citeauthoryear{Wiedijk}{Wiedijk}{2020}]%
+        {Wiedijk-2020}
+\bibfield{author}{\bibinfo{person}{Freek Wiedijk}.} \bibinfo{year}{last update:
+  2020}\natexlab{}.
+\newblock \bibinfo{title}{{Formalizing 100 Theorems}}.
+\newblock
+\newblock
+\newblock
+\shownote{Available from \url{https://www.cs.ru.nl/~freek/100/}, accessed 22
+  August, 2021.}
+
+
+\bibitem[\protect\citeauthoryear{Williams}{Williams}{2010}]%
+        {Williams-2010-alt}
+\bibfield{author}{\bibinfo{person}{Kenneth~S. Williams}.}
+  \bibinfo{year}{2010}\natexlab{}.
+\newblock \bibinfo{booktitle}{\emph{{Number Theory in the Spirit of
+  Liouville}}}.
+\newblock \bibinfo{publisher}{Cambridge University Press, Cambridge, UK}.
+\newblock
+\showISBNx{9780511751684}
+\urldef\tempurl%
+\url{https://doi.org/10.1017/CBO9780511751684}
+\showDOI{\tempurl}
+\newblock
+\shownote{ISBN: 9780511751684.}
+
+
+\bibitem[\protect\citeauthoryear{Zagier}{Zagier}{1990}]%
+        {Zagier-1990-acm}
+\bibfield{author}{\bibinfo{person}{Don Zagier}.}
+  \bibinfo{year}{1990}\natexlab{}.
+\newblock \showarticletitle{{A One-Sentence Proof That Every Prime $p\equiv
+  1\pmod{4}$ Is a Sum of Two Squares}}.
+\newblock \bibinfo{journal}{\emph{The American Mathematical Monthly}}
+  \bibinfo{volume}{97}, \bibinfo{number}{2} (\bibinfo{year}{1990}),
+  \bibinfo{pages}{144}.
+\newblock
+\urldef\tempurl%
+\url{https://doi.org/10.2307/2323918}
+\showDOI{\tempurl}
+
+
+\end{thebibliography}

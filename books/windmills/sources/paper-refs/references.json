@@ -1,0 +1,518 @@
+{
+ "offset": 0,
+ "citingPaperInfo": {
+  "openAccessPdf": {
+   "url": "https://dl.acm.org/doi/pdf/10.1145/3497775.3503673",
+   "status": "BRONZE",
+   "license": null,
+   "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2112.02556, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "title": "Windmills of the minds: an algorithm for fermat\u2019s two squares theorem",
+  "authors": [
+   {
+    "authorId": "1935979",
+    "name": "Hing-Lun Chan"
+   }
+  ]
+ },
+ "data": [
+  {
+   "citedPaper": {
+    "paperId": "e6e8cea11d54e1e1d439264c4761315384d13079",
+    "externalIds": {
+     "DBLP": "journals/corr/abs-2103-11389",
+     "ArXiv": "2103.11389",
+     "DOI": "10.48550/arXiv.2103.11389",
+     "CorpusId": 232307414
+    },
+    "url": "https://www.semanticscholar.org/paper/e6e8cea11d54e1e1d439264c4761315384d13079",
+    "title": "Formal verification of Zagier's one-sentence proof",
+    "venue": "arXiv.org",
+    "year": 2021,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null
+    },
+    "authors": [
+     {
+      "authorId": "96359875",
+      "name": "Guillaume Dubach"
+     },
+     {
+      "authorId": "2028830",
+      "name": "Fabian Muehlboeck"
+     }
+    ]
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": "c65cf41ba099dd660aca9ed6ecdbd240f45c858d",
+    "externalIds": {
+     "DOI": "10.1090/chel/384.h/02",
+     "CorpusId": 17904307
+    },
+    "url": "https://www.semanticscholar.org/paper/c65cf41ba099dd660aca9ed6ecdbd240f45c858d",
+    "title": "Sums of Two Squares",
+    "venue": "Introduction to Number Theory",
+    "year": 2018,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null
+    },
+    "authors": [
+     {
+      "authorId": "2766165",
+      "name": "P. Clark"
+     }
+    ]
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": "e7e30d7a1c11f8445efc3826a99a13fb9721a1b7",
+    "externalIds": {
+     "MAG": "2214131438",
+     "DBLP": "journals/dm/Christopher16",
+     "DOI": "10.1016/j.disc.2015.12.002",
+     "CorpusId": 28642052
+    },
+    "url": "https://www.semanticscholar.org/paper/e7e30d7a1c11f8445efc3826a99a13fb9721a1b7",
+    "title": "A partition-theoretic proof of Fermat's Two Squares Theorem",
+    "venue": "Discrete Mathematics",
+    "year": 2016,
+    "openAccessPdf": {
+     "url": "https://www.sciencedirect.com/science/article/pii/S0012365X15004355/pdf",
+     "status": "BRONZE",
+     "license": null
+    },
+    "authors": [
+     {
+      "authorId": "144748835",
+      "name": "A. Christopher"
+     }
+    ]
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": "6d28dcef911dd91f47e6ca4bd2c564c1f3099a05",
+    "externalIds": {
+     "MAG": "2400659318",
+     "DBLP": "journals/tamm/MalterSZ13",
+     "DOI": "10.4169/amer.math.monthly.120.03.243",
+     "CorpusId": 14700341
+    },
+    "url": "https://www.semanticscholar.org/paper/6d28dcef911dd91f47e6ca4bd2c564c1f3099a05",
+    "title": "New Looks at Old Number Theory",
+    "venue": "The American mathematical monthly",
+    "year": 2013,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null
+    },
+    "authors": [
+     {
+      "authorId": "2610495",
+      "name": "Aimeric Malter"
+     },
+     {
+      "authorId": "1780578",
+      "name": "D. Schleicher"
+     },
+     {
+      "authorId": "1785790",
+      "name": "D. Zagier"
+     }
+    ]
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": "9d2d2da0c86e6872725d572640e82022a4e7f209",
+    "externalIds": {
+     "MAG": "1496340815",
+     "DBLP": "journals/jfrea/ChanN13",
+     "DOI": "10.6092/issn.1972-5787/3728",
+     "CorpusId": 5776285
+    },
+    "url": "https://www.semanticscholar.org/paper/9d2d2da0c86e6872725d572640e82022a4e7f209",
+    "title": "A String of Pearls: Proofs of Fermat's Little Theorem",
+    "venue": "Journal of Formalized Reasoning",
+    "year": 2012,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null
+    },
+    "authors": [
+     {
+      "authorId": "1935979",
+      "name": "Hing-Lun Chan"
+     },
+     {
+      "authorId": "1700277",
+      "name": "Michael Norrish"
+     }
+    ]
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": "bfc01ae3e9385367a4ff69ee7fc34a98a37cc496",
+    "externalIds": {
+     "MAG": "369397571",
+     "DOI": "10.5860/choice.48-5750",
+     "CorpusId": 118409796
+    },
+    "url": "https://www.semanticscholar.org/paper/bfc01ae3e9385367a4ff69ee7fc34a98a37cc496",
+    "title": "Number Theory in the Spirit of Liouville",
+    "venue": "",
+    "year": 2010,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null
+    },
+    "authors": [
+     {
+      "authorId": "31455379",
+      "name": "K. Williams"
+     }
+    ]
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": "fd614de3245ed3dd97789c3726468113d83b2e6e",
+    "externalIds": {
+     "MAG": "2009155740",
+     "DOI": "10.1080/00029890.1990.11995566",
+     "CorpusId": 120255489
+    },
+    "url": "https://www.semanticscholar.org/paper/fd614de3245ed3dd97789c3726468113d83b2e6e",
+    "title": "A one-sentence proof that every prime p \u039e1(mod 4) is a sum of two squares",
+    "venue": "",
+    "year": 1990,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null
+    },
+    "authors": [
+     {
+      "authorId": "1785790",
+      "name": "D. Zagier"
+     }
+    ]
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": "ae33e55c60b45728195a5f94f90e935700a50f75",
+    "externalIds": {
+     "MAG": "2274434947",
+     "DOI": "10.2307/2323912",
+     "CorpusId": 124707287
+    },
+    "url": "https://www.semanticscholar.org/paper/ae33e55c60b45728195a5f94f90e935700a50f75",
+    "title": "The Euclidean algorithm strikes again",
+    "venue": "",
+    "year": 1990,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null
+    },
+    "authors": [
+     {
+      "authorId": "1894767",
+      "name": "S. Wagon"
+     }
+    ]
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "last update: 2020. Formalizing 100 Theorems",
+    "venue": ":/",
+    "year": 2021,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": "73ffedaefdd99a37a1f01465c53ce736f69903fd",
+    "externalIds": {
+     "MAG": "2988161545",
+     "CorpusId": 209056949
+    },
+    "url": "https://www.semanticscholar.org/paper/73ffedaefdd99a37a1f01465c53ce736f69903fd",
+    "title": "Primality Testing is Polynomial-time: A Mechanised Verification of the AKS Algorithm",
+    "venue": "",
+    "year": 2019,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null
+    },
+    "authors": [
+     {
+      "authorId": "1935979",
+      "name": "Hing-Lun Chan"
+     }
+    ]
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "Mathematical Case Studies: Some Number Theory. Supplementary ProofPower Examples",
+    "venue": "Available from http://www. lemma-one.com/ProofPower/examples/wrk074.pdf,",
+    "year": 2016,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "primes_sum_squares: THEORY. NASA PVS Library 6.0.9",
+    "venue": "In https://github.com/nasa/pvslib/blob/master/ numbers/primes_sum_squares.pvs,",
+    "year": 2012,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "Formalizing 100 Theorems in Mizar",
+    "venue": "Available from http://www.mizar.org/100/index.html,",
+    "year": 2009,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "A proof from The Book? Todd and Vishal\u2019s blog",
+    "venue": "Available from http://topologicalmusings. wordpress.com/2008/05/04/a-proof-from-the-book/,",
+    "year": 2008,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "Theory TwoSquares. Isabelle, Archive of Formal Proofs",
+    "venue": "Available from https://www.isa-afp.org/entries/ SumSquares.html,",
+    "year": 2007,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "Winged Squares [in Russian",
+    "venue": "Popular lectures in mathematics,",
+    "year": 2007,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "Coq Gaussian integers, with uniqueness",
+    "venue": "",
+    "year": 2007,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "Popular lectures in mathematics",
+    "venue": "Lecture",
+    "year": 2006,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "Involutions associated with Sums of Two Squares. Publications de l",
+    "venue": "Institut Math\u00e9matique",
+    "year": 1996,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": "b39d1c36cbcb669abd71db50b2b1b7a706a78702",
+    "externalIds": {
+     "MAG": "24561648",
+     "CorpusId": 116326004
+    },
+    "url": "https://www.semanticscholar.org/paper/b39d1c36cbcb669abd71db50b2b1b7a706a78702",
+    "title": "Fermat's two squares theorem",
+    "venue": "",
+    "year": 1984,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null
+    },
+    "authors": [
+     {
+      "authorId": "1405711777",
+      "name": "D. R. Heath-Brown"
+     }
+    ]
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": "f3775d57de84542f0c652d9060284445ebfc1a69",
+    "externalIds": {
+     "DOI": "10.1038/147003a0",
+     "CorpusId": 4212863
+    },
+    "url": "https://www.semanticscholar.org/paper/f3775d57de84542f0c652d9060284445ebfc1a69",
+    "title": "A Mathematician's Apology",
+    "venue": "Nature",
+    "year": 1941,
+    "openAccessPdf": {
+     "url": "",
+     "status": "CLOSED",
+     "license": null
+    },
+    "authors": [
+     {
+      "authorId": "2527125727",
+      "name": "F. S."
+     }
+    ]
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "Anthony Narkawicz [12] NASA PVS Zagier's proof with involutions",
+    "venue": "",
+    "year": null,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "Representation of primes \u2261 1 (mod 4) as sum of 2 squares. Formalizing 100 Theorems in HOL Light",
+    "venue": "",
+    "year": null,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "Lean Principal Ideal Ring of Gaussian integers, with uniqueness 2021 Dubach and Muehlboeck [6] Coq Zagier's and Christopher's proofs with involutions",
+    "venue": "",
+    "year": null,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": "d880a12ba87b225c6d3d57805e6c8cb08706bdd2",
+    "externalIds": {
+     "CorpusId": 277918806
+    },
+    "url": "https://www.semanticscholar.org/paper/d880a12ba87b225c6d3d57805e6c8cb08706bdd2",
+    "title": "Numbers Equal to the Sum of Two Square Numbers",
+    "venue": "",
+    "year": null,
+    "openAccessPdf": {
+     "url": "",
+     "status": null,
+     "license": null
+    },
+    "authors": [
+     {
+      "authorId": "1734852",
+      "name": "L. Th\u00e9ry"
+     },
+     {
+      "authorId": "2288734712",
+      "name": "Sophia Antipolis"
+     }
+    ]
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "Rob Arthan [1] ProofPower Heath-Brown's proof with involutions",
+    "venue": "",
+    "year": null,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  },
+  {
+   "citedPaper": {
+    "paperId": null,
+    "externalIds": null,
+    "url": null,
+    "title": "Theorem 2sq",
+    "venue": "Metamath",
+    "year": null,
+    "openAccessPdf": null,
+    "authors": []
+   }
+  }
+ ]
+}

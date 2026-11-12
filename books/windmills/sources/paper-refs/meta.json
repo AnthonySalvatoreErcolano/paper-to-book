@@ -1,0 +1,10 @@
+{
+ "id": "paper-refs",
+ "type": "s2refs",
+ "ref": "2112.02556",
+ "why": "the paper's references with open-access links",
+ "fetched": "2026-11-12T16:50:52Z",
+ "files": {
+  "references.json": "7ed66023ce1eda9c63e355e38916613d653546328d65d657f794ea501933fab4"
+ }
+}

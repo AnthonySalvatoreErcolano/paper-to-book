@@ -1,0 +1,27 @@
+Formal verification of Zagier's one-sentence proof | Guillaume Dubach, Fabian Muehlboeck | 2021 | {"DBLP": "journals/corr/abs-2103-11389", "ArXiv": "2103.11389", "DOI": "10.48550/arXiv.2103.11389", "CorpusId": 232307414} | 
+Sums of Two Squares | P. Clark | 2018 | {"DOI": "10.1090/chel/384.h/02", "CorpusId": 17904307} | 
+A partition-theoretic proof of Fermat's Two Squares Theorem | A. Christopher | 2016 | {"MAG": "2214131438", "DBLP": "journals/dm/Christopher16", "DOI": "10.1016/j.disc.2015.12.002", "CorpusId": 28642052} | https://www.sciencedirect.com/science/article/pii/S0012365X15004355/pdf
+New Looks at Old Number Theory | Aimeric Malter, D. Schleicher, D. Zagier | 2013 | {"MAG": "2400659318", "DBLP": "journals/tamm/MalterSZ13", "DOI": "10.4169/amer.math.monthly.120.03.243", "CorpusId": 14700341} | 
+A String of Pearls: Proofs of Fermat's Little Theorem | Hing-Lun Chan, Michael Norrish | 2012 | {"MAG": "1496340815", "DBLP": "journals/jfrea/ChanN13", "DOI": "10.6092/issn.1972-5787/3728", "CorpusId": 5776285} | 
+Number Theory in the Spirit of Liouville | K. Williams | 2010 | {"MAG": "369397571", "DOI": "10.5860/choice.48-5750", "CorpusId": 118409796} | 
+A one-sentence proof that every prime p Ξ1(mod 4) is a sum of two squares | D. Zagier | 1990 | {"MAG": "2009155740", "DOI": "10.1080/00029890.1990.11995566", "CorpusId": 120255489} | 
+The Euclidean algorithm strikes again | S. Wagon | 1990 | {"MAG": "2274434947", "DOI": "10.2307/2323912", "CorpusId": 124707287} | 
+last update: 2020. Formalizing 100 Theorems |  | 2021 | null | None
+Primality Testing is Polynomial-time: A Mechanised Verification of the AKS Algorithm | Hing-Lun Chan | 2019 | {"MAG": "2988161545", "CorpusId": 209056949} | 
+Mathematical Case Studies: Some Number Theory. Supplementary ProofPower Examples |  | 2016 | null | None
+primes_sum_squares: THEORY. NASA PVS Library 6.0.9 |  | 2012 | null | None
+Formalizing 100 Theorems in Mizar |  | 2009 | null | None
+A proof from The Book? Todd and Vishal’s blog |  | 2008 | null | None
+Theory TwoSquares. Isabelle, Archive of Formal Proofs |  | 2007 | null | None
+Winged Squares [in Russian |  | 2007 | null | None
+Coq Gaussian integers, with uniqueness |  | 2007 | null | None
+Popular lectures in mathematics |  | 2006 | null | None
+Involutions associated with Sums of Two Squares. Publications de l |  | 1996 | null | None
+Fermat's two squares theorem | D. R. Heath-Brown | 1984 | {"MAG": "24561648", "CorpusId": 116326004} | 
+A Mathematician's Apology | F. S. | 1941 | {"DOI": "10.1038/147003a0", "CorpusId": 4212863} | 
+Anthony Narkawicz [12] NASA PVS Zagier's proof with involutions |  | None | null | None
+Representation of primes ≡ 1 (mod 4) as sum of 2 squares. Formalizing 100 Theorems in HOL Light |  | None | null | None
+Lean Principal Ideal Ring of Gaussian integers, with uniqueness 2021 Dubach and Muehlboeck [6] Coq Zagier's and Christopher's proofs with involutions |  | None | null | None
+Numbers Equal to the Sum of Two Square Numbers | L. Théry, Sophia Antipolis | None | {"CorpusId": 277918806} | 
+Rob Arthan [1] ProofPower Heath-Brown's proof with involutions |  | None | null | None
+Theorem 2sq |  | None | null | None
