@@ -1,0 +1,19 @@
+{
+ "slug": "windmills",
+ "title": "Windmills: A Prerequisite Book",
+ "paper": {
+  "arxiv": "2112.02556"
+ },
+ "paper_source": "paper",
+ "baseline": [
+  "high-school algebra",
+  "basic proof writing (induction, contradiction)",
+  "sets and functions"
+ ],
+ "created": "2026-11-12T16:48:40Z",
+ "status": {
+  "stage": 1,
+  "map_approved": false,
+  "chapters_approved": []
+ }
+}
