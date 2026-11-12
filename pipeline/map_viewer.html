@@ -6,6 +6,7 @@
 <title>Prerequisite Map</title>
 <style>
 :root {
+  color-scheme: light;
   --bg: #fbfaf7; --panel: #ffffff; --ink: #1d1d1b; --muted: #6b6a66; --line: #d9d6cf;
   --base: #e8f0e6; --base-b: #8fb08a; --node: #ffffff; --node-b: #9a958a; --sel: #2f5fa8;
   --bad: #b3261e; --ok: #2e7d4f; --edge: #b9b4aa; --edge-hi: #2f5fa8; --paper: #fff3d6; --paper-b: #c99a2e;
@@ -13,14 +14,14 @@
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #171715; --panel: #1f1f1c; --ink: #ecebe6; --muted: #a29f97; --line: #3a3934;
   --base: #23331f; --base-b: #5f8a59; --node: #24241f; --node-b: #6f6b62; --sel: #7aa7ec;
-  --bad: #ef7d73; --ok: #6cc48f; --edge: #55524b; --edge-hi: #7aa7ec; --paper: #3a2f14; --paper-b: #c99a2e; } }
+  --bad: #ef7d73; --ok: #6cc48f; --edge: #55524b; --edge-hi: #7aa7ec; --paper: #3a2f14; --paper-b: #c99a2e; color-scheme: dark; } }
 :root[data-theme="dark"] {
   --bg: #171715; --panel: #1f1f1c; --ink: #ecebe6; --muted: #a29f97; --line: #3a3934;
   --base: #23331f; --base-b: #5f8a59; --node: #24241f; --node-b: #6f6b62; --sel: #7aa7ec;
-  --bad: #ef7d73; --ok: #6cc48f; --edge: #55524b; --edge-hi: #7aa7ec; --paper: #3a2f14; --paper-b: #c99a2e; }
+  --bad: #ef7d73; --ok: #6cc48f; --edge: #55524b; --edge-hi: #7aa7ec; --paper: #3a2f14; --paper-b: #c99a2e; color-scheme: dark; }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 Georgia, "Times New Roman", serif; }
-header { padding: 16px 20px 10px; border-bottom: 1px solid var(--line); }
+header { padding-block: 16px 10px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); border-bottom: 1px solid var(--line); }
 h1 { font-size: 19px; margin: 0 0 4px; font-weight: normal; }
 .sub { color: var(--muted); font-size: 13px; }
 .stats { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 8px; font: 12.5px system-ui, sans-serif; }
@@ -29,7 +30,7 @@ h1 { font-size: 19px; margin: 0 0 4px; font-weight: normal; }
 main { display: grid; grid-template-columns: minmax(0, 1fr) 360px; min-height: calc(100vh - 92px); }
 #graph { overflow: auto; position: relative; }
 svg { display: block; }
-aside { border-left: 1px solid var(--line); background: var(--panel); padding: 16px 18px; overflow: auto; max-height: calc(100vh - 92px); position: sticky; top: 0; }
+aside { border-left: 1px solid var(--line); background: var(--panel); padding-block: 16px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); overflow: auto; max-height: calc(100vh - 92px); position: sticky; top: 0; }
 aside h2 { font-size: 17px; margin: 0 0 6px; font-weight: normal; }
 aside .k { font: 11.5px system-ui, sans-serif; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin: 14px 0 4px; }
 aside blockquote { margin: 4px 0 8px; padding: 2px 0 2px 10px; border-left: 2px solid var(--line); font-style: italic; font-size: 13px; }
@@ -42,6 +43,8 @@ aside code { font-size: 12px; }
 .node.undefined rect { stroke: var(--bad); stroke-dasharray: 4 3; }
 .node text { font: 12px system-ui, sans-serif; fill: var(--ink); pointer-events: none; }
 .node .ch { font-size: 10px; fill: var(--muted); }
+.colhead { font: 600 11px system-ui, sans-serif; letter-spacing: .06em; text-transform: uppercase; fill: var(--muted); }
+aside a { color: var(--sel); }
 .node { cursor: pointer; }
 .node.sel rect { stroke: var(--sel); stroke-width: 2.2; }
 .node.dim { opacity: .28; }
@@ -58,14 +61,14 @@ button { font: 12px system-ui, sans-serif; background: transparent; color: var(-
 <body>
 <header>
   <h1 id="title">Prerequisite map</h1>
-  <div class="sub" id="subtitle"></div>
+  <div class="sub"><span>Prerequisite map</span> · <span id="subtitle"></span></div>
   <div class="stats" id="stats"></div>
   <div class="legend">
-    <span><span class="sw" style="background:var(--paper);border-color:var(--paper-b)"></span>the paper's own concepts</span>
+    <span><span class="sw" style="background:var(--paper);border-color:var(--paper-b)"></span>taught by the paper itself</span>
     <span><span class="sw" style="background:var(--node)"></span>to be taught</span>
     <span><span class="sw" style="background:var(--base);border-color:var(--base-b)"></span>assumed background</span>
     <span><span class="sw" style="border:1px dashed var(--bad)"></span>not yet sourced</span>
-    <span>Click a concept to see its sources. Arrows point from a concept to what it needs.</span>
+    <span>Click a concept to see its sources and what it needs.</span>
   </div>
 </header>
 <main>
@@ -81,58 +84,49 @@ const DATA = /*__DATA__*/null;
   const led = DATA.ledger || {};
   const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const b = DATA.book || {};
-  document.getElementById('title').textContent = (b.title || b.slug || 'Book') + ': prerequisite map';
+  document.getElementById('title').textContent = b.title || b.slug || 'Prerequisite map';
   document.getElementById('subtitle').textContent = 'Assumed background: ' + (b.baseline || []).join('; ');
   const probs = DATA.report.problems || [];
   const teach = nodes.filter(n => !n.baseline);
-  const chapters = new Set(teach.map(n => n.chapter).filter(x => x != null));
+  const chapters = new Set(teach.map(n => n.chapter).filter(x => x != null && x !== 'the paper'));
+  const paperN = nodes.filter(n => n.chapter === 'the paper').length;
   document.getElementById('stats').innerHTML =
-    `<span><b>${teach.length}</b> concepts to teach</span><span><b>${chapters.size}</b> chapters planned</span>` +
+    `<span><b>${teach.length - paperN}</b> concepts the book teaches</span><span><b>${paperN}</b> the paper teaches itself</span><span><b>${chapters.size}</b> chapters planned</span>` +
     `<span><b>${nodes.length - teach.length}</b> assumed</span>` +
     `<span class="${probs.length ? 'bad' : 'ok'}"><b>${probs.length}</b> grounding problems</span>`;
 
-  // longest-path layering: baseline at the bottom, the paper at the top
-  const level = {};
-  const depth = id => {
-    if (level[id] != null) return level[id];
-    level[id] = 0;
-    const req = (byId[id].requires || []).filter(r => byId[r]);
-    level[id] = req.length ? 1 + Math.max(...req.map(depth)) : 0;
-    return level[id];
-  };
-  nodes.forEach(n => depth(n.id));
-  const maxL = Math.max(0, ...Object.values(level));
-  const rows = [];
-  nodes.forEach(n => (rows[level[n.id]] ||= []).push(n));
-  // order within rows by the mean position of what they need (a few sweeps)
-  const pos = {};
-  rows.forEach(r => r.forEach((n, i) => pos[n.id] = i));
-  for (let s = 0; s < 4; s++) rows.forEach((r, L) => {
-    if (!L) return;
-    r.forEach(n => { const q = (n.requires || []).filter(x => pos[x] != null);
-      n._k = q.length ? q.reduce((a, x) => a + pos[x], 0) / q.length : pos[n.id]; });
-    r.sort((a, c) => a._k - c._k); r.forEach((n, i) => pos[n.id] = i);
-  });
-  const W = 168, H = 44, GX = 26, GY = 70, PAD = 30;
-  const widest = Math.max(...rows.map(r => r.length));
-  const width = PAD * 2 + widest * W + (widest - 1) * GX, height = PAD * 2 + (maxL + 1) * H + maxL * GY;
+  // columns: background, then each chapter in order, then the paper's own concepts
+  const isPaper = n => n.chapter === 'the paper';
+  const colKey = n => n.baseline ? -1 : isPaper(n) ? 1e6 : (n.chapter == null ? 1e5 : Number(n.chapter));
+  const keys = [...new Set(nodes.map(colKey))].sort((a, c) => a - c);
+  const cols = keys.map(k => nodes.filter(n => colKey(n) === k));
+  const depth = {};
+  const dep = id => depth[id] ?? (depth[id] = 0, depth[id] = (byId[id].requires || []).filter(r => byId[r]).reduce((m, r) => Math.max(m, 1 + dep(r)), 0));
+  nodes.forEach(n => dep(n.id));
+  cols.forEach(c => c.sort((a, b) => depth[a.id] - depth[b.id] || a.title.localeCompare(b.title)));
+  const W = 176, H = 44, GX = 54, GY = 16, PAD = 28, HEAD = 34;
+  const tallest = Math.max(...cols.map(c => c.length));
+  const width = PAD * 2 + cols.length * W + (cols.length - 1) * GX;
+  const height = PAD + HEAD + tallest * H + (tallest - 1) * GY + PAD;
   const xy = {};
-  rows.forEach((r, L) => {
-    const rowW = r.length * W + (r.length - 1) * GX, x0 = (width - rowW) / 2;
-    r.forEach((n, i) => xy[n.id] = { x: x0 + i * (W + GX), y: PAD + (maxL - L) * (H + GY) });
-  });
+  cols.forEach((c, ci) => c.forEach((n, i) => xy[n.id] = { x: PAD + ci * (W + GX), y: PAD + HEAD + i * (H + GY) }));
+  const colLabel = k => k === -1 ? 'Assumed' : k === 1e6 ? 'In the paper' : k === 1e5 ? 'Unplaced' : 'Chapter ' + k;
   const svgNS = 'http://www.w3.org/2000/svg';
   const svg = document.createElementNS(svgNS, 'svg');
   svg.setAttribute('width', width); svg.setAttribute('height', height);
-  svg.innerHTML = `<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+  const labels = keys.map((k, ci) => `<text class="colhead" x="${PAD + ci * (W + GX) + W / 2}" y="${PAD + 12}" text-anchor="middle">${colLabel(k)}</text>`).join('');
+  svg.innerHTML = labels + `<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
     <path d="M0,0 L10,5 L0,10 z" fill="var(--edge)"/></marker></defs>`;
   const edges = [];
   nodes.forEach(n => (n.requires || []).forEach(r => {
     if (!xy[r]) return;
     const a = xy[n.id], c = xy[r];
     const p = document.createElementNS(svgNS, 'path');
-    const x1 = a.x + W / 2, y1 = a.y + H, x2 = c.x + W / 2, y2 = c.y, my = (y1 + y2) / 2;
-    p.setAttribute('d', `M${x1},${y1} C${x1},${my} ${x2},${my} ${x2},${y2 - 2}`);
+    let x1 = a.x, y1 = a.y + H / 2, x2 = c.x + W, y2 = c.y + H / 2;
+    if (c.x >= a.x) { x1 = a.x + W / 2; y1 = a.y + H; x2 = c.x + W / 2; y2 = c.y; }      // same column
+    const mx = (x1 + x2) / 2;
+    p.setAttribute('d', c.x >= a.x ? `M${x1},${y1} C${x1 + 40},${(y1 + y2) / 2} ${x2 + 40},${(y1 + y2) / 2} ${x2},${y2 - 2}`
+                                    : `M${x1},${y1} C${mx},${y1} ${mx},${y2} ${x2 + 2},${y2}`);
     const ok = rep[n.id] && rep[n.id].edges && rep[n.id].edges[r];
     p.setAttribute('class', 'edge' + (ok ? '' : ' unsourced'));
     p.setAttribute('marker-end', 'url(#ar)');
@@ -143,11 +137,11 @@ const DATA = /*__DATA__*/null;
   nodes.forEach(n => {
     const g = document.createElementNS(svgNS, 'g');
     const st = rep[n.id] || {};
-    g.setAttribute('class', 'node' + (n.baseline ? ' baseline' : '') + (n.in_paper && n.in_paper.length ? ' paper' : '') + (st.defined ? '' : ' undefined'));
+    g.setAttribute('class', 'node' + (n.baseline ? ' baseline' : '') + (isPaper(n) ? ' paper' : '') + (st.defined ? '' : ' undefined'));
     g.setAttribute('transform', `translate(${xy[n.id].x},${xy[n.id].y})`);
     const title = n.title.length > 24 ? n.title.slice(0, 23) + '…' : n.title;
     g.innerHTML = `<rect width="${W}" height="${H}"></rect><text x="${W / 2}" y="19" text-anchor="middle">${esc(title)}</text>` +
-      `<text class="ch" x="${W / 2}" y="34" text-anchor="middle">${n.baseline ? 'assumed' : (n.chapter != null ? 'Chapter ' + n.chapter : 'unplaced')}</text>`;
+      `<text class="ch" x="${W / 2}" y="34" text-anchor="middle">${n.baseline ? 'assumed' : isPaper(n) ? 'taught by the paper' : (n.in_paper && n.in_paper.length ? 'used in ' + n.in_paper.slice(0, 2).join(', ') : '')}</text>`;
     g.addEventListener('click', () => select(n.id));
     svg.appendChild(g); gs[n.id] = g;
   });
@@ -169,7 +163,8 @@ const DATA = /*__DATA__*/null;
       `<div class="k">Definition / statement</div>` + (defs.length ? defs.map(quote).join('') : (n.baseline ? '<div class="src">Assumed; not taught.</div>' : '<div class="bad">No sourced definition yet.</div>')) +
       `<div class="k">Needs</div>` + ((n.requires || []).length ? (n.requires || []).map(r => {
           const e = eds.find(x => x.to === r);
-          return `<div><a href="#" data-go="${esc(r)}">${esc((byId[r] || {}).title || r)}</a></div>` + (e ? quote(e) : '<div class="bad src">No sourced reason for this link yet.</div>');
+          const base = (byId[r] || {}).baseline;
+          return `<div><a href="#" data-go="${esc(r)}">${esc((byId[r] || {}).title || r)}</a></div>` + (e ? quote(e) : base ? '<div class="src">Assumed background; no citation needed.</div>' : '<div class="bad src">No sourced reason for this link yet.</div>');
         }).join('') : '<div class="src">Nothing beyond the background.</div>') +
       (ml ? `<div class="k">Lean / mathlib</div>${ml}` : '');
     document.querySelectorAll('[data-go]').forEach(a => a.addEventListener('click', ev => { ev.preventDefault(); select(a.dataset.go); }));
