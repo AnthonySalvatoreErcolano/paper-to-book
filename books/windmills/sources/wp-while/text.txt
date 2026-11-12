@@ -1,0 +1,1095 @@
+Loop (statement) - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+(Redirected from
+While loop
+)
+Control flow construct for executing code repeatedly
+icon
+This article
+needs
+more citations
+.
+Please help
+improve this article
+by
+adding citations to reliable sources
+. Unsourced material may be challenged and
+removed
+.
+Find sources:
+"Loop"
+statement
+–
+news
+·
+newspapers
+·
+books
+·
+scholar
+·
+JSTOR
+(
+January 2026
+)
+(
+Learn how and when to remove this message
+)
+In
+computer programming
+, a
+loop
+is a
+control flow
+construct
+that allows code to be executed repeatedly, usually with minor alterations between repetitions. Loops can be used to perform a repeated action on all items in a
+collection
+, or to implement a long lived program.
+Overview
+[
+edit
+]
+Loops are a feature of
+high-level programming languages
+. In
+low-level programming languages
+the same functionality is achieved using
+jumps
+. When a program is
+compiled
+to
+machine code
+, looping may be achieved using jumps; but some loops can be
+optimized
+to run without jumping.
+[
+1
+]
+Usually, loops are expected to run for a finite number of iteration.
+[
+citation needed
+]
+Without proper care, loops may accidentally be created that have no possibility of terminating. Such loops are called
+infinite loops
+. The problem of determining whether a program contains an infinite loop is known as the
+halting problem
+.
+Conditional loop
+[
+edit
+]
+A
+conditional loop
+(also known as an
+indeterminate loop
+[
+2
+]
+) is a loop that determines whether to terminate based on a logical condition.
+[
+3
+]
+These loops are flexible, but their exact behavior can be difficult to reason about.
+[
+4
+]
+:
+368
+A conditional loop is usually composed of two parts: a
+condition
+and a
+body
+. The
+condition
+is a logical statement depending on the state of the program and the
+body
+is a block of code that runs as long as the
+condition
+holds.
+[
+3
+]
+A common misconception is that the execution of the
+body
+terminates as soon as the
+condition
+does not hold anymore; but this is usually not the case.
+[
+4
+]
+:
+368
+In most programming languages, the
+condition
+is checked once for every execution of the
+body
+. When the
+condition
+is checked is not standardized and some programming languages contain multiple conditional looping structures with different rules about when the
+condition
+is assessed.
+[
+citation needed
+]
+Pre-test loop
+[
+edit
+]
+A
+pre-test loop
+is a conditional loop where the
+condition
+is checked before the
+body
+is executed.
+[
+5
+]
+More precisely, the
+condition
+is checked and if it holds the
+body
+is executed. Afterwards, the
+condition
+is checked again, and if it holds the
+body
+is executed again. This process repeats until the
+condition
+does not hold. Many programming languages call this loop a
+while loop
+and refer to it with the
+keyword
+while
+. They are commonly formatted in manner similar to
+while
+condition
+do
+body
+repeat
+Instead of the keywords
+do
+and
+repeat
+, other methods are sometimes used to indicate where the
+body
+begins and ends, such as
+curly braces
+[
+6
+]
+or
+whitespace
+.
+[
+7
+]
+For example, the following code fragment first checks whether
+x
+is less than five, which it is, so the
+body
+is entered. There,
+x
+is displayed and then incremented by one. After executing the statements in the
+body
+, the
+condition
+is checked again, and the loop is executed again. This process repeats until
+x
+has the value five.
+x
+← 0
+while
+x
+< 5
+do
+display(
+x
+)
+x
+←
+x
++ 1
+repeat
+Post-test loop
+[
+edit
+]
+Do-While loop flow diagram
+A
+post-test loop
+is a conditional loop where the
+condition
+is checked after the
+body
+is executed. More precisely, the
+body
+is executed and afterwards the
+condition
+is checked. If it holds the
+body
+is run again and then the
+condition
+is checked. This is repeated until the
+condition
+does not hold. This is sometimes called a
+do-while loop
+due to the syntax used in various programming languages,
+[
+8
+]
+although this can be confusing since
+Fortran
+and
+PL/I
+use the syntax "DO WHILE" for pre-test loops.
+[
+9
+]
+[
+10
+]
+Post-test loops are commonly formatted in manner similar to
+do
+body
+repeat
+while
+condition
+Instead of the keywords
+do
+and
+repeat
+others methods are sometime use to indicate where the
+body
+begins and ends, such as curly braces.
+[
+11
+]
+Some
+languages
+may use a different naming convention for this type of loop. For example, the
+Pascal
+and
+Lua
+languages have a "
+repeat until
+" loop, which continues to run
+until
+the control expression is true and then terminates.
+[
+12
+]
+[
+13
+]
+Three-part for loop
+[
+edit
+]
+Flow diagram of a for loop that prints five asterisks.
+A
+three-part for loop
+, popularized by C, has two additional parts:
+initialization
+(
+loop variant
+),  and
+increment
+, both of which are blocks of code. The
+initialization
+is intended as code that prepares the loop and is run once in the beginning and
+increment
+is used to update the state of the program after each iteration of the loop. Otherwise, the three-part for loop is a pre-test loop.
+They are commonly formatted in manner similar to
+for
+initialization
+,
+condition
+,
+increment
+do
+body
+repeat
+This syntax came from
+B
+and was originally invented by
+Stephen C. Johnson
+.
+[
+14
+]
+The following C code is an example of a three part loop that prints the numbers from 0 to 4.
+for
+(
+int
+i
+=
+0
+;
+i
+<
+5
+;
+i
+++
+)
+{
+printf
+(
+"%d
+\n
+"
+,
+i
+);
+}
+Equivalent constructs
+[
+edit
+]
+[icon]
+This section
+needs expansion
+. You can help by
+adding missing information
+.
+(
+January 2026
+)
+Assuming there is a properly declared function or method called
+do_work()
+, the following are equivalent in programming languages which support post-test loops.
+[
+15
+]
+do
+do_work()
+repeat while
+condition
+do_work()
+while
+condition
+do
+do_work()
+repeat
+Furthermore, given that a
+continue
+statement is not used, the above is technically equivalent to the following, though these examples are not typical or modern style used in everyday computers.
+[
+16
+]
+[
+17
+]
+while
+true
+do
+do_work()
+if
+condition
+is not
+true
+then
+break
+end if
+repeat
+or alternatively,
+LOOPSTART:
+do_work()
+if
+condition
+then
+goto
+LOOPSTART
+end if
+Enumeration
+[
+edit
+]
+foreach
+loops are almost always used to iterate over items in a sequence of elements.
+An
+enumeration
+(also known as an
+determinate loop
+[
+2
+]
+) is a loop intended to iterate over all the items of a collection.
+[
+18
+]
+[
+page
+needed
+]
+It is not as flexible as a conditional loop; but it is more predictable.
+[
+citation needed
+]
+For example, it is easier to guarantee that enumerations terminate and they avoid potential
+off-by-one errors
+.
+[
+citation needed
+]
+Enumerations can be implemented using an
+iterator
+, whether implicitly or explicitly.
+[
+citation needed
+]
+Depending on the programming language, various keywords are used to invoke enumerations. For example, descendants of
+ALGOL
+use
+for
+,
+[
+19
+]
+while descendants of
+Fortran
+use
+do
+[
+20
+]
+and
+COBOL
+uses
+PERFORM VARYING
+.
+[
+21
+]
+Enumerations are sometimes called "for loops," for example in
+Zig
+and
+Rust
+.
+[
+22
+]
+[
+23
+]
+This can be confusing since many of the most popular
+[
+24
+]
+programming languages, such as C,
+C++
+, and
+Java
+, use that term for the three-part for loop,
+[
+25
+]
+[
+26
+]
+[
+27
+]
+which is not an enumeration. Other programming languages, such as
+Perl
+and
+C#
+, avoid this confusion by using the term "foreach loop."
+[
+28
+]
+[
+29
+]
+The order in which the items in the collection are iterated through depends on the programming language.
+Fortran 95
+has a loop, invoked using the keyword
+FORALL
+, that is independent of this order. It has the effect of executing each iteration of the loop at the same time. This feature was made obsolescent  in
+Fortran 2018
+.
+[
+30
+]
+Loops in functional programming
+[
+edit
+]
+[icon]
+This section
+needs expansion
+. You can help by
+adding missing information
+.
+(
+January 2026
+)
+In most
+functional programming languages
+,
+recursion
+is used instead of traditional loops. This is due to the fact that variables are
+immutable
+, and therefore the
+increment
+step of a loop cannot occur.
+[
+31
+]
+To avoid running into
+stack overflow
+errors for long loops, functional programming languages implement
+tail call optimisation
+, which allows the same
+stack frame
+to be used for each iteration of the loop, compiling to effectively the same code as a
+while
+or
+for
+loop.
+[
+32
+]
+Some languages, such as
+Haskell
+, have a syntax known as a
+list comprehension
+, which is similar to enumeration, iterating over the contents of a list and transforming it into a new list.
+[
+citation needed
+]
+Loop counter
+[
+edit
+]
+A
+loop counter
+is a control variable that controls the iterations of a loop. Loop counters change with each iteration of a loop, providing a unique value for each iteration. The loop counter is used to decide when the loop should terminate. It is so named because most uses of this construct result in the variable taking on a range of integer values.
+A common
+identifier naming convention
+is for the loop counter to use the variable names
+i
+,
+j
+, and
+k
+(and so on if needed),
+[
+33
+]
+where
+i
+would be the most outer loop,
+j
+the next inner loop, etc. This style is generally agreed to have originated from the early programming of Fortran
+[
+citation needed
+]
+, where these variable names beginning with these letters were implicitly declared as having an integer type, and so were obvious choices for loop counters that were only temporarily required. The practice dates back further to
+mathematical notation
+where
+indices
+for
+sums
+and
+multiplications
+are often
+i
+,
+j
+, and
+k
+.
+Using terse names for loop counters, like
+i
+and
+j
+, is discouraged by some since the purpose of the variables is not as clear as if they were given a longer more descriptive name.
+[
+4
+]
+:
+383–382
+Different languages specify different rules for what value the loop counter will hold on termination of its loop, and indeed some hold that it becomes undefined. This permits a
+compiler
+to generate code that leaves any value in the loop counter, or perhaps even leaves it unchanged because the loop value was held in a register and never stored in memory. Actual behavior may even vary according to the compiler's optimization settings.
+Modifying the loop counter within the body of the loop can lead to unexpected consequences. To prevent such problems, some languages make the loop counter
+immutable
+.
+[
+citation needed
+]
+However, only overt changes are likely to be detected by the compiler. Situations where the address of the loop counter is passed as an argument to a
+subroutine
+, make it very difficult to check because the routine's behavior is in general unknowable to the compiler unless the language supports procedure signatures and argument intents.
+[
+citation needed
+]
+Early exit and continuation
+[
+edit
+]
+Some languages may also provide supporting statements for altering how a loop's iteration proceeds. Common among these are the
+break
+statement, which terminates the current loop the program is in, and the
+continue
+statement, which skips to the next iteration of the current loop.
+[
+4
+]
+:
+379
+These statements may have other names; For example in
+Fortran 90
+, they are called
+exit
+and
+cycle
+.
+[
+citation needed
+]
+A loop can also be terminated by
+returning
+from the function within which it is being executed.
+In the case of nested loops, the
+break
+and
+continue
+statements apply to the inner most loop. Some languages allow loops to be labelled. These statements can then be applied to any of the loops in which the program is nested.
+outer_loop:
+(This is a label for the outermost loop)
+for
+1 ≤ i ≤ 2
+do
+for
+1 ≤ j ≤ 2
+do
+display(i, j)
+if
+i = 2
+continue
+outer_loop
+end if
+repeat
+repeat
+(This nested loop displays the pairs (1, 1), (1, 2), and (2, 1))
+Infinite loop
+[
+edit
+]
+Main article:
+Infinite loop
+[icon]
+This section
+needs expansion
+. You can help by
+adding missing information
+.
+(
+January 2026
+)
+An infinite loop is a loop which never terminates. This can be intentional, or the result of a
+logic error
+.
+[
+citation needed
+]
+Systematically detecting infinite loops is known as the
+halting problem
+. It is known that there is no general algorithm which decides whether a particular loop is infinite or not.
+Infinite loops are useful in applications which need to perform a repeated calculation until a program terminates, such as
+web servers
+.
+[
+34
+]
+See also
+[
+edit
+]
+Primitive recursive function
+General recursive function
+Repeat loop (disambiguation)
+LOOP (programming language)
+– a programming language with the property that the functions it can compute are exactly the primitive recursive functions
+References
+[
+edit
+]
+↑
+Angelou, Alexandros; Dadaliaris, Antonios; Dossis, Michael; Dimitriou, Georgios (2021-11-26).
+"Branchless Code Generation for Modern Processor Architectures"
+.
+25th Pan-Hellenic Conference on Informatics
+. New York, NY, USA: ACM. pp.
+300–
+305.
+doi
+:
+10.1145/3503823.3503879
+.
+ISBN
+978-1-4503-9555-7
+.
+1
+2
+Samanta, Debasis; Sarma, Monalisa (15 June 2023).
+Joy with Java: Fundamentals of Object Oriented Programming
+. Cambridge University Press. p.
+124.
+ISBN
+978-1-009-21190-1
+.
+1
+2
+"Conditional loops - Computational constructs - National 4 Computing Science Revision"
+.
+BBC Bitesize
+. Archived from
+the original
+on 19 October 2021
+. Retrieved
+8 January
+2026
+.
+1
+2
+3
+4
+McConnell, Steve (9 June 2004).
+Code Complete
+. Pearson Education.
+ISBN
+978-0-7356-3697-2
+.
+↑
+"8. Compound statements — The while statement"
+.
+Python Documentation
+. Python Software Foundation
+. Retrieved
+9 November
+2026
+.
+↑
+"while Statement (GNU C Language Manual)"
+.
+www.gnu.org
+. Archived from
+the original
+on 12 July 2024
+. Retrieved
+8 January
+2026
+.
+↑
+"3. An Informal Introduction to Python"
+.
+Python documentation
+. Archived from
+the original
+on 31 December 2025
+. Retrieved
+8 January
+2026
+.
+↑
+"do...while - JavaScript | MDN"
+.
+MDN Web Docs
+. 2025-07-08
+. Retrieved
+2026-01-22
+.
+↑
+"DO WHILE (FORTRAN 77 Language Reference)"
+.
+docs.oracle.com
+. Archived from
+the original
+on 14 March 2023
+. Retrieved
+8 January
+2026
+.
+↑
+"DO command (PL/I)"
+.
+www.ibm.com
+. Archived from
+the original
+on 2 March 2025
+. Retrieved
+22 January
+2026
+.
+↑
+"do-while Statement (GNU C Language Manual)"
+.
+www.gnu.org
+. Archived from
+the original
+on 13 July 2024
+. Retrieved
+8 January
+2026
+.
+↑
+"The Repeat..until statement"
+.
+www.freepascal.org
+. Archived from
+the original
+on 9 November 2025
+. Retrieved
+22 January
+2026
+.
+↑
+"Programming in Lua
+: 4.3.3"
+.
+www.lua.org
+. Archived from
+the original
+on 2 January 2026
+. Retrieved
+22 January
+2026
+.
+↑
+Thompson, Ken
+.
+VCF East 2019 – Brian Kernighan interviews Ken Thompson
+.
+YouTube
+.
+Archived
+from the original on 2021-12-12
+. Retrieved
+2020-11-16
+.
+I saw Johnson's semicolon version of the for loop and I put that in [B], I stole it.
+↑
+"The while and do-while Statements (The Java™ Tutorials > Learning the Java Language > Language Basics)"
+.
+docs.oracle.com
+. Retrieved
+2026-05-16
+.
+↑
+Parlante, Nick.
+"While Loop"
+. Stanford University. Retrieved 16-05-26.
+↑
+"3.12. Legitimate Uses For goto"
+.
+icarus.cs.weber.edu
+. Retrieved
+2026-05-16
+.
+↑
+McConnell, Steve (9 June 2004).
+Code Complete
+. Pearson Education. p.
+367.
+ISBN
+978-0-7356-3697-2
+.
+↑
+Wirth, Niklaus
+(1973). "Preface".
+Systematic Programming: An Introduction
+. Prentice-Hall. pp.
+xiii.
+ISBN
+0138803692
+.
+↑
+"DO / END DO"
+.
+www.ibm.com
+. 24 April 2018. Archived from
+the original
+on 8 January 2026
+. Retrieved
+8 January
+2026
+.
+↑
+"PERFORM with VARYING Phrase"
+.
+www.ibm.com
+. June 2012. Archived from
+the original
+on 8 January 2026
+. Retrieved
+8 January
+2026
+.
+↑
+"Zig documentation"
+.
+ziglang.org
+. Archived from
+the original
+on 4 January 2026
+. Retrieved
+8 January
+2026
+.
+↑
+"Looping Through a Collection with for"
+.
+rust-lang.org
+. Archived from
+the original
+on 19 December 2025
+. Retrieved
+8 January
+2026
+.
+↑
+"TIOBE Index for September 2024"
+. Archived from
+the original
+on January 4, 2026
+. Retrieved
+2025-12-16
+.
+↑
+"for Statement (GNU C Language Manual)"
+.
+www.gnu.org
+. Archived from
+the original
+on 13 July 2024
+. Retrieved
+8 January
+2026
+.
+↑
+"for statement (C++)"
+.
+learn.microsoft.com
+. Archived from
+the original
+on 28 September 2025
+. Retrieved
+8 January
+2026
+.
+↑
+"The for Statement (The Java™ Tutorials > Learning the Java Language > Language Basics)"
+.
+docs.oracle.com
+. Archived from
+the original
+on 28 December 2025
+. Retrieved
+8 January
+2026
+.
+↑
+"Iteration statements -for, foreach, do, and while - C# reference"
+.
+learn.microsoft.com
+. Archived from
+the original
+on 28 December 2025
+. Retrieved
+8 January
+2026
+.
+↑
+"Perl for Loop"
+.
+Perl Tutorial
+. Archived from
+the original
+on 7 June 2025
+. Retrieved
+8 January
+2026
+.
+↑
+"FORALL"
+.
+Intel
+. Archived from
+the original
+on 1 January 2026
+. Retrieved
+8 January
+2026
+.
+↑
+Hinsen, Konrad (2009).
+"The Promises of Functional Programming"
+.
+Computing in Science & Engineering
+.
+11
+(4):
+86–
+90.
+Bibcode
+:
+2009CSE....11d..86H
+.
+doi
+:
+10.1109/mcse.2009.129
+.
+ISSN
+1521-9615
+.
+↑
+Clinger, William D. (1998). "Proper tail recursion and space efficiency".
+Proceedings of the ACM SIGPLAN 1998 conference on Programming language design and implementation
+. New York, NY, USA: ACM. pp.
+174–
+185.
+doi
+:
+10.1145/277650.277719
+.
+ISBN
+0-89791-987-4
+.
+↑
+http://www.knosof.co.uk/vulnerabilities/loopcntrl.pdf
+Analysis of loop control variables in C
+↑
+"What is an infinite loop (endless loop)?"
+.
+WhatIs
+. Retrieved
+2026-01-22
+.
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Loop_(statement)&oldid=1384484959#Pre-test_loop
+"
+Category
+:
+Control flow
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Articles needing additional references from January 2026
+All articles needing additional references
+All articles with unsourced statements
+Articles with unsourced statements from December 2025
+Articles with unsourced statements from January 2026
+Articles to be expanded from January 2026
+All articles to be expanded
+Wikipedia articles needing page number citations from March 2026
+Articles with unsourced statements from March 2026
+Articles with unsourced statements from August 2009
+Search
+Search
+Loop (statement)
+26 languages
+Add topic

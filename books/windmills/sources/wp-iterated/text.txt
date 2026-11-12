@@ -1,0 +1,3169 @@
+Iterated function - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Result of repeatedly applying a mathematical function
+This article
+needs editing to comply with Wikipedia's
+Manual of Style
+.
+In particular, it has problems with
+MOS:FORMULA
+- avoid mixing
+<
+math
+>
+...
+<
+/
+math
+>
+and
+{
+{
+math
+}
+}
+in the same expression.
+Please help
+improve the content
+.
+(
+July 2025
+)
+(
+Learn how and when to remove this message
+)
+Iterated transformations of the object on the left
+On top is a clockwise rotation by 90°. It has
+order
+4, because that is the smallest positive exponent that produces the identity. Below is a
+shear mapping
+with infinite order.
+Below that are their
+compositions
+, which both have order 3.
+In
+mathematics
+, an
+iterated function
+is a function that is obtained by
+composing
+another function with itself two or several times. The process of repeatedly applying the same function is called
+iteration
+. In this process, starting from some initial object, the result of applying a given function is fed again into the function as input, and this process is repeated.
+For example, on the image on the right:
+L
+=
+F
+(
+K
+)
+,
+M
+=
+F
+∘
+F
+(
+K
+)
+=
+F
+2
+(
+K
+)
+.
+Iterated functions are studied in
+computer science
+,
+fractals
+,
+dynamical systems
+, mathematics and
+renormalization group
+physics.
+Definition
+[
+edit
+]
+The formal definition of an iterated function on a
+set
+X
+follows.
+Let
+X
+be a set and
+f
+:
+X
+→
+X
+be a
+function
+.
+Defining
+f
+n
+as the
+n
+-th iterate of
+f
+, where
+n
+is a non-negative integer, by:
+f
+0
+=
+d
+e
+f
+id
+X
+and
+f
+n
++
+1
+=
+d
+e
+f
+f
+∘
+f
+n
+,
+where
+id
+X
+is the
+identity function
+on
+X
+and
+(
+f
+∘
+g
+)(
+x
+) =
+f
+(
+g
+(
+x
+))
+denotes
+function composition
+. This notation has been traced to
+John Frederick William Herschel
+in 1813.
+[
+1
+]
+[
+2
+]
+[
+3
+]
+[
+4
+]
+Herschel credited
+Hans Heinrich Bürmann
+for it, but without giving a specific reference to the work of Bürmann, which remains undiscovered.
+[
+5
+]
+Because the notation
+f
+n
+may refer to both iteration (composition) of the function
+f
+or
+exponentiation of the function
+f
+(the latter is commonly used in
+trigonometry
+), some mathematicians
+[
+citation needed
+]
+choose to use
+∘
+to denote the compositional meaning, writing
+f
+∘
+n
+(
+x
+)
+for the
+n
+-th iterate of the function
+f
+(
+x
+)
+, as in, for example,
+f
+∘3
+(
+x
+)
+meaning
+f
+(
+f
+(
+f
+(
+x
+)))
+. For the same purpose,
+f
+[
+n
+]
+(
+x
+)
+was used by
+Benjamin Peirce
+[
+6
+]
+[
+4
+]
+[
+nb 1
+]
+whereas
+Alfred Pringsheim
+and
+Jules Molk
+suggested
+n
+f
+(
+x
+)
+instead.
+[
+7
+]
+[
+4
+]
+[
+nb 2
+]
+Abelian property and iteration sequences
+[
+edit
+]
+In general, the following identity holds for all non-negative integers
+m
+and
+n
+,
+f
+m
+∘
+f
+n
+=
+f
+n
+∘
+f
+m
+=
+f
+m
++
+n
+.
+This is structurally identical to the property of
+exponentiation
+that
+a
+m
+a
+n
+=
+a
+m
++
+n
+.
+In general, for arbitrary general (negative, non-integer, etc.) indices
+m
+and
+n
+, this relation is called the
+translation functional equation
+, cf.
+Schröder's equation
+and
+Abel equation
+. On a logarithmic scale, this reduces to the
+nesting property
+of
+Chebyshev polynomials
+,
+T
+m
+(
+T
+n
+(
+x
+)) =
+T
+m n
+(
+x
+)
+, since
+T
+n
+(
+x
+) = cos(
+n
+arccos(
+x
+))
+.
+The relation
+(
+f
+m
+)
+n
+(
+x
+) = (
+f
+n
+)
+m
+(
+x
+) =
+f
+mn
+(
+x
+)
+also holds, analogous to the property of exponentiation that
+(
+a
+m
+)
+n
+= (
+a
+n
+)
+m
+=
+a
+mn
+.
+The sequence of functions
+f
+n
+is called a
+Picard sequence
+,
+[
+8
+]
+[
+9
+]
+named after
+Charles Émile Picard
+.
+For a given
+x
+in
+X
+, the
+sequence
+of values
+f
+n
+(
+x
+)
+is called the
+orbit
+of
+x
+.
+If
+f
+n
+(
+x
+) =
+f
+n
++
+m
+(
+x
+)
+for some integer
+m > 0
+, the orbit is called a
+periodic orbit
+. The smallest such value of
+m
+for a given
+x
+is called the
+period of the orbit
+. The point
+x
+itself is called a
+periodic point
+. The
+cycle detection
+problem in computer science is the
+algorithmic
+problem of finding the first periodic point in an orbit, and the period of the orbit.
+Fixed points
+[
+edit
+]
+If
+x
+= f
+(
+x
+)
+for some
+x
+in
+X
+(that is, the period of the orbit of
+x
+is
+1
+), then
+x
+is called a
+fixed point
+of the iterated sequence.  The set of fixed points is often denoted as
+Fix
+(
+f
+)
+. There exist a number of
+fixed-point theorems
+that guarantee the existence of fixed points in various situations, including the
+Banach fixed point theorem
+and the
+Brouwer fixed point theorem
+.
+There are several techniques for
+convergence acceleration
+of the sequences produced by
+fixed point iteration
+.
+[
+10
+]
+For example, the
+Aitken method
+applied to an iterated fixed point is known as
+Steffensen's method
+, and produces quadratic convergence.
+Limiting behaviour
+[
+edit
+]
+Upon iteration, one may find that there are sets that shrink and converge towards a single point. In such a case, the point that is converged to is known as an
+attractive fixed point
+. Conversely, iteration may give the appearance of points diverging away from a single point; this would be the case for an
+unstable fixed point
+.
+[
+11
+]
+When the points of the orbit converge to one or more limits, the set of
+accumulation points
+of the orbit is known as the
+limit set
+or the
+ω-limit set
+.
+The ideas of attraction and repulsion generalize similarly; one may categorize iterates into
+stable sets
+and
+unstable sets
+, according to the behavior of small
+neighborhoods
+under iteration. Also see
+infinite compositions of analytic functions
+.
+Other limiting behaviors are possible; for example,
+wandering points
+are points that move away, and never come back even close to where they started.
+Invariant measure
+[
+edit
+]
+If one considers the evolution of a density distribution, rather than that of individual point dynamics, then the limiting behavior is given by the
+invariant measure
+. It can be visualized as the behavior of a point-cloud or dust-cloud under repeated iteration. The invariant measure is an eigenstate of the Ruelle-Frobenius-Perron operator or
+transfer operator
+, corresponding to an eigenvalue of 1. Smaller eigenvalues correspond to unstable, decaying states.
+In general, because repeated iteration corresponds to a shift, the transfer operator, and its adjoint, the
+Koopman operator
+can both be interpreted as
+shift operators
+action on a
+shift space
+. The theory of
+subshifts of finite type
+provides general insight into many iterated functions, especially those leading to chaos.
+Fractional iterates and flows, and negative iterates
+[
+edit
+]
+g
+:
+R
+→
+R
+is a trivial functional 5th root of
+f
+:
+R
++
+→
+R
++
+,
+f
+(
+x
+) = sin(
+x
+)
+. The computation of
+f
+(
+π
+⁄
+6
+) =
+1
+⁄
+2
+=
+g
+5
+(
+π
+⁄
+6
+) is shown.
+The notion
+f
+1/
+n
+must be used with care when the equation
+g
+n
+(
+x
+) =
+f
+(
+x
+)
+has multiple solutions, which is normally the case, as in
+Babbage's equation
+of the functional roots of the identity map. For example, for
+n
+= 2
+and
+f
+(
+x
+) = 4
+x
+− 6
+, both
+g
+(
+x
+) = 6 − 2
+x
+and
+g
+(
+x
+) = 2
+x
+− 2
+are solutions; so the expression
+f
+1/2
+(
+x
+)
+does not denote a unique function, just as numbers have multiple algebraic roots. A trivial root of
+f
+can always be obtained if
+f
+'
+s domain can be extended sufficiently, cf. picture. The roots chosen are normally the ones belonging to the orbit under study.
+Fractional iteration of a function can be defined: for instance, a
+half iterate
+of a function
+f
+is a function
+g
+such that
+g
+(
+g
+(
+x
+)) =
+f
+(
+x
+)
+.
+[
+12
+]
+This function
+g
+(
+x
+)
+can be written using the index notation as
+f
+1/2
+(
+x
+)
+. Similarly,
+f
+1/3
+(
+x
+)
+is the function defined such that
+f
+1/3
+(
+f
+1/3
+(
+f
+1/3
+(
+x
+))) =
+f
+(
+x
+)
+, while
+f
+2/3
+(
+x
+)
+may be defined as equal to
+f
+1/3
+(
+f
+1/3
+(
+x
+))
+, and so forth, all based on the principle, mentioned earlier, that
+f
+m
+○
+f
+n
+=
+f
+m
++
+n
+. This idea can be generalized so that the iteration count
+n
+becomes a
+continuous parameter
+, a sort of continuous "time" of a continuous
+orbit
+.
+[
+13
+]
+[
+14
+]
+In such cases, one refers to the system as a
+flow
+(cf. section on
+conjugacy
+below.)
+If a function is bijective (and so possesses an inverse function), then negative iterates correspond to function inverses and their compositions. For example,
+f
+−1
+(
+x
+)
+is the normal inverse of
+f
+, while
+f
+−2
+(
+x
+)
+is the inverse composed with itself, i.e.
+f
+−2
+(
+x
+) =
+f
+−1
+(
+f
+−1
+(
+x
+))
+. Fractional negative iterates are defined analogously to fractional positive ones; for example,
+f
+−1/2
+(
+x
+)
+is defined such that
+f
+−1/2
+(
+f
+−1/2
+(
+x
+)) =
+f
+−1
+(
+x
+)
+, or, equivalently, such that
+f
+−1/2
+(
+f
+1/2
+(
+x
+)) =
+f
+0
+(
+x
+) =
+x
+.
+Some formulas for fractional iteration
+[
+edit
+]
+One of several methods of finding a series formula for fractional iteration, making use of a fixed point, is as follows.
+[
+15
+]
+First determine a fixed point for the function such that
+f
+(
+a
+) =
+a
+.
+Define
+f
+n
+(
+a
+) =
+a
+for all
+n
+belonging to the reals. This, in some ways, is the most natural extra condition to place upon the fractional iterates.
+Expand
+f
+n
+(
+x
+)
+around the fixed point
+a
+as a
+Taylor series
+,
+f
+n
+(
+x
+)
+=
+f
+n
+(
+a
+)
++
+(
+x
+−
+a
+)
+d
+d
+s
+f
+n
+(
+s
+)
+|
+s
+=
+a
++
+(
+x
+−
+a
+)
+2
+2
+d
+2
+d
+s
+2
+f
+n
+(
+s
+)
+|
+s
+=
+a
++
+⋯
+Expand out
+f
+n
+(
+x
+)
+=
+f
+n
+(
+a
+)
++
+(
+x
+−
+a
+)
+f
+′
+(
+a
+)
+f
+′
+(
+f
+(
+a
+)
+)
+f
+′
+(
+f
+2
+(
+a
+)
+)
+⋯
+f
+′
+(
+f
+n
+−
+1
+(
+a
+)
+)
++
+⋯
+Substitute in for
+f
+k
+(
+a
+) =
+a
+, for any
+k
+,
+f
+n
+(
+x
+)
+=
+a
++
+(
+x
+−
+a
+)
+f
+′
+(
+a
+)
+n
++
+(
+x
+−
+a
+)
+2
+2
+(
+f
+″
+(
+a
+)
+f
+′
+(
+a
+)
+n
+−
+1
+)
+(
+1
++
+f
+′
+(
+a
+)
++
+⋯
++
+f
+′
+(
+a
+)
+n
+−
+1
+)
++
+⋯
+Make use of the
+geometric progression
+to simplify terms,
+f
+n
+(
+x
+)
+=
+a
++
+(
+x
+−
+a
+)
+f
+′
+(
+a
+)
+n
++
+(
+x
+−
+a
+)
+2
+2
+(
+f
+″
+(
+a
+)
+f
+′
+(
+a
+)
+n
+−
+1
+)
+f
+′
+(
+a
+)
+n
+−
+1
+f
+′
+(
+a
+)
+−
+1
++
+⋯
+There is a special case when
+f
+'(a) = 1
+,
+f
+n
+(
+x
+)
+=
+x
++
+(
+x
+−
+a
+)
+2
+2
+(
+n
+f
+″
+(
+a
+)
+)
++
+(
+x
+−
+a
+)
+3
+6
+(
+3
+2
+n
+(
+n
+−
+1
+)
+f
+″
+(
+a
+)
+2
++
+n
+f
+‴
+(
+a
+)
+)
++
+⋯
+This can be carried on indefinitely, although inefficiently, as the latter terms become increasingly complicated. A more systematic procedure is outlined in the following section on
+Conjugacy
+.
+Example 1
+[
+edit
+]
+For example, setting
+f
+(
+x
+) =
+Cx
++
+D
+gives the fixed point
+a
+=
+D
+/(1 −
+C
+)
+, so the above formula terminates to just
+f
+n
+(
+x
+)
+=
+D
+1
+−
+C
++
+(
+x
+−
+D
+1
+−
+C
+)
+C
+n
+=
+C
+n
+x
++
+1
+−
+C
+n
+1
+−
+C
+D
+,
+which is trivial to check.
+Example 2
+[
+edit
+]
+Find the value of
+2
+2
+2
+⋯
+where this is done
+n
+times (and possibly the interpolated values when
+n
+is not an integer). We have
+f
+(
+x
+) =
+√
+2
+x
+. A fixed point is
+a
+=
+f
+(2) = 2
+.
+So set
+x
+= 1
+and
+f
+n
+(1)
+expanded around the fixed point value of 2 is then an infinite series,
+2
+2
+2
+⋯
+=
+f
+n
+(
+1
+)
+=
+2
+−
+(
+ln
+⁡
+2
+)
+n
++
+(
+ln
+⁡
+2
+)
+n
++
+1
+(
+(
+ln
+⁡
+2
+)
+n
+−
+1
+)
+4
+(
+ln
+⁡
+2
+−
+1
+)
+−
+⋯
+which, taking just the first three terms, is correct to the first decimal place when
+n
+is positive. Also see
+Tetration
+:
+f
+n
+(1) =
+n
+√
+2
+. Using the other fixed point
+a
+=
+f
+(4) = 4
+causes the series to diverge.
+For
+n
+= −1
+, the series computes the inverse function
+⁠
+2
++
+ln
+x
+/
+ln 2
+⁠
+.
+Example 3
+[
+edit
+]
+With the function
+f
+(
+x
+) =
+x
+b
+, expand around the fixed point 1 to get the series
+f
+n
+(
+x
+)
+=
+1
++
+b
+n
+(
+x
+−
+1
+)
++
+1
+2
+b
+n
+(
+b
+n
+−
+1
+)
+(
+x
+−
+1
+)
+2
++
+1
+3
+!
+b
+n
+(
+b
+n
+−
+1
+)
+(
+b
+n
+−
+2
+)
+(
+x
+−
+1
+)
+3
++
+⋯
+,
+which is simply the Taylor series of
+x
+(
+b
+n
+)
+expanded around 1.
+Conjugacy
+[
+edit
+]
+If
+f
+and
+g
+are two iterated functions, and there exists a
+homeomorphism
+h
+such that
+g
+=
+h
+−1
+○
+f
+○
+h
+,  then
+f
+and
+g
+are said to be
+topologically conjugate
+.
+Clearly, topological conjugacy is preserved under iteration, as
+g
+n
+=
+h
+−1
+○
+f
+n
+○
+h
+.  Thus, if one can solve for one iterated function system, one also  has solutions for all topologically conjugate systems. For example, the
+tent map
+is topologically conjugate to the
+logistic map
+. As a special case, taking
+f
+(
+x
+) =
+x
++
+1
+, one has the iteration of
+g
+(
+x
+) =
+h
+−
+1
+(
+h
+(
+x
+)
++
+1)
+as
+g
+n
+(
+x
+) =
+h
+−
+1
+(
+h
+(
+x
+)
++
+n
+)
+,
+for any function
+h
+.
+Making the substitution
+x
+=
+h
+−
+1
+(
+y
+) =
+ϕ
+(
+y
+)
+yields
+g
+(
+ϕ
+(
+y
+)) =
+ϕ
+(
+y
++1)
+,
+a form known as the
+Abel equation
+.
+Even in the absence of a strict homeomorphism, near a fixed point, here taken to be at
+x
+= 0,
+f
+(0) = 0, one may often solve
+[
+16
+]
+Schröder's equation
+for a function Ψ, which makes
+f
+(
+x
+)
+locally conjugate to a mere dilation,
+g
+(
+x
+) =
+f
+'(0)
+x
+, that is
+f
+(
+x
+) =  Ψ
+−1
+(
+f
+'(0) Ψ(
+x
+))
+.
+Thus, its iteration orbit, or flow, under suitable provisions (e.g.,
+f
+'(0) ≠ 1
+), amounts to the conjugate of the orbit of the monomial,
+Ψ
+−1
+(
+f
+'(0)
+n
+Ψ(
+x
+))
+,
+where
+n
+in this expression serves as a plain exponent:
+functional iteration has been reduced to multiplication!
+Here, however, the exponent
+n
+no longer needs be integer or positive, and is a continuous "time" of evolution for the full orbit:
+[
+17
+]
+the
+monoid
+of the Picard sequence (cf.
+transformation semigroup
+) has generalized to a full
+continuous group
+.
+[
+18
+]
+Iterates of the sine function (
+blue
+), in the first half-period. Half-iterate (
+orange
+), i.e., the sine's
+functional square root
+; the functional square root of that, the quarter-iterate (black) above it; and further fractional iterates up to the 1/64th. The functions below the (
+blue
+)  sine are six integral iterates below it, starting with the second iterate (
+red
+) and ending with the 64th iterate. The
+green
+envelope triangle represents the limiting null iterate, a
+triangular function
+serving as the starting point leading to the sine function. The dashed line is the negative first iterate, i.e. the inverse of sine (arcsin).
+(From the general pedagogy web-site.
+[
+19
+]
+For the notation, see
+.)
+This method (perturbative determination of the principal
+eigenfunction
+Ψ, cf.
+Jabotinsky matrix
+) is equivalent to the algorithm of the preceding section, albeit, in practice,  more powerful and systematic.
+Markov chains
+[
+edit
+]
+If the function is linear and can be described by a
+stochastic matrix
+, that is, a matrix whose rows or columns sum to one, then the iterated system is known as a
+Markov chain
+.
+Examples
+[
+edit
+]
+There are
+many chaotic maps
+. Well-known iterated functions include the
+Mandelbrot set
+and
+iterated function systems
+.
+Ernst Schröder
+,
+[
+20
+]
+in 1870, worked out special cases of the
+logistic map
+, such as the chaotic case
+f
+(
+x
+) = 4
+x
+(1 −
+x
+)
+, so that
+Ψ(
+x
+) = arcsin(
+√
+x
+)
+2
+, hence
+f
+n
+(
+x
+) = sin(2
+n
+arcsin(
+√
+x
+))
+2
+.
+A nonchaotic case Schröder also illustrated with his method,
+f
+(
+x
+) = 2
+x
+(1 −
+x
+)
+, yielded
+Ψ(
+x
+) = −
+⁠
+1
+/
+2
+⁠
+ln(1 − 2
+x
+)
+, and hence
+f
+n
+(
+x
+) = −
+⁠
+1
+/
+2
+⁠
+((1 − 2
+x
+)
+2
+n
+− 1)
+.
+If
+f
+is the
+action
+of a group element on a set, then the iterated function corresponds to a
+free group
+.
+Most functions do not have explicit general
+closed-form expressions
+for the
+n
+-th iterate. The table below lists some
+[
+20
+]
+that do. Note that all these expressions are valid even for non-integer and negative
+n
+, as well as non-negative integer
+n
+.
+f
+(
+x
+)
+f
+n
+(
+x
+)
+x
++
+b
+x
++
+n
+b
+a
+x
++
+b
+(
+a
+≠
+1
+)
+a
+n
+x
++
+a
+n
+−
+1
+a
+−
+1
+b
+a
+x
+b
+(
+b
+≠
+1
+)
+a
+b
+n
+−
+1
+b
+−
+1
+x
+b
+n
+a
+x
+2
++
+b
+x
++
+b
+2
+−
+2
+b
+4
+a
+(see note)
+2
+α
+2
+n
+−
+b
+2
+a
+where:
+α
+=
+2
+a
+x
++
+b
+2
+a
+x
+2
++
+b
+x
++
+b
+2
+−
+2
+b
+−
+8
+4
+a
+(see note)
+2
+α
+2
+n
++
+2
+α
+−
+2
+n
+−
+b
+2
+a
+where:
+α
+=
+2
+a
+x
++
+b
+±
+(
+2
+a
+x
++
+b
+)
+2
+−
+16
+4
+a
+x
++
+b
+c
+x
++
+d
+(
+fractional linear transformation
+)
+[
+21
+]
+a
+c
++
+b
+c
+−
+a
+d
+c
+[
+(
+c
+x
+−
+a
++
+α
+)
+α
+n
+−
+1
+−
+(
+c
+x
+−
+a
++
+β
+)
+β
+n
+−
+1
+(
+c
+x
+−
+a
++
+α
+)
+α
+n
+−
+(
+c
+x
+−
+a
++
+β
+)
+β
+n
+]
+where:
+α
+=
+a
++
+d
++
+(
+a
+−
+d
+)
+2
++
+4
+b
+c
+2
+β
+=
+a
++
+d
+−
+(
+a
+−
+d
+)
+2
++
+4
+b
+c
+2
+g
+−
+1
+(
+h
+(
+g
+(
+x
+)
+)
+)
+g
+−
+1
+(
+h
+n
+(
+g
+(
+x
+)
+)
+)
+g
+−
+1
+(
+g
+(
+x
+)
++
+b
+)
+(generic
+Abel equation
+)
+g
+−
+1
+(
+g
+(
+x
+)
++
+n
+b
+)
+x
+2
++
+b
+x
+2
++
+b
+n
+g
+−
+1
+(
+a
+g
+(
+x
+)
++
+b
+)
+(
+a
+≠
+1
+∨
+b
+=
+0
+)
+g
+−
+1
+(
+a
+n
+g
+(
+x
+)
++
+a
+n
+−
+1
+a
+−
+1
+b
+)
+a
+x
+2
++
+b
+a
+n
+x
+2
++
+a
+n
+−
+1
+a
+−
+1
+b
+T
+m
+(
+x
+)
+=
+cos
+⁡
+(
+m
+arccos
+⁡
+x
+)
+(
+Chebyshev polynomial
+for integer
+m
+)
+T
+m
+n
+=
+cos
+⁡
+(
+m
+n
+arccos
+⁡
+x
+)
+Note: these two special cases of
+ax
+2
++
+bx
++
+c
+are the only cases that have a closed-form solution. Choosing
+b
+= 2 = –
+a
+and
+b
+= 4 = –
+a
+, respectively, further reduces them to the nonchaotic and chaotic logistic cases discussed prior to the table.
+Some of these examples are related among themselves by simple conjugacies.
+Means of study
+[
+edit
+]
+Iterated functions can be studied with the
+Artin–Mazur zeta function
+and with
+transfer operators
+.
+In computer science
+[
+edit
+]
+In
+computer science
+, iterated functions occur as a special case of
+recursive functions
+, which in turn anchor the study of such broad topics as
+lambda calculus
+, or narrower ones, such as the
+denotational semantics
+of computer programs.
+Definitions in terms of iterated functions
+[
+edit
+]
+Two important
+functionals
+can be defined in terms of iterated functions. These are
+summation
+:
+{
+b
++
+1
+,
+∑
+i
+=
+a
+b
+g
+(
+i
+)
+}
+≡
+(
+{
+i
+,
+x
+}
+→
+{
+i
++
+1
+,
+x
++
+g
+(
+i
+)
+}
+)
+b
+−
+a
++
+1
+{
+a
+,
+0
+}
+and the equivalent product:
+{
+b
++
+1
+,
+∏
+i
+=
+a
+b
+g
+(
+i
+)
+}
+≡
+(
+{
+i
+,
+x
+}
+→
+{
+i
++
+1
+,
+x
+g
+(
+i
+)
+}
+)
+b
+−
+a
++
+1
+{
+a
+,
+1
+}
+Functional derivative
+[
+edit
+]
+The
+functional derivative
+of an iterated function is given by the recursive formula:
+δ
+f
+N
+(
+x
+)
+δ
+f
+(
+y
+)
+=
+f
+′
+(
+f
+N
+−
+1
+(
+x
+)
+)
+δ
+f
+N
+−
+1
+(
+x
+)
+δ
+f
+(
+y
+)
++
+δ
+(
+f
+N
+−
+1
+(
+x
+)
+−
+y
+)
+Lie's data transport equation
+[
+edit
+]
+See also:
+Shift operator §
+Functions of a real variable
+Iterated functions crop up in the series expansion of combined functions, such as
+g
+(
+f
+(
+x
+))
+.
+Given the
+iteration velocity
+, or
+beta function (physics)
+,
+v
+(
+x
+)
+=
+∂
+f
+n
+(
+x
+)
+∂
+n
+|
+n
+=
+0
+for the
+n
+th
+iterate of the function
+f
+, we have
+[
+22
+]
+g
+(
+f
+(
+x
+)
+)
+=
+exp
+⁡
+[
+v
+(
+x
+)
+∂
+∂
+x
+]
+g
+(
+x
+)
+.
+For example, for rigid advection, if
+f
+(
+x
+) =
+x
++
+t
+, then
+v
+(
+x
+) =
+t
+.  Consequently,
+g
+(
+x
++
+t
+) = exp(
+t
+∂/∂
+x
+)
+g
+(
+x
+)
+, action by a plain
+shift operator
+.
+Conversely, one may   specify
+f
+(
+x
+)
+given an arbitrary
+v
+(
+x
+)
+, through the generic
+Abel equation
+discussed above,
+f
+(
+x
+)
+=
+h
+−
+1
+(
+h
+(
+x
+)
++
+1
+)
+,
+where
+h
+(
+x
+)
+=
+∫
+1
+v
+(
+x
+)
+d
+x
+.
+This is evident by noting that
+f
+n
+(
+x
+)
+=
+h
+−
+1
+(
+h
+(
+x
+)
++
+n
+)
+.
+For continuous iteration index
+t
+, then, now written as a subscript, this amounts to Lie's celebrated exponential realization of a continuous group,
+e
+t
+∂
+∂
+h
+(
+x
+)
+g
+(
+x
+)
+=
+g
+(
+h
+−
+1
+(
+h
+(
+x
+)
++
+t
+)
+)
+=
+g
+(
+f
+t
+(
+x
+)
+)
+.
+The initial
+flow velocity
+v
+suffices to determine the entire flow, given this exponential realization which automatically provides the  general solution to the
+translation functional equation
+,
+[
+23
+]
+f
+t
+(
+f
+τ
+(
+x
+)
+)
+=
+f
+t
++
+τ
+(
+x
+)
+.
+See also
+[
+edit
+]
+Irrational rotation
+Iterated function system
+Iterative method
+Rotation number
+Sarkovskii's theorem
+Fractional calculus
+Recurrence relation
+Schröder's equation
+Functional square root
+Abel equation
+Böttcher's equation
+Infinite compositions of analytic functions
+Flow (mathematics)
+Tetration
+Functional equation
+Half-exponential function
+Notes
+[
+edit
+]
+↑
+while
+f
+(
+n
+)
+is taken for the
+n
+th derivative
+↑
+Alfred Pringsheim
+'s and
+Jules Molk
+'s (1907) notation
+n
+f
+(
+x
+)
+to denote
+function compositions
+must not be confused with
+Rudolf von Bitter Rucker
+'s (1982)
+notation
+n
+x
+, introduced by Hans Maurer (1901) and
+Reuben Louis Goodstein
+(1947) for
+tetration
+, or with
+David Patterson Ellerman
+'s (1995)
+n
+x
+pre-superscript notation for
+roots
+.
+References
+[
+edit
+]
+↑
+Herschel, John Frederick William
+(1813) [1812-11-12].
+"On a Remarkable Application of Cotes's Theorem"
+.
+Philosophical Transactions of the Royal Society of London
+.
+103
+(Part 1). London:
+Royal Society of London
+, printed by W. Bulmer and Co., Cleveland-Row, St. James's, sold by G. and W. Nicol, Pall-Mall: 8–26 [10].
+doi
+:
+10.1098/rstl.1813.0005
+.
+JSTOR
+107384
+.
+S2CID
+118124706
+.
+↑
+Herschel, John Frederick William
+(1820).
+"Part III. Section I. Examples of the Direct Method of Differences"
+.
+A Collection of Examples of the Applications of the Calculus of Finite Differences
+. Cambridge, UK: Printed by J. Smith, sold by J. Deighton & sons. pp.
+1–13 [5–6].
+Archived
+from the original on 2020-08-04
+. Retrieved
+2020-08-04
+.
+(NB. Inhere, Herschel refers to his
+1813 work
+and mentions
+Hans Heinrich Bürmann
+'s older work.)
+↑
+Peano, Giuseppe
+(1903).
+Formulaire mathématique
+(in French). Vol.
+IV. p.
+229.
+1
+2
+3
+Cajori, Florian
+(1952) [March 1929]. "§472. The power of a logarithm / §473. Iterated logarithms / §533. John Herschel's notation for inverse functions / §535. Persistence of rival notations for inverse functions / §537. Powers of trigonometric functions".
+A History of Mathematical Notations
+. Vol.
+2 (3rd corrected printing of 1929 issue, 2nd
+ed.). Chicago, USA:
+Open court publishing company
+. pp.
+108,
+176–
+179, 336, 346.
+ISBN
+978-1-60206-714-1
+. Retrieved
+2016-01-18
+.
+[…] §473.
+Iterated logarithms
+[…] We note here the symbolism used by
+Pringsheim
+and
+Molk
+in their joint
+Encyclopédie
+article: "
+2
+log
+b
+a
+= log
+b
+(log
+b
+a
+), …,
+k
++1
+log
+b
+a
+= log
+b
+(
+k
+log
+b
+a
+)."
+[a]
+[…] §533.
+John Herschel
+'s notation for inverse functions,
+sin
+−
+1
+x
+, tan
+−
+1
+x
+, etc., was published by him in the
+Philosophical Transactions of London
+, for the year 1813. He says (
+p.
+10
+): "This notation cos.
+−
+1
+e
+must not be understood to signify 1/cos.
+e
+, but what is usually written thus, arc
+(cos.=
+e
+)." He admits that some authors use cos.
+m
+A
+for (cos.
+A
+)
+m
+, but he justifies his own notation by pointing out that since
+d
+2
+x
+, Δ
+3
+x
+, Σ
+2
+x
+mean
+dd
+x
+, ΔΔΔ
+x
+, ΣΣ
+x
+, we ought to write sin.
+2
+x
+for sin.
+sin.
+x
+, log.
+3
+x
+for log.
+log.
+log.
+x
+. Just as we write
+d
+−
+n
+V=∫
+n
+V, we may write similarly sin.
+−
+1
+x
+=arc
+(sin.=
+x
+), log.
+−
+1
+x
+.=c
+x
+. Some years later Herschel explained that in 1813 he used
+f
+n
+(
+x
+),
+f
+−
+n
+(
+x
+), sin.
+−
+1
+x
+, etc., "as he then supposed for the first time. The work of a German Analyst,
+Burmann
+, has, however, within these few months come to his knowledge, in which the same is explained at a considerably earlier date. He[Burmann], however, does not seem to have noticed the convenience of applying this idea to the inverse functions tan
+−
+1
+, etc., nor does he appear at all aware of the inverse calculus of functions to which it gives rise." Herschel adds, "The symmetry of this notation and above all the new and most extensive views it opens of the nature of analytical operations seem to authorize its universal adoption."
+[b]
+[…] §535.
+Persistence of rival notations for inverse function.
+—
+[…] The use of Herschel's notation underwent a slight change in
+Benjamin Peirce
+'s books, to remove the chief objection to them; Peirce wrote: "cos
+[
+−
+1]
+x
+," "log
+[
+−
+1]
+x
+."
+[c]
+[…] §537.
+Powers of trigonometric functions.
+—
+Three principal notations have been used to denote, say, the square of sin
+x
+, namely, (sin
+x
+)
+2
+, sin
+x
+2
+, sin
+2
+x
+. The prevailing notation at present is sin
+2
+x
+, though the first is least likely to be misinterpreted. In the case of sin
+2
+x
+two interpretations suggest themselves; first, sin
+x
+⋅
+sin
+x
+; second,
+[d]
+sin
+(sin
+x
+). As functions of the last type do not ordinarily present themselves, the danger of misinterpretation is very much less than in case of log
+2
+x
+, where log
+x
+⋅
+log
+x
+and log
+(log
+x
+) are of frequent occurrence in analysis. […] The notation sin
+n
+x
+for (sin
+x
+)
+n
+has been widely used and is now the prevailing one. […]
+{{
+cite book
+}}
+:
+ISBN / Date incompatibility (
+help
+)
+(xviii+367+1 pages including 1 addenda page) (NB. ISBN and link for reprint of 2nd edition by Cosimo, Inc., New York, USA, 2013.)
+↑
+Gulick, Denny; Ford, Jeff (2024).
+Encounters with Chaos and Fractals
+(3rd
+ed.). CRC Press. p.
+2.
+ISBN
+978-1-003-83577-6
+.
+↑
+Peirce, Benjamin
+(1852).
+Curves, Functions and Forces
+. Vol.
+I (new
+ed.). Boston, USA. p.
+203.
+{{
+cite book
+}}
+:  CS1 maint: location missing publisher (
+link
+)
+↑
+Pringsheim, Alfred
+;
+Molk, Jules
+(1907).
+Encyclopédie des sciences mathématiques pures et appliquées
+(in French). Vol.
+I. p.
+195. Part I.
+↑
+Kuczma, Marek
+(1968).
+Functional equations in a single variable
+. Monografie Matematyczne. Warszawa: PWN – Polish Scientific Publishers.
+↑
+Kuczma, M., Choczewski B., and Ger, R. (1990).
+Iterative Functional Equations
+. Cambridge University Press.
+ISBN
+0-521-35561-3
+.
+{{
+cite book
+}}
+:  CS1 maint: multiple names: authors list (
+link
+)
+↑
+Carleson, L.
+;
+Gamelin, T. D. W.
+(1993).
+Complex dynamics
+. Universitext: Tracts in Mathematics. Springer-Verlag.
+ISBN
+0-387-97942-5
+.
+↑
+Istratescu, Vasile  (1981).
+Fixed Point Theory, An Introduction
+,  D. Reidel, Holland.
+ISBN
+90-277-1224-7
+.
+↑
+"Finding f such that f(f(x))=g(x) given g"
+.
+MathOverflow
+.
+↑
+Aldrovandi, R.; Freitas, L. P. (1998). "Continuous Iteration of Dynamical Maps".
+J. Math. Phys
+.
+39
+(10): 5324.
+arXiv
+:
+physics/9712026
+.
+Bibcode
+:
+1998JMP....39.5324A
+.
+doi
+:
+10.1063/1.532574
+.
+hdl
+:
+11449/65519
+.
+S2CID
+119675869
+.
+↑
+Berkolaiko, G.; Rabinovich, S.; Havlin, S. (1998).
+"Analysis of Carleman Representation of Analytical Recursions"
+.
+J. Math. Anal. Appl
+.
+224
+:
+81–
+90.
+doi
+:
+10.1006/jmaa.1998.5986
+.
+↑
+"Tetration.org"
+.
+↑
+Kimura, Tosihusa (1971). "On the Iteration of Analytic Functions",
+Funkcialaj Ekvacioj
+Archived
+2012-04-26 at the
+Wayback Machine
+14
+, 197-238.
+↑
+Curtright, T. L.
+;
+Zachos, C. K.
+(2009). "Evolution Profiles and Functional Equations".
+Journal of Physics A
+.
+42
+(48) 485208.
+arXiv
+:
+0909.2424
+.
+Bibcode
+:
+2009JPhA...42V5208C
+.
+doi
+:
+10.1088/1751-8113/42/48/485208
+.
+S2CID
+115173476
+.
+↑
+For explicit instance, example 2 above amounts to just
+f
+n
+(
+x
+) = Ψ
+−1
+((ln
+2)
+n
+Ψ(
+x
+))
+, for
+any n
+, not necessarily integer, where Ψ is the solution of the relevant
+Schröder's equation
+,
+Ψ(
+√
+2
+x
+) =
+ln
+2
+Ψ(
+x
+)
+. This solution is also the infinite
+m
+limit of
+(
+f
+m
+(
+x
+)
+−
+2)/(ln
+2)
+m
+.
+↑
+Curtright, T. L.
+Evolution surfaces and Schröder functional methods.
+1
+2
+Schröder, Ernst
+(1870). "Ueber iterirte Functionen".
+Math. Ann
+.
+3
+(2):
+296–
+322.
+doi
+:
+10.1007/BF01443992
+.
+S2CID
+116998358
+.
+↑
+Brand, Louis, "A sequence defined by a difference equation,"
+American Mathematical Monthly
+62
+, September 1955, 489
+–
+492.
+online
+↑
+Berkson, E.; Porta, H. (1978).
+"Semigroups of analytic functions and composition operators"
+.
+The Michigan Mathematical Journal
+.
+25
+:
+101–
+115.
+doi
+:
+10.1307/mmj/1029002009
+.
+Curtright, T. L.; Zachos, C. K. (2010). "Chaotic maps, Hamiltonian flows and holographic methods".
+Journal of Physics A: Mathematical and Theoretical
+.
+43
+(44) 445101.
+arXiv
+:
+1002.0104
+.
+Bibcode
+:
+2010JPhA...43R5101C
+.
+doi
+:
+10.1088/1751-8113/43/44/445101
+.
+S2CID
+115176169
+.
+↑
+Aczel, J. (2006),
+Lectures on Functional Equations and Their Applications
+(Dover Books on Mathematics, 2006), Ch. 6,
+ISBN
+978-0486445236
+.
+External links
+[
+edit
+]
+Gill, John
+(January 2017).
+"A Primer on the Elementary Theory of Infinite Compositions of Complex Functions"
+. Colorado State University.
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Iterated_function&oldid=1384147455
+"
+Categories
+:
+Dynamical systems
+Fractals
+Sequences and series
+Fixed points (mathematics)
+Functions and mappings
+Functional equations
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Use dmy dates from May 2019
+Wikipedia articles with style issues from July 2025
+All articles with style issues
+All articles with unsourced statements
+Articles with unsourced statements from August 2020
+CS1 maint: multiple names: authors list
+Webarchive template wayback links
+CS1 errors: ISBN date
+CS1 maint: location missing publisher
+CS1 French-language sources (fr)
+Search
+Search
+Iterated function
+14 languages
+Add topic

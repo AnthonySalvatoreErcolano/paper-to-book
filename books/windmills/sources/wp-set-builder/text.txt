@@ -1,0 +1,1467 @@
+Set-builder notation - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Use of braces for specifying sets
+{
+n
+∣
+∃
+k
+∈
+ℤ
+,
+n
+=
+2
+k
+}
+—
+The set of all
+even integers
+,
+expressed in set-builder notation.
+In
+mathematics
+and more specifically in
+set theory
+,
+set-builder notation
+is a
+notation
+for specifying a
+set
+by a property that characterizes its members.
+[
+1
+]
+Roster notation
+is a similar notation used for specifying a set by enumerating its elements.
+Specifying sets by member properties is allowed by the
+axiom schema of specification
+. This is also known as
+set comprehension
+and
+set abstraction
+.
+Sets defined by a predicate
+[
+edit
+]
+Set-builder notation can be used to describe a set that is defined by a
+predicate
+, that is, a logical formula that evaluates to
+true
+for an element of the set, and
+false
+otherwise.
+[
+2
+]
+In this form, set-builder notation has three parts: a variable, a
+colon
+or
+vertical bar
+separator, and a predicate. Thus there is a variable on the left of the separator, and a rule on the right of it. These three parts are contained in curly brackets:
+{
+x
+∣
+Φ
+(
+x
+)
+}
+or
+{
+x
+:
+Φ
+(
+x
+)
+}
+.
+The vertical bar (or colon) is a separator that can be read as "
+such that
+",
+"for which", or "with the property that".  The formula
+Φ
+(
+x
+)
+is said to be the
+rule
+or the
+predicate
+. All values of
+x
+for which the predicate holds (is true) belong to the set being defined. All values of
+x
+for which the predicate does not hold do not belong to the set.  Thus
+{
+x
+∣
+Φ
+(
+x
+)
+}
+is the set of all values of
+x
+that satisfy the formula
+Φ
+.
+[
+3
+]
+It may be the
+empty set
+, if no value of
+x
+satisfies the formula.
+Specifying the domain
+[
+edit
+]
+A domain
+E
+—
+that is a set to which the notation defines a
+subset
+—
+can appear on the left of the vertical bar:
+[
+4
+]
+{
+x
+∈
+E
+∣
+Φ
+(
+x
+)
+}
+,
+or by adjoining it to the predicate:
+{
+x
+∣
+x
+∈
+E
+and
+Φ
+(
+x
+)
+}
+or
+{
+x
+∣
+x
+∈
+E
+∧
+Φ
+(
+x
+)
+}
+.
+(The symbol
+⁠
+∈
+⁠
+denotes
+set membership
+, and the symbol
+∧
+denotes the
+logical and
+operator). This notation represents the set of all values of
+x
+that belong to the set
+E
+and for which the predicate is true. The
+subset axiom
+insures that if
+E
+is a set and
+⁠
+Φ
+⁠
+is a predicate, the notation defines always a set, which is a
+subset
+of
+E
+. If
+Φ
+(
+x
+)
+has the form
+Φ
+1
+(
+x
+)
+∧
+Φ
+2
+(
+x
+)
+, then
+{
+x
+∈
+E
+∣
+Φ
+(
+x
+)
+}
+is sometimes written
+{
+x
+∈
+E
+∣
+Φ
+1
+(
+x
+)
+,
+Φ
+2
+(
+x
+)
+}
+, using a comma instead of the symbol
+∧
+.
+In cases where the set
+E
+is clear from context, it may be not explicitly specified. It is common in the literature for an author to state the domain ahead of time, and then not specify it in the set-builder notation. For example, an author may say something such as, "Unless otherwise stated, variables are to be taken to be natural numbers," though in less formal contexts where the domain can be assumed, a written mention is often unnecessary.
+In the cases where the domain
+E
+is not defined (implicitly or explicitly), it may occur that the notation does not define a set, but a
+proper class
+.
+[
+5
+]
+For example,
+Russell's paradox
+shows that the expression
+{
+x
+∣
+x
+∉
+x
+}
+,
+although seemingly well formed as a set builder expression, cannot define a set without producing a contradiction.
+[
+6
+]
+In some cases, the notation may define a set that is not a subset of a previously defined set. This is the case of the
+power set
+of a set
+E
+, which is defined as
+𝒫
+(
+E
+)
+=
+{
+x
+∣
+x
+⊂
+E
+}
+=
+{
+x
+∣
+y
+∈
+x
+⟹
+y
+∈
+E
+}
+.
+The fact that this defines a set is an axiom of set theory, called the
+axiom of power set
+.
+Examples
+[
+edit
+]
+The following examples illustrate particular sets defined by set-builder notation via predicates. In each case, the domain is specified on the left side of the vertical bar, while the rule is specified on the right side.
+{
+x
+∈
+ℝ
+∣
+x
+>
+0
+}
+is the set of all strictly
+positive
+real numbers
+, which can be written in
+interval notation
+as
+(
+0
+,
+∞
+)
+.
+{
+x
+∈
+ℝ
+∣
+|
+x
+|
+=
+1
+}
+is the set
+{
+−
+1
+,
+1
+}
+. This set can also be defined as
+{
+x
+∈
+ℝ
+∣
+x
+2
+=
+1
+}
+; see
+equivalent predicates yield equal sets
+below.
+For each integer
+m
+, we can define
+G
+m
+=
+{
+x
+∈
+ℤ
+∣
+x
+≥
+m
+}
+=
+{
+m
+,
+m
++
+1
+,
+m
++
+2
+,
+…
+}
+. As an example,
+G
+3
+=
+{
+x
+∈
+ℤ
+∣
+x
+≥
+3
+}
+=
+{
+3
+,
+4
+,
+5
+,
+…
+}
+and
+G
+−
+2
+=
+{
+−
+2
+,
+−
+1
+,
+0
+,
+…
+}
+.
+{
+(
+x
+,
+y
+)
+∈
+ℝ
+×
+ℝ
+∣
+0
+<
+y
+<
+f
+(
+x
+)
+}
+is the set of pairs of real numbers such that
+y
+is greater than 0 and less than
+f
+(
+x
+)
+, for a given
+function
+f
+.   Here the
+cartesian product
+ℝ
+×
+ℝ
+denotes the set of ordered pairs of real numbers.
+{
+n
+∈
+ℕ
+∣
+(
+∃
+k
+)
+[
+k
+∈
+ℕ
+∧
+n
+=
+2
+k
+]
+}
+is the set of all
+even
+natural numbers
+. The
+∧
+sign stands for "and", which is known as
+logical conjunction
+. The
+∃
+sign stands for "there exists", which is known as
+existential quantification
+. So for example,
+(
+∃
+x
+)
+P
+(
+x
+)
+is read as  "there exists an
+x
+such that
+P
+(
+x
+)
+".
+{
+n
+∣
+(
+∃
+k
+∈
+ℕ
+)
+[
+n
+=
+2
+k
+]
+}
+is a notational variant for the same set of even natural numbers. It is not necessary to specify that
+n
+is a natural number, as this is implied by the formula on the right.
+{
+a
+∈
+ℝ
+∣
+(
+∃
+p
+∈
+ℤ
+)
+(
+∃
+q
+∈
+ℤ
+)
+[
+q
+≠
+0
+∧
+a
+q
+=
+p
+]
+}
+is the set of
+rational numbers
+; that is, real numbers that can be written as the ratio of two
+integers
+.
+More complex expressions on the left side of the notation
+[
+edit
+]
+An extension of set-builder notation replaces the single variable
+x
+with an
+expression
+. So instead of
+{
+x
+∣
+Φ
+(
+x
+)
+}
+, we may have
+{
+f
+(
+x
+)
+∣
+Φ
+(
+x
+)
+}
+,
+which should be read
+{
+f
+(
+x
+)
+∣
+Φ
+(
+x
+)
+}
+=
+{
+y
+∣
+∃
+x
+(
+y
+=
+f
+(
+x
+)
+∧
+Φ
+(
+x
+)
+)
+}
+.
+For example:
+{
+2
+n
+∣
+n
+∈
+ℕ
+}
+, where
+ℕ
+is the set of all natural numbers, is the set of all even natural numbers.
+{
+p
+/
+q
+∣
+p
+,
+q
+∈
+ℤ
+,
+q
+≠
+0
+}
+, where
+ℤ
+is the set of all integers, is
+ℚ
+,
+the set of all rational numbers.
+{
+2
+t
++
+1
+∣
+t
+∈
+ℤ
+}
+is the set of odd integers.
+{
+(
+t
+,
+2
+t
++
+1
+)
+∣
+t
+∈
+ℤ
+}
+creates a set of pairs, where each pair puts an integer into correspondence with an odd integer.
+When inverse functions can be explicitly stated, the expression on the left can be eliminated through simple substitution. Consider the example set
+{
+2
+t
++
+1
+∣
+t
+∈
+ℤ
+}
+. Make the substitution
+u
+=
+2
+t
++
+1
+, which is to say
+t
+=
+(
+u
+−
+1
+)
+/
+2
+, then replace
+t
+in the set builder notation to find
+{
+2
+t
++
+1
+∣
+t
+∈
+ℤ
+}
+=
+{
+u
+∣
+(
+u
+−
+1
+)
+/
+2
+∈
+ℤ
+}
+.
+Equivalent predicates yield equal sets
+[
+edit
+]
+Two sets are equal if and only if they have the same elements. Sets defined by set builder notation are equal if and only if their set builder rules, including the domain specifiers, are equivalent. That is
+{
+x
+∈
+A
+∣
+P
+(
+x
+)
+}
+=
+{
+x
+∈
+B
+∣
+Q
+(
+x
+)
+}
+if and only if
+(
+∀
+t
+)
+[
+(
+t
+∈
+A
+∧
+P
+(
+t
+)
+)
+⇔
+(
+t
+∈
+B
+∧
+Q
+(
+t
+)
+)
+]
+.
+Therefore, in order to prove the equality of two sets defined by set builder notation, it suffices to prove the equivalence of their predicates, including the domain qualifiers.
+For example,
+{
+x
+∈
+ℝ
+∣
+x
+2
+=
+1
+}
+=
+{
+x
+∈
+ℚ
+∣
+|
+x
+|
+=
+1
+}
+because the two rule predicates are logically equivalent:
+(
+x
+∈
+ℝ
+∧
+x
+2
+=
+1
+)
+⇔
+(
+x
+∈
+ℚ
+∧
+|
+x
+|
+=
+1
+)
+.
+This equivalence holds because, for any real number
+x
+, we have
+x
+2
+=
+1
+if and only if
+x
+is a rational number with
+|
+x
+|
+=
+1
+. In particular, both sets are equal to the set
+{
+−
+1
+,
+1
+}
+.
+Set existence axiom
+[
+edit
+]
+In many formal set theories, such as
+Zermelo–Fraenkel set theory
+, set builder notation is not part of the formal syntax of the theory. Instead, there is a
+set existence axiom scheme
+, which states that if
+E
+is a set and
+Φ(
+x
+)
+is a formula in the language of set theory, then there is a set
+Y
+whose members are exactly the elements of
+E
+that satisfy
+Φ
+:
+(
+∀
+E
+)
+(
+∃
+Y
+)
+(
+∀
+x
+)
+[
+x
+∈
+Y
+⇔
+x
+∈
+E
+∧
+Φ
+(
+x
+)
+]
+.
+The set
+Y
+obtained from this axiom is exactly the set described in set builder notation as
+{
+x
+∈
+E
+∣
+Φ
+(
+x
+)
+}
+.
+In programming languages
+[
+edit
+]
+Main article:
+List comprehension
+A similar notation available in a number of
+programming languages
+(notably
+Python
+and
+Haskell
+) is the
+list comprehension
+, which combines
+map
+and
+filter
+operations over one or more
+lists
+.
+It has been suggested that parts of this page be
+moved
+into
+List comprehension
+. (
+Discuss
+)
+(
+December 2023
+)
+In Python, the set-builder's braces are replaced with square brackets, parentheses, or curly braces, giving list,
+generator
+, and set objects, respectively. Python uses an English-based syntax. Haskell replaces the set-builder's braces with square brackets and uses symbols, including the standard set-builder vertical bar.
+The same can be achieved in
+Scala
+using Sequence Comprehensions, where the "for" keyword returns a list of the yielded variables using the "yield" keyword.
+[
+7
+]
+Consider these set-builder notation examples in some programming languages:
+Example 1
+Example 2
+Set-builder
+{
+l
+|
+l
+∈
+L
+}
+{
+(
+k
+,
+x
+)
+|
+k
+∈
+K
+∧
+x
+∈
+X
+∧
+P
+(
+x
+)
+}
+Python
+{
+l
+for
+l
+in
+L
+}
+{(
+k
+,
+x
+)
+for
+k
+in
+K
+for
+x
+in
+X
+if
+P
+(
+x
+)}
+Haskell
+[
+l
+|
+l
+<-
+ls
+]
+[(
+k
+,
+x
+)
+|
+k
+<-
+ks
+,
+x
+<-
+xs
+,
+p
+x
+]
+Scala
+for
+(
+l
+<-
+L
+)
+yield
+l
+for
+(
+k
+<-
+K
+;
+x
+<-
+X
+if
+P
+(
+x
+))
+yield
+(
+k
+,
+x
+)
+C#
+from
+l
+in
+L
+select
+l
+from
+k
+in
+K
+from
+x
+in
+X
+where
+P
+(
+x
+)
+select
+(
+k
+,
+x
+)
+SQL
+SELECT
+l
+FROM
+L_set
+SELECT
+k
+,
+x
+FROM
+K_set
+,
+X_set
+WHERE
+P
+(
+x
+)
+Prolog
+setof
+(
+L
+,
+member
+(
+L
+,
+Ls
+),
+Result
+)
+setof
+((
+K
+,
+X
+),(
+member
+(
+K
+,
+Ks
+),
+member
+(
+X
+,
+Xs
+),
+call
+(
+P
+,
+X
+)),
+Result
+)
+Erlang
+[
+L
+||
+L
+<-
+Ls
+]
+[{
+K
+,
+X
+}
+||
+K
+<-
+Ks
+,
+X
+<-
+Xs
+,
+p
+(
+X
+)]
+Julia
+[
+l
+for
+l
+∈
+L
+]
+[(
+k
+,
+x
+)
+for
+k
+∈
+K
+for
+x
+∈
+X
+if
+P
+(
+x
+)]
+Mathematica
+(
+l
+|->
+l
+)
+/@
+L
+Cases
+[
+Tuples
+[{
+K
+,
+X
+}],
+{
+k_
+,
+x_
+}
+/;
+P
+[
+x
+]]
+Tuples
+[{
+K
+,
+Select
+[
+X
+,
+P
+]}]
+The set builder notation and list comprehension notation are both instances of a more general notation known as
+monad comprehensions
+, which permits map/filter-like operations over any
+monad
+with a
+zero element
+.
+See also
+[
+edit
+]
+Glossary of set theory
+Notes
+[
+edit
+]
+↑
+Rosen, Kenneth (2007).
+Discrete Mathematics and its Applications
+(6th
+ed.). New York, NY: McGraw-Hill. pp.
+111–
+112.
+ISBN
+978-0-07-288008-3
+.
+↑
+Michael J Cullinan, 2012,
+A Transition to Mathematics with Proofs
+, Jones & Bartlett, pp.
+44ff.
+↑
+Weisstein, Eric W.
+"Set"
+.
+mathworld.wolfram.com
+. Retrieved
+20 August
+2020
+.
+↑
+"Set-Builder Notation"
+.
+mathsisfun.com
+. Retrieved
+20 August
+2020
+.
+↑
+Richard S. Pierce
+(1968)
+Introduction to the Theory of Abstract Algebras
+, page 2
+↑
+Irvine, Andrew David; Deutsch, Harry (9 October 2016) [1995].
+"Russell's Paradox"
+.
+Stanford Encyclopedia of Philosophy
+. Retrieved
+6 August
+2017
+.
+↑
+"Sequence Comprehensions"
+. Scala
+. Retrieved
+6 August
+2017
+.
+v
+t
+e
+Set theory
+Overview
+Set (mathematics)
+Venn diagram of set intersection
+Axioms
+Adjunction
+Choice
+countable
+dependent
+global
+Constructibility (V=L)
+Determinacy
+projective
+Extensionality
+Infinity
+Limitation of size
+Pairing
+Power set
+Regularity
+Union
+Martin's axiom
+Axiom schema
+replacement
+specification
+Operations
+Cartesian product
+Complement
+(i.e. set difference)
+De Morgan's laws
+Disjoint union
+Identities
+Intersection
+Power set
+Symmetric difference
+Union
+Concepts
+Methods
+Almost
+Cardinality
+Cardinal number
+(
+large
+)
+Class
+Constructible universe
+Continuum hypothesis
+Diagonal argument
+Element
+ordered pair
+tuple
+Family
+Forcing
+One-to-one correspondence
+Ordinal number
+Set-builder notation
+Transfinite induction
+Venn diagram
+Set
+types
+Amorphous
+Countable
+Empty
+Finite
+(
+hereditarily
+)
+Filter
+base
+subbase
+Ultrafilter
+Fuzzy
+Infinite
+(
+Dedekind-infinite
+)
+Recursive
+Singleton
+Subset
+·
+Superset
+Transitive
+Uncountable
+Universal
+Theories
+Alternative
+Axiomatic
+Constructive
+Naive
+Cantor's theorem
+Zermelo
+General
+Principia Mathematica
+New Foundations
+Zermelo–Fraenkel
+von Neumann–Bernays–Gödel
+Morse–Kelley
+Kripke–Platek
+Tarski–Grothendieck
+Paradoxes
+Problems
+Russell's paradox
+Suslin's problem
+Burali-Forti paradox
+Set theorists
+Paul Bernays
+Georg Cantor
+Paul Cohen
+Richard Dedekind
+Abraham Fraenkel
+Kurt Gödel
+Thomas Jech
+John von Neumann
+Willard Quine
+Bertrand Russell
+Thoralf Skolem
+Ernst Zermelo
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Set-builder_notation&oldid=1368739220
+"
+Categories
+:
+Set theory
+Mathematical notation
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Use dmy dates from December 2020
+Articles proposed for splitting from December 2023
+All articles proposed for splitting
+Articles proposed for section moving from December 2023
+All articles proposed for section moving
+Articles with example Haskell code
+Articles with example Python (programming language) code
+Search
+Search
+Set-builder notation
+10 languages
+Add topic

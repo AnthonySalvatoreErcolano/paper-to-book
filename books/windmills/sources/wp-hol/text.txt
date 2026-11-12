@@ -1,0 +1,406 @@
+HOL (proof assistant) - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Interactive theorem proving systems
+HOL
+Designed
+by
+Michael J C Gordon
+License
+Modified (3-clause) BSD license
+Filename extensions
+.sml
+Website
+hol-theorem-prover
+.org
+HOL
+(
+Higher Order Logic
+) denotes a family of
+interactive theorem proving systems
+using similar
+(higher-order)
+logics and implementation strategies. Systems in this family follow the
+LCF
+(Logic for Computable Functions) approach as they are implemented as a library which defines an
+abstract data type
+of proven
+theorems
+such that new objects of this type can only be created using the functions in the library which correspond to
+inference rules
+in
+higher-order logic
+. As long as these functions are correctly implemented, all theorems proven in the system must be valid. As such, a large system can be built on top of a small trusted kernel.
+Systems in the HOL family use
+ML
+or its successors. ML was originally developed along with LCF as a meta-language for theorem proving systems; in fact, the name stands for "Meta-Language".
+Underlying logic
+[
+edit
+]
+[icon]
+This section
+needs expansion
+. You can help by
+adding missing information
+.
+(
+October 2021
+)
+HOL systems use variants of
+classical
+higher-order logic
+, which has simple axiomatic foundations with few axioms and well-understood semantics.
+[
+1
+]
+The logic used in HOL provers is closely related to Isabelle/HOL,
+[
+2
+]
+the most widely used logic of
+Isabelle
+.
+HOL implementations
+[
+edit
+]
+A number of HOL systems (sharing essentially the same logic) remain active and in use:
+HOL4
+—
+the only presently maintained and developed system stemming from the HOL88 system, which was the culmination of the original HOL implementation effort, led by
+Mike Gordon
+. HOL88 included its own
+ML
+implementation, which was in turn implemented on top of
+Common Lisp
+. The systems that followed HOL88 (HOL90, hol98 and HOL4) were all implemented in
+Standard ML
+; while hol98 is
+coupled
+to
+Moscow ML
+, HOL4 can be built with either Moscow ML or
+Poly/ML
+. All come with large libraries of theorem proving code which implement extra automation on top of the very simple core code. HOL4 is BSD licensed.
+[
+3
+]
+HOL Light
+—
+an experimental "minimalist" version of HOL which has since grown into another mainstream HOL variant; its logical foundations remain unusually simple. HOL Light, originally implemented in
+Caml Light
+, now uses
+OCaml
+. HOL Light is available under the new BSD license.
+[
+4
+]
+ProofPower
+—
+a collection of six tools designed to provide special support grounded in HOL for working with the
+Z notation
+for formal specification. The tool PPDaz supporting specification and verification of programs written in a subset of Ada was previously only supplied under a proprietary licence. All the tools are now available under the GNU GPL v2 license.
+HOL Zero
+—
+a minimalist implementation focused on trustworthiness. HOL Zero is GNU GPL 3+ licensed.
+[
+5
+]
+Candle
+—
+An end-to-end verified HOL Light implementation on top of CakeML.
+[
+6
+]
+Formal proof developments
+[
+edit
+]
+[icon]
+This section
+needs expansion
+. You can help by
+adding missing information
+.
+(
+October 2021
+)
+The
+CakeML
+project developed a formally proven compiler for ML.
+[
+7
+]
+Previously, HOL was used to develop a formally proven
+Lisp
+implementation running on ARM, x86 and PowerPC.
+[
+8
+]
+HOL was also used to formalize the
+semantics
+of x86 multiprocessors
+[
+9
+]
+as well as the
+machine code
+for
+Power ISA
+and
+ARM
+architectures.
+[
+10
+]
+References
+[
+edit
+]
+↑
+Andrews, Peter B (2002).
+An introduction to mathematical logic and type theory: to truth through proof
+. Applied Logic Series. Vol.
+27 (Second
+ed.). Dordrecht: Kluwer Academic Publishers.
+ISBN
+978-1-4020-0763-7
+.
+↑
+Tobias Nipkow
+; Markus Wenzel;
+Lawrence C. Paulson
+(2002).
+Isabelle/HOL: A Proof Assistant for Higher-Order Logic
+. Berlin, Heidelberg: Springer-Verlag.
+ISBN
+978-3-540-45949-1
+.
+↑
+"HOL Interactive Theorem Prover"
+.
+↑
+"HOL Light"
+.
+↑
+See LICENSE file in the
+tarball
+Archived
+2012-03-03 at the
+Wayback Machine
+.
+↑
+Abrahamsson, Oskar; Myreen, Magnus O.; Kumar, Ramana; Sewell, Thomas (2022). Andronick, June; de Moura, Leonardo (eds.).
+"Candle: A Verified Implementation of HOL Light"
+.
+13th International Conference on Interactive Theorem Proving (ITP 2022)
+. Leibniz International Proceedings in Informatics (LIPIcs).
+237
+. Dagstuhl, Germany: Schloss Dagstuhl – Leibniz-Zentrum für Informatik: 3:1–3:17.
+doi
+:
+10.4230/LIPIcs.ITP.2022.3
+.
+ISBN
+978-3-95977-252-5
+.
+S2CID
+251323103
+.
+{{
+cite journal
+}}
+:  CS1 maint: periodical has ISBN (
+link
+)
+↑
+"CakeML"
+.
+↑
+Magnus O. Myreen; Michael J. C. Gordon.
+Verified LISP Implementations on ARM, x86 and PowerPC
+(PDF)
+. TPHOLs 2009. pp.
+359–
+374.
+↑
+Peter Sewell; Susmit Sarkar; Scott Owens; Francesco Zappa Nardelli; Magnus O. Myreen (2010).
+"x86-TSO: a rigorous and usable programmer's model for x86 multiprocessors"
+(PDF)
+.
+Communications of the ACM
+.
+53
+(7):
+89–
+97.
+doi
+:
+10.1145/1785414.1785443
+.
+S2CID
+1999974
+.
+↑
+Jade Alglave
+; Anthony C. J. Fox; Samin Ishtiaq; Magnus O. Myreen; Susmit Sarkar; Peter Sewell; Francesco Zappa Nardelli.
+The Semantics of Power and ARM Multiprocessor Machine Code
+(PDF)
+. DAMP 2009. pp.
+13–
+24.
+Further reading
+[
+edit
+]
+Gordon, Michael J. C.
+(1996).
+"From LCF to HOL: A Short History"
+. Retrieved
+2007-10-11
+.
+External links
+[
+edit
+]
+Official website
+Documents specifying HOL's basic logic
+HOL4 Description manual
+, includes system logic specification
+Virtual library formal methods information
+v
+t
+e
+ML
+programming
+Software
+Implementations
+,
+dialects
+Caml
+OCaml
+°
+Eff
+F*
+°
+F#
+°
+JoCaml
+°
+Reason
+°
+Standard ML
+Alice
+°
+Concurrent ML
+Extended ML
+MLton
+°
+Standard ML of New Jersey
+° (SML/NJ)
+Dependent ML
+ATS
+°
+Futhark
+°
+Lazy ML
+MacroML
+Ur
+°
+Programming tools
+Alt-Ergo
+°
+Astrée
+Camlp4
+°
+CompCert
+°
+FFTW
+°
+Frama-C
+°
+Haxe
+°
+Marionnet
+°
+MTASC
+°
+Poplog
+°
+Semgrep
+°
+SLAM project
+Theorem provers
+,
+proof assistants
+HOL
+°
+HOL Light
+°
+Isabelle
+°
+LEGO
+Logic for Computable Functions
+Matita
+°
+Rocq
+°
+Twelf
+°
+GeneWeb
+°
+Community
+Designers
+Lennart Augustsson
+(Lazy ML)
+Damien Doligez
+(OCaml)
+Gérard Huet
+(Caml)
+Xavier Leroy
+(Caml, OCaml)
+Robin Milner
+(ML)
+Don Sannella
+(Extended ML)
+Don Syme
+(F#)
+Thierry Coquand
+Steven G. Johnson
+Christine Paulin-Mohring
+Frank Pfenning
+Simon Thompson
+Italics
+= discontinued
+° =
+Open-source software
+Book
+Categories
+:
+Family:ML
+•
+Family:OCaml
+•
+Software:OCaml
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=HOL_(proof_assistant)&oldid=1305058799
+"
+Categories
+:
+Proof assistants
+Logic in computer science
+Software using the BSD license
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Articles to be expanded from October 2021
+All articles to be expanded
+Webarchive template wayback links
+CS1 maint: periodical has ISBN
+Official website different in Wikidata and Wikipedia
+Search
+Search
+HOL (proof assistant)
+1 language
+Add topic

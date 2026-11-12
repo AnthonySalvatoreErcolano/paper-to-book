@@ -1,0 +1,11 @@
+{
+ "id": "wp-divisor",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Divisor",
+ "why": "divisibility",
+ "fetched": "2026-11-12T16:53:19Z",
+ "files": {
+  "raw.html": "1dc94d7e3871c34a7e1d5a80f0e362daad021c43dfcc47bf47e3c38eb3c4522e"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Divisor"
+}

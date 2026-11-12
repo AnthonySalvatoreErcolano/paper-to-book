@@ -1,0 +1,2145 @@
+Function composition - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Operation on mathematical functions
+This article is about the mathematical concept; not to be confused with
+Function composition (computer science)
+.
+"Ring operator" redirects here; not to be confused with
+operator ring
+or
+operator assistance
+.
+"∘" redirects here. For the character, see
+Degree symbol §
+Lookalikes
+.
+Function
+x
+↦
+f
+(
+x
+)
+History of the function concept
+Types by
+domain
+and
+codomain
+X
+→
+𝔹
+𝔹
+→
+X
+𝔹
+n
+→
+X
+X
+→
+ℤ
+ℤ
+→
+X
+X
+→
+ℝ
+ℝ
+→
+X
+ℝ
+n
+→
+X
+X
+→
+ℂ
+ℂ
+→
+X
+ℂ
+n
+→
+X
+Classes/properties
+Constant
+Identity
+Linear
+Polynomial
+Rational
+Algebraic
+Analytic
+Smooth
+Continuous
+Measurable
+Injective
+Surjective
+Bijective
+Constructions
+Restriction
+Composition
+λ
+Inverse
+Generalizations
+Relation
+(
+Binary relation
+)
+Set-valued
+Multivalued
+Partial
+Implicit
+Space
+Higher-order
+Morphism
+Functor
+List of specific functions
+v
+t
+e
+In
+mathematics
+, the
+composition operator
+∘
+takes two
+functions
+,
+f
+and
+g
+, and returns a new function
+f
+∘
+g
+.  When the composite function
+f
+∘
+g
+(pronounced "
+f
+of
+g
+") is evaluated at an input
+x
+, the result is
+(
+f
+∘
+g
+)
+(
+x
+)
+=
+f
+(
+g
+(
+x
+)
+)
+. That is, the function
+f
+is
+applied
+after applying
+g
+to
+x
+.
+[
+1
+]
+The composition of functions is a special case of the
+composition of relations
+, sometimes also denoted by
+∘
+. As a result, all properties of composition of relations are true of composition of functions,
+[
+2
+]
+such as
+associativity
+.
+Examples
+[
+edit
+]
+Concrete example for the composition of two functions
+Composition of functions on a finite
+set
+: If
+f
+= {(1, 1), (2, 3), (3, 1), (4, 2)}
+, and
+g
+= {(1, 2), (2, 3), (3, 1), (4, 2)}
+, then
+g
+∘
+f
+= {(1, 2), (2, 1), (3, 2), (4, 3)}
+, as shown in the figure.
+Composition of functions on an
+infinite set
+: If
+f
+:
+R
+→
+R
+(where
+R
+is the set of all
+real numbers
+) is given by
+f
+(
+x
+) = 2
+x
++ 4
+and
+g
+:
+R
+→
+R
+is given by
+g
+(
+x
+) =
+x
+3
+, then:
+(
+f
+∘
+g
+)(
+x
+) =
+f
+(
+g
+(
+x
+)) =
+f
+(
+x
+3
+) = 2
+x
+3
++ 4
+, and
+(
+g
+∘
+f
+)(
+x
+) =
+g
+(
+f
+(
+x
+)) =
+g
+(2
+x
++ 4) = (2
+x
++ 4)
+3
+.
+If an airplane's altitude at time
+t
+is
+a
+(
+t
+)
+, and the air pressure at altitude
+x
+is
+p
+(
+x
+)
+, then
+(
+p
+∘
+a
+)(
+t
+)
+is the pressure around the plane at time
+t
+.
+Function defined on finite sets which change the order of their elements such as
+permutations
+can be composed on the same set, this being composition of permutations.
+Properties
+[
+edit
+]
+The composition of functions is always
+associative
+—a property inherited from the
+composition of relations
+.
+[
+2
+]
+That is, if
+f
+,
+g
+, and
+h
+are composable, then
+f
+∘ (
+g
+∘
+h
+) = (
+f
+∘
+g
+) ∘
+h
+.
+[
+3
+]
+Since the parentheses do not change the result, they are generally omitted.
+In a strict sense, the composition
+g
+∘
+f
+is only meaningful if the codomain of
+f
+equals the domain of
+g
+; in a wider sense, it is sufficient that the former be an improper
+subset
+of the latter.
+[
+nb 1
+]
+Moreover, it is often convenient to tacitly restrict the domain of
+f
+, such that
+f
+produces only values in the domain of
+g
+. For example, the composition
+g
+∘
+f
+of the functions
+f
+:
+R
+→
+(−∞,+9]
+defined by
+f
+(
+x
+) = 9 −
+x
+2
+and
+g
+:
+[0,+∞)
+→
+R
+defined by
+g
+(
+x
+)
+=
+x
+can be defined on the
+interval
+[−3,+3]
+.
+Compositions of two
+real
+functions, the
+absolute value
+and a
+cubic function
+, in different orders, show a non-commutativity of composition.
+The functions
+g
+and
+f
+are said to
+commute
+with each other if
+g
+∘
+f
+=
+f
+∘
+g
+. Commutativity is a special property, attained only by particular functions, and often in special circumstances. For example,
+|
+x
+|
++ 3 =
+|
+x
++ 3
+|
+only when
+x
+≥ 0
+. The picture shows another example.
+The composition of
+one-to-one
+(injective) functions is always one-to-one. Similarly, the composition of
+onto
+(surjective) functions is always onto. It follows that the composition of two
+bijections
+is also a bijection. The
+inverse function
+of a composition (assumed invertible) has the property that
+(
+f
+∘
+g
+)
+−1
+=
+g
+−1
+∘
+f
+−1
+.
+[
+4
+]
+Derivatives
+of compositions involving differentiable functions can be found using the
+chain rule
+.
+Higher derivatives
+of such functions are given by
+Faà di Bruno's formula
+.
+[
+3
+]
+Composition of functions is sometimes described as a kind of
+multiplication
+on a function space, but has very different properties from
+pointwise
+multiplication of functions (e.g. composition is not
+commutative
+).
+[
+5
+]
+Composition monoids
+[
+edit
+]
+Main article:
+Transformation monoid
+Suppose one has two (or more) functions
+f
+:
+X
+→
+X
+,
+g
+:
+X
+→
+X
+having the same domain and codomain; these are often called
+transformations
+. Then one can form chains of transformations composed together, such as
+f
+∘
+f
+∘
+g
+∘
+f
+. Such chains have the
+algebraic structure
+of a
+monoid
+, called a
+transformation monoid
+or (much more seldom) a
+composition monoid
+.  In general, transformation monoids can have remarkably complicated structure. One particular notable example is the
+de Rham curve
+. The set of
+all
+functions
+f
+:
+X
+→
+X
+is called the
+full transformation semigroup
+[
+6
+]
+or
+symmetric semigroup
+[
+7
+]
+on
+X
+. (One can actually define two semigroups depending how one defines the semigroup operation as the left or right composition of functions.
+[
+8
+]
+)
+Composition of a
+shear mapping
+(red)
+and a clockwise rotation by 45°
+(green)
+. On the left is the original object. Above is shear, then rotate. Below is rotate, then shear.
+If the given transformations are
+bijective
+(and thus invertible), then the set of all possible combinations of these functions forms a
+transformation group
+(also known as a
+permutation group
+); and one says that the group is
+generated
+by these functions.
+The set of all bijective functions
+f
+:
+X
+→
+X
+(called
+permutations
+) forms a group with respect to function composition. This is the
+symmetric group
+, also sometimes called the
+composition group
+. A fundamental result in group theory,
+Cayley's theorem
+, essentially says that any group is in fact just a subgroup of a symmetric group (
+up to
+isomorphism).
+[
+9
+]
+In the symmetric semigroup (of all transformations) one also finds a weaker, non-unique notion of inverse (called a pseudoinverse) because the symmetric semigroup is a
+regular semigroup
+.
+[
+10
+]
+Functional powers
+[
+edit
+]
+Main article:
+Iterated function
+If
+Y
+⊆
+X
+, then
+f
+:
+X
+→
+Y
+may compose with itself; this is sometimes denoted as
+f
+2
+. That is:
+(
+f
+∘
+f
+)
+(
+x
+)
+=
+f
+(
+f
+(
+x
+)
+)
+=
+f
+2
+(
+x
+)
+(
+f
+∘
+f
+∘
+f
+)
+(
+x
+)
+=
+f
+(
+f
+(
+f
+(
+x
+)
+)
+)
+=
+f
+3
+(
+x
+)
+(
+f
+∘
+f
+∘
+f
+∘
+f
+)
+(
+x
+)
+=
+f
+(
+f
+(
+f
+(
+f
+(
+x
+)
+)
+)
+)
+=
+f
+4
+(
+x
+)
+More generally, for any
+natural number
+n
+≥ 2
+, the
+n
+th
+functional
+power
+can be defined inductively by
+f
+n
+=
+f
+∘
+f
+n
+−1
+=
+f
+n
+−1
+∘
+f
+, a notation introduced by
+Hans Heinrich Bürmann
+[
+citation needed
+]
+[
+11
+]
+[
+12
+]
+and
+John Frederick William Herschel
+.
+[
+13
+]
+[
+11
+]
+[
+14
+]
+[
+12
+]
+Repeated composition of such a function with itself is called
+function iteration
+.
+By convention,
+f
+0
+is defined as the identity map on
+f
+'s domain,
+id
+X
+.
+If
+Y
+=
+X
+and
+f
+:
+X
+→
+X
+admits an
+inverse function
+f
+−1
+, negative functional powers
+f
+−
+n
+are defined for
+n
+> 0
+as the
+negated
+power of the inverse function:
+f
+−
+n
+= (
+f
+−1
+)
+n
+.
+[
+13
+]
+[
+11
+]
+[
+12
+]
+If
+f
+takes its values in a
+ring
+(in particular for real or complex-valued
+f
+), there is a risk of confusion, as
+f
+n
+could also stand for the
+n
+-fold product of
+f
+, e.g.
+f
+2
+(
+x
+) =
+f
+(
+x
+) ·
+f
+(
+x
+)
+.
+[
+12
+]
+For trigonometric functions, usually the latter is meant, at least for positive exponents.
+[
+12
+]
+For example, in
+trigonometry
+, this superscript notation represents standard
+exponentiation
+when used with
+trigonometric functions
+:
+sin
+2
+(
+x
+) = sin(
+x
+) · sin(
+x
+)
+.
+However, for negative exponents (especially
+−
+1), it nevertheless usually refers to the inverse function, e.g.,
+tan
+−1
+= arctan ≠ 1/tan
+.
+In some cases, when, for a given function
+f
+, the equation
+g
+∘
+g
+=
+f
+has a unique solution
+g
+, that function can be defined as the
+functional square root
+of
+f
+, then written as
+g
+=
+f
+1/2
+.
+More generally, when
+g
+n
+=
+f
+has a unique solution for some natural number
+n
+> 0
+, then
+f
+m
+/
+n
+can be defined as
+g
+m
+.
+Under additional restrictions,
+this idea can be generalized so that the
+iteration count
+becomes a continuous parameter; in this case, such a system is called a
+flow
+, specified through solutions of
+Schröder's equation
+. Iterated functions and flows occur naturally in the study of
+fractals
+and
+dynamical systems
+.
+To avoid ambiguity, some mathematicians
+[
+citation needed
+]
+choose to use
+∘
+to denote the compositional meaning, writing
+f
+∘
+n
+(
+x
+)
+for the
+n
+-th iterate of the function
+f
+(
+x
+)
+, as in, for example,
+f
+∘3
+(
+x
+)
+meaning
+f
+(
+f
+(
+f
+(
+x
+)))
+. For the same purpose,
+f
+[
+n
+]
+(
+x
+)
+was used by
+Benjamin Peirce
+[
+15
+]
+[
+12
+]
+whereas
+Alfred Pringsheim
+and
+Jules Molk
+suggested
+n
+f
+(
+x
+)
+instead.
+[
+16
+]
+[
+12
+]
+[
+nb 2
+]
+Alternative notations
+[
+edit
+]
+Many mathematicians, particularly in
+group theory
+, omit the composition symbol, writing
+gf
+for
+g
+∘
+f
+.
+[
+17
+]
+During the mid-20th century, some mathematicians adopted
+postfix notation
+, writing
+xf
+for
+f
+(
+x
+)
+and
+(
+xf
+)
+g
+for
+g
+(
+f
+(
+x
+))
+.
+[
+18
+]
+This can be more natural than
+prefix notation
+in many cases, such as in
+linear algebra
+when
+x
+is a
+row vector
+and
+f
+and
+g
+denote
+matrices
+and the composition is by
+matrix multiplication
+. The order is important because function composition is not necessarily commutative. Having successive transformations applying and composing to the right agrees with the left-to-right reading sequence.
+Mathematicians who use postfix notation may write "
+fg
+", meaning first apply
+f
+and then apply
+g
+, in keeping with the order the symbols occur in postfix notation, thus making the notation "
+fg
+" ambiguous. Computer scientists may write "
+f
+;
+g
+" for this,
+[
+19
+]
+thereby disambiguating the order of composition. To distinguish the left composition operator from a text semicolon, in the
+Z notation
+the ⨾ character is used for left
+relation composition
+.
+[
+20
+]
+Since all functions are
+binary relations
+, it is correct to use the [fat] semicolon for function composition as well (see the article on
+composition of relations
+for further details on this notation).
+Composition operator
+[
+edit
+]
+Main article:
+Composition operator
+Given a function
+g
+, the
+composition operator
+C
+g
+is defined as the
+operator
+which maps functions to functions as
+C
+g
+f
+=
+f
+∘
+g
+.
+Composition operators are studied in the field of
+operator theory
+.
+In programming languages
+[
+edit
+]
+Main article:
+Function composition (computer science)
+Function composition appears in one form or another in numerous
+programming languages
+.
+Multivariate functions
+[
+edit
+]
+Partial composition is possible for
+multivariate functions
+. The function resulting when some argument
+x
+i
+of the function
+f
+is replaced by the function
+g
+is called a composition of
+f
+and
+g
+in some computer engineering contexts, and is denoted
+f
+|
+x
+i
+=
+g
+f
+|
+x
+i
+=
+g
+=
+f
+(
+x
+1
+,
+…
+,
+x
+i
+−
+1
+,
+g
+(
+x
+1
+,
+x
+2
+,
+…
+,
+x
+n
+)
+,
+x
+i
++
+1
+,
+…
+,
+x
+n
+)
+.
+When
+g
+is a simple constant
+b
+, composition degenerates into a (partial) valuation, whose result is also known as
+restriction
+or
+co-factor
+.
+[
+21
+]
+f
+|
+x
+i
+=
+b
+=
+f
+(
+x
+1
+,
+…
+,
+x
+i
+−
+1
+,
+b
+,
+x
+i
++
+1
+,
+…
+,
+x
+n
+)
+.
+In general, the composition of multivariate functions may involve several other functions as arguments, as in the definition of
+primitive recursive function
+. Given
+f
+, a
+n
+-ary function, and
+n
+m
+-ary functions
+g
+1
+, ...,
+g
+n
+, the composition of
+f
+with
+g
+1
+, ...,
+g
+n
+, is the
+m
+-ary function
+h
+(
+x
+1
+,
+…
+,
+x
+m
+)
+=
+f
+(
+g
+1
+(
+x
+1
+,
+…
+,
+x
+m
+)
+,
+…
+,
+g
+n
+(
+x
+1
+,
+…
+,
+x
+m
+)
+)
+.
+This is sometimes called the
+generalized composite
+or
+superposition
+of
+f
+with
+g
+1
+, ...,
+g
+n
+.
+[
+22
+]
+The partial composition in only one argument mentioned previously can be instantiated from this more general scheme by setting all argument functions except one to be suitably chosen
+projection functions
+. Here
+g
+1
+, ...,
+g
+n
+can be seen as a single vector/
+tuple
+-valued function in this generalized scheme, in which case this is precisely the standard definition of function composition.
+[
+23
+]
+A set of finitary
+operations
+on some base set
+X
+is called a
+clone
+if it contains all projections and is closed under generalized composition. A clone generally contains operations of various
+arities
+.
+[
+22
+]
+The notion of commutation also finds an interesting generalization in the multivariate case; a function
+f
+of arity
+n
+is said to commute with a function
+g
+of arity
+m
+if
+f
+is a
+homomorphism
+preserving
+g
+, and vice versa, that is:
+[
+22
+]
+f
+(
+g
+(
+a
+11
+,
+…
+,
+a
+1
+m
+)
+,
+…
+,
+g
+(
+a
+n
+1
+,
+…
+,
+a
+n
+m
+)
+)
+=
+g
+(
+f
+(
+a
+11
+,
+…
+,
+a
+n
+1
+)
+,
+…
+,
+f
+(
+a
+1
+m
+,
+…
+,
+a
+n
+m
+)
+)
+.
+A unary operation always commutes with itself, but this is not necessarily the case for a binary (or higher arity) operation. A binary (or higher arity) operation that commutes with itself is called
+medial or entropic
+.
+[
+22
+]
+Generalizations
+[
+edit
+]
+Composition
+can be generalized to arbitrary
+binary relations
+.
+If
+R
+⊆
+X
+×
+Y
+and
+S
+⊆
+Y
+×
+Z
+are two binary relations, then their composition amounts to
+R
+∘
+S
+=
+{
+(
+x
+,
+z
+)
+∈
+X
+×
+Z
+:
+(
+∃
+y
+∈
+Y
+)
+(
+(
+x
+,
+y
+)
+∈
+R
+∧
+(
+y
+,
+z
+)
+∈
+S
+)
+}
+.
+Considering a function as a special case of a binary relation (namely
+functional relations
+), function composition satisfies the definition for relation composition. A small circle
+R
+∘
+S
+has been used for the
+infix notation of composition of relations
+, as well as functions. When used to represent composition of functions
+(
+g
+∘
+f
+)
+(
+x
+)
+=
+g
+(
+f
+(
+x
+)
+)
+however, the text sequence is reversed to illustrate the different operation sequences accordingly.
+The composition is defined in the same way for
+partial functions
+and Cayley's theorem has its analogue called the
+Wagner–Preston theorem
+.
+[
+24
+]
+The
+category of sets
+with functions as
+morphisms
+is the prototypical
+category
+. The axioms of a category are in fact inspired from the properties (and also the definition) of function composition.
+[
+25
+]
+The structures given by composition are axiomatized and generalized in
+category theory
+with the concept of
+morphism
+as the category-theoretical replacement of functions. The reversed order of composition in the formula
+(
+f
+∘
+g
+)
+−1
+= (
+g
+−1
+∘
+f
+−1
+)
+applies for
+composition of relations
+using
+converse relations
+, and thus in
+group theory
+. These structures form
+dagger categories
+.
+The standard "foundation" for mathematics starts with
+sets and their elements
+. It is possible to start differently, by axiomatising not elements of sets but functions between sets. This can be done by using the language of categories and universal constructions.
+. . . the membership relation for sets can often be replaced by the composition operation for functions. This leads to an alternative foundation for Mathematics upon categories -- specifically, on the category of all functions. Now much of Mathematics is dynamic, in that it deals with morphisms of an object into another object of the same kind. Such morphisms
+(
+like functions
+)
+form categories, and so the approach via categories fits well with the objective of organizing and understanding Mathematics. That, in truth, should be the goal of a proper philosophy of Mathematics.
+-
+Saunders Mac Lane
+,
+Mathematics: Form and Function
+[
+26
+]
+Typography
+[
+edit
+]
+The composition symbol
+∘
+is encoded as
+U+2218
+∘
+RING OPERATOR
+(
+&
+compfn;,
+&
+SmallCircle;
+)
+; see the
+Degree symbol
+article for similar-appearing Unicode characters. In
+TeX
+, it is written
+\circ
+.
+See also
+[
+edit
+]
+Cobweb plot
+– a graphical technique for functional composition
+Combinatory logic
+Composition ring
+, a formal axiomatization of the composition operation
+Flow (mathematics)
+Function composition (computer science)
+Function of random variable
+, distribution of a function of a random variable
+Functional decomposition
+Functional square root
+Functional equation
+Higher-order function
+Infinite compositions of analytic functions
+Iterated function
+Lambda calculus
+Notes
+[
+edit
+]
+↑
+The strict sense is used,
+e.g.
+, in
+category theory
+, where a subset relation is modelled explicitly by an
+inclusion function
+.
+↑
+Alfred Pringsheim
+'s and
+Jules Molk
+'s (1907) notation
+n
+f
+(
+x
+)
+to denote function compositions must not be confused with
+Rudolf von Bitter Rucker
+'s (1982)
+notation
+n
+x
+, introduced by Hans Maurer (1901) and
+Reuben Louis Goodstein
+(1947) for
+tetration
+, or with
+David Patterson Ellerman
+'s (1995)
+n
+x
+pre-superscript notation for
+roots
+.
+References
+[
+edit
+]
+↑
+"Composition of Functions"
+.
+nool.ontariotechu.ca
+. Retrieved
+2025-02-07
+.
+1
+2
+Velleman, Daniel J. (2006).
+How to Prove It: A Structured Approach
+.
+Cambridge University Press
+. p.
+232.
+ISBN
+978-1-139-45097-3
+.
+1
+2
+Weisstein, Eric W.
+"Composition"
+.
+mathworld.wolfram.com
+. Retrieved
+2020-08-28
+.
+↑
+Rodgers, Nancy (2000).
+Learning to Reason: An Introduction to Logic, Sets, and Relations
+.
+John Wiley & Sons
+. pp.
+359–
+362.
+ISBN
+978-0-471-37122-9
+.
+↑
+"3.4: Composition of Functions"
+.
+Mathematics LibreTexts
+. 2020-01-16
+. Retrieved
+2020-08-28
+.
+↑
+Hollings, Christopher (2014).
+Mathematics across the Iron Curtain: A History of the Algebraic Theory of Semigroups
+.
+American Mathematical Society
+. p.
+334.
+ISBN
+978-1-4704-1493-1
+.
+↑
+Grillet, Pierre A. (1995).
+Semigroups: An Introduction to the Structure Theory
+.
+CRC Press
+. p.
+2.
+ISBN
+978-0-8247-9662-4
+.
+↑
+Dömösi, Pál; Nehaniv, Chrystopher L. (2005).
+Algebraic Theory of Automata Networks: An introduction
+. SIAM. p.
+8.
+ISBN
+978-0-89871-569-9
+.
+↑
+Carter, Nathan (2009-04-09).
+Visual Group Theory
+. MAA. p.
+95.
+ISBN
+978-0-88385-757-1
+.
+↑
+Ganyushkin, Olexandr; Mazorchuk, Volodymyr (2008).
+Classical Finite Transformation Semigroups: An Introduction
+.
+Springer Science & Business Media
+. p.
+24.
+ISBN
+978-1-84800-281-4
+.
+1
+2
+3
+Herschel, John Frederick William
+(1820).
+"Part III. Section I. Examples of the Direct Method of Differences"
+.
+A Collection of Examples of the Applications of the Calculus of Finite Differences
+. Cambridge, UK: Printed by J. Smith, sold by J. Deighton & sons. pp.
+1–13 [5–6].
+Archived
+from the original on 2020-08-04
+. Retrieved
+2020-08-04
+.
+(NB. Inhere, Herschel refers to his
+1813 work
+and mentions
+Hans Heinrich Bürmann
+'s older work.)
+1
+2
+3
+4
+5
+6
+7
+Cajori, Florian
+(1952) [March 1929]. "§472. The power of a logarithm / §473. Iterated logarithms / §533. John Herschel's notation for inverse functions / §535. Persistence of rival notations for inverse functions / §537. Powers of trigonometric functions".
+A History of Mathematical Notations
+. Vol.
+2 (3rd corrected printing of 1929 issue, 2nd
+ed.). Chicago, USA:
+Open court publishing company
+. pp.
+108,
+176–
+179, 336, 346.
+ISBN
+978-1-60206-714-1
+. Retrieved
+2016-01-18
+.
+[…] §473.
+Iterated logarithms
+[…] We note here the symbolism used by
+Pringsheim
+and
+Molk
+in their joint
+Encyclopédie
+article: "
+2
+log
+b
+a
+= log
+b
+(log
+b
+a
+), …,
+k
++1
+log
+b
+a
+= log
+b
+(
+k
+log
+b
+a
+)."
+[a]
+[…] §533.
+John Herschel
+'s notation for inverse functions,
+sin
+−
+1
+x
+, tan
+−
+1
+x
+, etc., was published by him in the
+Philosophical Transactions of London
+, for the year 1813. He says (
+p.
+10
+): "This notation cos.
+−
+1
+e
+must not be understood to signify 1/cos.
+e
+, but what is usually written thus, arc
+(cos.=
+e
+)." He admits that some authors use cos.
+m
+A
+for (cos.
+A
+)
+m
+, but he justifies his own notation by pointing out that since
+d
+2
+x
+, Δ
+3
+x
+, Σ
+2
+x
+mean
+dd
+x
+, ΔΔΔ
+x
+, ΣΣ
+x
+, we ought to write sin.
+2
+x
+for sin.
+sin.
+x
+, log.
+3
+x
+for log.
+log.
+log.
+x
+. Just as we write
+d
+−
+n
+V=∫
+n
+V, we may write similarly sin.
+−
+1
+x
+=arc
+(sin.=
+x
+), log.
+−
+1
+x
+.=c
+x
+. Some years later Herschel explained that in 1813 he used
+f
+n
+(
+x
+),
+f
+−
+n
+(
+x
+), sin.
+−
+1
+x
+, etc., "as he then supposed for the first time. The work of a German Analyst,
+Burmann
+, has, however, within these few months come to his knowledge, in which the same is explained at a considerably earlier date. He[Burmann], however, does not seem to have noticed the convenience of applying this idea to the inverse functions tan
+−
+1
+, etc., nor does he appear at all aware of the inverse calculus of functions to which it gives rise." Herschel adds, "The symmetry of this notation and above all the new and most extensive views it opens of the nature of analytical operations seem to authorize its universal adoption."
+[b]
+[…] §535.
+Persistence of rival notations for inverse function.
+—
+[…] The use of Herschel's notation underwent a slight change in
+Benjamin Peirce
+'s books, to remove the chief objection to them; Peirce wrote: "cos
+[
+−
+1]
+x
+," "log
+[
+−
+1]
+x
+."
+[c]
+[…] §537.
+Powers of trigonometric functions.
+—
+Three principal notations have been used to denote, say, the square of sin
+x
+, namely, (sin
+x
+)
+2
+, sin
+x
+2
+, sin
+2
+x
+. The prevailing notation at present is sin
+2
+x
+, though the first is least likely to be misinterpreted. In the case of sin
+2
+x
+two interpretations suggest themselves; first, sin
+x
+⋅
+sin
+x
+; second,
+[d]
+sin
+(sin
+x
+). As functions of the last type do not ordinarily present themselves, the danger of misinterpretation is very much less than in case of log
+2
+x
+, where log
+x
+⋅
+log
+x
+and log
+(log
+x
+) are of frequent occurrence in analysis. […] The notation sin
+n
+x
+for (sin
+x
+)
+n
+has been widely used and is now the prevailing one. […]
+{{
+cite book
+}}
+:
+ISBN / Date incompatibility (
+help
+)
+(xviii+367+1 pages including 1 addenda page) (NB. ISBN and link for reprint of 2nd edition by Cosimo, Inc., New York, USA, 2013.)
+1
+2
+Herschel, John Frederick William
+(1813) [1812-11-12]. "On a Remarkable Application of Cotes's Theorem".
+Philosophical Transactions of the Royal Society of London
+.
+103
+(Part 1). London:
+Royal Society of London
+, printed by W. Bulmer and Co., Cleveland-Row, St. James's, sold by G. and W. Nicol, Pall-Mall: 8–26 [10].
+doi
+:
+10.1098/rstl.1813.0005
+.
+JSTOR
+107384
+.
+S2CID
+118124706
+.
+↑
+Peano, Giuseppe
+(1903).
+Formulaire mathématique
+(in French). Vol.
+IV. p.
+229.
+↑
+Peirce, Benjamin
+(1852).
+Curves, Functions and Forces
+. Vol.
+I (new
+ed.). Boston, USA. p.
+203.
+{{
+cite book
+}}
+:  CS1 maint: location missing publisher (
+link
+)
+↑
+Pringsheim, Alfred
+;
+Molk, Jules
+(1907).
+Encyclopédie des sciences mathématiques pures et appliquées
+(in French). Vol.
+I. p.
+195. Part I.
+↑
+Ivanov, Oleg A. (2009-01-01).
+Making Mathematics Come to Life: A Guide for Teachers and Students
+.
+American Mathematical Society
+. pp.
+217–.
+ISBN
+978-0-8218-4808-1
+.
+↑
+Gallier, Jean
+(2011).
+Discrete Mathematics
+. Springer. p.
+118.
+ISBN
+978-1-4419-8047-2
+.
+↑
+Barr, Michael; Wells, Charles (1998).
+Category Theory for Computing Science
+(PDF)
+. p.
+6. Archived from
+the original
+(PDF)
+on 2016-03-04
+. Retrieved
+2014-08-23
+.
+(NB. This is the updated and free version of book originally published by
+Prentice Hall
+in 1990 as
+ISBN
+978-0-13-120486-7
+.)
+↑
+ISO/IEC 13568:2002(E), p. 23
+↑
+Bryant, R. E. (August 1986).
+"Logic Minimization Algorithms for VLSI Synthesis"
+(PDF)
+.
+IEEE Transactions on Computers
+.
+C-35
+(8):
+677–
+691.
+doi
+:
+10.1109/tc.1986.1676819
+.
+S2CID
+10385726
+.
+1
+2
+3
+4
+Bergman, Clifford (2011).
+Universal Algebra: Fundamentals and Selected Topics
+.
+CRC Press
+. pp.
+79
+–80,
+90
+–91.
+ISBN
+978-1-4398-5129-6
+.
+↑
+Tourlakis, George (2012).
+Theory of Computation
+.
+John Wiley & Sons
+. p.
+100.
+ISBN
+978-1-118-31533-0
+.
+↑
+Lipscomb, S. (1997).
+Symmetric Inverse Semigroups
+. AMS Mathematical Surveys and Monographs. p.
+xv.
+ISBN
+0-8218-0627-0
+.
+↑
+Hilton, Peter
+; Wu, Yel-Chiang (1989).
+A Course in Modern Algebra
+.
+John Wiley & Sons
+. p.
+65.
+ISBN
+978-0-471-50405-4
+.
+↑
+"Saunders Mac Lane - Quotations"
+.
+Maths History
+. Retrieved
+2024-02-13
+.
+External links
+[
+edit
+]
+"Composite function"
+,
+Encyclopedia of Mathematics
+, EMS Press, 2001 [1994]
+"
+Composition of Functions
+" by Bruce Atwood, the
+Wolfram Demonstrations Project
+, 2007.
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Function_composition&oldid=1376796701
+"
+Categories
+:
+Functions and mappings
+Basic concepts in set theory
+Binary operations
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Use dmy dates from May 2019
+All articles with unsourced statements
+Articles with unsourced statements from August 2020
+CS1 errors: ISBN date
+CS1 maint: location missing publisher
+CS1 French-language sources (fr)
+Search
+Search
+Function composition
+49 languages
+Add topic

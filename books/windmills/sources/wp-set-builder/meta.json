@@ -1,0 +1,11 @@
+{
+ "id": "wp-set-builder",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Set-builder_notation",
+ "why": "set comprehensions",
+ "fetched": "2026-11-12T16:53:24Z",
+ "files": {
+  "raw.html": "5c57df91c834a506b4caa3e888d47f6a55744caf6dd182650d1409167af1bf1c"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Set-builder_notation"
+}

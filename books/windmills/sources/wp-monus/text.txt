@@ -1,0 +1,666 @@
+Monus - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Truncating subtraction on natural numbers, or a generalization thereof
+In mathematics,
+monus
+is an operator on certain
+commutative
+monoids
+that are not
+groups
+. A commutative monoid on which a monus operator is defined is called a
+commutative monoid with monus
+, or
+CMM
+. The monus operator may be denoted with the
+minus sign
+, "
+−
+",
+because the
+natural numbers
+are a CMM under
+subtraction
+. It is also denoted with a dotted minus
+sign, "
+−
+˙
+",
+to distinguish it from the standard subtraction operator.
+Notation
+[
+edit
+]
+glyph
+Unicode
+name
+Unicode code point
+[
+1
+]
+HTML character entity reference
+HTML/
+XML
+numeric character references
+TeX
+−
+˙
+DOT MINUS
+U+2238
+&
+#8760;
+\dot
+-
+−
+MINUS SIGN
+U+2212
+&
+minus;
+&
+#8722;
+-
+A use of the monus symbol is seen in
+Dennis Ritchie
+'s PhD Thesis from 1968.
+[
+2
+]
+Definition
+[
+edit
+]
+Let
+(
+M
+,
++
+,
+0
+)
+be a commutative
+monoid
+. Define a
+binary relation
+≤
+on this monoid as follows: for any two elements
+a
+and
+b
+, define
+a
+≤
+b
+if there exists an element
+c
+such that
+a
++
+c
+=
+b
+. It is easy to check that
+≤
+is
+reflexive
+[
+3
+]
+and that it is
+transitive
+.
+[
+4
+]
+M
+is called
+naturally ordered
+if the
+≤
+relation is additionally
+antisymmetric
+and hence a
+partial order
+. Further, if for each pair of elements
+a
+and
+b
+, a unique smallest element
+c
+0
+exists such that
+a
+≤
+b
++
+c
+0
+, then
+M
+is called a
+commutative monoid with monus
+[
+5
+]
+and the
+monus
+a
+−
+˙
+b
+of any two elements
+a
+and
+b
+can be defined as this unique smallest element
+c
+0
+such that
+a
+≤
+b
++
+c
+0
+.
+An example of a commutative monoid that is not naturally ordered is
+(
+ℤ
+,
++
+,
+0
+)
+, the commutative monoid of the
+integers
+with usual
+addition
+, as for any
+a
+,
+b
+∈
+ℤ
+there exists
+c
+such that
+a
++
+c
+=
+b
+, so
+a
+≤
+b
+holds for any
+a
+,
+b
+∈
+ℤ
+, so
+≤
+is not antisymmetric and therefore not a partial order. There are also examples of monoids that are naturally ordered but are not semirings with monus.
+[
+6
+]
+Other structures
+[
+edit
+]
+Beyond monoids, the notion of monus can be applied to other structures. For instance, a
+naturally ordered semiring
+(sometimes called a
+dioid
+[
+7
+]
+) is a
+semiring
+where the commutative monoid induced by the addition operator is naturally ordered. When this monoid is a commutative monoid with monus, the semiring is called a
+semiring with monus
+, or
+m-semiring
+.
+Examples
+[
+edit
+]
+If
+M
+is an
+ideal
+in a
+Boolean algebra
+, then
+M
+is a commutative monoid with monus under
+a
++
+b
+=
+a
+∨
+b
+and
+a
+−
+˙
+b
+=
+a
+∧
+¬
+b
+.
+[
+5
+]
+Natural numbers
+[
+edit
+]
+The
+natural numbers
+including 0 form a commutative monoid with monus, with their ordering being the usual order of natural numbers and the monus operator being a
+saturating
+variant of standard subtraction, variously referred to as
+truncated subtraction
+,
+[
+8
+]
+limited subtraction
+,
+proper subtraction
+,
+doz
+(
+difference or zero
+),
+[
+9
+]
+and
+monus
+.
+[
+10
+]
+Truncated subtraction is usually defined as
+[
+8
+]
+a
+−
+˙
+b
+=
+{
+0
+if
+a
+<
+b
+a
+−
+b
+if
+a
+≥
+b
+,
+where
+−
+denotes standard
+subtraction
+. For example,
+5
+−
+3
+=
+2
+and
+3
+−
+5
+=
+−
+2
+in regular subtraction, whereas in truncated subtraction
+3
+−
+˙
+5
+=
+0
+. Truncated subtraction may also be defined as
+[
+10
+]
+a
+−
+˙
+b
+=
+max
+⁡
+(
+a
+−
+b
+,
+0
+)
+.
+In
+Peano arithmetic
+, truncated subtraction is defined in terms of the predecessor function
+P
+(the inverse of the
+successor function
+):
+[
+8
+]
+P
+(
+0
+)
+=
+0
+P
+(
+S
+(
+a
+)
+)
+=
+a
+a
+−
+˙
+0
+=
+a
+a
+−
+˙
+S
+(
+b
+)
+=
+P
+(
+a
+−
+˙
+b
+)
+.
+A definition that does not need the predecessor function is:
+a
+−
+˙
+0
+=
+a
+0
+−
+˙
+b
+=
+0
+S
+(
+a
+)
+−
+˙
+S
+(
+b
+)
+=
+a
+−
+˙
+b
+.
+Truncated subtraction is useful in contexts such as
+primitive recursive functions
+, which are not defined over negative numbers.
+[
+8
+]
+Truncated subtraction is also used in the definition of the
+multiset
+difference
+operator.
+Properties
+[
+edit
+]
+The class of all commutative monoids with monus form a
+variety
+.
+[
+5
+]
+The equational basis for the variety of all CMMs consists of the axioms for
+commutative monoids
+, as well as the following axioms:
+a
++
+(
+b
+−
+˙
+a
+)
+=
+b
++
+(
+a
+−
+˙
+b
+)
+,
+(
+a
+−
+˙
+b
+)
+−
+˙
+c
+=
+a
+−
+˙
+(
+b
++
+c
+)
+,
+(
+a
+−
+˙
+a
+)
+=
+0
+,
+(
+0
+−
+˙
+a
+)
+=
+0.
+Notes
+[
+edit
+]
+↑
+Characters
+in Unicode are referenced in prose via the "U+" notation. The
+hexadecimal
+number after the "U+" is the character's Unicode code point.
+↑
+Brailsford, Kernighan
+&
+Ritchie 2022
+.
+↑
+taking
+c
+to be the
+neutral element
+of the monoid
+↑
+if
+a
+≤
+b
+with witness
+d
+and
+b
+≤
+c
+with witness
+d
+′
+then
+d
++
+d
+′
+witnesses that
+a
+≤
+c
+1
+2
+3
+Amer 1984
+, p.
+129.
+↑
+Monet 2016
+.
+↑
+Pouly 2010
+, p.
+22, slide 17.
+1
+2
+3
+4
+Vereschchagin
+&
+Shen 2003
+.
+↑
+Warren Jr. 2013
+.
+1
+2
+Jacobs 1996
+.
+References
+[
+edit
+]
+Amer, K. (1984), "Equationally complete classes of commutative monoids with monus",
+Algebra Universalis
+,
+18
+:
+129–
+131,
+doi
+:
+10.1007/BF01182254
+Brailsford, David F.;
+Kernighan, Brian W.
+; Ritchie, William A. (2022),
+"How did Dennis Ritchie produce his PhD thesis? A typographical mystery"
+(PDF)
+, in Wigington, Curtis; Hardy, Matthew; Bagley, Steven R.; Simske, Steven J. (eds.),
+Proceedings of the 22nd ACM Symposium on Document Engineering, DocEng 2022, San Jose, California, USA, September 20–23, 2022
+, Association for Computing Machinery, pp.
+2:1–2:10,
+doi
+:
+10.1145/3558100.3563839
+Jacobs, Bart (1996),
+"Coalgebraic Specifications and Models of Deterministic Hybrid Systems"
+(PS)
+, in Wirsing, Martin; Nivat, Maurice (eds.),
+Algebraic Methodology and Software Technology
+, Lecture Notes in Computer Science, vol.
+1101, Springer, p.
+522,
+ISBN
+3-540-61463-X
+Monet, M. (14 October 2016),
+"Example of a naturally ordered semiring which is not an m-semiring"
+,
+Mathematics Stack Exchange
+, retrieved
+30 July
+2025
+Pouly, Marc (July 2010),
+"Semirings for breakfast"
+(PDF)
+,
+University of Luxembourg
+, p.
+27
+, retrieved
+30 July
+2025
+Vereschchagin, Nikolai K.; Shen, Alexander (2003),
+Computable Functions
+, translated by V. N. Dubrovskii,
+American Mathematical Society
+, p.
+141,
+ISBN
+0-8218-2732-4
+Warren Jr., Henry S. (2013),
+Hacker's Delight
+(2
+ed.),
+Addison Wesley
+-
+Pearson Education, Inc.
+,
+ISBN
+978-0-321-84268-8
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Monus&oldid=1329642033
+"
+Category
+:
+Algebraic structures
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Use dmy dates from December 2025
+Search
+Search
+Monus
+Add languages
+Add topic

@@ -1,0 +1,11 @@
+{
+ "id": "wp-modular",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Modular_arithmetic",
+ "why": "congruence modulo n",
+ "fetched": "2026-11-12T16:53:17Z",
+ "files": {
+  "raw.html": "6558d543d311b2ec1770708e86be18a8eec54b11e77d7dade803e2ed19e1ad6e"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Modular_arithmetic"
+}

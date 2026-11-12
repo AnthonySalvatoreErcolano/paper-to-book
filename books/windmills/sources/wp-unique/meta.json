@@ -1,0 +1,11 @@
+{
+ "id": "wp-unique",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Uniqueness_quantification",
+ "why": "exists-unique",
+ "fetched": "2026-11-12T16:53:23Z",
+ "files": {
+  "raw.html": "8c61f40415c98542ee605c82be3c349a55cf4d39b9b716896dbfd6509885b6e7"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Uniqueness_quantification"
+}

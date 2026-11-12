@@ -1,0 +1,5243 @@
+Permutation - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Mathematical version of an order change
+For other uses, see
+Permutation (disambiguation)
+.
+"nPr" redirects here. For other uses, see
+NPR (disambiguation)
+.
+The six different possible ways to order three balls of different colors: (red, green, blue), (red, blue, green), (green, red, blue), (green, blue, red), (blue, red, green), and (blue, green, red).
+Each of the six rows is a different permutation of the first row of three distinct balls
+In
+mathematics
+, a
+permutation
+is a
+bijective function
+of a
+finite set
+onto itself. When the set is represented as an ordered sequence of its members, a permutation amounts to change the place of the members of the set: if
+f
+is a permutation,
+⁠
+f
+(
+i
+)
+⁠
+is the new place of the
+i
+th member of the sequence.
+[
+1
+]
+[
+2
+]
+If the set is naturally ordered (typically the first
+natural numbers
+) or if an order of the set members has been chosen, a permutation of a set
+S
+is well represented by the sequence of the images of the members of
+S
+. For example, the permutation that maps
+⁠
+1
+,
+2
+,
+3
+,
+4
+⁠
+respectively to
+⁠
+1
+,
+3
+,
+2
+,
+4
+⁠
+, is well represented by the sequence
+⁠
+(
+1
+,
+3
+,
+2
+,
+4
+)
+⁠
+. Similarly, the six permutations  of the set {1, 2, 3} are the six  3-
+tuples
+(1, 2, 3), (1, 3, 2), (2, 1, 3), (2, 3, 1), (3, 1, 2), and (3, 2, 1). They correspond to the six bijections that map 1, 2, 3, to the first, the second and the third member of the tuple, respectively.
+Anagrams
+are example of permutations of sequences of letters.
+The number of permutations of
+n
+distinct objects is the product of the
+n
+first positive integers, which is called
+n
+factorial
+and usually written as
+n
+!
+.
+The
+function composition
+of two permutation is called a
+permutation composition
+. The collection of all permutations of a set form a
+group
+under permutation composition,  called the
+symmetric group
+of the set.
+The
+k
+-permutations
+, also called
+partial permutations
+, are the ordered sequences of
+k
+distinct elements of a set. When
+k
+equals the size of the set, these are the permutations of the set.
+The study of permutations of finite sets is a starting point of
+combinatorics
+. The permutations of a finite set form a
+group
+, and the fact that every finite group is a subgroup of a permutation group is widely used in
+group theory
+. In
+computer science
+, a
+sorting algorithm
+consists of computing the permutation of a set of data that put them in their natural order. Permutations are also widely used in many branches of mathematics and in many other  sciences,
+A Rubik's Cube mid-turn.
+In the popular puzzle
+Rubik's Cube
+invented in 1974 by
+Ernő Rubik
+, each turn of the puzzle faces creates a permutation of the surface colors.
+History
+[
+edit
+]
+Permutation-like objects called
+hexagrams
+were used in China in the
+I Ching
+(
+Pinyin
+: Yi Jing) as early as 1000 BC.
+[
+3
+]
+In Greece,
+Plutarch
+wrote that
+Xenocrates
+of Chalcedon (396–314 BC) discovered the number of different syllables possible in the Greek language. This would have been the first attempt on record to solve a difficult problem in permutations and combinations.
+[
+4
+]
+Al-Khalil
+(717–786), an
+Arab mathematician
+and
+cryptographer
+, wrote the
+Book of Cryptographic Messages
+. It contains the first use of permutations and combinations, to list all possible
+Arabic
+words with and without vowels.
+[
+5
+]
+The rule to determine the number of permutations of
+n
+objects was known in Indian culture around 1150 AD. The
+Lilavati
+by the Indian mathematician
+Bhāskara II
+contains a passage that translates as follows:
+The product of multiplication of the arithmetical series beginning and increasing by unity and continued to the number of places, will be the variations of number with specific figures.
+[
+6
+]
+In 1677,
+Fabian Stedman
+described factorials when explaining the number of permutations of bells in
+change ringing
+. Starting from two bells: "first,
+two
+must be admitted to be varied in two ways", which he illustrates by showing 1 2 and 2 1.
+[
+7
+]
+He then explains that with three bells there are "three times two figures to be produced out of three" which again is illustrated.  His explanation involves "cast away 3, and 1.2 will remain; cast away 2, and 1.3 will remain; cast away 1, and 2.3 will remain".
+[
+8
+]
+He then moves on to four bells and repeats the casting away argument showing that there will be four different sets of three.  Effectively, this is a recursive process.  He continues with five bells using the "casting away" method and tabulates the resulting 120 combinations.
+[
+9
+]
+At this point he gives up and remarks:
+Now the nature of these methods is such, that the changes on one number comprehends the changes on all lesser numbers, ... insomuch that a compleat Peal of changes on one number seemeth to be formed by uniting of the compleat Peals on all lesser numbers into one entire body;
+[
+10
+]
+Stedman widens the consideration of permutations; he goes on to consider the number of permutations of the letters of the alphabet and of horses from a stable of 20.
+[
+11
+]
+A first case in which seemingly unrelated mathematical questions were studied with the help of permutations occurred around 1770, when
+Joseph Louis Lagrange
+, in the study of polynomial equations, observed that properties of the permutations of the
+roots
+of an equation are related to the possibilities to solve it. This line of work ultimately resulted, through the work of
+Évariste Galois
+, in
+Galois theory
+, which gives a complete description of what is possible and impossible with respect to solving polynomial equations (in one unknown) by radicals. In modern mathematics, there are many similar situations in which understanding a problem requires studying certain permutations related to it.
+[
+12
+]
+The study of permutations as substitutions on n elements led to the notion of group as
+algebraic structure
+, through the works of
+Cauchy
+(1815 memoir).
+Permutations played an important role in the
+cryptanalysis of the Enigma machine
+, a cipher device used by
+Nazi Germany
+during
+World War II
+. In particular, one important property of permutations, namely, that two permutations are conjugate exactly when they have the same cycle type, was used by cryptologist
+Marian Rejewski
+to break the German Enigma cipher in turn of years 1932–1933.
+[
+13
+]
+[
+14
+]
+Definition
+[
+edit
+]
+In mathematics texts it is customary to denote permutations using lowercase Greek letters.
+[
+15
+]
+A permutation can be defined as a
+bijection
+(an invertible mapping, a one-to-one and onto function) from a set
+S
+to itself:
+σ
+:
+S
+⟶
+∼
+S
+.
+The
+identity permutation
+is defined by
+σ
+(
+x
+)
+=
+x
+for all elements
+x
+∈
+S
+, and can be denoted by the number
+1
+,
+[
+a
+]
+by
+id
+=
+id
+S
+, or by a single 1-cycle (x).
+[
+16
+]
+[
+17
+]
+The set of all permutations of a set with
+n
+elements forms the
+symmetric group
+S
+n
+, where the
+group operation
+is
+composition of functions
+. Thus for two permutations
+σ
+and
+τ
+in the group
+S
+n
+, their product
+π
+=
+σ
+τ
+is defined by
+π
+(
+i
+)
+=
+σ
+(
+τ
+(
+i
+)
+)
+.
+Composition is usually written without a dot or other sign. In general, composition of two permutations is not
+commutative
+; that is, typically the permutations
+τ
+σ
+and
+σ
+τ
+are not equal.
+As a bijection from a set to itself, a permutation is a function that
+performs
+a rearrangement of a set, termed an
+active permutation
+or
+substitution
+. An older viewpoint sees a permutation as an ordered arrangement or list of all the elements of
+S
+, called a
+passive permutation
+.
+[
+18
+]
+According to this definition, all permutations in
+§
+One-line notation
+are passive. This meaning is subtly distinct from how passive (i.e.
+alias
+) is used in
+Active and passive transformation
+and elsewhere,
+[
+19
+]
+[
+20
+]
+which would consider all permutations open to passive interpretation (regardless of whether they are in one-line notation, two-line notation, etc.).
+A permutation
+σ
+can be decomposed into one or more disjoint
+cycles
+which are the
+orbits
+of the
+cyclic group
+⟨
+σ
+⟩
+=
+{
+1
+,
+σ
+,
+σ
+2
+,
+…
+}
+acting
+on the set
+S
+. A cycle is found by repeatedly applying the permutation to an element:
+x
+,
+σ
+(
+x
+)
+,
+σ
+(
+σ
+(
+x
+)
+)
+,
+…
+,
+σ
+k
+−
+1
+(
+x
+)
+, where we assume
+σ
+k
+(
+x
+)
+=
+x
+. A cycle consisting of
+k
+elements is called a
+k
+-cycle. (See
+§
+Cycle notation
+below.)
+A
+fixed point
+of a permutation
+σ
+is an element
+x
+which is taken to itself, that is
+σ
+(
+x
+)
+=
+x
+, forming a 1-cycle
+(
+x
+)
+. A permutation with no fixed points is called a
+derangement
+. A permutation exchanging two elements (a single 2-cycle) and leaving the others fixed is called a
+transposition
+.
+Notations
+[
+edit
+]
+Several notations are widely used to represent permutations conveniently. The properties of permutations do not depend on the nature of the elements being permuted, only on their number, so one often considers the standard set
+{
+1
+,
+2
+,
+…
+,
+n
+}
+.
+Cycle notation
+is a popular choice, as it is compact and shows the permutation's structure clearly. This article will use cycle notation unless otherwise specified.
+Two-line notation
+[
+edit
+]
+Cauchy
+'s
+two-line notation
+[
+21
+]
+[
+22
+]
+lists the elements of
+S
+in the first row, and the image of each element below it in the second row. For example, the permutation of
+S
+= {1, 2, 3, 4, 5, 6} given by the function
+σ
+(
+1
+)
+=
+2
+,
+σ
+(
+2
+)
+=
+6
+,
+σ
+(
+3
+)
+=
+5
+,
+σ
+(
+4
+)
+=
+4
+,
+σ
+(
+5
+)
+=
+3
+,
+σ
+(
+6
+)
+=
+1
+can be written as
+σ
+=
+(
+1
+2
+3
+4
+5
+6
+2
+6
+5
+4
+3
+1
+)
+.
+The elements of
+S
+may appear in any order in the first row, so this permutation could also be written:
+σ
+=
+(
+2
+3
+4
+5
+6
+1
+6
+5
+4
+3
+1
+2
+)
+=
+(
+6
+5
+4
+3
+2
+1
+1
+3
+4
+5
+6
+2
+)
+.
+One-line notation
+[
+edit
+]
+If there is a "natural" order for the elements of
+S
+,
+[
+b
+]
+say
+x
+1
+,
+x
+2
+,
+…
+,
+x
+n
+, then one uses this for the first row of the two-line notation:
+σ
+=
+(
+x
+1
+x
+2
+x
+3
+⋯
+x
+n
+σ
+(
+x
+1
+)
+σ
+(
+x
+2
+)
+σ
+(
+x
+3
+)
+⋯
+σ
+(
+x
+n
+)
+)
+.
+Under this assumption, one may omit the first row and write the permutation in
+one-line notation
+as
+σ
+=
+σ
+(
+x
+1
+)
+σ
+(
+x
+2
+)
+σ
+(
+x
+3
+)
+⋯
+σ
+(
+x
+n
+)
+,
+that is, as an ordered arrangement of the elements of
+S
+.
+[
+23
+]
+[
+24
+]
+Care must be taken to distinguish one-line notation from the cycle notation described below: a common usage is to omit parentheses or other enclosing marks for one-line notation, while using parentheses for cycle notation. The one-line notation is also called the
+word
+representation
+.
+[
+25
+]
+The example above would then be:
+σ
+=
+(
+1
+2
+3
+4
+5
+6
+2
+6
+5
+4
+3
+1
+)
+=
+265431.
+(It is typical to use commas to separate these entries only if some have two or more digits.)
+This compact form is common in elementary
+combinatorics
+and
+computer science
+. It is especially useful in applications where the permutations are to be compared as
+larger or smaller
+using
+lexicographic order
+.
+Cycle notation
+[
+edit
+]
+Cycle notation describes the effect of repeatedly applying the permutation on the elements of the set
+S
+, with an orbit being called a
+cycle
+. The permutation is written as a list of cycles; since distinct cycles involve
+disjoint
+sets of elements, this is referred to as "decomposition into disjoint cycles".
+To write down the permutation
+σ
+in cycle notation, one proceeds as follows:
+Write an opening bracket followed by an arbitrary element
+x
+of
+S
+:
+(
+x
+Trace the orbit of
+x
+, writing down the values under successive applications of
+σ
+:
+(
+x
+,
+σ
+(
+x
+)
+,
+σ
+(
+σ
+(
+x
+)
+)
+,
+…
+Repeat until the value returns to
+x,
+and close the parenthesis without repeating
+x
+:
+(
+x
+σ
+(
+x
+)
+σ
+(
+σ
+(
+x
+)
+)
+…
+)
+Continue with an element
+y
+of
+S
+which was not yet written, and repeat the above process:
+(
+x
+σ
+(
+x
+)
+σ
+(
+σ
+(
+x
+)
+)
+…
+)
+(
+y
+…
+)
+Repeat until all elements of
+S
+are written in cycles.
+Also, it is common to omit 1-cycles, since these can be inferred: for any element
+x
+in
+S
+not appearing in any cycle, one implicitly assumes
+σ
+(
+x
+)
+=
+x
+.
+[
+26
+]
+Following the convention of omitting 1-cycles, one may interpret an individual cycle as a permutation which fixes all the elements not in the cycle (a
+cyclic permutation
+having only one cycle of length greater than 1). Then the list of disjoint cycles can be seen as the composition of these cyclic permutations. For example, the one-line permutation
+σ
+=
+265431
+can be written in cycle notation as:
+σ
+=
+(
+126
+)
+(
+35
+)
+(
+4
+)
+=
+(
+126
+)
+(
+35
+)
+.
+This may be seen as the composition
+σ
+=
+κ
+1
+κ
+2
+of cyclic permutations
+κ
+1
+=
+(
+126
+)
+=
+(
+126
+)
+(
+3
+)
+(
+4
+)
+(
+5
+)
+,
+κ
+2
+=
+(
+35
+)
+=
+(
+35
+)
+(
+1
+)
+(
+2
+)
+(
+4
+)
+(
+6
+)
+.
+While permutations in general do not commute, disjoint cycles do; for example:
+σ
+=
+(
+126
+)
+(
+35
+)
+=
+(
+35
+)
+(
+126
+)
+.
+Also, each cycle can be rewritten from a different starting point; for example,
+σ
+=
+(
+126
+)
+(
+35
+)
+=
+(
+261
+)
+(
+53
+)
+.
+Thus one may write the disjoint cycles of a given permutation in many different ways.
+A convenient feature of cycle notation is that inverting the permutation is given by reversing the order of the elements in each cycle. For example,
+σ
+−
+1
+=
+(
+A
+2
+(
+126
+)
+(
+35
+)
+)
+−
+1
+=
+(
+621
+)
+(
+53
+)
+.
+Canonical cycle notation
+[
+edit
+]
+Any permutation has a particular choice of cycle notation which is useful in many combinatorial contexts, especially Foata's bijection described below. The
+canonical cycle notation
+is defined by:
+each cycle has its
+largest
+element listed first;
+the cycles are sorted in
+increasing
+order of their first element, not omitting 1-cycles.
+For example,
+(
+513
+)
+(
+6
+)
+(
+827
+)
+(
+94
+)
+is a permutation of
+S
+=
+{
+1
+,
+2
+,
+…
+,
+9
+}
+in canonical cycle notation (
+Miklós Bóna
+'s terminology) .
+[
+27
+]
+Richard Stanley
+calls this the
+standard representation
+,
+[
+28
+]
+and Martin Aigner uses
+standard form
+.
+[
+25
+]
+Sergey Kitaev
+also uses the "standard form" terminology, but reverses both choices; that is, each cycle lists its minimal element first, and the cycles are sorted in decreasing order of their minimal elements.
+[
+29
+]
+Composition of permutations
+[
+edit
+]
+There are two ways to denote the composition of two permutations. In the most common notation,
+σ
+⋅
+τ
+is the function that maps any element
+x
+to
+σ
+(
+τ
+(
+x
+)
+)
+. The rightmost permutation is applied to the argument first,
+[
+30
+]
+because the argument is written to the right of the function.
+A
+different
+rule for multiplying permutations comes from writing the argument to the left of the function, so that the leftmost permutation acts first.
+[
+31
+]
+[
+32
+]
+[
+33
+]
+In this notation, the permutation is often written as an exponent, so
+σ
+acting on
+x
+is written
+x
+σ
+; then the product is defined by
+x
+σ
+⋅
+τ
+=
+(
+x
+σ
+)
+τ
+. This article uses the first definition, where the rightmost permutation is applied first.
+The
+function composition
+operation satisfies the axioms of a
+group
+. It is
+associative
+, meaning
+(
+ρ
+σ
+)
+τ
+=
+ρ
+(
+σ
+τ
+)
+, and products of more than two permutations are usually written without parentheses. The composition operation also has an
+identity element
+(the identity permutation
+id
+), and each permutation
+σ
+has an inverse
+σ
+−
+1
+(its
+inverse function
+) with
+σ
+−
+1
+σ
+=
+σ
+σ
+−
+1
+=
+id
+.
+Other uses of the term
+permutation
+[
+edit
+]
+The concept of a permutation as an ordered arrangement admits several generalizations that have been called
+permutations
+, especially in older literature.
+k
+-permutations of
+n
+[
+edit
+]
+In older literature and elementary textbooks, a
+k
+-permutation of
+n
+(sometimes called a
+partial permutation
+,
+sequence without repetition
+,
+variation
+, or
+arrangement
+) means an ordered arrangement (list) of a
+k
+-element subset of an
+n
+-set.
+[
+c
+]
+[
+34
+]
+[
+35
+]
+The number of such
+k
+-permutations (
+k
+-arrangements) of
+n
+is denoted variously by such symbols as
+P
+k
+n
+,
+n
+P
+k
+,
+n
+P
+k
+,
+P
+n
+,
+k
+,
+P
+(
+n
+,
+k
+)
+, or
+A
+n
+k
+,
+[
+36
+]
+computed by the formula:
+[
+37
+]
+P
+(
+n
+,
+k
+)
+=
+n
+⋅
+(
+n
+−
+1
+)
+⋅
+(
+n
+−
+2
+)
+⋯
+(
+n
+−
+k
++
+1
+)
+⏟
+k
+f
+a
+c
+t
+o
+r
+s
+,
+which is 0 when
+k
+>
+n
+, and otherwise is equal to
+n
+!
+(
+n
+−
+k
+)
+!
+.
+The product is well defined without the assumption that
+n
+is a non-negative integer, and is of importance outside combinatorics as well; it is known as the
+Pochhammer symbol
+(
+n
+)
+k
+or as the
+k
+-th falling factorial power
+n
+k
+_
+:
+P
+(
+n
+,
+k
+)
+=
+n
+P
+k
+=
+(
+n
+)
+k
+=
+n
+k
+_
+.
+This usage of the term
+permutation
+is closely associated with the term
+combination
+to mean a subset: that is, a
+k-combination
+of a set
+S
+is a
+k-
+element (unordered) subset of
+S
+. Ordering the
+k
+-combinations of
+S
+in all possible ways produces the
+k
+-permutations of
+S
+. The number of
+k
+-combinations of an
+n
+-set,
+C
+(
+n
+,
+k
+), is therefore related to the number of
+k
+-permutations of
+n
+by:
+C
+(
+n
+,
+k
+)
+=
+P
+(
+n
+,
+k
+)
+P
+(
+k
+,
+k
+)
+=
+n
+k
+_
+k
+!
+=
+n
+!
+(
+n
+−
+k
+)
+!
+k
+!
+.
+These numbers are also known as
+binomial coefficients
+, usually denoted
+(
+n
+k
+)
+:
+C
+(
+n
+,
+k
+)
+=
+n
+C
+k
+=
+(
+n
+k
+)
+.
+Permutations with repetition
+[
+edit
+]
+Ordered arrangements of
+k
+elements of a set
+S
+, where repetition is allowed, are called
+k
+-tuples
+.  They have sometimes been referred to as
+permutations with repetition
+, although they are not permutations in the usual sense. They are also called
+words
+or
+strings
+over the alphabet
+S
+. If the set
+S
+has
+n
+elements, the number of
+k
+-tuples over
+S
+is
+n
+k
+.
+Permutations of multisets
+[
+edit
+]
+Permutations without repetition on the left, with repetition to their right
+If
+M
+is a finite
+multiset
+, then a
+multiset permutation
+is an ordered arrangement of elements of
+M
+in which each element appears a number of times equal exactly to its multiplicity in
+M
+. An
+anagram
+of a word having some repeated letters is an example of a multiset permutation.
+[
+d
+]
+If the multiplicities of the elements of
+M
+(taken in some order) are
+m
+1
+,
+m
+2
+, ...,
+m
+l
+and their sum (that is, the size of
+M
+) is
+n
+, then the number of multiset permutations of
+M
+is given by a
+multinomial coefficient
+:
+[
+38
+]
+(
+n
+m
+1
+,
+m
+2
+,
+…
+,
+m
+l
+)
+=
+n
+!
+m
+1
+!
+m
+2
+!
+⋯
+m
+l
+!
+=
+(
+∑
+i
+=
+1
+l
+m
+i
+)
+!
+∏
+i
+=
+1
+l
+m
+i
+!
+.
+For example, the number of distinct anagrams of the word MISSISSIPPI is
+[
+39
+]
+11
+!
+1
+!
+4
+!
+4
+!
+2
+!
+=
+34650.
+A
+k
+-permutation
+of a multiset
+M
+is a sequence of
+k
+elements of
+M
+in which each element appears
+a number of times less than or equal to
+its multiplicity in
+M
+(an element's
+repetition number
+). In this case, the number of permutations can be determined with
+generating functions
+: it is
+k
+!
+times the coefficient of
+x
+k
+in the product
+∏
+i
+=
+1
+l
+∑
+j
+=
+0
+m
+i
+x
+j
+j
+!
+.
+[
+40
+]
+[
+better
+source
+needed
+]
+Continuing the example from above, in the case of the multiset of letters in MISSISSIPPI, the resulting generating function is
+(
+1
++
+x
+)
+⋅
+(
+1
++
+x
++
+1
+2
+x
+2
+)
+⋅
+(
+1
++
+x
++
+1
+2
+x
+2
++
+1
+6
+x
+3
++
+1
+24
+x
+4
+)
+2
+=
+1
++
+4
+x
++
+15
+2
+!
+x
+2
++
+53
+3
+!
+x
+3
++
+176
+4
+!
+x
+4
++
+550
+5
+!
+x
+5
++
+1610
+6
+!
+x
+6
++
+4340
+7
+!
+x
+7
++
+10430
+8
+!
+x
+8
++
+21420
+9
+!
+x
+9
++
+34650
+10
+!
+x
+10
++
+34650
+11
+!
+x
+11
+.
+Thus, the number of 11-permutations is 34650 (the same result as above), but we also have the number of
+k
+-permutations with
+k
+ranging from 0 to 11.
+Circular permutations
+[
+edit
+]
+See also:
+Cyclic order §
+Finite cycles
+Permutations, when considered as arrangements, are sometimes referred to as
+linearly ordered
+arrangements. If, however, the objects are arranged in a circular manner this distinguished ordering is weakened: there is no "first element" in the arrangement, as any element can be considered as the start. An arrangement of distinct objects in a circular manner is called a
+circular permutation
+.
+[
+41
+]
+[
+e
+]
+These can be formally defined as
+equivalence classes
+of ordinary permutations of these objects, for the
+equivalence relation
+generated by moving the final element of the linear arrangement to its front.
+Two circular permutations are equivalent if one can be rotated into the other. The following four circular permutations on four letters are considered to be the same.
+1
+4
+3
+2
+4
+2
+1
+3
+2
+3
+4
+1
+3
+1
+2
+4
+The circular arrangements are to be read counter-clockwise, so the following two are not equivalent since no rotation can bring one to the other.
+1
+4
+3
+2
+1
+3
+4
+2
+There are (
+n
+– 1)! circular permutations of a set with
+n
+elements.
+Properties
+[
+edit
+]
+The number of permutations of
+n
+distinct objects is
+n
+!.
+The number of
+n
+-permutations with
+k
+disjoint cycles is the signless
+Stirling number of the first kind
+, denoted
+c
+(
+n
+,
+k
+)
+or
+[
+n
+k
+]
+.
+[
+42
+]
+Cycle type
+[
+edit
+]
+The cycles (including the fixed points) of a permutation
+σ
+of a set with
+n
+elements partition that set; so the lengths of these cycles form an
+integer partition
+of
+n
+, which is called the
+cycle type
+(or sometimes
+cycle structure
+or
+cycle shape
+) of
+σ
+. There is a "1" in the cycle type for every fixed point of
+σ
+, a "2" for every transposition, and so on. The cycle type of
+β
+=
+(
+1
+2
+5
+)
+(
+3
+4
+)
+(
+6
+8
+)
+(
+7
+)
+is
+(
+3
+,
+2
+,
+2
+,
+1
+)
+.
+This may also be written in a more compact form as
+[1
+1
+2
+2
+3
+1
+]
+.
+More precisely, the general form is
+[
+1
+α
+1
+2
+α
+2
+⋯
+n
+α
+n
+]
+, where
+α
+1
+,
+…
+,
+α
+n
+are the numbers of cycles of respective length. The number of permutations of a given cycle type is
+[
+43
+]
+n
+!
+1
+α
+1
+2
+α
+2
+⋯
+n
+α
+n
+α
+1
+!
+α
+2
+!
+⋯
+α
+n
+!
+.
+The number of cycle types of a set with
+n
+elements equals the value of the
+partition function
+p
+(
+n
+)
+.
+Polya
+'s
+cycle index
+polynomial is a
+generating function
+which counts permutations by their cycle type.
+Conjugating permutations
+[
+edit
+]
+In general, composing permutations written in cycle notation follows no easily described pattern – the cycles of the composition can be different from those being composed. However the cycle type is preserved in the special case of
+conjugating
+a permutation
+σ
+by another permutation
+π
+, which means forming the product
+π
+σ
+π
+−
+1
+. Here,
+π
+σ
+π
+−
+1
+is the
+conjugate
+of
+σ
+by
+π
+and its cycle notation can be obtained by taking the cycle notation for
+σ
+and applying
+π
+to all the entries in it.
+[
+44
+]
+It follows that two permutations are conjugate exactly when they have the same cycle type.
+Order of a permutation
+[
+edit
+]
+The order of a permutation
+σ
+is the smallest positive integer
+m
+so that
+σ
+m
+=
+i
+d
+. It is the
+least common multiple
+of the lengths of its cycles. For example, the order of
+σ
+=
+(
+152
+)
+(
+34
+)
+is
+lcm
+(
+3
+,
+2
+)
+=
+6
+.
+Parity of a permutation
+[
+edit
+]
+Main article:
+Parity of a permutation
+Every permutation of a finite set can be expressed as the product of transpositions.
+[
+45
+]
+Although many such expressions for a given permutation may exist, either they all contain an even number of transpositions or they all contain an odd number of transpositions. Thus all permutations can be classified as
+even or odd
+depending on this number.
+This result can be extended so as to assign a
+sign
+, written
+sgn
+⁡
+σ
+, to each permutation.
+sgn
+⁡
+σ
+=
++
+1
+if
+σ
+is even and
+sgn
+⁡
+σ
+=
+−
+1
+if
+σ
+is odd. Then for two permutations
+σ
+and
+π
+sgn
+⁡
+(
+σ
+π
+)
+=
+sgn
+⁡
+σ
+⋅
+sgn
+⁡
+π
+.
+It follows that
+sgn
+⁡
+(
+σ
+σ
+−
+1
+)
+=
++
+1.
+The sign of a permutation is equal to the determinant of its
+permutation matrix
+(below).
+Matrix representation
+[
+edit
+]
+Main article:
+Permutation matrix
+A
+permutation matrix
+is an
+n
+×
+n
+matrix
+that has exactly one entry 1 in each column and in each row, and all other entries are 0. There are several ways to assign a permutation matrix to a permutation of {1, 2, ...,
+n
+}. One natural approach is to define
+L
+σ
+to be the
+linear transformation
+of
+ℝ
+n
+which permutes the
+standard basis
+{
+𝐞
+1
+,
+…
+,
+𝐞
+n
+}
+by
+L
+σ
+(
+𝐞
+j
+)
+=
+𝐞
+σ
+(
+j
+)
+, and define
+M
+σ
+to be its matrix. That is,
+M
+σ
+has its
+j
+th
+column equal to the n × 1 column vector
+𝐞
+σ
+(
+j
+)
+: its (
+i
+,
+j
+) entry is 1 if
+i
+=
+σ
+(
+j
+), and 0 otherwise. Since composition of linear mappings is described by
+matrix multiplication
+, it follows that this construction is compatible with composition of permutations:
+M
+σ
+M
+τ
+=
+M
+σ
+τ
+.
+For example, the one-line permutations
+σ
+=
+213
+,
+τ
+=
+231
+have product
+σ
+τ
+=
+132
+, and the corresponding matrices are:
+M
+σ
+M
+τ
+=
+(
+0
+1
+0
+1
+0
+0
+0
+0
+1
+)
+(
+0
+0
+1
+1
+0
+0
+0
+1
+0
+)
+=
+(
+1
+0
+0
+0
+0
+1
+0
+1
+0
+)
+=
+M
+σ
+τ
+.
+Composition of permutations corresponding to a multiplication of permutation matrices.
+It is also common in the literature to find the inverse convention, where a permutation
+σ
+is associated to the matrix
+P
+σ
+=
+(
+M
+σ
+)
+−
+1
+=
+(
+M
+σ
+)
+T
+whose (
+i
+,
+j
+) entry is 1 if
+j
+=
+σ
+(
+i
+) and is 0 otherwise.  In this convention, permutation matrices multiply in the opposite order from permutations, that is,
+P
+σ
+P
+τ
+=
+P
+τ
+σ
+.  In this correspondence, permutation matrices act on the right side of the standard
+1
+×
+n
+row vectors
+(
+𝐞
+i
+)
+T
+:
+(
+𝐞
+i
+)
+T
+P
+σ
+=
+(
+𝐞
+σ
+(
+i
+)
+)
+T
+.
+The
+Cayley table
+on the right shows these matrices for permutations of 3 elements.
+Permutations of totally ordered sets
+[
+edit
+]
+In some applications, the elements of the set being permuted will be compared with each other. This requires that the set
+S
+has a
+total order
+so that any two elements can be compared. The set {1, 2, ...,
+n
+} with the usual ≤ relation is the most frequently used set in these applications.
+A number of properties of a permutation are directly related to the total ordering of
+S,
+considering the permutation written in one-line notation as a sequence
+σ
+=
+σ
+(
+1
+)
+σ
+(
+2
+)
+⋯
+σ
+(
+n
+)
+.
+Ascents, descents, runs, exceedances, records
+[
+edit
+]
+An
+ascent
+of a permutation
+σ
+of
+n
+is any position
+i
+<
+n
+where the following value is bigger than the current one. That is,
+i
+is an ascent if
+σ
+(
+i
+)
+<
+σ
+(
+i
++
+1
+)
+. For example, the permutation 3452167 has ascents (at positions) 1, 2, 5, and 6.
+Similarly, a
+descent
+is a position
+i
+<
+n
+with
+σ
+(
+i
+)
+>
+σ
+(
+i
++
+1
+)
+, so every
+i
+with
+1
+≤
+i
+<
+n
+is either an ascent or a descent.
+An
+ascending run
+of a permutation is a nonempty increasing contiguous subsequence that cannot be extended at either end; it corresponds to a maximal sequence of successive ascents (the latter may be empty: between two successive descents there is still an ascending run of length
+1). By contrast an
+increasing subsequence
+of a permutation is not necessarily contiguous: it is an increasing sequence obtained by omitting some of the values of the one-line notation.
+For example, the permutation 2453167 has the ascending runs 245, 3, and 167, while it has an increasing subsequence 2367.
+If a permutation has
+k
+−
+1 descents, then it must be the union of
+k
+ascending runs.
+[
+46
+]
+The number of permutations of
+n
+with
+k
+ascents is (by definition) the
+Eulerian number
+⟨
+n
+k
+⟩
+; this is also the number of permutations of
+n
+with
+k
+descents. Some authors however define the Eulerian number
+⟨
+n
+k
+⟩
+as the number of permutations with
+k
+ascending runs, which corresponds to
+k
+− 1
+descents.
+[
+47
+]
+An exceedance of a permutation
+σ
+1
+σ
+2
+...
+σ
+n
+is an index
+j
+such that
+σ
+j
+>
+j
+. If the inequality is not strict (that is,
+σ
+j
+≥
+j
+), then
+j
+is called a
+weak exceedance
+. The number of
+n
+-permutations with
+k
+exceedances coincides with the number of
+n
+-permutations with
+k
+descents.
+[
+48
+]
+A
+record
+or
+left-to-right maximum
+of a permutation
+σ
+is an element
+i
+such that
+σ
+(
+j
+) <
+σ
+(
+i
+) for all
+j < i
+.
+Foata's transition lemma
+[
+edit
+]
+Foata
+'s
+fundamental bijection
+transforms a permutation
+σ
+with a given canonical cycle form into the permutation
+f
+(
+σ
+)
+=
+σ
+̂
+whose one-line notation has the same sequence of elements with parentheses removed.
+[
+28
+]
+[
+49
+]
+For example:
+σ
+=
+(
+513
+)
+(
+6
+)
+(
+827
+)
+(
+94
+)
+=
+(
+1
+2
+3
+4
+5
+6
+7
+8
+9
+3
+7
+5
+9
+1
+6
+8
+2
+4
+)
+,
+σ
+̂
+=
+513682794
+=
+(
+1
+2
+3
+4
+5
+6
+7
+8
+9
+5
+1
+3
+6
+8
+2
+7
+9
+4
+)
+.
+Here the first element in each canonical cycle of
+σ
+becomes a record (left-to-right maximum) of
+σ
+̂
+. Given
+σ
+̂
+, one may find its records and insert parentheses to construct the inverse transformation
+σ
+=
+f
+−
+1
+(
+σ
+̂
+)
+. Underlining the records in the above example:
+σ
+̂
+=
+5
+_
+1
+3
+6
+_
+8
+_
+2
+7
+9
+_
+4
+, which allows the reconstruction of the cycles of
+σ
+.
+The following table shows
+σ
+̂
+and
+σ
+for the six permutations of
+S
+= {1, 2, 3}, with the bold text on each side showing the notation used in the bijection: one-line notation for
+σ
+̂
+and canonical cycle notation for
+σ
+.
+σ
+̂
+=
+f
+(
+σ
+)
+σ
+=
+f
+−
+1
+(
+σ
+̂
+)
+𝟏𝟐𝟑
+=
+(
+1
+)
+(
+2
+)
+(
+3
+)
+123
+=
+(
+𝟏
+)
+(
+𝟐
+)
+(
+𝟑
+)
+𝟏𝟑𝟐
+=
+(
+1
+)
+(
+3
+2
+)
+132
+=
+(
+𝟏
+)
+(
+𝟑
+𝟐
+)
+𝟐𝟏𝟑
+=
+(
+2
+1
+)
+(
+3
+)
+213
+=
+(
+𝟐
+𝟏
+)
+(
+𝟑
+)
+𝟐𝟑𝟏
+=
+(
+3
+1
+2
+)
+321
+=
+(
+𝟐
+)
+(
+𝟑
+𝟏
+)
+𝟑𝟏𝟐
+=
+(
+3
+2
+1
+)
+231
+=
+(
+𝟑
+𝟏
+𝟐
+)
+𝟑𝟐𝟏
+=
+(
+2
+)
+(
+3
+1
+)
+312
+=
+(
+𝟑
+𝟐
+𝟏
+)
+As a first corollary, the number of
+n
+-permutations with exactly
+k
+records is equal to the number of
+n
+-permutations with exactly
+k
+cycles: this last number is the signless
+Stirling number of the first kind
+,
+c
+(
+n
+,
+k
+)
+. Furthermore, Foata's mapping takes an
+n
+-permutation with
+k
+weak exceedances to an
+n
+-permutation with
+k
+− 1
+ascents.
+[
+49
+]
+For example, (2)(31) = 321 has
+k =
+2 weak exceedances (at index 1 and 2), whereas
+f
+(321) = 231
+has
+k
+− 1 = 1
+ascent (at index 1; that is, from 2 to 3).
+Inversions
+[
+edit
+]
+Main article:
+Inversion (discrete mathematics)
+A 15 puzzle in an unsolvable configuration; all of its number tiles are in numerical order, except for the 14 and 15 tiles being swapped.
+In the
+15 puzzle
+the goal is to get the squares in ascending order.  Initial positions which have an odd number of inversions are impossible to solve.
+[
+50
+]
+An
+inversion
+of a permutation
+σ
+is a pair
+(
+i
+,
+j
+)
+of positions where the entries of a permutation are in the opposite order:
+i
+<
+j
+and
+σ
+(
+i
+)
+>
+σ
+(
+j
+)
+.
+[
+51
+]
+Thus a descent is an inversion at two adjacent positions. For example,
+σ
+= 23154
+has (
+i
+,
+j
+) = (1, 3), (2, 3), and (4, 5), where (
+σ
+(
+i
+),
+σ
+(
+j
+)) = (2, 1), (3, 1), and (5, 4).
+Sometimes an inversion is defined as the pair of values (
+σ
+(
+i
+),
+σ
+(
+j
+)); this makes no difference for the
+number
+of inversions, and the reverse pair (
+σ
+(
+j
+),
+σ
+(
+i
+)) is an inversion in the above sense for the inverse permutation
+σ
+−1
+.
+The number of inversions is an important measure for the degree to which the entries of a permutation are out of order; it is the same for
+σ
+and for
+σ
+−1
+. To bring a permutation with
+k
+inversions into order (that is, transform it into the identity permutation), by successively applying (right-multiplication by)
+adjacent transpositions
+, is always possible and requires a sequence of
+k
+such operations. Moreover, any reasonable choice for the adjacent transpositions will work: it suffices to choose at each step a transposition of
+i
+and
+i
++ 1
+where
+i
+is a descent of the permutation as modified so far (so that the transposition will remove this particular descent, although it might create other descents). This is so because applying such a transposition reduces the number of inversions by
+1; as long as this number is not zero, the permutation is not the identity, so it has at least one descent.
+Bubble sort
+and
+insertion sort
+can be interpreted as particular instances of this procedure to put a sequence into order. Incidentally this procedure proves that any permutation
+σ
+can be written as a product of adjacent transpositions; for this one may simply reverse any sequence of such transpositions that transforms
+σ
+into the identity. In fact, by enumerating all sequences of adjacent transpositions that would transform
+σ
+into the identity, one obtains (after reversal) a
+complete
+list of all expressions of minimal length writing
+σ
+as a product of adjacent transpositions.
+The number of permutations of
+n
+with
+k
+inversions is expressed by a
+Mahonian number
+.
+[
+52
+]
+This is the coefficient of
+q
+k
+in the expansion of the product
+[
+n
+]
+q
+!
+=
+∏
+m
+=
+1
+n
+∑
+i
+=
+0
+m
+−
+1
+q
+i
+=
+1
+(
+1
++
+q
+)
+(
+1
++
+q
++
+q
+2
+)
+⋯
+(
+1
++
+q
++
+q
+2
++
+⋯
++
+q
+n
+−
+1
+)
+,
+The notation
+[
+n
+]
+q
+!
+denotes the
+q-factorial
+. This expansion commonly appears in the study of
+necklaces
+.
+Let
+σ
+∈
+S
+n
+,
+i
+,
+j
+∈
+{
+1
+,
+2
+,
+…
+,
+n
+}
+such that
+i
+<
+j
+and
+σ
+(
+i
+)
+>
+σ
+(
+j
+)
+.
+In this case, say the weight of the inversion
+(
+i
+,
+j
+)
+is
+σ
+(
+i
+)
+−
+σ
+(
+j
+)
+.
+Kobayashi (2011) proved the enumeration formula
+∑
+i
+<
+j
+,
+σ
+(
+i
+)
+>
+σ
+(
+j
+)
+(
+σ
+(
+i
+)
+−
+σ
+(
+j
+)
+)
+=
+|
+{
+τ
+∈
+S
+n
+∣
+τ
+≤
+σ
+,
+τ
+is bigrassmannian
+}
+where
+≤
+denotes
+Bruhat order
+in the
+symmetric groups
+. This graded partial order often appears in the context of
+Coxeter groups
+.
+Permutations in computing
+[
+edit
+]
+Numbering permutations
+[
+edit
+]
+One way to represent permutations of
+n
+things is by an integer
+N
+with 0
+≤
+N
+<
+n
+!, provided convenient methods are given to convert between the number and the representation of a permutation as an ordered arrangement (sequence). This gives the most compact representation of arbitrary permutations, and in computing is particularly attractive when
+n
+is small enough that
+N
+can be held in a machine word; for 32-bit words this means
+n
+≤
+12, and for 64-bit words this means
+n
+≤
+20. The conversion can be done via the intermediate form of a sequence of numbers
+d
+n
+,
+d
+n
+−1
+, ...,
+d
+2
+,
+d
+1
+, where
+d
+i
+is a non-negative integer less than
+i
+(one may omit
+d
+1
+, as it is always 0, but its presence makes the subsequent conversion to a permutation easier to describe). The first step then is to simply express
+N
+in the
+factorial number system
+, which is just a particular
+mixed radix
+representation, where, for numbers less than
+n
+!, the bases (place values or multiplication factors) for successive digits are
+(
+n
+− 1)!
+,
+(
+n
+− 2)!
+, ..., 2!, 1!. The second step interprets this sequence as a
+Lehmer code
+or (almost equivalently) as an inversion table.
+Rothe diagram for
+σ
+=
+(
+6
+,
+3
+,
+8
+,
+1
+,
+4
+,
+9
+,
+7
+,
+2
+,
+5
+)
+σ
+i
+i
+1
+2
+3
+4
+5
+6
+7
+8
+9
+Lehmer
+code
+1
+×
+×
+×
+×
+×
+•
+d
+9
+= 5
+2
+×
+×
+•
+d
+8
+= 2
+3
+×
+×
+×
+×
+×
+•
+d
+7
+= 5
+4
+•
+d
+6
+= 0
+5
+×
+•
+d
+5
+= 1
+6
+×
+×
+×
+•
+d
+4
+= 3
+7
+×
+×
+•
+d
+3
+= 2
+8
+•
+d
+2
+= 0
+9
+•
+d
+1
+= 0
+Inversion
+table
+3
+6
+1
+2
+4
+0
+2
+0
+0
+In the
+Lehmer code
+for a permutation
+σ
+, the number
+d
+n
+represents the choice made for the first term
+σ
+1
+, the number
+d
+n
+−1
+represents the choice made for the second term
+σ
+2
+among the remaining
+n
+− 1
+elements of the set, and so forth. More precisely, each
+d
+n
++1−
+i
+gives the number of
+remaining
+elements strictly less than the term
+σ
+i
+. Since those remaining elements are bound to turn up as some later term
+σ
+j
+, the digit
+d
+n
++1−
+i
+counts the
+inversions
+(
+i
+,
+j
+) involving
+i
+as smaller index (the number of values
+j
+for which
+i
+<
+j
+and
+σ
+i
+>
+σ
+j
+). The
+inversion table
+for
+σ
+is quite similar, but here
+d
+n
++1−
+k
+counts the number of inversions (
+i
+,
+j
+) where
+k
+=
+σ
+j
+occurs as the smaller of the two values appearing in inverted order.
+[
+53
+]
+Both encodings can be visualized by an
+n
+by
+n
+Rothe diagram
+[
+54
+]
+(named after
+Heinrich August Rothe
+) in which dots at (
+i
+,
+σ
+i
+) mark the entries of the permutation, and a cross at (
+i
+,
+σ
+j
+) marks the inversion (
+i
+,
+j
+); by the definition of inversions a cross appears in any square that comes both before the dot (
+j
+,
+σ
+j
+) in its column, and before the dot (
+i
+,
+σ
+i
+) in its row. The Lehmer code lists the numbers of crosses in successive rows, while the inversion table lists the numbers of crosses in successive columns; it is just the Lehmer code for the inverse permutation, and vice versa.
+To effectively convert a Lehmer code
+d
+n
+,
+d
+n
+−1
+, ...,
+d
+2
+,
+d
+1
+into a permutation of an ordered set
+S
+, one can start with a list of the elements of
+S
+in increasing order, and for
+i
+increasing from 1 to
+n
+set
+σ
+i
+to the element in the list that is preceded by
+d
+n
++1−
+i
+other ones, and remove that element from the list. To convert an inversion table
+d
+n
+,
+d
+n
+−1
+, ...,
+d
+2
+,
+d
+1
+into the corresponding permutation, one can traverse the numbers from
+d
+1
+to
+d
+n
+while inserting the elements of
+S
+from largest to smallest into an initially empty sequence; at the step using the number
+d
+from the inversion table, the element from
+S
+inserted into the sequence at the point where it is preceded by
+d
+elements already present. Alternatively one could process the numbers from the inversion table and the elements of
+S
+both in the opposite order, starting with a row of
+n
+empty slots, and at each step place the element from
+S
+into the empty slot that is preceded by
+d
+other empty slots.
+Converting successive
+natural numbers
+to the factorial number system produces those sequences in
+lexicographic order
+(as is the case with any mixed radix number system), and further converting them to permutations preserves the lexicographic ordering, provided the Lehmer code interpretation is used (using inversion tables, one gets a different ordering, where one starts by comparing permutations by the
+place
+of their entries 1 rather than by the value of their first entries). The sum of the numbers in the factorial number system representation gives the number of inversions of the permutation, and the parity of that sum gives the
+signature
+of the permutation. Moreover, the positions of the zeroes in the inversion table give the values of left-to-right maxima of the permutation (in the example 6, 8, 9) while the positions of the zeroes in the Lehmer code are the positions of the right-to-left minima (in the example positions the 4, 8, 9 of the values 1, 2, 5); this allows computing the distribution of such extrema among all permutations. A permutation with Lehmer code
+d
+n
+,
+d
+n
+−1
+, ...,
+d
+2
+,
+d
+1
+has an ascent
+n
+−
+i
+if and only if
+d
+i
+≥
+d
+i
++1
+.
+Algorithms to generate permutations
+[
+edit
+]
+In computing it may be required to generate permutations of a given sequence of values. The methods best adapted to do this depend on whether one wants some randomly chosen permutations, or all permutations, and in the latter case if a specific ordering is required. Another question is whether possible equality among entries in the given sequence is to be taken into account; if so, one should only generate distinct multiset permutations of the sequence.
+An obvious way to generate permutations of
+n
+is to generate values for the
+Lehmer code
+(possibly using the
+factorial number system
+representation of integers up to
+n
+!), and convert those into the corresponding permutations. However, the latter step, while straightforward, is hard to implement efficiently, because it requires
+n
+operations each of selection from a sequence and deletion from it, at an arbitrary position; of the obvious representations of the sequence as an
+array
+or a
+linked list
+, both require (for different reasons) about
+n
+2
+/4 operations to perform the conversion. With
+n
+likely to be rather small (especially if generation of all permutations is needed) that is not too much of a problem, but it turns out that both for random and for systematic generation there are simple alternatives that do considerably better. For this reason it does not seem useful, although certainly possible, to employ a special
+data structure
+that would allow performing the conversion from Lehmer code to permutation in
+O
+(
+n
+log
+n
+)
+time.
+Random generation of permutations
+[
+edit
+]
+Main article:
+Fisher–Yates shuffle
+For generating
+random permutations
+of a given sequence of
+n
+values, it makes no difference whether one applies a randomly selected permutation of
+n
+to the sequence, or chooses a random element from the set of distinct (multiset) permutations of the sequence. This is because, even though in case of repeated values there can be many distinct permutations of
+n
+that result in the same permuted sequence, the number of such permutations is the same for each possible result. Unlike for systematic generation, which becomes unfeasible for large
+n
+due to the growth of the number
+n
+!, there is no reason to assume that
+n
+will be small for random generation.
+The basic idea to generate a random permutation is to generate at random one of the
+n
+! sequences of integers
+d
+1
+,
+d
+2
+,...,
+d
+n
+satisfying
+0 ≤
+d
+i
+<
+i
+(since
+d
+1
+is always zero it may be omitted) and to convert it to a permutation through a
+bijective
+correspondence. For the latter correspondence one could interpret the (reverse) sequence as a Lehmer code, and this gives a generation method first published in 1938 by
+Ronald Fisher
+and
+Frank Yates
+.
+[
+55
+]
+While at the time computer implementation was not an issue, this method suffers from the difficulty sketched above to convert from Lehmer code to permutation efficiently. This can be remedied by using a different bijective correspondence: after using
+d
+i
+to select an element among
+i
+remaining elements of the sequence (for decreasing values of
+i
+), rather than removing the element and compacting the sequence by shifting down further elements one place, one
+swaps
+the element with the final remaining element. Thus the elements remaining for selection form a consecutive range at each point in time, even though they may not occur in the same order as they did in the original sequence. The mapping from sequence of integers to permutations is somewhat complicated, but it can be seen to produce each permutation in exactly one way, by an immediate
+induction
+. When the selected element happens to be the final remaining element, the swap operation can be omitted. This does not occur sufficiently often to warrant testing for the condition, but the final element must be included among the candidates of the selection, to guarantee that all permutations can be generated.
+The resulting algorithm for generating a random permutation of
+a
+[0],
+a
+[1], ...,
+a
+[
+n
+− 1]
+can be described as follows in
+pseudocode
+:
+for
+i
+from
+n
+downto
+2
+do
+d
+i
+← random element of { 0, ...,
+i
+− 1 }
+swap
+a
+[
+d
+i
+] and
+a
+[
+i
+− 1]
+This can be combined with the initialization of the array
+a
+[
+i
+] =
+i
+as follows
+for
+i
+from
+0
+to
+n
+−1
+do
+d
+i
++1
+← random element of { 0, ...,
+i
+}
+a
+[
+i
+] ←
+a
+[
+d
+i
++1
+]
+a
+[
+d
+i
++1
+] ←
+i
+If
+d
+i
++1
+=
+i
+, the first assignment will copy an uninitialized value, but the second will overwrite it with the correct value
+i
+.
+However, Fisher-Yates is not the fastest algorithm for generating a permutation, because Fisher-Yates is essentially a sequential algorithm and "divide and conquer" procedures can achieve the same result in parallel.
+[
+56
+]
+Generation in lexicographic order
+[
+edit
+]
+There are many ways to systematically generate all permutations of a given sequence.
+[
+57
+]
+One classic, simple, and flexible algorithm is based upon finding the next permutation in
+lexicographic ordering
+, if it exists. It can handle repeated values, for which case it generates each distinct multiset permutation once. Even for ordinary permutations it is significantly more efficient than generating values for the Lehmer code in lexicographic order (possibly using the
+factorial number system
+) and converting those to permutations. It begins by sorting the sequence in (weakly)
+increasing
+order (which gives its lexicographically minimal permutation), and then repeats advancing to the next permutation as long as one is found. The method goes back to
+Narayana Pandita
+in 14th century India, and has been rediscovered frequently.
+[
+58
+]
+The following algorithm generates the next permutation lexicographically after a given permutation. It changes the given permutation in-place.
+Find the largest index
+k
+such that
+a
+[
+k
+] <
+a
+[
+k
++ 1]
+.  If no such index exists, the permutation is the last permutation.
+Find the largest index
+l
+greater than
+k
+such that
+a
+[
+k
+] <
+a
+[
+l
+]
+.
+Swap the value of
+a
+[
+k
+] with that of
+a
+[
+l
+].
+Reverse the sequence from
+a
+[
+k
++ 1] up to and including the final element
+a
+[
+n
+].
+For example, given the sequence [1, 2, 3, 4] (which is in increasing order), and given that the index is
+zero-based
+, the steps are as follows:
+Index
+k
+= 2, because 3 is placed at an index that satisfies condition of being the largest index that is still less than
+a
+[
+k
++ 1] which is 4.
+Index
+l
+= 3, because 4 is the only value in the sequence that is greater than 3 in order to satisfy the condition
+a
+[
+k
+] <
+a
+[
+l
+].
+The values of
+a
+[2] and
+a
+[3] are swapped to form the new sequence [1, 2, 4, 3].
+The sequence after
+k
+-index
+a
+[2] to the final element is reversed. Because only one value lies after this index (the 3), the sequence remains unchanged in this instance. Thus the lexicographic successor of the initial state is permuted: [1, 2, 4, 3].
+Following this algorithm, the next lexicographic permutation will be [1, 3, 2, 4], and the 24th permutation will be [4, 3, 2, 1] at which point
+a
+[
+k
+] <
+a
+[
+k
++ 1] does not exist, indicating that this is the last permutation.
+This method uses about 3 comparisons and 1.5 swaps per permutation, amortized over the whole sequence, not counting the initial sort.
+[
+59
+]
+Generation with minimal changes
+[
+edit
+]
+Main articles:
+Steinhaus–Johnson–Trotter algorithm
+and
+Heap's algorithm
+An alternative to the above algorithm, the
+Steinhaus–Johnson–Trotter algorithm
+, generates an ordering on all the permutations of a given sequence with the property that any two consecutive permutations in its output differ by swapping two adjacent values. This ordering on the permutations was known to 17th-century English bell ringers, among whom it was known as "plain changes". One advantage of this method is that the small amount of change from one permutation to the next allows the method to be implemented in constant time per permutation. The same can also easily generate the subset of even permutations, again in constant time per permutation, by skipping every other output permutation.
+[
+58
+]
+An alternative to Steinhaus–Johnson–Trotter is
+Heap's algorithm
+,
+[
+60
+]
+said by
+Robert Sedgewick
+in 1977 to be the fastest algorithm of generating permutations in applications.
+[
+57
+]
+The following figure shows the output of all three aforementioned algorithms for generating all permutations of length
+n
+=
+4
+, and of six additional algorithms described in the literature.
+Ordering of all permutations of length
+n
+=
+4
+generated by different algorithms. The permutations are color-coded, where
+1
+,
+2
+,
+3
+,
+4
+.
+[
+61
+]
+Lexicographic ordering;
+Steinhaus–Johnson–Trotter algorithm
+;
+Heap's algorithm
+;
+Ehrlich's star-transposition algorithm:
+[
+58
+]
+in each step, the first entry of the permutation is exchanged with a later entry;
+Zaks' prefix reversal algorithm:
+[
+62
+]
+in each step, a prefix of the current permutation is reversed to obtain the next permutation;
+Sawada-Williams' algorithm:
+[
+63
+]
+each permutation differs from the previous one either by a cyclic left-shift by one position, or an exchange of the first two entries;
+Corbett's algorithm:
+[
+64
+]
+each permutation differs from the previous one by a cyclic left-shift of some prefix by one position;
+Single-track ordering:
+[
+65
+]
+each column is a cyclic shift of the other columns;
+Single-track
+Gray code
+:
+[
+65
+]
+each column is a cyclic shift of the other columns, plus any two consecutive permutations differ only in one or two transpositions.
+Nested swaps generating algorithm in steps connected to the nested subgroups
+S
+k
+⊂
+S
+k
++
+1
+. Each permutation is obtained from the previous by a transposition multiplication to the left. Algorithm is connected to the
+Factorial number system
+of the index.
+Generation of permutations in nested swap steps
+[
+edit
+]
+Explicit sequence of swaps (transpositions, 2-cycles
+(
+p
+q
+)
+), is described here, each swap applied (on the left) to the previous chain providing a new permutation, such that all the permutations can be retrieved, each only once.
+[
+66
+]
+This counting/generating procedure has an additional structure (call it nested), as it is given in steps: after completely retrieving
+S
+k
+−
+1
+, continue retrieving
+S
+k
+∖
+S
+k
+−
+1
+by cosets
+S
+k
+−
+1
+τ
+i
+of
+S
+k
+−
+1
+in
+S
+k
+,  by appropriately choosing the
+coset
+representatives
+τ
+i
+to be described below. Since each
+S
+m
+is sequentially generated, there is a
+last element
+λ
+m
+∈
+S
+m
+. So, after generating
+S
+k
+−
+1
+by swaps, the next permutation in
+S
+k
+∖
+S
+k
+−
+1
+has to be
+τ
+1
+=
+(
+p
+1
+k
+)
+λ
+k
+−
+1
+for some
+1
+≤
+p
+1
+<
+k
+. Then all swaps that generated
+S
+k
+−
+1
+are repeated, generating the whole coset
+S
+k
+−
+1
+τ
+1
+, reaching the last permutation in that coset
+λ
+k
+−
+1
+τ
+1
+; the next swap has to move the permutation to representative of another coset
+τ
+2
+=
+(
+p
+2
+k
+)
+λ
+k
+−
+1
+τ
+1
+.
+Continuing the same way, one gets coset representatives
+τ
+j
+=
+(
+p
+j
+k
+)
+λ
+k
+−
+1
+⋯
+λ
+k
+−
+1
+(
+p
+i
+k
+)
+λ
+k
+−
+1
+⋯
+λ
+k
+−
+1
+(
+p
+1
+k
+)
+λ
+k
+−
+1
+for the cosets of
+S
+k
+−
+1
+in
+S
+k
+; the ordered set
+(
+p
+1
+,
+…
+,
+p
+k
+−
+1
+)
+(
+0
+≤
+p
+i
+<
+k
+) is called the set of coset beginnings. Two of these representatives are in the same coset if and only if
+τ
+j
+(
+τ
+i
+)
+−
+1
+=
+(
+p
+j
+k
+)
+λ
+k
+−
+1
+(
+p
+j
+−
+1
+k
+)
+λ
+k
+−
+1
+⋯
+λ
+k
+−
+1
+(
+p
+i
++
+1
+k
+)
+=
+ϰ
+i
+j
+∈
+S
+k
+−
+1
+, that is,
+ϰ
+i
+j
+(
+k
+)
+=
+k
+. Concluding, permutations
+τ
+i
+∈
+S
+k
+−
+S
+k
+−
+1
+are all representatives of distinct cosets
+if and only if
+for any
+k
+>
+j
+>
+i
+≥
+1
+,
+(
+λ
+k
+−
+1
+)
+j
+−
+i
+p
+i
+≠
+p
+j
+(no repeat condition).  In particular, for all generated permutations to be distinct it is not necessary for the
+p
+i
+values to be distinct. In the process, one gets that
+λ
+k
+=
+λ
+k
+−
+1
+(
+p
+k
+−
+1
+k
+)
+λ
+k
+−
+1
+(
+p
+k
+−
+2
+k
+)
+λ
+k
+−
+1
+⋯
+λ
+k
+−
+1
+(
+p
+1
+k
+)
+λ
+k
+−
+1
+and this provides the recursion procedure.
+EXAMPLES: obviously, for
+λ
+2
+one has
+λ
+2
+=
+(
+12
+)
+; to build
+λ
+3
+there are only two possibilities for the coset beginnings satisfying the no repeat condition; the choice
+p
+1
+=
+p
+2
+=
+1
+leads to
+λ
+3
+=
+λ
+2
+(
+13
+)
+λ
+2
+(
+13
+)
+λ
+2
+=
+(
+13
+)
+. To continue generating
+S
+4
+one needs appropriate  coset beginnings (satisfying the no repeat condition): there is a convenient choice:
+p
+1
+=
+1
+,
+p
+2
+=
+2
+,
+p
+3
+=
+3
+, leading to
+λ
+4
+=
+(
+13
+)
+(
+1234
+)
+(
+13
+)
+=
+(
+1432
+)
+. Then, to build
+λ
+5
+a convenient choice for the coset beginnings (satisfying the no repeat condition) is
+p
+1
+=
+p
+2
+=
+p
+3
+=
+p
+4
+=
+1
+, leading to
+λ
+5
+=
+(
+15
+)
+.
+From examples above one can inductively go to higher
+k
+in a similar way, choosing coset beginnings of
+S
+k
+in
+S
+k
++
+1
+, as follows: for
+k
+even choosing all coset beginnings equal to 1 and for
+k
+odd choosing coset beginnings equal to
+(
+1
+,
+2
+,
+…
+,
+k
+)
+. With such choices the "last" permutation is
+λ
+k
+=
+(
+1
+k
+)
+for
+k
+odd and
+λ
+k
+=
+(
+1
+k
+−
+)
+(
+12
+⋯
+k
+)
+(
+1
+k
+−
+)
+for
+k
+even (
+k
+−
+=
+k
+−
+1
+). Using these explicit formulae one can easily compute the permutation of certain index in the counting/generation steps with minimum computation. For this, writing the index in factorial base is useful. For example, the permutation for index
+699
+=
+5
+(
+5
+!
+)
++
+4
+(
+4
+!
+)
++
+1
+(
+2
+!
+)
++
+1
+(
+1
+!
+)
+is:
+σ
+=
+λ
+2
+(
+13
+)
+λ
+2
+(
+15
+)
+λ
+4
+(
+15
+)
+λ
+4
+(
+15
+)
+λ
+4
+(
+15
+)
+λ
+4
+(
+56
+)
+λ
+5
+(
+46
+)
+λ
+5
+(
+36
+)
+λ
+5
+(
+26
+)
+λ
+5
+(
+16
+)
+λ
+5
+=
+λ
+2
+(
+13
+)
+λ
+2
+(
+(
+15
+)
+λ
+4
+)
+4
+(
+λ
+5
+)
+−
+1
+λ
+6
+=
+(
+23
+)
+(
+14325
+)
+−
+1
+(
+15
+)
+(
+15
+)
+(
+123456
+)
+(
+15
+)
+=
+(
+23
+)
+(
+15234
+)
+(
+123456
+)
+(
+15
+)
+, yielding finally,
+σ
+=
+(
+1653
+)
+(
+24
+)
+.
+Because multiplying by swap permutation  takes  short computing time and every new generated permutation requires only one such swap multiplication, this generation procedure is quite efficient. Moreover, as there is a simple formula, having the last permutation in each
+S
+k
+can save even more time to go directly to a permutation with certain index in fewer steps than expected as it can be done in blocks of subgroups rather than swap by swap.
+Applications
+[
+edit
+]
+Permutations are used in the
+interleaver
+component of the
+error detection and correction
+algorithms, such as
+turbo codes
+, for example
+3GPP Long Term Evolution
+mobile telecommunication standard uses these ideas (see 3GPP technical specification 36.212
+[
+67
+]
+).
+Such applications raise the question of fast generation of permutations satisfying certain desirable properties. One of the methods is based on the
+permutation polynomials
+. Also as a base for optimal hashing in Unique Permutation Hashing.
+[
+68
+]
+See also
+[
+edit
+]
+icon
+Mathematics portal
+Alternating permutation
+Convolution
+Cyclic order
+Even and odd permutations
+Josephus permutation
+Levi-Civita symbol
+List of permutation topics
+Major index
+Permutation category
+Permutation group
+Permutation pattern
+Permutation representation (symmetric group)
+Probability
+Rencontres numbers
+Sorting network
+Substitution cipher
+Superpattern
+Superpermutation
+Twelvefold way
+Weak order of permutations
+Notes
+[
+edit
+]
+↑
+1 is frequently used to represent the
+identity element
+in a non-commutative group
+↑
+The order is often implicitly understood. A set of integers is naturally written from smallest to largest; a set of letters is written in lexicographic order. For other sets, a natural order needs to be specified explicitly.
+↑
+More precisely,
+variations without repetition
+. The term is still common in other languages and appears in modern English most often in translation.
+↑
+The natural order in this example is the order of the letters in the original word.
+↑
+In older texts
+circular permutation
+was sometimes used as a synonym for
+cyclic permutation
+, but this is no longer done. See
+Carmichael (1956
+, p.
+7)
+References
+[
+edit
+]
+↑
+McCoy (1968
+, p.
+152)
+↑
+Nering (1970
+, p.
+86)
+↑
+"Yijing | Ancient Chinese Divination Text & Philosophy | Britannica"
+.
+www.britannica.com
+. Retrieved
+2026-11-07
+.
+↑
+Heath, Thomas Little (1981).
+A History of Greek Mathematics
+. New York: Dover Publications.
+ISBN
+0-486-24073-8
+.
+OCLC
+7703465
+.
+↑
+Broemeling, Lyle D. (1 November 2011). "An Account of Early Statistical Inference in Arab Cryptology".
+The American Statistician
+.
+65
+(4):
+255–
+257.
+doi
+:
+10.1198/tas.2011.10191
+.
+S2CID
+123537702
+.
+↑
+Biggs, N. L.
+(1979). "The Roots of Combinatorics".
+Historia Math
+.
+6
+(2):
+109–
+136.
+doi
+:
+10.1016/0315-0860(79)90074-0
+.
+↑
+Stedman 1677
+, p.
+4.
+↑
+Stedman 1677
+, p.
+5.
+↑
+Stedman 1677
+, pp.
+6–7.
+↑
+Stedman 1677
+, p.
+8.
+↑
+Stedman 1677
+, pp.
+13–18.
+↑
+"Joseph-Louis Lagrange"
+.
+math.berkeley.edu
+. Retrieved
+2026-11-07
+.
+↑
+Rejewski, Marian (1980).
+"An application of the theory of permutations in breaking the Enigma cipher"
+.
+Applicationes Mathematicae
+.
+16
+(4):
+543–
+559.
+doi
+:
+10.4064/am-16-4-543-559
+.
+ISSN
+1233-7234
+.
+↑
+Cash, David (2019).
+"CMSC 28400 Introduction to Cryptography Autumn 2019 - Notes #2: Permutations and Enigma"
+(PDF)
+.
+↑
+Scheinerman, Edward A. (March 5, 2012).
+"Chapter 5: Functions"
+.
+Mathematics: A Discrete Introduction
+(3rd
+ed.). Cengage Learning. p.
+188.
+ISBN
+978-0840049421
+.
+Archived
+from the original on February 5, 2020
+. Retrieved
+February 5,
+2020
+.
+It is customary to use lowercase Greek letters (especially π, σ, and τ) to stand for permutations.
+↑
+Rotman 2002
+, p.
+41
+↑
+Bogart 1990
+, p.
+487
+↑
+Cameron 1994
+, p. 29, footnote 3.
+↑
+Conway, John H.; Burgiel, Heidi; Goodman-Strauss, Chaim (2008).
+The Symmetries of Things
+. A K Peters. p.
+179.
+A permutation---say, of the names of a number of people---can be thought of as moving either the names or the people.  The alias viewpoint regards the permutation as assigning a new name or
+alias
+to each person (from the Latin
+alias
+= otherwise).  Alternatively, from the alibi viewoint we move the people to the places corresponding to their new names (from the Latin
+alibi
+= in another place.)
+↑
+"Permutation notation - Wikiversity"
+.
+en.wikiversity.org
+. Retrieved
+2024-08-04
+.
+↑
+Cauchy, A. L. (January 1815).
+"Mémoire Sur le Nombre des Valeurs qu'une Fonction peut acquérir, lorsqu'on y permute de toutes les manières possibles les quantités qu'elle renferme"
+[
+Memoir on the number of values which a function can acquire when one permutes within it, in all possible ways, the variables which it contains
+]
+.
+Journal de l'École polytechnique
+(in French).
+10
+:
+1–
+28.
+See p. 4.
+English translation
+↑
+Wussing, Hans (2007),
+The Genesis of the Abstract Group Concept: A Contribution to the History of the Origin of Abstract Group Theory
+, Courier Dover Publications, p.
+94,
+ISBN
+9780486458687
+,
+Cauchy used his permutation notation—in which the arrangements are written one below the other and both are enclosed in parentheses—for the first time in 1815.
+↑
+Bogart 1990
+, p.
+17
+↑
+Gerstein 1987
+, p.
+217
+1
+2
+Aigner, Martin (2007).
+A Course in Enumeration
+. Springer GTM 238. pp.
+24
+–25.
+ISBN
+978-3-540-39035-0
+.
+↑
+Hall 1959
+, p.
+54
+↑
+Bona 2012
+, p.87
+[The book has a typo/error here, as it gives (45) instead of (54).]
+1
+2
+Stanley, Richard P. (2012).
+Enumerative Combinatorics: Volume I, Second Edition
+. Cambridge University Press. p.
+30, Prop 1.3.1.
+ISBN
+978-1-107-01542-5
+.
+↑
+Kitaev, Sergey (2011).
+Patterns in Permutations and Words
+. Springer Science & Business Media. p.
+119.
+ISBN
+978-3-642-17333-2
+.
+↑
+Biggs, Norman L.; White, A. T. (1979).
+Permutation groups and combinatorial structures
+. Cambridge University Press.
+ISBN
+978-0-521-22287-7
+.
+↑
+Dixon, John D.; Mortimer, Brian (1996).
+Permutation Groups
+. Springer.
+ISBN
+978-0-387-94599-6
+.
+↑
+Cameron, Peter J. (1999).
+Permutation groups
+. Cambridge University Press.
+ISBN
+978-0-521-65302-2
+.
+↑
+Jerrum, M. (1986). "A compact representation of permutation groups".
+J. Algorithms
+.
+7
+(1):
+60–
+78.
+doi
+:
+10.1016/0196-6774(86)90038-6
+.
+S2CID
+18896625
+.
+↑
+"Combinations and Permutations"
+.
+www.mathsisfun.com
+. Retrieved
+2020-09-10
+.
+↑
+Weisstein, Eric W.
+"Permutation"
+.
+mathworld.wolfram.com
+. Retrieved
+2020-09-10
+.
+↑
+Uspensky 1937
+, p.
+18
+↑
+Charalambides, Ch A. (2002).
+Enumerative Combinatorics
+. CRC Press. p.
+42.
+ISBN
+978-1-58488-290-9
+.
+↑
+Brualdi 2010
+, p. 46, Theorem 2.4.2
+↑
+Brualdi 2010
+, p.
+47
+↑
+Bays, Martin.
+"Generating Functions"
+(PDF)
+. p.
+4
+. Retrieved
+17 May
+2026
+.
+↑
+Brualdi 2010
+, p.
+39
+↑
+Bona 2012
+, pp.
+97–103.
+↑
+Sagan, Bruce (2001),
+The Symmetric Group
+(2
+ed.), Springer, p.
+3
+↑
+Humphreys 1996
+, p.
+84.
+↑
+Hall 1959
+, p.
+60
+↑
+Bóna 2004
+, p.
+4f.
+↑
+Bona 2012
+, pp.
+4–5.
+↑
+Bona 2012
+, p.
+25.
+1
+2
+Bona 2012
+, pp.
+109–110.
+↑
+Slocum, Jerry; Weisstein, Eric W. (1999).
+"15 – puzzle"
+.
+MathWorld
+. Wolfram Research, Inc
+. Retrieved
+October 4,
+2014
+.
+↑
+Bóna 2004
+, p.
+43.
+↑
+Bóna 2004
+, pp.
+43ff.
+↑
+Knuth 1973
+, p.
+12.
+↑
+H. A. Rothe
+,
+Sammlung combinatorisch-analytischer Abhandlungen
+2
+(Leipzig, 1800), 263–305. Cited in
+Knuth 1973
+, p.
+14
+↑
+Fisher, R.A.; Yates, F. (1948) [1938].
+Statistical tables for biological, agricultural and medical research
+(3rd
+ed.). London: Oliver & Boyd. pp.
+26–
+27.
+OCLC
+14222135
+.
+↑
+Bacher, A.; Bodini, O.; Hwang, H.K.; Tsai, T.H. (2017). "Generating Random Permutations by Coin Tossing: Classical Algorithms, New Analysis, and Modern Implementation" (ACM Trans. Algorithms 13(2): 24:1–24:43
+ed.). pp.
+24–
+43.
+1
+2
+Sedgewick, R (1977).
+"Permutation generation methods"
+(PDF)
+.
+Computing Surveys
+.
+9
+(2):
+137–
+164.
+doi
+:
+10.1145/356689.356692
+.
+S2CID
+12139332
+.
+Archived
+(PDF)
+from the original on 2008-02-21.
+1
+2
+3
+Knuth 2005
+, pp.
+1–26.
+↑
+"std::next_permutation"
+.
+cppreference.com
+. 4 December 2017
+. Retrieved
+31 March
+2018
+.
+↑
+Heap, B. R. (1963).
+"Permutations by Interchanges"
+.
+The Computer Journal
+.
+6
+(3):
+293–
+298.
+doi
+:
+10.1093/comjnl/6.3.293
+.
+↑
+Mütze, Torsten; Sawada, Joe; Williams, Aaron.
+"Generate permutations"
+.
+Combinatorial Object Server
+. Retrieved
+May 29,
+2019
+.
+↑
+Zaks, S. (1984). "A new algorithm for generation of permutations".
+BIT Numerical Mathematics
+.
+24
+(2):
+196–
+204.
+doi
+:
+10.1007/BF01937486
+.
+S2CID
+30234652
+.
+↑
+Sawada, Joe; Williams, Aaron (2018). "A Hamilton path for the sigma-tau problem".
+Proceedings of the 29th Annual ACM-SIAM Symposium on Discrete Algorithms, SODA 2018
+. New Orleans, Louisiana:
+Society for Industrial and Applied Mathematics
+(SIAM). pp.
+568–
+575.
+doi
+:
+10.1137/1.9781611975031.37
+.
+↑
+Corbett, P. F. (1992). "Rotator graphs: An efficient topology for point-to-point multiprocessor networks".
+IEEE Transactions on Parallel and Distributed Systems
+.
+3
+(5):
+622–
+626.
+Bibcode
+:
+1992ITPDS...3..622C
+.
+doi
+:
+10.1109/71.159045
+.
+1
+2
+Arndt, Jörg (2011).
+Matters Computational. Ideas, Algorithms, Source Code
+.
+Springer
+.
+doi
+:
+10.1007/978-3-642-14764-7
+.
+ISBN
+978-3-642-14763-0
+.
+↑
+Popp, O.T. (2002).
+Quickly Handling Big Permutations
+. priv. comm.
+↑
+"3GPP TS 36.212"
+.
+↑
+Dolev, Shlomi; Lahiani, Limor; Haviv, Yinnon (2013).
+"Unique permutation hashing"
+.
+Theoretical Computer Science
+.
+475
+:
+59–
+65.
+doi
+:
+10.1016/j.tcs.2012.12.047
+.
+Bibliography
+[
+edit
+]
+Bogart, Kenneth P. (1990),
+Introductory Combinatorics
+(2nd
+ed.), Harcourt Brace Jovanovich,
+ISBN
+978-0-15-541576-8
+Bóna, Miklós
+(2004),
+Combinatorics of Permutations
+, Chapman Hall-CRC,
+ISBN
+978-1-58488-434-7
+Bona, Miklos (2012),
+Combinatorics of Permutations
+(2nd
+ed.), CRC Press,
+ISBN
+978-1-4398-5051-0
+Brualdi, Richard A. (2010),
+Introductory Combinatorics
+(5th
+ed.), Prentice-Hall,
+ISBN
+978-0-13-602040-0
+Cameron, Peter J. (1994),
+Combinatorics: Topics, Techniques, Algorithms
+, Cambridge University Press,
+ISBN
+978-0-521-45761-3
+Carmichael, Robert D. (1956) [1937],
+Introduction to the theory of Groups of Finite Order
+, Dover,
+ISBN
+978-0-486-60300-1
+{{
+citation
+}}
+:
+ISBN / Date incompatibility (
+help
+)
+Fraleigh, John B. (1976),
+A First Course In Abstract Algebra
+(2nd
+ed.), Reading:
+Addison-Wesley
+,
+ISBN
+0-201-01984-1
+Gerstein, Larry J. (1987),
+Discrete Mathematics and Algebraic Structures
+, W.H. Freeman and Co.,
+ISBN
+978-0-7167-1804-8
+Hall, Marshall Jr.
+(1959),
+The Theory of Groups
+, MacMillan
+Humphreys, J. F. (1996),
+A course in group theory
+, Oxford University Press,
+ISBN
+978-0-19-853459-4
+Knuth, Donald (1973),
+Sorting and Searching
+, The Art of Computer Programming, vol.
+3
+This book mentions the Lehmer code (without using that name) as a variant
+C
+1
+,...,
+C
+n
+of inversion tables in exercise 5.1.1–7 (p.
+19), together with two other variants.
+Knuth, Donald
+(2005),
+Generating All Tuples and Permutations
+,
+The Art of Computer Programming
+, vol.
+4, Addison–Wesley,
+ISBN
+978-0-201-85393-3
+Fascicle
+2, first printing.
+McCoy, Neal H. (1968),
+Introduction To Modern Algebra, Revised Edition
+, Boston:
+Allyn and Bacon
+,
+LCCN
+68015225
+Nering, Evar D. (1970),
+Linear Algebra and Matrix Theory
+(2nd
+ed.), New York:
+Wiley
+,
+LCCN
+76091646
+Rotman, Joseph J. (2002),
+Advanced Modern Algebra
+, Prentice-Hall,
+ISBN
+978-0-13-087868-7
+Stedman, Fabian
+(1677),
+Campanalogia
+, London
+The publisher is given as "W.S." who may have been William Smith, possibly acting as agent for the
+Society of College Youths
+, to which society the "Dedicatory" is addressed.
+In quotations the original long "S" has been replaced by a modern short "s".
+Uspensky, James
+(1937),
+Introduction to Mathematical Probability
+, McGraw-Hill
+Webster's Seventh New Collegiate Dictionary
+, Springfield:
+G. & C. Merriam Company
+, 1969
+Further reading
+[
+edit
+]
+Biggs, Norman L. (2002),
+Discrete Mathematics
+(2nd
+ed.), Oxford University Press,
+ISBN
+978-0-19-850717-8
+Foata, Dominique; Schutzenberger, Marcel-Paul (1970),
+Théorie Géométrique des Polynômes Eulériens
+, Lecture Notes in Mathematics, vol.
+138, Berlin, Heidelberg: Springer-Verlag,
+ISBN
+978-3-540-04927-2
+. The link is to a freely available retyped (LaTeX'ed) and revised version of the text originally published by Springer-Verlag.
+Knuth, Donald (1998),
+Sorting and Searching
+, The Art of Computer Programming, vol.
+3 (Second
+ed.), Addison–Wesley,
+ISBN
+978-0-201-89685-5
+. Section 5.1: Combinatorial Properties of Permutations, pp.
+11–72.
+Sedgewick, Robert (1977).
+"Permutation generation methods"
+.
+ACM Computing Surveys
+.
+9
+(2):
+137–
+164.
+doi
+:
+10.1145/356689.356692
+.
+S2CID
+12139332
+.
+Masato, Kobayashi (2011). "Enumeration of bigrassmannian permutations below a permutation in Bruhat order".
+Order
+.
+1
+:
+131–
+137.
+External links
+[
+edit
+]
+Wikimedia Commons logo
+Wikimedia Commons has media related to
+Permutations
+.
+Wikiversity logo
+Wikiversity has learning resources about
+Permutation notation
+"Permutation"
+,
+Encyclopedia of Mathematics
+, EMS Press, 2001 [1994]
+Authority control databases
+: National
+Edit this at Wikidata
+Czech Republic
+Israel
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Permutation&oldid=1384190504
+"
+Categories
+:
+Factorial and binomial topics
+Permutations
+Arab inventions
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+CS1 French-language sources (fr)
+All articles lacking reliable references
+Articles lacking reliable references from May 2026
+CS1 errors: ISBN date
+Commons category link is on Wikidata
+Search
+Search
+Permutation
+67 languages
+Add topic

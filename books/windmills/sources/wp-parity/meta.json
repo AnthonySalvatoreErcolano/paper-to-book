@@ -1,0 +1,11 @@
+{
+ "id": "wp-parity",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Parity_(mathematics)",
+ "why": "even and odd",
+ "fetched": "2026-11-12T16:53:18Z",
+ "files": {
+  "raw.html": "dae0eb75f32f76652ea44537e406112b3b944d31f9caf2aa5677b30be01da8b3"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Parity_(mathematics)"
+}

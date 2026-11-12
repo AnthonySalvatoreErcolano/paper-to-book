@@ -1,0 +1,354 @@
+Periodic point - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Point which a function/system returns to after some time or iterations
+In
+mathematics
+, in the study of
+iterated functions
+and
+dynamical systems
+, a
+periodic point
+of a
+function
+is a point which the system returns to after a certain number of function iterations or a certain amount of time.
+Iterated functions
+[
+edit
+]
+Given a
+mapping
+f
+from a
+set
+X
+into itself,
+f
+:
+X
+→
+X
+,
+a point
+x
+in
+X
+is called periodic point if there exists an
+n
+>0 so that
+f
+n
+(
+x
+)
+=
+x
+where
+f
+n
+is the
+n
+th
+iterate
+of
+f
+. The smallest positive
+integer
+n
+satisfying the above is called the
+prime period
+or
+least period
+of the point
+x
+. If every point in
+X
+is a periodic point with the same period
+n
+, then
+f
+is called
+periodic
+with period
+n
+(this is not to be confused with the notion of a
+periodic function
+).
+If there exist distinct
+n
+and
+m
+such that
+f
+n
+(
+x
+)
+=
+f
+m
+(
+x
+)
+then
+x
+is called a
+preperiodic point
+. All periodic points are preperiodic.
+If
+f
+is a
+diffeomorphism
+of a
+differentiable manifold
+, so that the
+derivative
+f
+n
+′
+is defined, then one says that a periodic point is
+hyperbolic
+if
+|
+f
+n
+′
+|
+≠
+1
+,
+that it is
+attractive
+if
+|
+f
+n
+′
+|
+<
+1
+,
+and it is
+repelling
+if
+|
+f
+n
+′
+|
+>
+1.
+If the
+dimension
+of the
+stable manifold
+of a periodic point or fixed point is zero, the point is called a
+source
+; if the dimension of its
+unstable manifold
+is zero, it is called a
+sink
+; and if both the stable and unstable manifold have nonzero dimension, it is called a
+saddle
+or
+saddle point
+.
+Examples
+[
+edit
+]
+A period-one point is called a
+fixed point
+.
+The
+logistic map
+x
+t
++
+1
+=
+r
+x
+t
+(
+1
+−
+x
+t
+)
+,
+0
+≤
+x
+t
+≤
+1
+,
+0
+≤
+r
+≤
+4
+exhibits periodicity for various values of the parameter
+r
+. For
+r
+between 0 and 1, 0 is the sole periodic point, with period 1 (giving the sequence
+0, 0, 0, …,
+which
+attracts
+all orbits). For
+r
+between 1 and 3, the value 0 is still periodic but is not attracting, while the value
+r
+−
+1
+r
+is an attracting periodic point of period 1. With
+r
+greater than 3 but less than
+⁠
+1
++
+6
+,
+⁠
+there are a pair of period-2 points which together form an attracting sequence, as well as the non-attracting period-1 points 0 and
+r
+−
+1
+r
+.
+As the value of parameter
+r
+rises toward 4, there arise groups of periodic points with any positive integer for the period; for some values of
+r
+one of these repeating sequences is attracting while for others none of them are (with almost all orbits being chaotic).
+Dynamical system
+[
+edit
+]
+Given a
+real global dynamical system
+⁠
+(
+ℝ
+,
+X
+,
+Φ
+)
+,
+⁠
+with
+X
+the
+phase space
+and
+Φ
+the
+evolution function
+,
+Φ
+:
+ℝ
+×
+X
+→
+X
+a point
+x
+in
+X
+is called
+periodic
+with
+period
+T
+if
+Φ
+(
+T
+,
+x
+)
+=
+x
+The smallest positive
+T
+with this property is called
+prime period
+of the point
+x
+.
+Properties
+[
+edit
+]
+Given a periodic point
+x
+with period
+T
+, then
+Φ
+(
+t
+,
+x
+)
+=
+Φ
+(
+t
++
+T
+,
+x
+)
+for all
+t
+in
+⁠
+ℝ
+.
+⁠
+Given a periodic point
+x
+then all points on the
+orbit
+γ
+x
+through
+x
+are periodic with the same prime period.
+See also
+[
+edit
+]
+Limit cycle
+Limit set
+Stable set
+Sharkovsky's theorem
+Stationary point
+Periodic points of complex quadratic mappings
+This article incorporates material from hyperbolic fixed point on
+PlanetMath
+, which is licensed under the
+Creative Commons Attribution/Share-Alike License
+.
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Periodic_point&oldid=1182739231
+"
+Category
+:
+Limit sets
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Wikipedia articles incorporating text from PlanetMath
+Search
+Search
+Periodic point
+7 languages
+Add topic

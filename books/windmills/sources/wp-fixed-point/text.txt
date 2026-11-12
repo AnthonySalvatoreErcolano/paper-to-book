@@ -1,0 +1,830 @@
+Fixed point (mathematics) - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Element mapped to itself by a mathematical function
+Fixed points in mathematics are not to be confused with
+other uses of "fixed point"
+, or
+stationary points
+where
+f
+′
+(
+x
+)
+=
+0
+.
+The function
+f
+(
+x
+)
+=
+x
+3
+−
+3
+x
+2
++
+3
+x
+(shown in red) has the fixed points 0, 1, and 2.
+In
+mathematics
+, a
+fixed point
+(sometimes shortened to
+fixpoint
+), also known as an
+invariant point
+, is a value that does not change under a given
+transformation
+. Specifically, for
+functions
+, a fixed point is an element that is mapped to itself by the function. Any set of fixed points of a transformation is also an
+invariant set
+.
+Fixed point of a function
+[
+edit
+]
+Formally,
+c
+is a fixed point of a function
+f
+if
+c
+belongs to both the
+domain
+and the
+codomain
+of
+f
+, and
+f
+(
+c
+) =
+c
+.
+In particular,
+f
+cannot have any fixed point if its domain is disjoint from its codomain.
+If
+f
+is defined on the
+real numbers
+, it corresponds, in graphical terms, to a
+curve
+in the
+Euclidean plane
+, and each fixed-point
+c
+corresponds to an intersection of the curve with the line
+y
+=
+x
+, cf. picture.
+For example, if
+f
+is defined on the
+real numbers
+by
+f
+(
+x
+)
+=
+x
+2
+−
+3
+x
++
+4
+,
+then 2 is a fixed point of
+f
+, because
+f
+(2) = 2
+.
+Not all functions have fixed points: for example,
+f
+(
+x
+) =
+x
++ 1
+has no fixed points because
+x
++ 1
+is never equal to
+x
+for any real number.
+Fixed point iteration
+[
+edit
+]
+Main article:
+Fixed-point iteration
+In
+numerical analysis
+,
+fixed-point iteration
+is a method of computing fixed points of a function. Specifically, given a function
+f
+with the same domain and codomain, a point
+x
+0
+in the domain of
+f
+, the fixed-point iteration is
+x
+n
++
+1
+=
+f
+(
+x
+n
+)
+,
+n
+=
+0
+,
+1
+,
+2
+,
+…
+which gives rise to the
+sequence
+x
+0
+,
+x
+1
+,
+x
+2
+,
+…
+of
+iterated function
+applications
+x
+0
+,
+f
+(
+x
+0
+)
+,
+f
+(
+f
+(
+x
+0
+)
+)
+,
+…
+which is hoped to
+converge
+to a point
+x
+. If
+f
+is continuous, then one can prove that the obtained
+x
+is a fixed point of
+f
+.
+The notions of attracting fixed points, repelling fixed points, and
+periodic points
+are defined with respect to fixed-point iteration.
+Fixed-point theorems
+[
+edit
+]
+Main article:
+Fixed-point theorems
+A fixed-point theorem is a result saying that at least one fixed point exists, under some general condition.
+[
+1
+]
+For example, the
+Banach fixed-point theorem
+(1922) gives a general criterion guaranteeing that, if it is satisfied,
+fixed-point iteration
+will always converge to a fixed point.
+The
+Brouwer fixed-point theorem
+(1911) says that any
+continuous function
+from the closed
+unit ball
+in
+n
+-dimensional
+Euclidean space
+to itself must have a fixed point, but it doesn't describe how to find the fixed point.
+The
+Lefschetz fixed-point theorem
+(and the
+Nielsen fixed-point theorem
+) from
+algebraic topology
+give a way to count fixed points.
+Fixed point of a group action
+[
+edit
+]
+In
+algebra
+, for a group
+G
+acting on a set
+X
+with a
+group action
+⋅
+,
+x
+in
+X
+is said to be a fixed point of
+g
+if
+g
+⋅
+x
+=
+x
+.
+The
+fixed-point subgroup
+G
+f
+of an
+automorphism
+f
+of a
+group
+G
+is the
+subgroup
+of
+G
+:
+G
+f
+=
+{
+g
+∈
+G
+∣
+f
+(
+g
+)
+=
+g
+}
+.
+Similarly, the
+fixed-point subring
+R
+f
+of an automorphism
+f
+of a
+ring
+R
+is the
+subring
+of the fixed points of
+f
+, that is,
+R
+f
+=
+{
+r
+∈
+R
+∣
+f
+(
+r
+)
+=
+r
+}
+.
+In
+Galois theory
+, the set of the fixed points of a set of automorphisms of a
+field
+is called the
+fixed field
+of the set of automorphisms.
+Topological fixed point property
+[
+edit
+]
+Main article:
+Fixed-point property
+A
+topological space
+X
+is said to have the
+fixed point property
+(FPP) if for any
+continuous function
+f
+:
+X
+→
+X
+there exists
+x
+∈
+X
+such that
+f
+(
+x
+)
+=
+x
+.
+The FPP is a
+topological invariant
+, i.e., it is preserved by any
+homeomorphism
+. The FPP is also preserved by any
+retraction
+.
+According to the
+Brouwer fixed-point theorem
+, every
+compact
+and
+convex
+subset
+of a
+Euclidean space
+has the FPP. Compactness alone does not imply the FPP, and convexity is not even a topological property, so it makes sense to ask how to topologically characterize the FPP. In 1932
+Borsuk
+asked whether compactness together with
+contractibility
+could be a necessary and sufficient condition for the FPP to hold. The problem was open for 20 years until the conjecture was disproved by Kinoshita, who found an example of a compact contractible space without the FPP.
+[
+2
+]
+Fixed points of partial orders
+[
+edit
+]
+In
+domain theory
+, the notion and terminology of fixed points is generalized to a
+partial order
+. Let ≤ be a partial order over a set
+X
+and let
+f
+:
+X
+→
+X
+be a function over
+X
+. Then a
+prefixed point
+(also spelled
+pre-fixed point
+, sometimes shortened to
+prefixpoint
+or
+pre-fixpoint
+)
+[
+citation needed
+]
+of
+f
+is any
+p
+such that
+f
+(
+p
+) ≤
+p
+. Analogously, a
+postfixed point
+of
+f
+is any
+p
+such that
+p
+≤
+f
+(
+p
+).
+[
+3
+]
+The opposite usage occasionally appears.
+[
+4
+]
+Malkis justifies the definition presented here as follows: "since
+f
+is
+before
+the inequality sign in the term
+f
+(
+x
+) ≤
+x
+, such
+x
+is called a
+pre
+fix point."
+[
+5
+]
+A fixed point is a point that is both a prefixpoint and a postfixpoint. Prefixpoints and postfixpoints have applications in
+theoretical computer science
+.
+[
+6
+]
+Least fixed point
+[
+edit
+]
+Main article:
+Least fixed point
+In
+order theory
+, the
+least fixed point
+of a
+function
+from a
+partially ordered set
+(poset) to itself is the fixed point which is less than each other fixed point, according to the order of the poset. A function need not have a least fixed point, but if it does then the least fixed point is unique.
+One way to express the
+Knaster–Tarski theorem
+is to say that a
+monotone function
+on a
+complete lattice
+has a
+least fixed point
+that coincides with its least prefixpoint (and similarly its greatest fixed point coincides with its greatest postfixpoint).
+[
+7
+]
+Fixed-point combinator
+[
+edit
+]
+Main article:
+Fixed point combinator
+In
+combinatory logic
+for
+computer science
+, a fixed-point combinator is a
+higher-order function
+𝖿
+𝗂
+𝗑
+that returns a fixed point of its argument function, if one exists. Formally, if the function
+f
+has one or more fixed points, then
+𝖿
+𝗂
+𝗑
+⁡
+f
+=
+f
+(
+𝖿
+𝗂
+𝗑
+⁡
+f
+)
+.
+Fixed-point logics
+[
+edit
+]
+Main article:
+Fixed-point logic
+In
+mathematical logic
+, fixed-point logics are extensions of classical predicate logic that have been introduced to express recursion. Their development has been motivated by
+descriptive complexity theory
+and their relationship to
+database query languages
+, in particular to
+Datalog
+.
+Applications
+[
+edit
+]
+icon
+This section
+needs
+more citations
+.
+Please help
+improve this section
+by
+adding citations to reliable sources
+. Unsourced material may be challenged and
+removed
+.
+(
+July 2018
+)
+(
+Learn how and when to remove this message
+)
+In many fields, equilibria or
+stability
+are fundamental concepts that can be described in terms of fixed points.  Some examples follow.
+In
+projective geometry
+, a fixed point of a
+projectivity
+has been called a
+double point
+.
+[
+8
+]
+[
+9
+]
+In
+economics
+, a
+Nash equilibrium
+of a
+game
+is a fixed point of the game's
+best response correspondence
+.
+John Nash
+exploited the
+Kakutani fixed-point theorem
+for his seminal paper that won him the Nobel prize in economics.
+In
+physics
+, more precisely in the
+theory of phase transitions
+,
+linearization
+near an
+unstable
+fixed point has led to
+Wilson
+'s Nobel prize-winning work inventing the
+renormalization group
+, and to the mathematical explanation of the term "
+critical phenomenon
+."
+[
+10
+]
+[
+11
+]
+Programming language
+compilers
+use fixed point computations for program analysis, for example in
+data-flow analysis
+, which is often required for code
+optimization
+. They are also the core concept used by the generic program analysis method
+abstract interpretation
+.
+[
+12
+]
+In
+type theory
+, the
+fixed-point combinator
+allows definition of recursive functions in the
+untyped lambda calculus
+.
+The vector of
+PageRank
+values of all web pages is the fixed point of a
+linear transformation
+derived from the
+World Wide Web
+'s link structure.
+The stationary distribution of a
+Markov chain
+is the fixed point of the one step transition probability function.
+Fixed points are used to finding formulas for
+iterated functions
+.
+See also
+[
+edit
+]
+Cycles and fixed points
+of permutations
+Eigenvector
+Equilibrium
+Fixed points of a Möbius transformation
+Idempotence
+Infinite compositions of analytic functions
+Invariant (mathematics)
+Notes
+[
+edit
+]
+↑
+Brown, R. F., ed. (1988).
+Fixed Point Theory and Its Applications
+. American Mathematical Society.
+ISBN
+0-8218-5080-6
+.
+↑
+Kinoshita, Shin'ichi (1953).
+"On Some Contractible Continua without Fixed Point Property"
+.
+Fund. Math.
+40
+(1):
+96–
+98.
+doi
+:
+10.4064/fm-40-1-96-98
+.
+ISSN
+0016-2736
+.
+↑
+Smyth, Michael B.; Plotkin, Gordon D. (1982).
+"The Category-Theoretic Solution of Recursive Domain Equations"
+(PDF)
+.
+Proceedings, 18th IEEE Symposium on Foundations of Computer Science
+. SIAM Journal of Computing (volume 11). pp.
+761–
+783.
+doi
+:
+10.1137/0211062
+.
+↑
+Patrick Cousot; Radhia Cousot (1979).
+"Constructive Versions of Tarski's Fixed Point Theorems"
+(PDF)
+.
+Pacific Journal of Mathematics
+.
+82
+(1):
+43–
+57.
+doi
+:
+10.2140/pjm.1979.82.43
+.
+↑
+Malkis, Alexander (2015).
+"Multithreaded-Cartesian Abstract Interpretation of Multithreaded Recursive Programs Is Polynomial"
+(
+(PDF)
+)
+.
+Reachability Problems
+. Lecture Notes in Computer Science. Vol.
+9328. pp.
+114–
+127.
+doi
+:
+10.1007/978-3-319-24537-9_11
+.
+ISBN
+978-3-319-24536-2
+.
+S2CID
+17640585
+. Archived from
+the original
+on 2022-08-10.
+↑
+Yde Venema (2008)
+Lectures on the Modal μ-calculus
+Archived
+March 21, 2012, at the
+Wayback Machine
+↑
+Yde Venema (2008)
+Lectures on the Modal μ-calculus
+Archived
+March 21, 2012, at the
+Wayback Machine
+↑
+Coxeter, H. S. M.
+(1942).
+Non-Euclidean Geometry
+.
+University of Toronto Press
+. p.
+36.
+↑
+G. B. Halsted
+(1906)
+Synthetic Projective Geometry
+, page 27
+↑
+Wilson, Kenneth G. (1971).
+"Renormalization Group and Critical Phenomena. I. Renormalization Group and the Kadanoff Scaling Picture"
+.
+Physical Review B
+.
+4
+(9):
+3174–
+3183.
+Bibcode
+:
+1971PhRvB...4.3174W
+.
+doi
+:
+10.1103/PhysRevB.4.3174
+.
+↑
+Wilson, Kenneth G. (1971).
+"Renormalization Group and Critical Phenomena. II. Phase-Space Cell Analysis of Critical Behavior"
+.
+Physical Review B
+.
+4
+(9):
+3184–
+3205.
+Bibcode
+:
+1971PhRvB...4.3184W
+.
+doi
+:
+10.1103/PhysRevB.4.3184
+.
+↑
+"P. Cousot & R. Cousot, Abstract interpretation: A unified lattice model for static analysis of programs by construction or approximation of fixpoints"
+.
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Fixed_point_(mathematics)&oldid=1364471395
+"
+Category
+:
+Fixed points (mathematics)
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+All articles with unsourced statements
+Articles with unsourced statements from October 2022
+Webarchive template wayback links
+Articles needing additional references from July 2018
+All articles needing additional references
+Search
+Search
+Fixed point (mathematics)
+36 languages
+Add topic

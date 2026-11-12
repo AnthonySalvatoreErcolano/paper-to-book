@@ -1,0 +1,661 @@
+Turnstile (symbol) - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Symbol in mathematical logic
+Not to be confused with
+ㅏ
+,
+ト
+,
+卜
+, or
+double turnstile
+.
+In
+mathematical logic
+and
+computer science
+the symbol
+⊢
+(
+⊢
+) has taken the name
+turnstile
+because of its resemblance to a typical
+turnstile
+. It is also referred to as
+tee
+and is often read as "yields", "proves", "satisfies" or "entails".
+Interpretations
+[
+edit
+]
+The turnstile represents a
+binary relation
+. It has several different
+interpretations
+in different contexts:
+In
+epistemology
+,
+Per Martin-Löf
+(1996) analyzes the
+⊢
+symbol thus: "...[T]he combination of Frege's
+Urteilsstrich
+, judgement stroke [
+|
+], and
+Inhaltsstrich
+, content stroke [—], came to be called the assertion sign."
+[
+1
+]
+Frege's notation for a
+judgement
+of some content
+A
+⊢
+A
+can then be read
+I know
+A
+is true
+.
+[
+2
+]
+In the same vein, a conditional assertion
+P
+⊢
+Q
+can be read as:
+From
+P
+, I know that
+Q
+In
+metalogic
+, the study of
+formal languages
+; the turnstile represents
+syntactic consequence
+(or "derivability"). This is to say, that it shows that one string can be
+derived
+from another in a single step, according to the
+transformation rules
+(i.e. the
+syntax
+) of some given
+formal system
+.
+[
+3
+]
+As such, the expression
+P
+⊢
+Q
+means that
+Q
+is derivable from
+P
+in the system.
+Consistent with its use for derivability, a "⊢" followed by an expression without anything preceding it denotes a
+theorem
+, which is to say that the expression can be derived from the rules using an
+empty set
+of
+axioms
+. As such, the expression
+⊢
+Q
+means that
+Q
+is a theorem in the system.
+In
+proof theory
+, the turnstile is used to denote "provability" or "derivability". For example, if
+T
+is a
+formal theory
+and
+S
+is a particular sentence in the language of the theory then
+T
+⊢
+S
+means that
+S
+is
+provable
+from
+T
+.
+[
+4
+]
+This usage is demonstrated in the article on
+propositional calculus
+. The syntactic consequence of provability should be contrasted to semantic consequence, denoted by the
+double turnstile
+symbol
+⊨
+. One says that
+S
+is a semantic consequence of
+T
+, or
+T
+⊨
+S
+, when all possible
+valuations
+in which
+T
+is true,
+S
+is also true. For propositional logic, it may be shown that semantic consequence
+⊨
+and derivability
+⊢
+are equivalent to one-another. That is, propositional logic is sound (
+⊢
+implies
+⊨
+) and complete (
+⊨
+implies
+⊢
+)
+[
+5
+]
+In
+sequent calculus
+, the turnstile is used to denote a
+sequent
+. A sequent
+A
+1
+,
+…
+,
+A
+m
+⊢
+B
+1
+,
+…
+,
+B
+n
+asserts that, if all the antecedents
+A
+1
+,
+…
+,
+A
+m
+are true, then at least one of the consequents
+B
+1
+,
+…
+,
+B
+n
+must be true.
+In the
+typed lambda calculus
+, the turnstile is used to separate typing assumptions from the typing judgment.
+[
+6
+]
+[
+7
+]
+In
+category theory
+, a reversed turnstile (
+⊣
+), as in
+F
+⊣
+G
+, is used to indicate that the
+functor
+F
+is
+left adjoint
+to the functor
+G
+.
+[
+8
+]
+More rarely, a turnstile (
+⊢
+), as in
+G
+⊢
+F
+, is used to indicate that the functor
+G
+is
+right adjoint
+to the functor
+F
+.
+[
+9
+]
+In
+APL
+the symbol is called "right tack" and represents the ambivalent right identity function where both
+X
+⊢
+Y
+and ⊢
+Y
+are
+Y
+. The reversed symbol "⊣" is called "left tack" and represents the analogous left identity where
+X
+⊣
+Y
+is
+X
+and ⊣
+Y
+is
+Y
+.
+[
+10
+]
+[
+11
+]
+In
+combinatorics
+,
+λ
+⊢
+n
+means that
+λ
+is a
+partition
+of the integer
+n
+.
+[
+12
+]
+In
+Hewlett-Packard
+'s
+HP-41C
+/
+CV
+/
+CX
+and
+HP-42S
+series of calculators, the symbol (at code point 127 in the
+FOCAL character set
+) is called "Append character" and is used to indicate that the following characters will be appended to the alpha register rather than replacing the existing contents of the register. The symbol is also supported (at code point 148) in a
+modified variant
+of the
+HP Roman-8
+character set used by other HP calculators.
+On the
+Casio
+fx-92 Collège 2D and fx-92+ Spéciale Collège calculators,
+[
+13
+]
+the symbol represents the
+modulo
+operator; entering
+5
+⊢
+2
+will produce an answer of
+Q
+=
+2
+;
+R
+=
+1
+, where
+Q
+is the
+quotient
+and
+R
+is the
+remainder
+.
+In
+model theory
+,
+φ
+⊢
+ψ
+means
+φ
+entails
+ψ
+, every model of
+φ
+is a model of
+ψ
+.
+Typography
+[
+edit
+]
+In
+TeX
+, the turnstile symbol
+⊢
+is obtained from the command
+\vdash
+.
+In
+Unicode
+, the turnstile symbol (
+⊢
+) is called
+right tack
+and is at code point U+22A2.
+[
+14
+]
+(Code point U+22A6 is named
+assertion sign
+(
+⊦
+).)
+U+22A2
+⊢
+RIGHT TACK
+(
+&
+RightTee;,
+&
+vdash;
+)
+= turnstile
+= proves, implies, yields
+= reducible
+U+22A3
+⊣
+LEFT TACK
+(
+&
+dashv;,
+&
+LeftTee;
+)
+= reverse turnstile
+= non-theorem, does not yield
+U+22AC
+⊬
+DOES NOT PROVE
+(
+&
+nvdash;
+)
+≡
+U+22A2
+⊢
+RIGHT TACK
+U+0338
+̸
+COMBINING LONG SOLIDUS OVERLAY
+On a
+typewriter
+, a turnstile can be composed from a
+vertical bar
+(|) and a
+dash
+(–).
+In
+LaTeX
+there is a turnstile package which issues this sign in many ways, and is capable of putting labels below or above it, in the correct places.
+[
+15
+]
+Similar graphemes
+[
+edit
+]
+꜔
+(U+A714) Modifier Letter Mid Left-Stem Tone Bar
+├
+(U+251C) Box Drawings Light Vertical And Right
+ㅏ
+(U+314F) Hangul Letter A
+Ͱ
+(U+0370) Greek Capital Letter Heta
+ͱ
+(U+0371) Greek Small Letter Heta
+Ⱶ
+(U+2C75) Latin Capital Letter Half H
+ⱶ
+(U+2C76) Latin Small Letter Half H
+⎬
+(U+23AC) Right Curly Bracket Middle Piece
+See also
+[
+edit
+]
+Double turnstile ⊨
+List of logic symbols
+List of mathematical symbols
+Notes
+[
+edit
+]
+↑
+Martin-Löf 1996
+, pp.
+6, 15
+↑
+Martin-Löf 1996
+, p.
+15
+↑
+"Chapter 6, Formal Language Theory"
+(PDF)
+.
+↑
+Troelstra
+&
+Schwichtenberg 2000
+↑
+Dirk van Dalen,
+Logic and Structure
+(1980), Springer,
+ISBN
+3-540-20879-8
+.
+See Chapter 1, section 1.5.
+↑
+"Peter Selinger, Lecture Notes on the Lambda Calculus"
+(PDF)
+.
+↑
+Schmidt 1994
+↑
+"adjoint functor in nLab"
+.
+ncatlab.org
+.
+↑
+@FunctorFact (5 July 2016).
+"Functor Fact on Twitter"
+(
+Tweet
+)
+–
+via
+Twitter
+.
+↑
+"A Dictionary of APL"
+.
+www.jsoftware.com
+.
+↑
+Iverson 1987
+↑
+Stanley, Richard P. (1999).
+Enumerative Combinatorics
+. Vol.
+2 (1st
+ed.). Cambridge: Cambridge University Press. p.
+287.
+↑
+fx-92 Spéciale Collège Mode d'emploi
+(PDF)
+.
+Casio
+. 2015. p.
+12.
+↑
+"Unicode standard"
+(PDF)
+.
+↑
+"CTAN: /tex-archive/macros/latex/contrib/turnstile"
+.
+ctan.org
+.
+References
+[
+edit
+]
+Frege, Gottlob
+(1879).
+Begriffsschrift: Eine der arithmetischen nachgebildete Formelsprache des reinen Denkens
+. Halle.
+Iverson, Kenneth
+(1987).
+A Dictionary of APL
+.
+Martin-Löf, Per
+(1996).
+"On the meanings of the logical constants and the justifications of the logical laws"
+(PDF)
+.
+Nordic Journal of Philosophical Logic
+.
+1
+(1):
+11–
+60.
+(Lecture notes to a short course at Università degli Studi di Siena, April 1983.)
+Schmidt, David
+(1994).
+The Structure of Typed Programming Languages
+.
+MIT Press
+.
+ISBN
+0-262-19349-3
+.
+Troelstra, A. S.
+;
+Schwichtenberg, H.
+(2000).
+Basic Proof Theory
+(2nd
+ed.).
+Cambridge University Press
+.
+ISBN
+978-0-521-77911-1
+.
+v
+t
+e
+Common
+logical symbols
+∧
+or
+&
+and
+∨
+or
+¬
+or
+~
+not
+→
+implies
+⊃
+implies
+,
+superset
+↔
+or
+≡
+iff
+|
+nand
+∀
+universal
+quantification
+∃
+existential
+quantification
+⊤
+true
+,
+tautology
+⊥
+false
+,
+contradiction
+⊢
+entails,
+proves
+⊨
+entails,
+therefore
+∴
+therefore
+∵
+because
+Philosophy
+portal
+icon
+Mathematics
+portal
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Turnstile_(symbol)&oldid=1352986291
+"
+Categories
+:
+Mathematical symbols
+Mathematical logic
+Logic symbols
+Deductive reasoning
+Proof theory
+Logical consequence
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Articles containing German-language text
+Search
+Search
+Turnstile (symbol)
+5 languages
+Add topic

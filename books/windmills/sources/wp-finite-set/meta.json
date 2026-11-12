@@ -1,0 +1,11 @@
+{
+ "id": "wp-finite-set",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Finite_set",
+ "why": "finite sets",
+ "fetched": "2026-11-12T16:53:19Z",
+ "files": {
+  "raw.html": "d027a8ba7133295aba46255ea05e92d01556cded5c3f36b4f8cdf7ace567bf60"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Finite_set"
+}

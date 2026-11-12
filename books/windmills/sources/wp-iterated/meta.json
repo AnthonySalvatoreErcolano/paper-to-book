@@ -1,0 +1,11 @@
+{
+ "id": "wp-iterated",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Iterated_function",
+ "why": "iterates f^n",
+ "fetched": "2026-11-12T16:53:20Z",
+ "files": {
+  "raw.html": "ffe376db233b5b6ab9c1a30f464571e5e9009bfece7bcf75b63733bcee556598"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Iterated_function"
+}

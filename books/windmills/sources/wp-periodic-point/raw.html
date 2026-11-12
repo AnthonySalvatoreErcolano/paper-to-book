@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html class="client-nojs vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-available skin-thumbsize-clientpref-standard skin-underline-clientpref-browser" lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<title>Periodic point - Wikipedia</title>
+<script>(function(){var className="client-js vector-feature-language-in-header-enabled vector-feature-language-in-main-menu-disabled vector-feature-language-in-main-page-header-disabled vector-feature-page-tools-pinned-disabled vector-feature-toc-pinned-clientpref-1 vector-feature-main-menu-pinned-disabled vector-feature-limited-width-clientpref-1 vector-feature-limited-width-content-enabled vector-feature-custom-font-size-clientpref-1 vector-feature-appearance-pinned-clientpref-1 skin-theme-clientpref-day vector-sticky-header-enabled vector-toc-available skin-thumbsize-clientpref-standard skin-underline-clientpref-browser";var cookie=document.cookie.match(/(?:^|; )enwikimwclientpreferences=([^;]+)/);if(cookie){cookie[1].split('%2C').forEach(function(pref){className=className.replace(new RegExp('(^| )'+pref.replace(/-clientpref-\w+$|[^\w-]+/g,'')+'-clientpref-\\w+( |$)'),'$1'+pref+'$2');});}document.documentElement.className=className;}());RLCONF={"wgBreakFrames":false,"wgSeparatorTransformTable":["",""],"wgDigitTransformTable":["",""],"wgDefaultDateFormat":"dmy","wgMonthNames":["","January","February","March","April","May","June","July","August","September","October","November","December"],"wgRequestId":"a14035bb-58e7-4873-9cc2-1a4bccc8946c","wgCanonicalNamespace":"","wgCanonicalSpecialPageName":false,"wgNamespaceNumber":0,"wgPageName":"Periodic_point","wgTitle":"Periodic point","wgCurRevisionId":1182739231,"wgRevisionId":1182739231,"wgArticleId":4941621,"wgIsArticle":true,"wgIsRedirect":false,"wgAction":"view","wgUserName":null,"wgUserGroups":["*"],"wgCategories":["Articles with short description","Short description is different from Wikidata","Wikipedia articles incorporating text from PlanetMath","Limit sets"],"wgPageViewLanguage":"en","wgPageContentLanguage":"en","wgPageContentModel":"wikitext","wgRelevantPageName":"Periodic_point","wgRelevantArticleId":4941621,"wgTempUserName":null,"wgIsProbablyEditable":true,"wgRelevantPageIsProbablyEditable":true,"wgRestrictionEdit":[],"wgRestrictionMove":[],"wgNoticeProject":"wikipedia","wgFlaggedRevsParams":{"tags":{"status":{"levels":1}},"namespaces":[0,4]},"wgConfirmEditCaptchaNeededForGenericEdit":"hcaptcha","wgConfirmEditForceShowCaptcha":false,"wgConfirmEditHCaptchaSiteKey":"5d0c670e-a5f4-4258-ad16-1f42792c9c62","wgMediaViewerOnClick":true,"wgMediaViewerEnabledByDefault":true,"wgMediaViewerDesktopVue":false,"wgPopupsFlags":0,"wgVisualEditor":{"pageLanguageCode":"en","pageLanguageDir":"ltr","pageVariantFallbacks":"en"},"wgWMESchemaEditAttemptStepOversample":false,"wgWMEPageLength":4000,"wgParsoidHtmlVersion":"2.8.0","parsermigration-parsoid":true,"wgPageAssessments":{"Project-independent assessment":{"class":"Start","importance":""},"Systems":{"class":"Start","importance":"Mid"},"Systems/Dynamical systems":{"class":"Start","importance":""}},"wgTestKitchenUserExperiments":{"overrides":[],"enrolled":[],"assigned":[],"subject_ids":[]},"wgEditSubmitButtonLabelPublish":true,"wgVisualEditorPageIsDisambiguation":false,"wgULSPosition":"interlanguage","wgULSisCompactLinksEnabled":false,"wgULSContentLanguageSelectorEnabled":true,"wgULSLanguageSelectorV2Enabled":true,"wgWikibaseItemId":"Q116301","wgCheckUserClientHintsHeadersJsApi":["brands","architecture","bitness","fullVersionList","mobile","model","platform","platformVersion"],"wgCheckUserClientHintsInEditRequest":true,"wgPersonalDashboardMenuVisible":false};
+RLSTATE={"ext.globalCssJs.user.styles":"ready","site.styles":"ready","user.styles":"ready","ext.globalCssJs.user":"ready","user":"ready","user.options":"loading","ext.math.styles":"ready","ext.wikimediamessages.styles":"ready","skins.vector.search.codex.styles":"ready","skins.vector.styles":"ready","skins.vector.icons":"ready","ext.visualEditor.desktopArticleTarget.noscript":"ready","ext.uls.interlanguage":"ready","wikibase.client.init":"ready","ext.readingLists.bookmark.icons":"ready","ext.readingLists.bookmark.styles":"ready"};RLPAGEMODULES=["ext.math.polyfills","ext.math.mathjax","site","mediawiki.page.ready","mediawiki.toc","skins.vector.js","ext.centralNotice.geoIP","ext.centralNotice.startUp","ext.gadget.ReferenceTooltips","ext.gadget.switcher","ext.urlShortener.toolbar","ext.centralauth.centralautologin","ext.testKitchen","ext.wikimediaCustomizations.donorAccountCreation","mmv.bootstrap","ext.popups","ext.visualEditor.desktopArticleTarget.init","ext.echo.centralauth","ext.eventLogging","ext.wikimediaEvents","ext.navigationTiming","ext.uls.interface","ext.cx.eventlogging.campaigns","ext.cx.uls.quick.actions","wikibase.client.vector-2022","wikibase.databox.fromWikidata","ext.checkUser.clientHints","ext.readerExperiments/preferredSources","ext.readingLists.bookmark.anonymous"];</script>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.loader.impl(function(){return["user.options@12s5i",function($,jQuery,require,module){mw.user.tokens.set({"patrolToken":"+\\","watchToken":"+\\","csrfToken":"+\\"});mw.user.options.set({"usecodemirror":1});
+}];});});</script>
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=ext.math.styles%7Cext.readingLists.bookmark.icons%2Cstyles%7Cext.uls.interlanguage%7Cext.visualEditor.desktopArticleTarget.noscript%7Cext.wikimediamessages.styles%7Cskins.vector.icons%2Cstyles%7Cskins.vector.search.codex.styles%7Cwikibase.client.init&amp;only=styles&amp;skin=vector-2022">
+<script async="" src="/w/load.php?lang=en&amp;modules=startup&amp;only=scripts&amp;raw=1&amp;skin=vector-2022"></script>
+<meta name="ResourceLoaderDynamicStyles" content="">
+<link rel="stylesheet" href="/w/load.php?lang=en&amp;modules=site.styles&amp;only=styles&amp;skin=vector-2022">
+<meta name="generator" content="MediaWiki 1.48.0-wmf.3">
+<meta name="referrer" content="origin">
+<meta name="referrer" content="origin-when-cross-origin">
+<meta name="robots" content="max-image-preview:standard">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="width=1120">
+<meta property="og:title" content="Periodic point - Wikipedia">
+<meta property="og:type" content="website">
+<link rel="discord:component-embed" type="application/json" href="https://en.wikipedia.org/w/rest.php/discord/v0-internal/discord-preview?title=Periodic+point&amp;db=enwiki&amp;lang=en">
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="/w/index.php?title=Periodic_point&amp;action=edit">
+<link rel="apple-touch-icon" href="/static/apple-touch/wikipedia.png">
+<link rel="icon" href="/static/favicon/wikipedia.ico">
+<link rel="search" type="application/opensearchdescription+xml" href="/w/rest.php/v1/search" title="Wikipedia (en)">
+<link rel="EditURI" type="application/rsd+xml" href="//en.wikipedia.org/w/api.php?action=rsd">
+<link rel="canonical" href="https://en.wikipedia.org/wiki/Periodic_point">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.en">
+<link rel="alternate" type="application/atom+xml" title="Wikipedia Atom feed" href="/w/index.php?title=Special:RecentChanges&amp;feed=atom">
+<link rel="dns-prefetch" href="//meta.wikimedia.org" />
+<link rel="dns-prefetch" href="auth.wikimedia.org">
+</head>
+<body class="mediawiki ltr sitedir-ltr mw-hide-empty-elt action-view skin-vector-2022 ns-0 ns-subject mw-editable page-Periodic_point rootpage-Periodic_point skin--responsive skin-vector skin-vector-search-vue">
+<div id="mw-aria-live-region" class="mw-aria-live-region" aria-live="polite"></div><a class="mw-jump-link" href="#bodyContent">Jump to content</a>
+<div class="vector-header-container">
+	<header class="vector-header mw-header no-font-mode-scale">
+		<div class="vector-header-start">
+			<nav class="vector-main-menu-landmark" aria-label="Site">
+				
+<div id="vector-main-menu-dropdown" class="vector-dropdown vector-main-menu-dropdown vector-button-flush-left vector-button-flush-right"  title="Main menu" >
+	<input type="checkbox" id="vector-main-menu-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-main-menu-dropdown" class="vector-dropdown-checkbox "  aria-label="Main menu"   >
+	<label id="vector-main-menu-dropdown-label" for="vector-main-menu-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-menu mw-ui-icon-wikimedia-menu cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Main menu</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+				<div id="vector-main-menu-unpinned-container" class="vector-unpinned-container">
+		
+<div id="vector-main-menu" class="vector-main-menu vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-main-menu-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="main-menu-pinned"
+	data-pinnable-element-id="vector-main-menu"
+	data-pinned-container-id="vector-main-menu-pinned-container"
+	data-unpinned-container-id="vector-main-menu-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Main menu</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-main-menu.pin" aria-label="Move Main menu to sidebar">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-main-menu.unpin" aria-label="Hide Main menu">hide</button>
+</div>
+
+	
+<div id="p-navigation" class="vector-menu mw-portlet mw-portlet-navigation"  >
+	<div class="vector-menu-heading">
+		Navigation
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-mainpage-description" class="mw-list-item"><a href="/wiki/Main_Page" title="Visit the main page [z]" accesskey="z"><span>Main page</span></a></li><li id="n-contents" class="mw-list-item"><a href="/wiki/Wikipedia:Contents" title="Guides to browsing Wikipedia"><span>Contents</span></a></li><li id="n-currentevents" class="mw-list-item"><a href="/wiki/Portal:Current_events" title="Articles related to current events"><span>Current events</span></a></li><li id="n-randompage" class="mw-list-item"><a href="/wiki/Special:Random" title="Visit a randomly selected article [x]" accesskey="x"><span>Random article</span></a></li><li id="n-aboutsite" class="mw-list-item"><a href="/wiki/Wikipedia:About" title="Learn about Wikipedia and how it works"><span>About Wikipedia</span></a></li><li id="n-contactpage" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us" title="How to contact Wikipedia"><span>Contact us</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-interaction" class="vector-menu mw-portlet mw-portlet-interaction"  >
+	<div class="vector-menu-heading">
+		Contribute
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="n-help" class="mw-list-item"><a href="/wiki/Help:Contents" title="Guidance on how to use and edit Wikipedia"><span>Help</span></a></li><li id="n-introduction" class="mw-list-item"><a href="/wiki/Help:Introduction" title="Learn how to edit Wikipedia"><span>Learn to edit</span></a></li><li id="n-portal" class="mw-list-item"><a href="/wiki/Wikipedia:Community_portal" title="The hub for editors"><span>Community portal</span></a></li><li id="n-recentchanges" class="mw-list-item"><a href="/wiki/Special:RecentChanges" title="A list of recent changes to Wikipedia [r]" accesskey="r"><span>Recent changes</span></a></li><li id="n-upload" class="mw-list-item"><a href="/wiki/Wikipedia:File_upload_wizard" title="Add images or other media for use on Wikipedia"><span>Upload file</span></a></li><li id="n-specialpages" class="mw-list-item"><a href="/wiki/Special:SpecialPages" title="A list of all special pages [q]" accesskey="q"><span>Special pages</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+				</div>
+
+	</div>
+</div>
+
+		</nav>
+			
+<a href="/wiki/Main_Page" class="mw-logo">
+	<img class="mw-logo-icon" src="/static/images/icons/enwiki-25.svg" alt="" aria-hidden="true" height="50" width="50">
+	<span class="mw-logo-container skin-invert">
+		<img class="mw-logo-wordmark" alt="Wikipedia" src="/static/images/mobile/copyright/wikipedia-wordmark-en-25.svg" style="width: 8.75em; height: 1.375em;">
+		<img class="mw-logo-tagline" alt="The Free Encyclopedia" src="/static/images/mobile/copyright/wikipedia-tagline-en-25.svg" width="140" height="11" style="width: 8.75em; height: 0.6875em;">
+	</span>
+</a>
+
+		</div>
+		<div class="vector-header-end">
+			
+<div id="p-search" role="search" class="vector-search-box-vue  vector-search-box-collapses vector-search-box-show-thumbnail vector-search-box-auto-expand-width vector-search-box">
+	<a href="/wiki/Special:Search" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only search-toggle" title="Search Wikipedia [f]" accesskey="f"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search cdx-button__icon"></span>
+
+<span>Search</span>
+	</a>
+	<div class="vector-typeahead-search-container">
+		<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail cdx-typeahead-search--auto-expand-width">
+			<form action="/w/index.php" id="searchform" class="cdx-search-input cdx-search-input--has-end-button">
+				<div id="simpleSearch" class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+					<div class="cdx-text-input cdx-text-input--has-start-icon">
+						<input
+							class="cdx-text-input__input mw-searchInput" autocomplete="off"
+							 type="search" name="search" placeholder="Search Wikipedia" aria-label="Search Wikipedia" autocapitalize="none" spellcheck="false" title="Search Wikipedia [f]" accesskey="f" id="searchInput"
+							>
+						<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+					</div>
+					<input type="hidden" name="title" value="Special:Search">
+				</div>
+				<button class="cdx-button cdx-search-input__end-button">Search</button>
+			</form>
+		</div>
+	</div>
+</div>
+
+			<nav class="vector-user-links vector-user-links-wide" aria-label="Personal tools">
+	<div class="vector-user-links-main">
+	
+<div id="p-vector-user-menu-preferences" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-userpage" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	<nav class="vector-appearance-landmark" aria-label="Appearance">
+		
+<div id="vector-appearance-dropdown" class="vector-dropdown "  title="Change the appearance of the page&#039;s font size, width, and color" >
+	<input type="checkbox" id="vector-appearance-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-appearance-dropdown" class="vector-dropdown-checkbox "  aria-label="Appearance"   >
+	<label id="vector-appearance-dropdown-label" for="vector-appearance-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-appearance mw-ui-icon-wikimedia-appearance cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Appearance</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+			<div id="vector-appearance-unpinned-container" class="vector-unpinned-container">
+				
+			</div>
+		
+	</div>
+</div>
+
+	</nav>
+	
+<div id="p-vector-user-menu-notifications" class="vector-menu mw-portlet emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+<div id="p-vector-user-menu-overflow" class="vector-menu mw-portlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-sitesupport-2" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=en.wikipedia.org&amp;uselang=en" data-mw-donate-attempt="top_link" class=""><span>Donate</span></a>
+</li>
+<li id="pt-createaccount-2" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Special:CreateAccount&amp;returnto=Periodic+point" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span>Create account</span></a>
+</li>
+<li id="pt-login-2" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Special:UserLogin&amp;returnto=Periodic+point" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	</div>
+	
+<div id="vector-user-links-dropdown" class="vector-dropdown vector-user-menu vector-button-flush-right vector-user-menu-logged-out vector-user-links-dropdown--collapsible"  title="Log in and more options" >
+	<input type="checkbox" id="vector-user-links-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-user-links-dropdown" class="vector-dropdown-checkbox "  aria-label="Personal tools"   >
+	<label id="vector-user-links-dropdown-label" for="vector-user-links-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-userAvatar mw-ui-icon-wikimedia-userAvatar cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Personal tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+		
+<div id="p-personal" class="vector-menu mw-portlet mw-portlet-personal"  title="User menu" >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="pt-sitesupport" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="https://donate.wikimedia.org/?wmf_source=donate&amp;wmf_medium=sidebar&amp;wmf_campaign=en.wikipedia.org&amp;uselang=en" data-mw-donate-attempt="top_link" class=""><span class="vector-icon mw-ui-icon-heart mw-ui-icon-wikimedia-heart cdx-button__icon"></span>
+
+<span>Donate</span></a>
+</li>
+<li id="pt-createaccount" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Special:CreateAccount&amp;returnto=Periodic+point" title="You are encouraged to create an account and log in; however, it is not mandatory" class=""><span class="vector-icon mw-ui-icon-userAvatar mw-ui-icon-wikimedia-userAvatar cdx-button__icon"></span>
+
+<span>Create account</span></a>
+</li>
+<li id="pt-login" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Special:UserLogin&amp;returnto=Periodic+point" title="You&#039;re encouraged to log in; however, it&#039;s not mandatory. [o]" accesskey="o" class=""><span class="vector-icon mw-ui-icon-logIn mw-ui-icon-wikimedia-logIn cdx-button__icon"></span>
+
+<span>Log in</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+	
+	</div>
+</div>
+
+</nav>
+
+		</div>
+	</header>
+</div>
+<div class="mw-page-container">
+	<div class="mw-page-container-inner">
+		<div class="vector-sitenotice-container">
+			<div id="siteNotice"><!-- CentralNotice --></div>
+		</div>
+		<div class="vector-column-start">
+			<div class="vector-main-menu-container">
+		<div id="mw-navigation">
+			<nav id="mw-panel" class="vector-main-menu-landmark" aria-label="Site">
+				<div id="vector-main-menu-pinned-container" class="vector-pinned-container">
+				
+				</div>
+		</nav>
+		</div>
+	</div>
+	<div class="vector-sticky-pinned-container">
+				<nav id="mw-panel-toc" aria-label="Contents" data-event-name="ui.sidebar-toc" class="mw-table-of-contents-container vector-toc-landmark">
+					<div id="vector-toc-pinned-container" class="vector-pinned-container">
+					<div id="vector-toc" class="vector-toc vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-toc-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="toc-pinned"
+	data-pinnable-element-id="vector-toc"
+	data-pinned-container-id="vector-toc-pinned-container"
+	data-unpinned-container-id="vector-toc-unpinned-container"
+>
+	<h2 class="vector-pinnable-header-label">Contents</h2>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-toc.pin" aria-label="Move Contents to sidebar">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-toc.unpin" aria-label="Hide Contents">hide</button>
+</div>
+
+
+	<ul class="vector-toc-contents" id="mw-panel-toc-list">
+		<li id="toc-mw-content-text"
+			class="vector-toc-list-item vector-toc-level-1">
+			<a href="#" class="vector-toc-link">
+				<div class="vector-toc-text">(Top)</div>
+			</a>
+		</li>
+		<li id="toc-Iterated_functions"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Iterated_functions">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">1</span>
+				<span>Iterated functions</span>
+			</div>
+		</a>
+		
+			<button aria-controls="toc-Iterated_functions-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Iterated functions subsection</span>
+			</button>
+		
+		<ul id="toc-Iterated_functions-sublist" class="vector-toc-list">
+			<li id="toc-Examples"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Examples">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">1.1</span>
+					<span>Examples</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Examples-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-Dynamical_system"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#Dynamical_system">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">2</span>
+				<span>Dynamical system</span>
+			</div>
+		</a>
+		
+			<button aria-controls="toc-Dynamical_system-sublist" class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-toc-toggle">
+				<span class="vector-icon mw-ui-icon-wikimedia-expand"></span>
+				<span>Toggle Dynamical system subsection</span>
+			</button>
+		
+		<ul id="toc-Dynamical_system-sublist" class="vector-toc-list">
+			<li id="toc-Properties"
+			class="vector-toc-list-item vector-toc-level-2">
+			<a class="vector-toc-link" href="#Properties">
+				<div class="vector-toc-text">
+					<span class="vector-toc-numb">2.1</span>
+					<span>Properties</span>
+				</div>
+			</a>
+			
+			<ul id="toc-Properties-sublist" class="vector-toc-list">
+			</ul>
+		</li>
+	</ul>
+	</li>
+	<li id="toc-See_also"
+		class="vector-toc-list-item vector-toc-level-1 vector-toc-list-item-expanded">
+		<a class="vector-toc-link" href="#See_also">
+			<div class="vector-toc-text">
+				<span class="vector-toc-numb">3</span>
+				<span>See also</span>
+			</div>
+		</a>
+		
+		<ul id="toc-See_also-sublist" class="vector-toc-list">
+		</ul>
+	</li>
+</ul>
+</div>
+
+					</div>
+		</nav>
+			</div>
+		</div>
+		<div class="mw-content-container">
+			<main id="content" class="mw-body">
+				<header class="mw-body-header vector-page-titlebar no-font-mode-scale">
+					<nav aria-label="Contents" class="vector-toc-landmark">
+						
+<div id="vector-page-titlebar-toc" class="vector-dropdown vector-page-titlebar-toc vector-button-flush-left"  title="Table of Contents" >
+	<input type="checkbox" id="vector-page-titlebar-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-titlebar-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"   >
+	<label id="vector-page-titlebar-toc-label" for="vector-page-titlebar-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+							<div id="vector-page-titlebar-toc-unpinned-container" class="vector-unpinned-container">
+			</div>
+		
+	</div>
+</div>
+
+					</nav>
+					<h1 id="firstHeading" class="firstHeading mw-first-heading"><span lang="en" dir="ltr"><span class="mw-page-title-main">Periodic point</span></span></h1>
+			
+<div id="p-lang-btn" class="vector-dropdown mw-portlet mw-portlet-lang"  >
+	<input type="checkbox" id="p-lang-btn-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-p-lang-btn" class="vector-dropdown-checkbox mw-interlanguage-selector"  aria-label="7 languages" aria-description="Go to an article in another language. Available in 7 languages"  >
+	<label id="p-lang-btn-label" for="p-lang-btn-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive mw-portlet-lang-heading-7" aria-hidden="true"  ><span class="vector-icon mw-ui-icon-language-progressive mw-ui-icon-wikimedia-language-progressive cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">7 languages</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+		<div class="vector-menu-content">
+			
+			<ul class="vector-menu-content-list">
+				
+				<li class="interlanguage-link interwiki-es mw-list-item"><a href="https://es.wikipedia.org/wiki/Punto_peri%C3%B3dico" title="Punto periódico – Spanish" lang="es" hreflang="es" data-title="Punto periódico" data-language-autonym="Español" data-language-local-name="Spanish" class="interlanguage-link-target"><span>Español</span></a></li><li class="interlanguage-link interwiki-fr mw-list-item"><a href="https://fr.wikipedia.org/wiki/Point_p%C3%A9riodique" title="Point périodique – French" lang="fr" hreflang="fr" data-title="Point périodique" data-language-autonym="Français" data-language-local-name="French" class="interlanguage-link-target"><span>Français</span></a></li><li class="interlanguage-link interwiki-it mw-list-item"><a href="https://it.wikipedia.org/wiki/Punto_periodico" title="Punto periodico – Italian" lang="it" hreflang="it" data-title="Punto periodico" data-language-autonym="Italiano" data-language-local-name="Italian" class="interlanguage-link-target"><span>Italiano</span></a></li><li class="interlanguage-link interwiki-ja mw-list-item"><a href="https://ja.wikipedia.org/wiki/%E5%91%A8%E6%9C%9F%E7%82%B9" title="周期点 – Japanese" lang="ja" hreflang="ja" data-title="周期点" data-language-autonym="日本語" data-language-local-name="Japanese" class="interlanguage-link-target"><span>日本語</span></a></li><li class="interlanguage-link interwiki-pl mw-list-item"><a href="https://pl.wikipedia.org/wiki/Punkt_okresowy" title="Punkt okresowy – Polish" lang="pl" hreflang="pl" data-title="Punkt okresowy" data-language-autonym="Polski" data-language-local-name="Polish" class="interlanguage-link-target"><span>Polski</span></a></li><li class="interlanguage-link interwiki-uk mw-list-item"><a href="https://uk.wikipedia.org/wiki/%D0%9F%D0%B5%D1%80%D1%96%D0%BE%D0%B4%D0%B8%D1%87%D0%BD%D0%B0_%D1%82%D0%BE%D1%87%D0%BA%D0%B0" title="Періодична точка – Ukrainian" lang="uk" hreflang="uk" data-title="Періодична точка" data-language-autonym="Українська" data-language-local-name="Ukrainian" class="interlanguage-link-target"><span>Українська</span></a></li><li class="interlanguage-link interwiki-zh mw-list-item"><a href="https://zh.wikipedia.org/wiki/%E5%91%A8%E6%9C%9F%E7%82%B9" title="周期点 – Chinese" lang="zh" hreflang="zh" data-title="周期点" data-language-autonym="中文" data-language-local-name="Chinese" class="interlanguage-link-target"><span>中文</span></a></li>
+			</ul>
+			<div class="after-portlet after-portlet-lang"><span class="wb-langlinks-edit wb-langlinks-link"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q116301#sitelinks-wikipedia" title="Edit interlanguage links" class="wbc-editpage">Edit links</a></span></div>
+		</div>
+
+	</div>
+</div>
+</header>
+				<div class="vector-page-toolbar">
+					<div class="vector-page-toolbar-container">
+						<div id="left-navigation">
+							<nav aria-label="Namespaces">
+								
+<div id="p-associated-pages" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-associated-pages"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-nstab-main" class="selected mw-list-item vector-tab-noicon"><a data-mw-interface  href="/wiki/Periodic_point" title="View the content page [c]" accesskey="c" class=""><span>Article</span></a>
+</li>
+<li id="ca-talk" class="mw-list-item vector-tab-noicon"><a data-mw-interface  href="/wiki/Talk:Periodic_point" rel="discussion" title="Discuss improvements to the content page [t]" accesskey="t" class=""><span>Talk</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+								
+<div id="vector-variants-dropdown" class="vector-dropdown emptyPortlet"  >
+	<input type="checkbox" id="vector-variants-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-variants-dropdown" class="vector-dropdown-checkbox " aria-label="Change language variant"    >
+	<label id="vector-variants-dropdown-label" for="vector-variants-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet" aria-hidden="true"  ><span class="vector-dropdown-label-text">English</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+					
+<div id="p-variants" class="vector-menu mw-portlet mw-portlet-variants emptyPortlet"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			
+		</ul>
+		
+	</div>
+</div>
+
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+						<div id="right-navigation" class="vector-collapsible">
+							<nav aria-label="Views">
+			    
+<div id="p-views" class="vector-menu vector-menu-tabs mw-portlet mw-portlet-views"  >
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-view" class="selected mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/wiki/Periodic_point" class=""><span>Read</span></a>
+</li>
+<li id="ca-edit" class="mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/w/index.php?title=Periodic_point&amp;action=edit" title="Edit the source code of this page [e]" accesskey="e" class=""><span>Edit</span></a>
+</li>
+<li id="ca-history" class="mw-list-item vector-menu-item--collapsible vector-tab-noicon"><a data-mw-interface  href="/w/index.php?title=Periodic_point&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class=""><span>View history</span></a>
+</li>
+<li id="ca-bookmark" class="mw-list-item vector-menu-item--collapsible"><a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only reading-lists-bookmark" id="" title="Add this page to your saved items"><span class="vector-icon mw-ui-icon-bookmarkOutline mw-ui-icon-wikimedia-bookmarkOutline cdx-button__icon"></span>
+
+<span>Save</span>
+</a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+			</nav>
+
+							<nav class="vector-page-tools-landmark" aria-label="Page tools">
+								
+<div id="vector-page-tools-dropdown" class="vector-dropdown vector-page-tools-dropdown"  >
+	<input type="checkbox" id="vector-page-tools-dropdown-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-page-tools-dropdown" class="vector-dropdown-checkbox "  aria-label="Tools"   >
+	<label id="vector-page-tools-dropdown-label" for="vector-page-tools-dropdown-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-verticalEllipsis mw-ui-icon-wikimedia-verticalEllipsis cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Tools</span>
+	</label>
+	<div class="vector-dropdown-content">
+
+
+									<div id="vector-page-tools-unpinned-container" class="vector-unpinned-container">
+						
+<div id="vector-page-tools" class="vector-page-tools vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-page-tools-pinnable-header vector-pinnable-header-unpinned"
+	data-feature-name="page-tools-pinned"
+	data-pinnable-element-id="vector-page-tools"
+	data-pinned-container-id="vector-page-tools-pinned-container"
+	data-unpinned-container-id="vector-page-tools-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Tools</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-page-tools.pin" aria-label="Move Tools to sidebar">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-page-tools.unpin" aria-label="Hide Tools">hide</button>
+</div>
+
+	
+<div id="p-cactions" class="vector-menu mw-portlet mw-portlet-cactions emptyPortlet vector-has-collapsible-items"  >
+	<div class="vector-menu-heading">
+		Actions
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			<li id="ca-view-more" class="selected mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/wiki/Periodic_point" class=""><span class="vector-icon mw-ui-icon-eye mw-ui-icon-wikimedia-eye cdx-button__icon"></span>
+
+<span>Read</span></a>
+</li>
+<li id="ca-edit-more" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Periodic_point&amp;action=edit" title="Edit the source code of this page [e]" accesskey="e" class=""><span class="vector-icon mw-ui-icon-edit mw-ui-icon-wikimedia-edit cdx-button__icon"></span>
+
+<span>Edit</span></a>
+</li>
+<li id="ca-history-more" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="/w/index.php?title=Periodic_point&amp;action=history" title="Past revisions of this page [h]" accesskey="h" class=""><span class="vector-icon mw-ui-icon-history mw-ui-icon-wikimedia-history cdx-button__icon"></span>
+
+<span>View history</span></a>
+</li>
+<li id="ca-bookmark-more" class="mw-list-item vector-menu-item--collapsible"><a data-mw-interface  href="#" class="reading-lists-bookmark" title="Add this page to your saved items"><span class="vector-icon mw-ui-icon-bookmarkOutline mw-ui-icon-wikimedia-bookmarkOutline cdx-button__icon"></span>
+
+<span>Save</span></a>
+</li>
+
+			
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-tb" class="vector-menu mw-portlet mw-portlet-tb"  >
+	<div class="vector-menu-heading">
+		General
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-whatlinkshere" class="mw-list-item"><a href="/wiki/Special:WhatLinksHere/Periodic_point" title="List of all English Wikipedia pages containing links to this page [j]" accesskey="j"><span>What links here</span></a></li><li id="t-recentchangeslinked" class="mw-list-item"><a href="/wiki/Special:RecentChangesLinked/Periodic_point" rel="nofollow" title="Recent changes in pages linked from this page [k]" accesskey="k"><span>Related changes</span></a></li><li id="t-upload" class="mw-list-item"><a href="//en.wikipedia.org/wiki/Wikipedia:File_Upload_Wizard" title="Upload files [u]" accesskey="u"><span>Upload file</span></a></li><li id="t-permalink" class="mw-list-item"><a href="/w/index.php?title=Periodic_point&amp;oldid=1182739231" title="Permanent link to this revision of this page"><span>Permanent link</span></a></li><li id="t-info" class="mw-list-item"><a href="/w/index.php?title=Periodic_point&amp;action=info" title="More information about this page"><span>Page information</span></a></li><li id="t-cite" class="mw-list-item"><a href="/w/index.php?title=Special:CiteThisPage&amp;page=Periodic_point&amp;id=1182739231&amp;wpFormIdentifier=titleform" title="Information on how to cite this page"><span>Cite this page</span></a></li><li id="t-urlshortener" class="mw-list-item"><a href="/w/index.php?title=Special:UrlShortener&amp;url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FPeriodic_point"><span>Get shortened URL</span></a></li><li id="parsermigration-switch-to-legacy" class="mw-list-item"><a href="/w/index.php?title=Periodic_point&amp;useparsoid=0"><span>Switch to legacy parser</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-coll-print_export" class="vector-menu mw-portlet mw-portlet-coll-print_export"  >
+	<div class="vector-menu-heading">
+		Print/export
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="coll-download-as-rl" class="mw-list-item"><a href="/w/index.php?title=Special:DownloadAsPdf&amp;page=Periodic_point&amp;action=show-download-screen" title="Download this page as a PDF file"><span>Download as PDF</span></a></li><li id="t-print" class="mw-list-item"><a href="javascript:print();" rel="alternate" title="Printable version of this page [p]" accesskey="p"><span>Printable version</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+<div id="p-wikibase-otherprojects" class="vector-menu mw-portlet mw-portlet-wikibase-otherprojects"  >
+	<div class="vector-menu-heading">
+		In other projects
+	</div>
+	<div class="vector-menu-content">
+		
+		<ul class="vector-menu-content-list">
+			
+			<li id="t-wikibase" class="wb-otherproject-link wb-otherproject-wikibase-dataitem mw-list-item"><a href="https://www.wikidata.org/wiki/Special:EntityPage/Q116301" title="Structured data on this page hosted by Wikidata [g]" accesskey="g"><span>Wikidata item</span></a></li>
+		</ul>
+		
+	</div>
+</div>
+
+</div>
+
+									</div>
+				
+	</div>
+</div>
+
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="vector-column-end no-font-mode-scale">
+					<div class="vector-sticky-pinned-container">
+						<nav class="vector-page-tools-landmark" aria-label="Page tools">
+							<div id="vector-page-tools-pinned-container" class="vector-pinned-container">
+				
+							</div>
+		</nav>
+						<nav class="vector-appearance-landmark" aria-label="Appearance">
+							<div id="vector-appearance-pinned-container" class="vector-pinned-container">
+				<div id="vector-appearance" class="vector-appearance vector-pinnable-element">
+	<div
+	class="vector-pinnable-header vector-appearance-pinnable-header vector-pinnable-header-pinned"
+	data-feature-name="appearance-pinned"
+	data-pinnable-element-id="vector-appearance"
+	data-pinned-container-id="vector-appearance-pinned-container"
+	data-unpinned-container-id="vector-appearance-unpinned-container"
+>
+	<div class="vector-pinnable-header-label">Appearance</div>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-pin-button" data-event-name="pinnable-header.vector-appearance.pin" aria-label="Move Appearance to sidebar">move to sidebar</button>
+	<button class="vector-pinnable-header-toggle-button vector-pinnable-header-unpin-button" data-event-name="pinnable-header.vector-appearance.unpin" aria-label="Hide Appearance">hide</button>
+</div>
+
+
+</div>
+
+							</div>
+		</nav>
+					</div>
+				</div>
+				<div id="bodyContent" class="vector-body" aria-labelledby="firstHeading" data-mw-ve-target-container>
+					<div class="vector-body-before-content">
+							<div class="mw-indicators">
+		</div>
+
+						<div id="siteSub" class="noprint">From Wikipedia, the free encyclopedia</div>
+						<div id="contentSub"><div id="mw-content-subtitle"></div></div>
+						
+					</div>
+					
+					<div id="mw-content-text" class="mw-body-content"><div class="mw-content-ltr mw-parser-output" lang="en" dir="ltr" data-mw-parsoid-version="0.25.0.0-alpha1" data-mw-html-version="2.8.0"><section data-mw-section-id="0" id="mwAQ"><div class="shortdescription nomobile noexcerpt noprint searchaux" style="display:none" about="#mwt1" typeof="mw:Transclusion" id="mwAg" data-mw='{"parts":[{"template":{"target":{"wt":"short description","href":"./Template:Short_description"},"params":{"1":{"wt":"Point which a function/system returns to after some time or iterations"}},"i":0}}]}'>Point which a function/system returns to after some time or iterations</div><span class="mw-empty-elt" about="#mwt1"><link rel="mw:PageProp/Category" href="./Category:Articles_with_short_description"/><link rel="mw:PageProp/Category" href="./Category:Short_description_is_different_from_Wikidata"/></span>
+
+<p id="mwAw">In <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Mathematics" title="Mathematics" id="mwBA">mathematics</a>, in the study of <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Iterated_function" title="Iterated function" id="mwBQ">iterated functions</a> and <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Dynamical_system" title="Dynamical system" id="mwBg">dynamical systems</a>, a <b id="mwBw">periodic point</b> of a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Function_(mathematics)" title="Function (mathematics)" id="mwCA">function</a> is a point which the system returns to after a certain number of function iterations or a certain amount of time.</p>
+
+<meta property="mw:PageProp/toc" id="mwCQ" data-mw='{"autoGenerated":true}'/></section><section data-mw-section-id="1" id="mwCg" aria-labelledby="Iterated_functions"><div class="mw-heading mw-heading2"><h2 id="Iterated_functions">Iterated functions</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Periodic_point&amp;action=edit&amp;section=1" title="Edit section: Iterated functions"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p id="mwCw">Given a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Mapping_(mathematics)" title="Mapping (mathematics)" class="mw-redirect" id="mwDA">mapping</a> <style data-mw-deduplicate="TemplateStyles:r1384732841" typeof="mw:Extension/templatestyles mw:Transclusion" about="#mwt2" id="mwDQ" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"f"}},"i":0}}]}'>.mw-parser-output .texhtml{font-family:"Nimbus Roman No9 L","Times New Roman",Times,serif;font-size:118%;line-height:1;font-variant-numeric:lining-nums tabular-nums;font-kerning:none}.mw-parser-output .texhtml .texhtml{font-size:100%}.mw-parser-output .texhtml-big{font-size:165%}.mw-parser-output .mvar{font-style:italic}@media(min-width:420px){.mw-parser-output .texhtml{white-space:nowrap}}</style><span class="texhtml mvar" about="#mwt2" id="mwDg">f</span> from a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Set_(mathematics)" title="Set (mathematics)" id="mwDw">set</a> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt4" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwEA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"X"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt4" id="mwEQ">X</span> into itself,</p>
+<dl id="mwEg"><dd id="mwEw"><math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt6" id="mwFA" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"f: X \\to X,"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mi>f</mi><mo stretchy="false">:</mo><mi>X</mi><mo stretchy="false">→</mo><mi>X</mi><mo>,</mo></mstyle></mrow></math></dd></dl>
+<p id="mwFQ">a point <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt7" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwFg" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"x"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt7" id="mwFw">x</span> in <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt9" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwGA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"X"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt9" id="mwGQ">X</span> is called periodic point if there exists an <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt11" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwGg" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"n"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt11" id="mwGw">n</span>>0 so that</p>
+<dl id="mwHA"><dd id="mwHQ"><math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt13" id="mwHg" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\\ f_n(x) = x"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mtext> </mtext><msub><mi>f</mi><mrow data-mjx-texclass="ORD"><mi>n</mi></mrow></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">=</mo><mi>x</mi></mstyle></mrow></math></dd></dl>
+<p id="mwHw">where <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt14" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwIA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"f{{sub|n}}"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt14" id="mwIQ">f<sub>n</sub></span> is the <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt16" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwIg" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"n"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt16" id="mwIw">n</span>th <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Iterated_function" title="Iterated function" id="mwJA">iterate</a> of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt18" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwJQ" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"f"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt18" id="mwJg">f</span>. The smallest positive <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Integer" title="Integer" id="mwJw">integer</a> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt20" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwKA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"n"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt20" id="mwKQ">n</span> satisfying the above is called the <i id="mwKg">prime period</i> or <i id="mwKw">least period</i> of the point <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt22" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwLA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"x"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt22" id="mwLQ">x</span>. If every point in <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt24" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwLg" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"X"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt24" id="mwLw">X</span> is a periodic point with the same period <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt26" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwMA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"n"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt26" id="mwMQ">n</span>, then <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt28" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwMg" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"f"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt28" id="mwMw">f</span> is called <i id="mwNA">periodic</i> with period <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt30" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwNQ" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"n"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt30" id="mwNg">n</span> (this is not to be confused with the notion of a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Periodic_function" title="Periodic function" id="mwNw">periodic function</a>).</p>
+
+<p id="mwOA">If there exist distinct <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt32" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwOQ" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"n"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt32" id="mwOg">n</span> and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt34" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwOw" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"m"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt34" id="mwPA">m</span> such that</p>
+<dl id="mwPQ"><dd id="mwPg"><math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt36" id="mwPw" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"f_n(x) = f_m(x)"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><msub><mi>f</mi><mrow data-mjx-texclass="ORD"><mi>n</mi></mrow></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">=</mo><msub><mi>f</mi><mrow data-mjx-texclass="ORD"><mi>m</mi></mrow></msub><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mstyle></mrow></math></dd></dl>
+<p id="mwQA">then <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt37" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwQQ" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"x"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt37" id="mwQg">x</span> is called a <b id="mwQw">preperiodic point</b>. All periodic points are preperiodic.</p>
+
+<p id="mwRA">If <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt39" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwRQ" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"f"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt39" id="mwRg">f</span> is a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Diffeomorphism" title="Diffeomorphism" id="mwRw">diffeomorphism</a> of a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Differentiable_manifold" title="Differentiable manifold" id="mwSA">differentiable manifold</a>, so that the <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Derivative" title="Derivative" id="mwSQ">derivative</a> <math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt41" id="mwSg" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"f_n^\\prime"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><msup><msub><mi>f</mi><mrow data-mjx-texclass="ORD"><mi>n</mi></mrow></msub><mo>′</mo></msup></mstyle></mrow></math> is defined, then one says that a periodic point is <i id="mwSw">hyperbolic</i> if</p>
+
+<dl id="mwTA"><dd id="mwTQ"><math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt42" id="mwTg" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"|f_n^\\prime|\\ne 1,"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msup><msub><mi>f</mi><mrow data-mjx-texclass="ORD"><mi>n</mi></mrow></msub><mo>′</mo></msup><mo stretchy="false">|</mo><mo stretchy="false">≠</mo><mn>1</mn><mo>,</mo></mstyle></mrow></math></dd></dl>
+
+<p id="mwTw">that it is <i id="mwUA"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Attractor" title="Attractor" id="mwUQ">attractive</a></i> if</p>
+
+<dl id="mwUg"><dd id="mwUw"><math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt43" id="mwVA" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"|f_n^\\prime|&lt; 1,"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msup><msub><mi>f</mi><mrow data-mjx-texclass="ORD"><mi>n</mi></mrow></msub><mo>′</mo></msup><mo stretchy="false">|</mo><mo>&lt;</mo><mn>1</mn><mo>,</mo></mstyle></mrow></math></dd></dl>
+
+<p id="mwVQ">and it is <i id="mwVg">repelling</i> if</p>
+
+<dl id="mwVw"><dd id="mwWA"><math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt44" id="mwWQ" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"|f_n^\\prime|> 1."}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">|</mo><msup><msub><mi>f</mi><mrow data-mjx-texclass="ORD"><mi>n</mi></mrow></msub><mo>′</mo></msup><mo stretchy="false">|</mo><mo>></mo><mn>1.</mn></mstyle></mrow></math></dd></dl>
+
+<p id="mwWg">If the <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Dimension" title="Dimension" id="mwWw">dimension</a> of the <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stable_manifold" title="Stable manifold" id="mwXA">stable manifold</a> of a periodic point or fixed point is zero, the point is called a <i id="mwXQ">source</i>; if the dimension of its <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Unstable_manifold" title="Unstable manifold" class="mw-redirect" id="mwXg">unstable manifold</a> is zero, it is called a <i id="mwXw">sink</i>; and if both the stable and unstable manifold have nonzero dimension, it is called a <i id="mwYA">saddle</i> or <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Saddle_point" title="Saddle point" id="mwYQ">saddle point</a>.</p>
+
+<section data-mw-section-id="2" id="mwYg" aria-labelledby="Examples"><div class="mw-heading mw-heading3"><h3 id="Examples">Examples</h3><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Periodic_point&amp;action=edit&amp;section=2" title="Edit section: Examples"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p id="mwYw">A period-one point is called a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Fixed_point_(mathematics)" title="Fixed point (mathematics)" id="mwZA">fixed point</a>.</p>
+
+<p id="mwZQ">The <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Logistic_map" title="Logistic map" id="mwZg">logistic map</a></p> 
+
+<p id="mwZw"><math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-block" display="block" typeof="mw:Extension/math" about="#mwt45" id="mwaA" data-mw='{"name":"math","attrs":{"display":"block"},"body":{"extsrc":"x_{t+1}=rx_t(1-x_t), \\qquad 0 \\leq x_t \\leq 1, \\qquad 0 \\leq r \\leq 4"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><msub><mi>x</mi><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="ORD"><mi>t</mi><mo stretchy="false">+</mo><mn>1</mn></mrow></mrow></msub><mo stretchy="false">=</mo><mi>r</mi><msub><mi>x</mi><mrow data-mjx-texclass="ORD"><mi>t</mi></mrow></msub><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">−</mo><msub><mi>x</mi><mrow data-mjx-texclass="ORD"><mi>t</mi></mrow></msub><mo stretchy="false">)</mo><mo>,</mo><mspace width="2em"></mspace><mn>0</mn><mo stretchy="false">≤</mo><msub><mi>x</mi><mrow data-mjx-texclass="ORD"><mi>t</mi></mrow></msub><mo stretchy="false">≤</mo><mn>1</mn><mo>,</mo><mspace width="2em"></mspace><mn>0</mn><mo stretchy="false">≤</mo><mi>r</mi><mo stretchy="false">≤</mo><mn>4</mn></mstyle></mrow></math></p>
+
+<p id="mwaQ">exhibits periodicity for various values of the parameter <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt46" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwag" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"r"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt46" id="mwaw">r</span>. For <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt48" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwbA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"r"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt48" id="mwbQ">r</span> between 0 and 1, 0 is the sole periodic point, with period 1 (giving the sequence <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt50" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwbg" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"math","href":"./Template:Math"},"params":{"1":{"wt":"0, 0, 0, …,"}},"i":0}}]}'/><span class="texhtml " about="#mwt50" id="mwbw">0, 0, 0, …,</span> which <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Attractor" title="Attractor" id="mwcA">attracts</a> all orbits). For <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt52" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwcQ" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"r"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt52" id="mwcg">r</span> between 1 and 3, the value 0 is still periodic but is not attracting, while the value <math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt62" id="mwcw" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\\tfrac{r-1}{r}"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mrow data-mjx-texclass="ORD"><mstyle displaystyle="false" scriptlevel="0"><mrow data-mjx-texclass="ORD"><mfrac><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="ORD"><mi>r</mi><mo stretchy="false">−</mo><mn>1</mn></mrow></mrow><mrow data-mjx-texclass="ORD"><mi>r</mi></mrow></mfrac></mrow></mstyle></mrow></mstyle></mrow></math> is an attracting periodic point of period 1. With <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt54" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwdA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"r"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt54" id="mwdQ">r</span> greater than 3 but less than <span class="nowrap" about="#mwt56" typeof="mw:Transclusion" id="mwdg" data-mw='{"parts":[{"template":{"target":{"wt":"tmath","href":"./Template:Tmath"},"params":{"1":{"wt":"1 + \\sqrt 6,"}},"i":0}}]}'><span typeof="mw:Entity">⁠</span><math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt57" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"1 + \\sqrt 6,"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mn>1</mn><mo stretchy="false">+</mo><mrow data-mjx-texclass="ORD"><msqrt><mn>6</mn></msqrt></mrow><mo>,</mo></mstyle></mrow></math><span typeof="mw:Entity">⁠</span></span> there are a pair of period-2 points which together form an attracting sequence, as well as the non-attracting period-1 points 0 and <math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt63" id="mwdw" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\\tfrac{r-1}{r}."}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mrow data-mjx-texclass="ORD"><mstyle displaystyle="false" scriptlevel="0"><mrow data-mjx-texclass="ORD"><mfrac><mrow data-mjx-texclass="ORD"><mrow data-mjx-texclass="ORD"><mi>r</mi><mo stretchy="false">−</mo><mn>1</mn></mrow></mrow><mrow data-mjx-texclass="ORD"><mi>r</mi></mrow></mfrac></mrow></mstyle></mrow><mo stretchy="false">.</mo></mstyle></mrow></math> As the value of parameter <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt58" typeof="mw:Extension/templatestyles mw:Transclusion" id="mweA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"r"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt58" id="mweQ">r</span> rises toward 4, there arise groups of periodic points with any positive integer for the period; for some values of <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt60" typeof="mw:Extension/templatestyles mw:Transclusion" id="mweg" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"r"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt60" id="mwew">r</span> one of these repeating sequences is attracting while for others none of them are (with almost all orbits being chaotic).</p>
+
+</section></section><section data-mw-section-id="3" id="mwfA" aria-labelledby="Dynamical_system"><div class="mw-heading mw-heading2"><h2 id="Dynamical_system">Dynamical system</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Periodic_point&amp;action=edit&amp;section=3" title="Edit section: Dynamical system"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<p id="mwfQ">Given a <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Real_global_dynamical_system" title="Real global dynamical system" class="mw-redirect" id="mwfg">real global dynamical system</a> <span class="nowrap" about="#mwt64" typeof="mw:Transclusion" id="mwfw" data-mw='{"parts":[{"template":{"target":{"wt":"tmath","href":"./Template:Tmath"},"params":{"1":{"wt":"(\\R, X, \\Phi),"}},"i":0}}]}'><span typeof="mw:Entity">⁠</span><math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt65" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"(\\R, X, \\Phi),"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mo stretchy="false">(</mo><mrow data-mjx-texclass="ORD"><mi>ℝ</mi></mrow><mo>,</mo><mi>X</mi><mo>,</mo><mi mathvariant="normal">Φ</mi><mo stretchy="false">)</mo><mo>,</mo></mstyle></mrow></math><span typeof="mw:Entity">⁠</span></span> with <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt66" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwgA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"X"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt66" id="mwgQ">X</span> the <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Phase_space_(dynamical_system)" title="Phase space (dynamical system)" class="mw-redirect" id="mwgg">phase space</a> and <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt68" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwgw" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"math","href":"./Template:Math"},"params":{"1":{"wt":"Φ"}},"i":0}}]}'/><span class="texhtml " about="#mwt68" id="mwhA">Φ</span> the <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Evolution_function" title="Evolution function" class="mw-redirect" id="mwhQ">evolution function</a>,</p>
+<dl id="mwhg"><dd id="mwhw"><math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt70" id="mwiA" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\\Phi: \\R \\times X \\to X"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mi mathvariant="normal">Φ</mi><mo stretchy="false">:</mo><mrow data-mjx-texclass="ORD"><mi>ℝ</mi></mrow><mo stretchy="false">×</mo><mi>X</mi><mo stretchy="false">→</mo><mi>X</mi></mstyle></mrow></math></dd></dl>
+<p id="mwiQ">a point <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt71" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwig" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"x"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt71" id="mwiw">x</span> in <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt73" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwjA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"X"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt73" id="mwjQ">X</span> is called <i id="mwjg">periodic</i> with <i id="mwjw">period</i> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt75" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwkA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"T"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt75" id="mwkQ">T</span> if</p>
+<dl id="mwkg"><dd id="mwkw"><math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt77" id="mwlA" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\\Phi(T, x) = x\\,"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mi mathvariant="normal">Φ</mi><mo stretchy="false">(</mo><mi>T</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">=</mo><mi>x</mi><mspace width="0.167em"></mspace></mstyle></mrow></math></dd></dl>
+<p id="mwlQ">The smallest positive <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt78" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwlg" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"T"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt78" id="mwlw">T</span> with this property is called <i id="mwmA">prime period</i> of the point <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt80" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwmQ" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"x"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt80" id="mwmg">x</span>.</p>
+
+<section data-mw-section-id="4" id="mwmw" aria-labelledby="Properties"><div class="mw-heading mw-heading3"><h3 id="Properties">Properties</h3><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Periodic_point&amp;action=edit&amp;section=4" title="Edit section: Properties"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<ul id="mwnA"><li id="mwnQ">Given a periodic point <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt82" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwng" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"x"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt82" id="mwnw">x</span> with period <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt84" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwoA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"T"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt84" id="mwoQ">T</span>, then <math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt90" id="mwog" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\\Phi(t,x) = \\Phi(t+T,x)"}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mi mathvariant="normal">Φ</mi><mo stretchy="false">(</mo><mi>t</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo><mo stretchy="false">=</mo><mi mathvariant="normal">Φ</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">+</mo><mi>T</mi><mo>,</mo><mi>x</mi><mo stretchy="false">)</mo></mstyle></mrow></math> for all <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt86" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwow" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"t"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt86" id="mwpA">t</span> in <span class="nowrap" about="#mwt88" typeof="mw:Transclusion" id="mwpQ" data-mw='{"parts":[{"template":{"target":{"wt":"tmath","href":"./Template:Tmath"},"params":{"1":{"wt":"\\R."}},"i":0}}]}'><span typeof="mw:Entity">⁠</span><math xmlns="http://www.w3.org/1998/Math/MathML" class="mwe-math-element mwe-math-element-inline" typeof="mw:Extension/math" about="#mwt89" data-mw='{"name":"math","attrs":{},"body":{"extsrc":"\\R."}}'><mrow data-mjx-texclass="ORD"><mstyle displaystyle="true" scriptlevel="0"><mrow data-mjx-texclass="ORD"><mi>ℝ</mi></mrow><mo stretchy="false">.</mo></mstyle></mrow></math><span typeof="mw:Entity">⁠</span></span></li>
+<li id="mwpg">Given a periodic point <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt91" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwpw" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"x"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt91" id="mwqA">x</span> then all points on the <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Orbit_(dynamics)" title="Orbit (dynamics)" id="mwqQ">orbit</a> <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt93" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwqg" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"&amp;gamma;{{sub|x}}"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt93" id="mwqw"><span typeof="mw:Entity">γ</span><sub>x</sub></span> through <link rel="mw-deduplicated-inline-style" href="mw-data:TemplateStyles:r1384732841" about="#mwt95" typeof="mw:Extension/templatestyles mw:Transclusion" id="mwrA" data-mw='{"name":"templatestyles","attrs":{"src":"Math/styles.css"},"parts":[{"template":{"target":{"wt":"mvar","href":"./Template:Mvar"},"params":{"1":{"wt":"x"}},"i":0}}]}'/><span class="texhtml mvar" about="#mwt95" id="mwrQ">x</span> are periodic with the same prime period.</li></ul>
+
+</section></section><section data-mw-section-id="5" id="mwrg" aria-labelledby="See_also"><div class="mw-heading mw-heading2"><h2 id="See_also">See also</h2><span class="mw-editsection"><span class="mw-editsection-bracket">[</span><a href="/w/index.php?title=Periodic_point&amp;action=edit&amp;section=5" title="Edit section: See also"><span>edit</span></a><span class="mw-editsection-bracket">]</span></span></div>
+<ul id="mwrw"><li id="mwsA"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Limit_cycle" title="Limit cycle" id="mwsQ">Limit cycle</a></li>
+<li id="mwsg"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Limit_set" title="Limit set" id="mwsw">Limit set</a></li>
+<li id="mwtA"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stable_manifold" title="Stable manifold" id="mwtQ">Stable set</a></li>
+<li id="mwtg"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Sharkovsky's_theorem" title="Sharkovsky's theorem" class="mw-redirect" id="mwtw">Sharkovsky's theorem</a></li>
+<li id="mwuA"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Stationary_point" title="Stationary point" id="mwuQ">Stationary point</a></li>
+<li id="mwug"><a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Periodic_points_of_complex_quadratic_mappings" title="Periodic points of complex quadratic mappings" id="mwuw">Periodic points of complex quadratic mappings</a></li></ul>
+
+<p id="mwvA"><i about="#mwt97" typeof="mw:Transclusion" id="mwvQ" data-mw='{"parts":[{"template":{"target":{"wt":"PlanetMath attribution","href":"./Template:PlanetMath_attribution"},"params":{"id":{"wt":"4516"},"title":{"wt":"hyperbolic fixed point"}},"i":0}}]}'>This article incorporates material from hyperbolic fixed point on <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/PlanetMath" title="PlanetMath">PlanetMath</a>, which is licensed under the <a rel="mw:WikiLink" href="https://en.wikipedia.org/wiki/Wikipedia:CC-BY-SA" title="Wikipedia:CC-BY-SA" class="mw-redirect">Creative Commons Attribution/Share-Alike License</a>.</i><link rel="mw:PageProp/Category" href="./Category:Wikipedia_articles_incorporating_text_from_PlanetMath#Periodic%20point" about="#mwt97" id="mwvg"/></p>
+
+<link rel="mw:PageProp/Category" href="./Category:Limit_sets" id="mwvw"/></section>
+<!-- 
+NewPP limit report
+Parsed by mw‐api‐int.codfw.main‐57c75d4c7b‐ms4rf
+Cached time: 20261110001914
+Cache expiry: 2592000
+Reduced expiry: false
+Complications: [vary‐revision‐sha1, show‐toc, use‐parsoid]
+CPU time usage: 0.275 seconds
+Real time usage: 0.319 seconds
+Preprocessor visited node count: 701/1000000
+Revision size: 4158/2097152 bytes
+Post‐expand include size: 5153/2097152 bytes
+Template argument size: 962/2097152 bytes
+Highest expansion depth: 8/100
+Expensive parser function count: 0/500
+Unstrip recursion depth: 0/20
+Unstrip post‐expand size: 21126/5000000 bytes
+Lua time usage: 0.024/10.000 seconds
+Lua memory usage: 1366325/52428800 bytes
+Number of Wikibase entities loaded: 0/500
+-->
+<!--
+Transclusion expansion time report (%,ms,calls,template)
+100.00%  229.525      1 -total
+ 30.84%   70.786      1 Template:Short_description
+ 17.61%   40.418      2 Template:Pagetype
+  8.56%   19.659      4 Template:Main_other
+  7.69%   17.644      1 Template:SDcat
+  2.26%    5.180     36 Template:Mvar
+  1.69%    3.886      2 Template:Math
+  1.02%    2.342      1 Template:PlanetMath_attribution
+  0.93%    2.134      3 Template:Tmath
+  0.93%    2.128      1 Template:Short_description/lowercasecheck
+-->
+
+<!-- Render ID 5be5f430-dc9c-11f1-b1cb-3f99ae33c273 -->
+
+<!-- Saved in parser cache with key enwiki:parsoid-pcache:4941621:|#|:idhash:useParsoid=1 and timestamp 20261110001914 and revision id 1182739231. Rendering was triggered because: MediaWiki\Rest\Handler\Helper\HtmlOutputRendererHelper::getParserOutput
+ -->
+
+<!-- Parsoid 0.25.0.0-alpha1 -->
+</div><!--
+Post‐processing cache key enwiki:postproc‐parsoid‐pcache:4941621:|#|:idhash:injectTOC=0!postproc=1!skin=vector‐2022!useParsoid=1!visibleLinks=single, generated at 20261110012306
+--><noscript><img src="https://en.wikipedia.org/wiki/Special:CentralAutoLogin/start?useformat=desktop&amp;type=1x1&amp;usesul3=1" alt="" width="1" height="1" style="border: none; position: absolute;"></noscript>
+<div class="printfooter" data-nosnippet="">Retrieved from "<a dir="ltr" href="https://en.wikipedia.org/w/index.php?title=Periodic_point&amp;oldid=1182739231">https://en.wikipedia.org/w/index.php?title=Periodic_point&amp;oldid=1182739231</a>"</div></div>
+					<div id="catlinks" class="catlinks" data-mw-interface=""><div id="mw-normal-catlinks" class="mw-normal-catlinks"><a href="/wiki/Help:Category" title="Help:Category">Category</a>: <ul><li><a href="/wiki/Category:Limit_sets" title="Category:Limit sets">Limit sets</a></li></ul></div><div id="mw-hidden-catlinks" class="mw-hidden-catlinks mw-hidden-cats-hidden">Hidden categories: <ul><li><a href="/wiki/Category:Articles_with_short_description" title="Category:Articles with short description">Articles with short description</a></li><li><a href="/wiki/Category:Short_description_is_different_from_Wikidata" title="Category:Short description is different from Wikidata">Short description is different from Wikidata</a></li><li><a href="/wiki/Category:Wikipedia_articles_incorporating_text_from_PlanetMath" title="Category:Wikipedia articles incorporating text from PlanetMath">Wikipedia articles incorporating text from PlanetMath</a></li></ul></div></div>
+				</div>
+			</main>
+			
+		</div>
+		<div class="mw-footer-container">
+			<footer id="footer" class="mw-footer" >
+				<ul id="footer-info" class="mw-portlet mw-portlet-footer-info">
+	<li id="footer-info-lastmod"> This page was last edited on 31 October 2023, at 02:40<span class="anonymous-show">&#160;(UTC)</span>.</li>
+	<li id="footer-info-renderedwith">Page was rendered with <a href="https://www.mediawiki.org/wiki/Special:MyLanguage/Parsoid" class="extiw" title="mw:Special:MyLanguage/Parsoid">Parsoid</a>.</li>
+	<li id="footer-info-copyright">Text is available under the <a href="/wiki/Wikipedia:Text_of_the_Creative_Commons_Attribution-ShareAlike_4.0_International_License" title="Wikipedia:Text of the Creative Commons Attribution-ShareAlike 4.0 International License">Creative Commons Attribution-ShareAlike 4.0 License</a>;
+additional terms may apply. By using this site, you agree to the <a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Terms_of_Use" class="extiw" title="foundation:Special:MyLanguage/Policy:Terms of Use">Terms of Use</a> and <a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy" class="extiw" title="foundation:Special:MyLanguage/Policy:Privacy policy">Privacy Policy</a>. Wikipedia® is a registered trademark of the <a rel="nofollow" class="external text" href="https://wikimediafoundation.org/">Wikimedia Foundation, Inc.</a>, a non-profit organization.</li>
+</ul>
+
+				<ul id="footer-places" class="mw-portlet mw-portlet-footer-places">
+	<li id="footer-places-privacy"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Privacy_policy">Privacy policy</a></li>
+	<li id="footer-places-about"><a href="/wiki/Wikipedia:About">About Wikipedia</a></li>
+	<li id="footer-places-disclaimers"><a href="/wiki/Wikipedia:General_disclaimer">Disclaimers</a></li>
+	<li id="footer-places-contact"><a href="//en.wikipedia.org/wiki/Wikipedia:Contact_us">Contact Wikipedia</a></li>
+	<li id="footer-places-legal-safety-contacts"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Legal:Wikimedia_Foundation_Legal_and_Safety_Contact_Information">Legal &amp; safety contacts</a></li>
+	<li id="footer-places-wm-codeofconduct"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Universal_Code_of_Conduct">Code of Conduct</a></li>
+	<li id="footer-places-developers"><a href="https://developer.wikimedia.org">Developers</a></li>
+	<li id="footer-places-statslink"><a href="https://stats.wikimedia.org/#/en.wikipedia.org">Statistics</a></li>
+	<li id="footer-places-cookiestatement"><a href="https://foundation.wikimedia.org/wiki/Special:MyLanguage/Policy:Cookie_statement">Cookie statement</a></li>
+	<li id="footer-places-mobileview"><a href="//en.wikipedia.org/w/index.php?title=Periodic_point&amp;mobileaction=toggle_view_mobile" class="noprint stopMobileRedirectToggle">Mobile view</a></li>
+</ul>
+
+				<ul id="footer-icons" class="mw-portlet mw-portlet-footer-icons noprint">
+	<li id="footer-copyrightico"><a href="https://www.wikimedia.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/static/images/footer/wikimedia-button.svg" width="84" height="29"><img src="/static/images/footer/wikimedia.svg" width="25" height="25" alt="Wikimedia Foundation" lang="en" loading="lazy"></picture></a></li>
+	<li id="footer-poweredbyico"><a href="https://www.mediawiki.org/" class="cdx-button cdx-button--fake-button cdx-button--size-large cdx-button--fake-button--enabled"><picture><source media="(min-width: 500px)" srcset="/w/resources/assets/poweredby_mediawiki.svg" width="88" height="31"><img src="/w/resources/assets/mediawiki_compact.svg" alt="Powered by MediaWiki" lang="en" width="25" height="25" loading="lazy"></picture></a></li>
+</ul>
+
+			</footer>
+		</div>
+	</div> 
+</div> 
+<div class="vector-header-container vector-sticky-header-container no-font-mode-scale">
+	<div id="vector-sticky-header" class="vector-sticky-header">
+		<div class="vector-sticky-header-start">
+			<div class="vector-sticky-header-icon-start vector-button-flush-left" aria-hidden="true">
+				<button class="cdx-button cdx-button--weight-quiet cdx-button--icon-only vector-sticky-header-search-toggle" tabindex="-1" data-event-name="ui.vector-sticky-search-form.icon"><span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search cdx-button__icon"></span>
+
+<span>Search</span>
+			</button>
+		</div>
+			
+		<div role="search" class="vector-search-box-vue  vector-search-box-show-thumbnail vector-search-box">
+			<div class="vector-typeahead-search-container">
+				<div class="cdx-typeahead-search cdx-typeahead-search--show-thumbnail">
+					<form action="/w/index.php" id="vector-sticky-search-form" class="cdx-search-input cdx-search-input--has-end-button">
+						<div  class="cdx-search-input__input-wrapper"  data-search-loc="header-moved">
+							<div class="cdx-text-input cdx-text-input--has-start-icon">
+								<input
+									class="cdx-text-input__input mw-searchInput" autocomplete="off"
+									
+									type="search" name="search" placeholder="Search Wikipedia">
+								<span class="cdx-text-input__icon cdx-text-input__start-icon"></span>
+							</div>
+							<input type="hidden" name="title" value="Special:Search">
+						</div>
+						<button class="cdx-button cdx-search-input__end-button">Search</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-context-bar">
+				<nav aria-label="Contents" class="vector-toc-landmark">
+						
+					<div id="vector-sticky-header-toc" class="vector-dropdown mw-portlet mw-portlet-sticky-header-toc vector-sticky-header-toc vector-button-flush-left"  >
+						<input type="checkbox" id="vector-sticky-header-toc-checkbox" role="button" aria-haspopup="true" data-event-name="ui.dropdown-vector-sticky-header-toc" class="vector-dropdown-checkbox "  aria-label="Toggle the table of contents"   >
+						<label id="vector-sticky-header-toc-label" for="vector-sticky-header-toc-checkbox" class="vector-dropdown-label cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only " aria-hidden="true"  ><span class="vector-icon mw-ui-icon-listBullet mw-ui-icon-wikimedia-listBullet cdx-button__icon"></span>
+
+<span class="vector-dropdown-label-text">Toggle the table of contents</span>
+						</label>
+						<div class="vector-dropdown-content">
+					
+						<div id="vector-sticky-header-toc-unpinned-container" class="vector-unpinned-container">
+						</div>
+					
+						</div>
+					</div>
+			</nav>
+				<div class="vector-sticky-header-context-bar-primary" aria-hidden="true" ><span lang="en" dir="ltr"><span class="mw-page-title-main">Periodic point</span></span></div>
+			</div>
+		</div>
+		<div class="vector-sticky-header-end" aria-hidden="true">
+			<div class="vector-sticky-header-icons">
+				<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-talk-sticky-header" tabindex="-1" data-event-name="talk-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbles mw-ui-icon-wikimedia-speechBubbles cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-subject-sticky-header" tabindex="-1" data-event-name="subject-sticky-header"><span class="vector-icon mw-ui-icon-article mw-ui-icon-wikimedia-article cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-history-sticky-header" tabindex="-1" data-event-name="history-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-history mw-ui-icon-wikimedia-wikimedia-history cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only mw-watchlink" id="ca-watchstar-sticky-header" tabindex="-1" data-event-name="watch-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-star mw-ui-icon-wikimedia-wikimedia-star cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-edit-sticky-header" tabindex="-1" data-event-name="wikitext-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-wikiText mw-ui-icon-wikimedia-wikimedia-wikiText cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-ve-edit-sticky-header" tabindex="-1" data-event-name="ve-edit-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-edit mw-ui-icon-wikimedia-wikimedia-edit cdx-button__icon"></span>
+
+<span></span>
+			</a>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--icon-only" id="ca-viewsource-sticky-header" tabindex="-1" data-event-name="ve-edit-protected-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-editLock mw-ui-icon-wikimedia-wikimedia-editLock cdx-button__icon"></span>
+
+<span></span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-buttons">
+				<button class="cdx-button cdx-button--weight-quiet mw-interlanguage-selector" id="p-lang-btn-sticky-header" tabindex="-1" data-event-name="ui.dropdown-p-lang-btn-sticky-header"><span class="vector-icon mw-ui-icon-wikimedia-language mw-ui-icon-wikimedia-wikimedia-language cdx-button__icon"></span>
+
+<span>7 languages</span>
+			</button>
+			<a href="#" class="cdx-button cdx-button--fake-button cdx-button--fake-button--enabled cdx-button--weight-quiet cdx-button--action-progressive" id="ca-addsection-sticky-header" tabindex="-1" data-event-name="addsection-sticky-header"><span class="vector-icon mw-ui-icon-speechBubbleAdd-progressive mw-ui-icon-wikimedia-speechBubbleAdd-progressive cdx-button__icon"></span>
+
+<span>Add topic</span>
+			</a>
+		</div>
+			<div class="vector-sticky-header-icon-end">
+				<div class="vector-user-links">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mw-portlet mw-portlet-dock-bottom emptyPortlet" id="p-dock-bottom">
+	<ul>
+		
+	</ul>
+</div>
+<script>(RLQ=window.RLQ||[]).push(function(){mw.config.set({"wgHostname":"mw-web.codfw.main-598c5b64bf-2hj8w","wgBackendResponseTime":77,"wgPageParseReport":{"limitreport":{"cputime":"0.275","walltime":"0.319","ppvisitednodes":{"value":701,"limit":1000000},"revisionsize":{"value":4158,"limit":2097152},"postexpandincludesize":{"value":5153,"limit":2097152},"templateargumentsize":{"value":962,"limit":2097152},"expansiondepth":{"value":8,"limit":100},"expensivefunctioncount":{"value":0,"limit":500},"unstrip-depth":{"value":0,"limit":20},"unstrip-size":{"value":21126,"limit":5000000},"entityaccesscount":{"value":0,"limit":500},"timingprofile":["100.00%  229.525      1 -total"," 30.84%   70.786      1 Template:Short_description"," 17.61%   40.418      2 Template:Pagetype","  8.56%   19.659      4 Template:Main_other","  7.69%   17.644      1 Template:SDcat","  2.26%    5.180     36 Template:Mvar","  1.69%    3.886      2 Template:Math","  1.02%    2.342      1 Template:PlanetMath_attribution","  0.93%    2.134      3 Template:Tmath","  0.93%    2.128      1 Template:Short_description/lowercasecheck"]},"scribunto":{"limitreport-timeusage":{"value":"0.024","limit":"10.000"},"limitreport-memusage":{"value":1366325,"limit":52428800}},"cachereport":{"origin":"mw-api-int.codfw.main-57c75d4c7b-ms4rf","timestamp":"20261110001914","ttl":2592000,"transientcontent":false}}});});</script>
+<script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"Periodic point","url":"https:\/\/en.wikipedia.org\/wiki\/Periodic_point","sameAs":"http:\/\/www.wikidata.org\/entity\/Q116301","mainEntity":"http:\/\/www.wikidata.org\/entity\/Q116301","author":{"@type":"Organization","name":"Contributors to Wikimedia projects"},"publisher":{"@type":"Organization","name":"Wikimedia Foundation, Inc.","logo":{"@type":"ImageObject","url":"https:\/\/www.wikimedia.org\/static\/images\/wmf-hor-googpub.png"}},"datePublished":"2006-04-29T12:57:27Z","dateModified":"2023-10-31T02:40:49Z","headline":"point that returns to itself after function iteration"}</script>
+</body>
+</html>

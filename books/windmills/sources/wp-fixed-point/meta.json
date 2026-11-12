@@ -1,0 +1,11 @@
+{
+ "id": "wp-fixed-point",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Fixed_point_(mathematics)",
+ "why": "fixed points",
+ "fetched": "2026-11-12T16:53:17Z",
+ "files": {
+  "raw.html": "c1d6146690faf5abd44dafa0daed454d10b2b19d72eaf138b1e10db0017438af"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Fixed_point_(mathematics)"
+}

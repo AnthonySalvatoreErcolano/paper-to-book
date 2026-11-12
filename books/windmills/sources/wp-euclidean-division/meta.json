@@ -1,0 +1,11 @@
+{
+ "id": "wp-euclidean-division",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Euclidean_division",
+ "why": "division with remainder",
+ "fetched": "2026-11-12T16:53:18Z",
+ "files": {
+  "raw.html": "694f7ea7e684c731e8aea50f079a39d1536976eedad52deef5bdf6e52a5b9ef7"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Euclidean_division"
+}

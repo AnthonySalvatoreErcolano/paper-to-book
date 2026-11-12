@@ -1,0 +1,11 @@
+{
+ "id": "wp-inverse",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Inverse_function",
+ "why": "inverses",
+ "fetched": "2026-11-12T16:53:20Z",
+ "files": {
+  "raw.html": "598c129f5d176e73457cb7af82abe8d3e833dd5dbdfde63935ffdc0c11e31aa3"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Inverse_function"
+}

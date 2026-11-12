@@ -1,0 +1,8272 @@
+Cardinality - Wikipedia
+Jump to content
+This is a good article. Click here for more information.
+From Wikipedia, the free encyclopedia
+Size of a set in mathematics
+For other uses, see
+Cardinality (disambiguation)
+.
+A one-to-one correspondence between a set of apples and a set of oranges shows they have the same cardinality.
+In
+mathematics
+,
+cardinality
+is an inherent property of
+sets
+, roughly meaning the number of individual
+objects
+they contain, which may be
+infinite
+. The concept is understood through
+one-to-one correspondences
+between sets. That is, if their objects can be paired such that each object has a pair, and no object is paired more than once.
+Two sets are said to be
+equinumerous
+or
+have the same cardinality
+if there exists a one-to-one correspondence between them. Otherwise, under the
+axiom of choice
+, one of the two sets must be equinumerous with a
+strict subset
+of the other and is said to be
+strictly smaller
+than it; the other set is
+strictly larger
+. Using this concept, it is possible to show there are different sizes of infinity.
+A set is
+countably infinite
+if it can be placed in one-to-one correspondence with the set of
+natural numbers
+⁠
+{
+1
+,
+2
+,
+3
+,
+4
+,
+⋯
+}
+⁠
+. For example, the set of even numbers
+⁠
+{
+2
+,
+4
+,
+6
+,
+⋯
+}
+⁠
+and the set of
+rational numbers
+are countable.
+Uncountable sets
+are those strictly larger than the set of natural numbers. The set of all
+real numbers
+and the
+powerset
+of the set of natural numbers are proven to be uncountable by so-called
+diagonal arguments
+.
+Cantor's theorem
+generalizes these arguments to show there is an infinite hierarchy of infinities.
+For
+finite sets
+, cardinality recovers the usual concept of size as "number of elements." However, it is more often difficult to ascribe "sizes" to
+infinite sets
+. A system of
+cardinal numbers
+can be developed to extend the
+role of natural numbers in answering "how many"
+. Most commonly, the
+Aleph numbers
+⁠
+ℵ
+0
+,
+ℵ
+1
+,
+ℵ
+2
+,
+...
+ℵ
+ω
+,
+ℵ
+ω
++
+1
+...
+⁠
+are used, since their definition naturally extends the process of
+counting
+, and it can be shown that every infinite set has cardinality equivalent to some Aleph.
+The set of natural numbers has cardinality
+⁠
+ℵ
+0
+⁠
+. The question of whether the real numbers have cardinality
+⁠
+ℵ
+1
+⁠
+is known as the
+continuum hypothesis
+, which has been shown to be both
+unprovable and undisprovable
+in standard set theories such as
+Zermelo–Fraenkel set theory
+. Alternative set theories and additional
+axioms
+give rise to different properties and have often strange or unintuitive consequences. However, every theory of cardinality using standard logical foundations of mathematics admits
+Skolem's paradox
+.
+The basic concepts of cardinality go back as early as the 6th century BCE, and there are several close encounters with it throughout history, however, the results were generally dismissed as paradoxical. It is considered to have been first introduced formally to mathematics by
+Georg Cantor
+at the turn of the 20th century. Cantor's theory of cardinality was then formalized, popularized, and explored by many influential mathematicians of the time, and has since become a fundamental concept of mathematics.
+Basics
+[
+edit
+]
+Definition
+[
+edit
+]
+Cardinality is an inherent property of
+sets
+which defines their size, roughly meaning the number of individual
+objects
+they contain.
+[
+1
+]
+Fundamentally however, it is different from the concepts of
+number
+or
+counting
+as the cardinalities of two sets can be compared without referring to their number of elements, or defining number at all. For example, in the image
+above
+, a set of apples is compared to a set of oranges such that every fruit is used exactly once which shows these two sets have the same cardinality, even if one does not know how many of each there are.
+[
+2
+]
+Thus, cardinality is measured by putting sets in so-called
+one-to-one correspondence
+: each object in one set can be assigned a dedicated "pair" in the other, and no object from either set left unpaired. If it is possible, the sets are said to have the
+same cardinality
+, and if not, one set is said to be
+strictly larger
+or
+strictly smaller
+than the other.
+[
+3
+]
+Sets and functions
+[
+edit
+]
+not surjective
+surjective
+not
+injective
+Total function
+general
+function
+surjective
+only
+injective
+injective
+only
+bijective
+The basic concepts of cardinality are developed in terms of
+sets
+and
+functions
+, which are more abstract than their counterparts outside of mathematics. Informally, a set can be understood as any collection of objects, usually represented with
+curly braces
+. For example,
+⁠
+S
+=
+{
+1
+,
+2
+,
+3
+}
+⁠
+specifies a set, called
+⁠
+S
+⁠
+, which contains the numbers 1, 2, and 3. The symbol
+⁠
+∈
+⁠
+represents set membership, for example
+⁠
+1
+∈
+S
+⁠
+says "1 is a member of the set
+⁠
+S
+⁠
+" which is true by the definition of
+⁠
+S
+⁠
+above. Here
+⁠
+S
+⁠
+is
+finite
+, but that is not a requirement in general. The only requirement for a set is that it is well-defined. That is, for any object,
+⁠
+x
+⁠
+, one can determine whether
+⁠
+x
+⁠
+belongs to that set
+⁠
+(
+x
+∈
+S
+)
+⁠
+, or
+⁠
+x
+⁠
+does not belong to that set
+⁠
+(
+x
+∉
+S
+)
+⁠
+. One example of an infinite set is the set of all natural numbers
+⁠
+{
+1
+,
+2
+,
+3
+,
+⋯
+}
+⁠
+.
+[
+4
+]
+[
+a
+]
+A
+function
+, or correspondence, maps each member of one set to a unique member of another, often represented with an arrow diagram. For example, the adjacent table depicts several functions which map sets of
+natural numbers
+to sets of letters. If a function does not map two members to the same place, it is called
+injective
+. If a function covers every member in the output set, it is called
+surjective
+. If a function is both injective and surjective, it is called
+bijective
+or a one-to-one correspondence. Functions are not limited to those one can draw an arrow diagram for, so long as the function is well-defined. That is, for each possible input, the output is defined. For example, one may define a function
+⁠
+f
+⁠
+on the natural numbers by multiplying by two:
+⁠
+f
+(
+1
+)
+=
+2
+,
+⁠
+⁠
+f
+(
+2
+)
+=
+4
+,
+⁠
+⁠
+f
+(
+3
+)
+=
+6
+,
+…
+⁠
+⁠
+f
+(
+n
+)
+=
+2
+n
+…
+⁠
+[
+6
+]
+Etymology and related terms
+[
+edit
+]
+The term
+cardinality
+originates from the
+post-classical Latin
+cardo
+("to hinge"), which referred to something central or pivotal, both literally and metaphorically. This passed into
+medieval Latin
+and then into English, where
+cardinal
+came to describe things considered to be, in some sense, fundamental, such as,
+cardinal sins
+,
+cardinal directions
+, and (in linguistics)
+cardinal numbers
+.
+[
+7
+]
+[
+8
+]
+The last of which referred to numbers used for counting (e.g.,
+one
+,
+two
+,
+three
+),
+[
+9
+]
+as opposed to
+ordinal numbers
+, which express order (e.g.,
+first, second, third
+),
+[
+10
+]
+and
+nominal numbers
+used for labeling without meaning (e.g.,
+jersey numbers
+and
+serial numbers
+).
+[
+11
+]
+In mathematics, the notion of cardinality was first introduced by German mathematician
+Georg Cantor
+in the late 19th century, who used the term
+Mächtigkeit
+, which may be translated as "magnitude" or "power", though Cantor credited the term to a work by
+Jakob Steiner
+on
+projective geometry
+.
+[
+12
+]
+Around 1930, the terms
+cardinality
+and
+cardinal number
+were adopted from the grammatical sense, and later translations would use these terms.
+[
+13
+]
+[
+14
+]
+[
+b
+]
+Comparing sets
+[
+edit
+]
+Equinumerosity
+[
+edit
+]
+"Equipollent" redirects here; not to be confused with
+Equipollent (geometry)
+.
+A one-to-one correspondence from
+N
+, the set of all non-negative integers, to the set
+E
+of non-negative
+even numbers
+. Although
+E
+is a proper subset of
+N
+, both sets have the same cardinality.
+An intuitive relationship between two sets having the "same size" is that their objects can be paired one-to-one. That is, if each object in one set can be assigned a dedicated "pair" in the other, and no object from either set left unpaired, there are the same number of objects in each set. A one-to-one pairing between two sets defines a bijective function between them by mapping each object to its pair. Similarly, a bijection between two sets defines a pairing of their elements by pairing each object with the one it maps to. Therefore, these notions of "pairing" and "bijection" are, at least intuitively, equivalent.
+[
+17
+]
+Thus, the following definition is given:
+Two sets are said to have the
+same cardinality
+or be
+equinumerous
+if their members can be paired one-to-one. That is, if there exists a function between them which is bijective. This is often written as
+⁠
+A
+∼
+B
+⁠
+, or
+⁠
+A
+≈
+B
+⁠
+.
+[
+20
+]
+Alternatively, these sets may be said to be
+equivalent
+,
+similar
+,
+equipotent
+, or
+equipollent
+.
+[
+26
+]
+For example, the set
+⁠
+E
+=
+{
+0
+,
+2
+,
+4
+,
+6
+,
+...
+}
+⁠
+of
+even numbers
+has the same cardinality as the set
+⁠
+ℕ
+=
+{
+0
+,
+1
+,
+2
+,
+3
+,
+...
+}
+⁠
+of
+natural numbers
+, since the function
+⁠
+f
+(
+n
+)
+=
+2
+n
+⁠
+is a bijection from
+⁠
+ℕ
+⁠
+to
+⁠
+E
+⁠
+.
+[
+27
+]
+The property for finite sets that "the whole is greater than the part" is no longer true for infinite sets, and the existence of surjections or injections that do not work does not prove that there is no bijection. For example, the function
+⁠
+g
+⁠
+from
+⁠
+ℕ
+⁠
+to
+⁠
+E
+⁠
+, defined by multiplying by 4,
+⁠
+g
+(
+n
+)
+=
+4
+n
+⁠
+, is injective, but not surjective (since 2, for instance, is not mapped to). Further, the function
+⁠
+h
+⁠
+from
+⁠
+ℕ
+⁠
+to
+⁠
+E
+⁠
+, defined by rounding down to the nearest even number,
+⁠
+h
+(
+n
+)
+=
+2
+floor
+⁡
+(
+n
+/
+2
+)
+⁠
+(cf.
+floor function
+), is surjective, but not injective, (since 0 and 1 for instance both map to 0). Neither
+⁠
+g
+⁠
+nor
+⁠
+h
+⁠
+can challenge
+⁠
+E
+∼
+ℕ
+⁠
+, which was established by the existence of
+⁠
+f
+⁠
+.
+[
+28
+]
+Equivalence
+[
+edit
+]
+The composition of two functions applies one function to the output of another:
+⁠
+(
+g
+∘
+f
+)
+(
+x
+)
+=
+g
+(
+f
+(
+x
+)
+)
+⁠
+.
+A fundamental result in developing a theory of cardinality is that equinumerosity forms an
+equivalence relation
+—
+that is, a
+relation
+satisfying the same three basic properties as equality:
+reflexivity
+,
+symmetry
+, and
+transitivity
+.
+[
+29
+]
+[
+c
+]
+Reflexivity, the property that every set has the same cardinality as itself
+⁠
+(
+A
+∼
+A
+)
+⁠
+, follows from the
+identity function
+: for any set
+⁠
+A
+⁠
+, the function that maps each element to itself is a bijection from
+⁠
+A
+⁠
+to
+⁠
+A
+⁠
+. Symmetry, the property that, if
+⁠
+A
+⁠
+has the same cardinality as
+⁠
+B
+⁠
+⁠
+(
+A
+∼
+B
+)
+⁠
+, then
+⁠
+B
+⁠
+has the same cardinality as
+⁠
+A
+⁠
+⁠
+(
+B
+∼
+A
+)
+⁠
+, holds because any bijection
+⁠
+f
+:
+A
+→
+B
+⁠
+has an
+inverse function
+⁠
+f
+−
+1
+:
+B
+→
+A
+⁠
+, which is also bijective. Transitivity, the property that if
+⁠
+A
+⁠
+and
+⁠
+B
+⁠
+have the same cardinality
+⁠
+(
+A
+∼
+B
+)
+⁠
+, and
+⁠
+B
+⁠
+and
+⁠
+C
+⁠
+have the same cardinality
+⁠
+(
+B
+∼
+C
+)
+⁠
+then so do
+⁠
+A
+⁠
+and
+⁠
+C
+⁠
+⁠
+(
+A
+∼
+C
+)
+⁠
+, follows from the
+composition of functions
+: given bijections
+⁠
+f
+:
+A
+→
+B
+⁠
+and
+⁠
+g
+:
+B
+→
+C
+⁠
+, their composition
+⁠
+g
+∘
+f
+⁠
+is a bijection from
+⁠
+A
+⁠
+to
+⁠
+C
+⁠
+(see image).
+[
+29
+]
+Since equinumerosity satisfies all three properties, it is an equivalence relation. This means that it groups sets into
+equivalence classes
+—
+groups of sets that are all equinumerous with one another
+—
+where each group defines a possible size of a set. This motivates the notion of
+cardinal numbers
+, which are
+representatives
+that stand for the "size" of each group, developed in
+the section below
+.
+[
+31
+]
+Inequality
+[
+edit
+]
+Given the two injections between a circle and a square above, the Schröder–Bernstein theorem constructs the following bijection.
+[
+32
+]
+A set
+⁠
+A
+⁠
+is not larger than a set
+⁠
+B
+⁠
+if it can be mapped into
+⁠
+B
+⁠
+without overlap. That is, the cardinality of
+⁠
+A
+⁠
+is less than or equal to the cardinality of
+⁠
+B
+⁠
+if there is an
+injective function
+from
+⁠
+A
+⁠
+to
+⁠
+B
+⁠
+, or equivalently,
+[
+d
+]
+if there is a surjection from
+⁠
+B
+⁠
+to
+⁠
+A
+⁠
+(or
+⁠
+A
+⁠
+is
+empty
+). This is written
+⁠
+A
+⪯
+B
+⁠
+, or
+⁠
+A
+≲
+B
+⁠
+.
+[
+35
+]
+and read as "
+⁠
+A
+⁠
+is
+not greater than
+⁠
+B
+⁠
+," or "
+⁠
+A
+⁠
+is
+dominated by
+⁠
+B
+⁠
+."
+[
+36
+]
+If
+⁠
+A
+⪯
+B
+⁠
+, but there is no injection from
+⁠
+B
+⁠
+to
+⁠
+A
+⁠
+, then
+⁠
+A
+⁠
+is said to be
+strictly
+smaller than
+⁠
+B
+⁠
+, written without the underline as
+⁠
+A
+≺
+B
+⁠
+.
+[
+37
+]
+For example, if
+⁠
+A
+⁠
+has four elements and
+⁠
+B
+⁠
+has five, then the following are true
+⁠
+A
+⪯
+A
+⁠
+,
+⁠
+A
+⪯
+B
+⁠
+, and
+⁠
+A
+≺
+B
+⁠
+.
+The
+basic properties of an inequality
+are reflexivity (for any
+⁠
+a
+⁠
+,
+⁠
+a
+≤
+a
+⁠
+), transitivity (if
+⁠
+a
+≤
+b
+⁠
+and
+⁠
+b
+≤
+c
+⁠
+, then
+⁠
+a
+≤
+c
+⁠
+) and
+antisymmetry
+(if
+⁠
+a
+≤
+b
+⁠
+and
+⁠
+b
+≤
+a
+⁠
+, then
+⁠
+a
+=
+b
+⁠
+). Cardinal inequality
+⁠
+(
+⪯
+)
+⁠
+as defined above is reflexive since the
+identity function
+is injective, and is transitive by function composition.
+[
+38
+]
+Antisymmetry
+—
+the fact that, given injections in both directions, then one can find a bijection
+—
+is non-trivial, and is the content of the so-called
+Schröder–Bernstein theorem
+.
+[
+39
+]
+One such proof can be summarized as follows, with the help of the adjacent illustration:
+Given injections in both directions (
+⁠
+f
+:
+A
+→
+B
+⁠
+, and
+⁠
+g
+:
+B
+→
+A
+⁠
+), take set
+⁠
+A
+⁠
+and "color" each point blue.  Then take the
+image
+of set
+⁠
+B
+⁠
+on
+⁠
+A
+⁠
+after the injection
+—
+that is, the set of points that the injection projects on to
+—
+and color those red. Then take the image of
+⁠
+A
+⁠
+on this image of
+⁠
+B
+⁠
+, and color those points blue again. By
+recursively
+alternating the images of these sets, one obtains a "coloring" of the original set (see illustration). For each point, it either stops at some finite step
+—
+and thus is definitively colored blue or red
+—
+or continues switching indefinitely. Of the points in
+⁠
+A
+⁠
+that are definitively colored blue, map them into the next recursive image (i.e. by applying
+⁠
+f
+⁠
+then
+⁠
+g
+⁠
+), leaving all other points in place. This transforms the set
+⁠
+A
+⁠
+into exactly the image of
+⁠
+B
+⁠
+. Taking this transformation, followed by the inverse of
+⁠
+g
+⁠
+, gives a bijection from
+⁠
+A
+⁠
+to
+⁠
+B
+⁠
+(since
+⁠
+g
+⁠
+is injective and surjective on its image, its inverse is bijective).
+[
+32
+]
+A further property of cardinal inequality is
+totality
+, which says that any two sets are comparable. That is, for any
+⁠
+a
+⁠
+and
+⁠
+b
+⁠
+, either
+⁠
+a
+≤
+b
+⁠
+or
+⁠
+b
+≤
+a
+⁠
+. A full proof of which requires concepts introduced later, however the argument can be briefly summarized as follows. Every
+well-ordered
+set is
+isomorphic
+to a unique
+ordinal number
+, called the
+order type
+of the set. By the
+well-ordering theorem
+, every set can be well-ordered. Then, by comparing their order types, one can show that
+⁠
+A
+⪯
+B
+⁠
+or
+⁠
+B
+⪯
+A
+⁠
+. This fact is equivalent to the
+axiom of choice
+.
+[
+40
+]
+Countability
+[
+edit
+]
+Countable sets
+[
+edit
+]
+A set is called
+countable
+if it is
+finite
+or has a bijection with the set of
+natural numbers
+⁠
+(
+ℕ
+)
+⁠
+, in which case it is called
+countably infinite
+. The term
+denumerable
+is also sometimes used for countably infinite sets.
+[
+41
+]
+For example, the set of all even natural numbers is countable, and therefore has the same cardinality as the whole set of natural numbers, even though it is a
+proper subset
+. Similarly, the set of
+square numbers
+is countable, which was considered paradoxical for hundreds of years before modern set theory (cf.
+§
+Pre-Cantorian set theory
+). However, several other examples have historically been considered surprising or initially unintuitive since the rise of set theory.
+[
+42
+]
+Two images of a visual depiction of a function from
+⁠
+ℕ
+⁠
+to
+⁠
+ℚ
+⁠
+. On the left, a version for the positive rational numbers. On the right, a spiral for all pairs of integers
+⁠
+(
+p
+,
+q
+)
+⁠
+for each fraction
+⁠
+p
+/
+q
+⁠
+.
+The
+rational numbers
+⁠
+(
+ℚ
+)
+⁠
+are those which can be expressed as the
+quotient
+or
+fraction
+⁠
+p
+q
+⁠
+of two
+integers
+. The rational numbers can be shown to be countable by considering the set of fractions as the set of all
+ordered pairs
+of integers, which can be visualized as the set of all
+integer points
+on a grid. Then, an intuitive function can be described by drawing a line in a repeating pattern, or spiral, which eventually goes through each point in the grid. For example, going through each diagonal on the grid for positive fractions, or through a lattice spiral for all integer pairs.
+[
+43
+]
+These over-cover the rationals, since, for example, the fractions
+⁠
+2
+4
+,
+3
+6
+,
+4
+8
+,
+…
+⁠
+all get mapped to
+⁠
+1
+2
+⁠
+, as the grid method treats these all as distinct ordered pairs. So this function shows
+⁠
+|
+ℚ
+|
+≤
+|
+ℕ
+|
+⁠
+not
+⁠
+|
+ℚ
+|
+=
+|
+ℕ
+|
+⁠
+. This can be corrected by "skipping over" these numbers in the grid, using the Schröder–Bernstein theorem, or by designing a function which does this naturally, for example using the
+Calkin–Wilf tree
+.
+[
+44
+]
+Algebraic numbers on the
+complex plane
+, colored by degree
+A number is called
+algebraic
+if it is a solution of some
+polynomial
+equation with integer
+coefficients
+. For example, the
+square root of two
+⁠
+2
+⁠
+is a solution to
+⁠
+x
+2
+−
+2
+=
+0
+⁠
+, and the rational number
+⁠
+p
+/
+q
+⁠
+is the solution to
+⁠
+q
+x
+−
+p
+=
+0
+⁠
+. Conversely, a number which cannot be the root of any polynomial is called
+transcendental
+. Two examples include
+Euler's number
+(
+e
+) and
+pi (
+π
+)
+. In general, proving a number is transcendental is considered to be very difficult, and only a few classes of transcendental numbers are known. However, it can be shown that the set of algebraic numbers is countable by ordering the polynomials
+lexicographically
+(for example, see
+Cantor's first set theory article §
+The proofs
+). Since the set of algebraic numbers is countable while the real numbers are uncountable (shown in
+the following subsection
+), the transcendental numbers must form the vast majority of real numbers, even though they are individually much harder to identify. That is to say,
+almost all
+real numbers are transcendental.
+[
+45
+]
+Hilbert's hotel
+[
+edit
+]
+Visual representation of
+Hilbert's hotel
+. Each guest goes to the room with a number that is double their room number, leaving the odd-numbered rooms vacant.
+Hilbert's paradox of the Grand Hotel
+is a popular
+thought experiment
+devised by the German mathematician
+David Hilbert
+to illustrate a counterintuitive property of countably infinite sets, allowing them to have the same cardinality as a
+proper subset
+of themselves. The scenario begins by imagining a hotel with an infinite number of rooms, one for each natural number, all of which are occupied. But then a new guest walks in asking for a room. The hotel accommodates by moving the occupant of room 1 to room 2, the occupant of room 2 to room 3, room 3 to room 4, and in general, room n to room n+1. Then every guest still has a room, but room 1 is open for the new guest.
+[
+46
+]
+Then, the scenario continues by imagining an infinitely long bus of new guests seeking a room. The hotel accommodates by moving the person in room 1 to room 2, room 2 to room 4, and in general, room n to room 2n. Thus, all the even-numbered rooms are occupied, but all the odd-numbered rooms are vacant, leaving room for the infinite bus of new guests. The scenario continues further by assuming an infinite number of these infinite buses arrive at the hotel, and showing that the hotel is still able to accommodate. Finally, an infinite bus which has a seat for every
+real number
+arrives, and the hotel is no longer able to accommodate.
+[
+46
+]
+Uncountable sets
+[
+edit
+]
+Further information:
+§
+Cardinality of the continuum
+A set is called
+uncountable
+if it is not countable; that is, it is infinite and strictly larger than the set of natural numbers. The usual first example of this is the set of
+real numbers
+⁠
+(
+ℝ
+)
+⁠
+, which can be understood as the set of all numbers on the
+number line
+. One method of proving that the reals are uncountable is called
+Cantor's diagonal argument
+, credited to Cantor for his 1891 proof,
+[
+47
+]
+though his method differs from the more common presentation.
+[
+48
+]
+⁠
+1
+→
+0.
+𝟔
+18033...
+2
+→
+0.1
+𝟐
+3456...
+3
+→
+0.60
+𝟕
+927...
+4
+→
+0.222
+𝟐
+22...
+⋮
+0.
+𝟐𝟑𝟐𝟑
+22
+...
+⁠
+It begins by assuming,
+by contradiction
+, that there is some one-to-one mapping between the natural numbers and the set of real numbers between 0 and 1 (the interval
+⁠
+[
+0
+,
+1
+]
+⁠
+). Then, take the
+decimal representation
+of each real number, for example,
+⁠
+0.5772...
+⁠
+with a leading zero followed by any sequence of digits. The number 1 is included in this set since
+1 =
+0.999...
+Considering these real numbers in a list, it is always possible to create a new number such that the first digit of the new number is different from that of the first number in the list, the second digit is different from the second number in the list, and so on. The new number must also have a unique decimal representation, that is, it cannot end in
+repeating nines
+or repeating zeros. For example, if the digit is not 2, make the digit of the new number 2, and if it was 2, make it 3.
+[
+49
+]
+Then, this new number will be different from each of the numbers in the list by at least one digit, and therefore must not be in the list. This shows that the real numbers cannot be put into a one-to-one correspondence with the naturals, and thus must be strictly larger.
+[
+50
+]
+⁠
+ℕ
+⁠
+does not have the same cardinality as its
+power set
+⁠
+𝒫
+(
+ℕ
+)
+⁠
+: For every function
+f
+from
+⁠
+ℕ
+⁠
+to
+⁠
+𝒫
+(
+ℕ
+)
+⁠
+, the set
+⁠
+T
+=
+{
+n
+∈
+N
+:
+n
+∉
+f
+(
+n
+)
+}
+⁠
+disagrees with every set in the
+range
+of
+⁠
+f
+⁠
+, hence
+⁠
+f
+⁠
+cannot be surjective. The picture shows an example
+⁠
+f
+⁠
+and the corresponding
+⁠
+T
+⁠
+;
+red
+:
+⁠
+n
+∉
+T
+⁠
+,
+blue
+:
+⁠
+n
+∈
+T
+⁠
+.
+Another classical example of an uncountable set, established using a related reasoning, is the
+power set
+of the natural numbers, denoted
+⁠
+𝒫
+(
+ℕ
+)
+⁠
+. This is the set of all
+subsets
+of
+⁠
+ℕ
+⁠
+, including the
+empty set
+and
+⁠
+ℕ
+⁠
+itself. The method is much closer to Cantor's original diagonal argument. Again, assume by contradiction that there exists a one-to-one correspondence
+⁠
+f
+⁠
+between
+⁠
+ℕ
+⁠
+and
+⁠
+𝒫
+(
+ℕ
+)
+⁠
+, so that every subset of
+⁠
+ℕ
+⁠
+is assigned to some natural number. These subsets are then placed in a list, in the order defined by
+⁠
+f
+⁠
+(see image). Now, one may define a subset
+⁠
+T
+⁠
+of
+⁠
+ℕ
+⁠
+which is not in the list by taking the negation of the "diagonal" of this list as follows:
+[
+51
+]
+If
+⁠
+1
+∈
+f
+(
+1
+)
+⁠
+, then
+⁠
+1
+∉
+T
+⁠
+, that is, if 1 is in the first subset of the list, then 1 is
+not
+in the subset
+⁠
+T
+⁠
+. Further, if
+⁠
+2
+∉
+f
+(
+2
+)
+⁠
+, then
+⁠
+2
+∈
+T
+⁠
+, that is if the number 2 is not in the second subset of the list, then 2
+is
+in the subset
+⁠
+T
+⁠
+. Then in general, for each natural number
+⁠
+n
+⁠
+,
+⁠
+n
+∈
+T
+⁠
+if and only if
+⁠
+n
+∉
+f
+(
+n
+)
+⁠
+, meaning
+⁠
+n
+⁠
+is put in the subset
+⁠
+T
+⁠
+only if the nth subset in the list does not contain the number
+⁠
+n
+⁠
+. Then, for each natural number
+⁠
+n
+⁠
+,
+⁠
+T
+≠
+f
+(
+n
+)
+⁠
+, meaning,
+⁠
+T
+⁠
+is not the nth subset in the list, for any number
+⁠
+n
+⁠
+, and so it cannot appear anywhere in the list defined by
+⁠
+f
+⁠
+. Since
+⁠
+f
+⁠
+was chosen arbitrarily, this shows that every function from
+⁠
+ℕ
+⁠
+to
+⁠
+𝒫
+(
+ℕ
+)
+⁠
+must be missing at least one element, therefore no such bijection can exist, and so
+⁠
+𝒫
+(
+ℕ
+)
+⁠
+must be not be countable.
+[
+51
+]
+These two sets,
+⁠
+ℝ
+⁠
+and
+⁠
+𝒫
+(
+ℕ
+)
+⁠
+can be shown to have the same cardinality (by, for example, assigning each subset to a decimal expansion) called the
+cardinality of the continuum
+.
+[
+52
+]
+Cantor's theorem
+generalizes the second theorem above, showing that every set is strictly smaller than its powerset. In broad strokes, the proof goes as follows: Given a set
+⁠
+A
+⁠
+, assume by contradiction that there is a bijection
+⁠
+f
+⁠
+from
+⁠
+A
+⁠
+to
+⁠
+𝒫
+(
+A
+)
+⁠
+. Then, the subset
+⁠
+T
+⊆
+A
+⁠
+given by taking the negation of the "diagonal", formally,
+⁠
+T
+=
+{
+a
+∈
+A
+:
+a
+∉
+f
+(
+a
+)
+}
+⁠
+, cannot be in the list. Therefore, every function is missing at least one element, and so
+⁠
+|
+A
+|
+<
+|
+𝒫
+(
+A
+)
+|
+⁠
+. Further, since
+⁠
+𝒫
+(
+A
+)
+⁠
+is itself a set, the argument can be repeated to show
+⁠
+|
+A
+|
+<
+|
+𝒫
+(
+A
+)
+|
+<
+|
+𝒫
+(
+𝒫
+(
+A
+)
+)
+|
+⁠
+. Taking
+⁠
+A
+=
+ℕ
+⁠
+, this shows that
+⁠
+𝒫
+(
+𝒫
+(
+ℕ
+)
+)
+⁠
+is even larger than
+⁠
+𝒫
+(
+ℕ
+)
+⁠
+, which was already shown to be uncountable. Repeating this argument shows that there are infinitely many "sizes" of infinity.
+[
+53
+]
+Cardinal numbers
+[
+edit
+]
+In the above sections, "the cardinality of a set" was described relationally. In other words, one set could be compared to another, intuitively comparing their "size".
+Cardinal numbers
+are a means of measuring this "size" more explicitly. For finite sets, this is simply the
+natural number
+found by counting the elements. This number is called the
+cardinal number
+of that set, or simply
+the cardinality
+of that set. The cardinal number of a set
+⁠
+A
+⁠
+is generally denoted by
+⁠
+|
+A
+|
+⁠
+, with a
+vertical bar
+on each side,
+[
+54
+]
+though it may also be denoted by
+⁠
+A
+⁠
+,
+⁠
+card
+⁡
+(
+A
+)
+⁠
+, or
+⁠
+#
+A
+⁠
+.
+[
+58
+]
+For infinite sets, "cardinal number" is somewhat more difficult to define formally. However, cardinal numbers are not usually thought of in terms of their formal definition, but immaterially in terms of their arithmetic/algebraic properties.
+[
+59
+]
+The assumption that there is
+some
+cardinality function
+⁠
+A
+↦
+|
+A
+|
+⁠
+which satisfies
+⁠
+A
+∼
+B
+⟺
+|
+A
+|
+=
+|
+B
+|
+⁠
+(in prose, "two sets are equinumerous exactly when they map to the same cardinal number"), sometimes called the
+axiom of cardinality
+[
+60
+]
+or
+Hume's principle
+,
+[
+61
+]
+is sufficient for deriving most properties of cardinal numbers.
+[
+62
+]
+Commonly in mathematics, if a relation satisfies the properties of an
+equivalence relation
+, the objects used to materialize this relation are
+equivalence classes
+, each of which group objects equivalent to one another. These equivalence classes are called the
+Frege
+–
+Russell
+cardinal numbers.
+[
+63
+]
+However, these equivalence classes are too large to form sets (apart from the cardinal number
+⁠
+𝟎
+⁠
+whose only element is the
+empty set
+), since, for example, the cardinal number
+⁠
+𝟏
+⁠
+would be the set of all sets with one element, then
+⁠
+{
+𝟏
+}
+∈
+𝟏
+⁠
+, and would therefore contain itself, violating
+regularity
+.
+[
+64
+]
+Thus, due to
+John von Neumann
+, it is more common to assign
+representatives
+of these classes.
+[
+65
+]
+Finite cardinals
+[
+edit
+]
+Main articles:
+Finite set
+and
+Combinatorial principles
+A
+bijective function
+,
+⁠
+f
+:
+X
+→
+Y
+⁠
+from the set
+X = {1,2,3,4
+} to the set Y demonstrates that Y has cardinality 4.
+Given a basic sense of
+natural numbers
+, a set is said to have cardinality
+⁠
+n
+⁠
+if it can be put in one-to-one correspondence with the set
+⁠
+{
+1
+,
+2
+,
+…
+,
+n
+}
+⁠
+, analogous to
+counting
+its elements.
+[
+66
+]
+For example, the set
+⁠
+S
+=
+{
+A
+,
+B
+,
+C
+,
+D
+}
+⁠
+has a natural correspondence with the set
+⁠
+{
+1
+,
+2
+,
+3
+,
+4
+}
+⁠
+, and therefore is said to have cardinality 4. Other terminologies include "Its cardinality is 4" or "Its cardinal number is 4". In formal contexts, the natural numbers can be understood as some construction of objects satisfying the
+Peano axioms
+—
+a list of properties, such that any system satisfying these properties is,
+in a certain sense
+, just like the natural numbers.
+[
+67
+]
+Showing that such a correspondence exists is not always trivial.
+Combinatorics
+is the area of mathematics primarily concerned with
+counting
+, both as a means and as an end to obtaining results, and certain properties of finite structures.
+[
+68
+]
+The notion cardinality of finite sets is closely tied to many basic
+combinatorial principles
+, and provides a set-theoretic foundation to recover them. It can be shown
+by induction
+on the possible sizes of sets that finite cardinality corresponds uniquely with natural numbers (cf.
+Finite set §
+Uniqueness of cardinality
+).
+[
+69
+]
+This is related to several other concepts, verifying Hume's principle and the basis of
+bijective proofs
+, and is equivalent to a certain formulation of the
+pigeonhole principle
+, that a finite set cannot be put in one to one correspondence with a proper subset of itself.
+[
+70
+]
+The
+addition principle
+asserts that given
+disjoint
+sets
+⁠
+A
+⁠
+and
+⁠
+B
+⁠
+,
+⁠
+|
+A
+∪
+B
+|
+=
+|
+A
+|
++
+|
+B
+|
+⁠
+, intuitively meaning that the sum of the parts is equal to the whole.
+[
+71
+]
+The
+multiplication principle
+asserts that given two sets
+⁠
+A
+⁠
+and
+⁠
+B
+⁠
+,
+⁠
+|
+A
+×
+B
+|
+=
+|
+A
+|
+⋅
+|
+B
+|
+⁠
+, intuitively meaning that there are
+⁠
+|
+A
+|
+⋅
+|
+B
+|
+⁠
+ways to pair objects from these sets.
+[
+72
+]
+Both of these can be proven by a
+bijective proof
+, together with induction.
+[
+73
+]
+The more general result is the
+inclusion–exclusion principle
+, which defines how to count the number of elements in overlapping sets.
+[
+74
+]
+Naturally, a set is defined to be finite if it is
+empty
+or can be put in correspondence with the set
+⁠
+{
+1
+,
+2
+,
+…
+,
+n
+}
+⁠
+, for some natural number
+⁠
+n
+⁠
+.
+[
+66
+]
+However, there exist
+other definitions of "finite"
+which do not rely on a definition of "number." For example, a set is called
+Dedekind-finite
+if it cannot be put in one-to-one correspondence with a
+proper subset
+of itself, though this definition requires the
+axiom of choice
+to be equivalent to the original definition.
+[
+75
+]
+Aleph numbers
+[
+edit
+]
+Aleph-nought
+, aleph-zero, or aleph-null: the smallest infinite cardinal number, and the cardinal number of the set of natural numbers.
+[
+76
+]
+The
+aleph numbers
+are a sequence of cardinal numbers that represent the sizes of
+infinite sets
+, denoted with an
+aleph
+⁠
+ℵ
+⁠
+, the first letter of the
+Hebrew alphabet
+.
+[
+76
+]
+The first aleph number is
+⁠
+ℵ
+0
+⁠
+, called "aleph-nought", "aleph-zero", or "aleph-null", which represents the cardinality of the set of all
+natural numbers
+:
+⁠
+ℵ
+0
+=
+|
+ℕ
+|
+=
+|
+{
+0
+,
+1
+,
+2
+,
+3
+,
+⋯
+}
+|
+⁠
+.  Then,
+⁠
+ℵ
+1
+⁠
+represents the next largest cardinality, then
+⁠
+ℵ
+2
+⁠
+, and so on.
+[
+77
+]
+The most common way this is formalized in set theory is through
+Von Neumann ordinals
+, known as
+Von Neumann cardinal assignment
+.
+[
+78
+]
+Ordinal numbers
+generalize the notion of
+order
+to infinite sets. For example, 2 comes after 1, denoted
+⁠
+1
+<
+2
+⁠
+, and 3 comes after both, denoted
+⁠
+1
+<
+2
+<
+3
+⁠
+. Then, one defines a new number,
+⁠
+ω
+⁠
+, which comes after every natural number, denoted
+⁠
+1
+<
+2
+<
+3
+<
+⋯
+<
+ω
+⁠
+. Further
+⁠
+ω
+<
+ω
++
+1
+<
+⋯
+<
+ω
++
+ω
+=
+ω
+⋅
+2
+⁠
+, and so on.
+[
+79
+]
+More formally, these ordinal numbers can be defined as follows:
+⁠
+0
+:=
+{
+}
+⁠
+, the
+empty set
+,
+⁠
+1
+:=
+{
+0
+}
+⁠
+,
+⁠
+2
+:=
+{
+0
+,
+1
+}
+⁠
+,
+⁠
+3
+:=
+{
+0
+,
+1
+,
+2
+}
+⁠
+, and so on. Then one can define
+⁠
+m
+<
+n
+, if
+m
+∈
+n
+⁠
+, for example,
+⁠
+2
+∈
+{
+0
+,
+1
+,
+2
+}
+=
+3
+⁠
+, therefore
+⁠
+2
+<
+3
+⁠
+.  Defining
+⁠
+ω
+:=
+{
+0
+,
+1
+,
+2
+,
+3
+,
+⋯
+}
+⁠
+gives
+⁠
+ω
+⁠
+the desired property of being the smallest ordinal greater than all finite ordinal numbers. Further,
+⁠
+ω
++
+1
+:=
+{
+0
+,
+1
+,
+⋯
+,
+ω
+}
+⁠
+, and so on.
+[
+80
+]
+Since
+⁠
+ω
+∼
+ℕ
+⁠
+by the natural correspondence, one may define
+⁠
+ℵ
+0
+⁠
+as the set of all finite ordinals. That is,
+⁠
+ℵ
+0
+:=
+ω
+⁠
+. Then,
+⁠
+ℵ
+1
+⁠
+is the set of all countable ordinals (all ordinals
+⁠
+α
+⁠
+with cardinality
+⁠
+|
+α
+|
+≤
+ℵ
+0
+⁠
+), the
+first uncountable ordinal
+. Since a set cannot contain itself,
+⁠
+ℵ
+1
+⁠
+must have a strictly larger cardinality:
+⁠
+ℵ
+0
+<
+ℵ
+1
+⁠
+.
+[
+81
+]
+Furthermore,
+⁠
+ℵ
+2
+⁠
+is the set of all ordinals with cardinality less than or equal to
+⁠
+ℵ
+1
+⁠
+, and in general the
+successor cardinal
+⁠
+κ
++
+⁠
+is the set of all ordinals with cardinality up to
+⁠
+κ
+⁠
+. Put another way for infinite cardinals,
+⁠
+κ
++
+⁠
+is the number of possible
+well-orderings
+on
+⁠
+κ
+⁠
+up to
+order isomorphism
+.
+[
+82
+]
+Proving that such a set always exists is known as Hartogs' theorem, wherein the smallest ordinal not less or equal to than a set
+⁠
+κ
+⁠
+is called the
+Hartogs number
+of
+⁠
+κ
+⁠
+.
+[
+83
+]
+Then,
+⁠
+ℵ
+λ
+⁠
+for a limit ordinal
+⁠
+λ
+⁠
+is the
+union
+of all lesser alephs.
+[
+84
+]
+The importance of ordinal numbers here is to generalize the notion of counting to infinite sets. When counting, one implicitly assigns an order to their set of objects, but no matter what order one assigns the final result of the count is always the same, which demonstrates the connection between cardinal and ordinal numbers.
+[
+85
+]
+Further, by the
+well-ordering theorem
+, there cannot exist any set with cardinality between
+⁠
+ℵ
+0
+⁠
+and
+⁠
+ℵ
+1
+⁠
+, and every infinite set has some cardinality corresponding uniquely to some aleph
+⁠
+ℵ
+α
+⁠
+, for some ordinal
+⁠
+α
+⁠
+.
+[
+86
+]
+This allows one to use a constructive definition of the cardinality function, by assigning each set to its equinumerous aleph.
+[
+87
+]
+Cardinal arithmetic
+[
+edit
+]
+The addition of the objects from the two disjoint sets is an instance of
+⁠
+3
++
+2
+=
+5
+⁠
+.
+Basic arithmetic can be done on cardinal numbers in a very natural way, by extending the theorems for finite combinatorial principles above. The intuitive principle that if
+⁠
+A
+⁠
+and
+⁠
+B
+⁠
+are disjoint then addition of these sets is simply taking their
+union
+, written as
+⁠
+|
+A
+∪
+B
+|
+=
+|
+A
+|
++
+|
+B
+|
+⁠
+.
+[
+88
+]
+Thus if
+⁠
+A
+⁠
+and
+⁠
+B
+⁠
+are infinite, cardinal addition is defined as
+⁠
+|
+A
+|
++
+|
+B
+|
+:=
+|
+A
+⊔
+B
+|
+⁠
+where
+⁠
+⊔
+⁠
+denotes
+disjoint union
+. Similarly, the multiplication of two sets is intuitively the number of ways to pair their elements (as in the
+multiplication principle
+), therefore cardinal multiplication is defined as
+⁠
+|
+A
+|
+⋅
+|
+B
+|
+:=
+|
+A
+×
+B
+|
+⁠
+, where
+⁠
+×
+⁠
+denotes the
+Cartesian product
+.
+[
+89
+]
+These definitions can be shown to satisfy the basic properties of standard arithmetic:
+[
+90
+]
+Associativity
+:
+⁠
+|
+A
+|
++
+|
+B
+⊔
+C
+|
+=
+|
+A
+⊔
+B
+|
++
+|
+C
+|
+⁠
+, and
+⁠
+|
+A
+|
+⋅
+|
+B
+×
+C
+|
+=
+|
+A
+×
+B
+|
+⋅
+|
+C
+|
+⁠
+Commutativity
+:
+⁠
+|
+A
+|
++
+|
+B
+|
+=
+|
+B
+|
++
+|
+A
+|
+⁠
+, and
+⁠
+|
+A
+|
+⋅
+|
+B
+|
+=
+|
+B
+|
+⋅
+|
+A
+|
+⁠
+Distributivity
+:
+⁠
+|
+A
+|
+⋅
+|
+B
+⊔
+C
+|
+=
+|
+A
+×
+B
+|
++
+|
+A
+×
+C
+|
+⁠
+Although a lot of properties of finite arithmetic hold for infinite arithmetic, as above and in the table below, strict inequalities (such as
+Kőnig's theorem
+) are rare. For example, in finite arithmetic, for any nonzero number
+⁠
+n
+⁠
+,
+⁠
+n
++
+n
+>
+n
+⁠
+. However, since both the set of even numbers
+⁠
+(
+E
+)
+⁠
+and set of odd numbers
+⁠
+(
+F
+)
+⁠
+have cardinality
+⁠
+ℵ
+0
+⁠
+, it shows
+⁠
+|
+E
+⊔
+F
+|
+=
+|
+ℕ
+|
+⁠
+thus
+⁠
+ℵ
+0
++
+ℵ
+0
+=
+ℵ
+0
+⁠
+. In fact, for any infinite cardinal,
+⁠
+κ
++
+κ
+=
+κ
+⋅
+κ
+=
+κ
+⁠
+. In this way, infinite cardinal addition and multiplication are considered to be remarkably well-behaved (at least under the
+Axiom of Choice
+).
+[
+91
+]
+Cardinal exponentiation
+⁠
+|
+A
+|
+|
+B
+|
+⁠
+is defined via
+set exponentiation
+, the set of all functions
+⁠
+f
+:
+B
+↦
+A
+⁠
+, that is,
+⁠
+|
+A
+|
+|
+B
+|
+:=
+|
+A
+B
+|
+⁠
+which naturally extends the role of "repeated multiplication" to infinite sets.
+[
+92
+]
+For finite sets this can be shown to coincide with standard
+natural number exponentiation
+, but includes as a corollary that
+zero to the power of zero
+is one
+⁠
+(
+0
+0
+=
+1
+)
+⁠
+since there is exactly one function from the
+empty set
+to itself: the
+empty function
+.
+[
+93
+]
+A combinatorial argument can be used to show
+⁠
+2
+|
+A
+|
+=
+|
+𝒫
+(
+A
+)
+|
+⁠
+, by considering the
+indicator function
+of each subset. In general, cardinal exponentiation is not as well-behaved as addition and multiplication. For example, even though it can be proven that the expression
+⁠
+2
+ℵ
+0
+⁠
+does indeed correspond to some aleph, it is
+unprovable
+from standard set theories which aleph it corresponds to.
+[
+94
+]
+Basic results
+Exponentiation
+Inequality and
+Monotonicity
+Identity elements
+Absorption laws
+(for infinite A,B)
+⁠
+(
+|
+A
+|
+|
+B
+|
+)
+|
+C
+|
+=
+|
+A
+|
+|
+B
+×
+C
+|
+⁠
+[
+e
+]
+[
+95
+]
+⁠
+|
+A
+|
+≤
+|
+B
+|
+⁠
+implies
+⁠
+|
+A
+|
++
+|
+C
+|
+≤
+|
+B
+|
++
+|
+C
+|
+⁠
+[
+96
+]
+⁠
+|
+A
+|
++
+𝟎
+=
+|
+A
+|
+⁠
+[
+97
+]
+⁠
+|
+A
+|
++
+|
+B
+|
+=
+max
+⁡
+(
+|
+A
+|
+,
+|
+B
+|
+)
+⁠
+[
+98
+]
+⁠
+|
+A
+|
+|
+B
+|
++
+|
+C
+|
+=
+|
+A
+|
+|
+B
+|
+⋅
+|
+A
+|
+|
+C
+|
+⁠
+[
+99
+]
+⁠
+|
+A
+|
+≤
+|
+B
+|
+⁠
+implies
+⁠
+|
+A
+|
+⋅
+|
+C
+|
+≤
+|
+B
+|
+⋅
+|
+C
+|
+⁠
+[
+100
+]
+⁠
+|
+A
+|
+⋅
+𝟏
+=
+|
+A
+|
+⁠
+[
+101
+]
+⁠
+|
+A
+|
+⋅
+|
+B
+|
+=
+max
+⁡
+(
+|
+A
+|
+,
+|
+B
+|
+)
+⁠
+[
+98
+]
+⁠
+|
+A
+×
+B
+|
+|
+C
+|
+=
+|
+A
+|
+|
+C
+|
+⋅
+|
+B
+|
+|
+C
+|
+⁠
+[
+99
+]
+⁠
+|
+A
+|
+≤
+|
+B
+|
+⁠
+implies
+⁠
+|
+A
+|
+|
+C
+|
+≤
+|
+B
+|
+|
+C
+|
+⁠
+[
+102
+]
+⁠
+|
+A
+|
+𝟏
+=
+|
+A
+|
+⁠
+[
+103
+]
+⁠
+𝟎
+⋅
+|
+A
+|
+=
+𝟎
+⁠
+(
+annihilator
+)
+[
+104
+]
+⁠
+|
+A
+|
+𝟎
+=
+𝟏
+⁠
+[
+105
+]
+⁠
+|
+A
+|
+≤
+|
+B
+|
+⁠
+and
+⁠
+𝟎
+<
+|
+C
+|
+⁠
+implies
+⁠
+|
+C
+|
+|
+A
+|
+≤
+|
+C
+|
+|
+B
+|
+⁠
+[
+102
+]
+⁠
+𝟏
+|
+A
+|
+=
+𝟏
+⁠
+[
+106
+]
+Set of all cardinal numbers
+[
+edit
+]
+ת
+The
+Hebrew
+letter
+Tav
+, denoting the
+proper class
+of all cardinal numbers
+[
+107
+]
+The
+set of all cardinal numbers
+refers to a hypothetical set which contains all cardinal numbers. Such a set cannot exist, which has been considered paradoxical, and related to the
+Burali-Forti paradox
+. Using the definition of cardinal numbers as representatives of their cardinalities.  It begins by assuming there is some set
+⁠
+S
+:=
+{
+X
+|
+X
+is a cardinal number
+}
+⁠
+. Then, if there is some largest cardinal
+⁠
+κ
+∈
+S
+⁠
+, then the powerset
+⁠
+2
+κ
+⁠
+is strictly greater, and thus not in
+⁠
+S
+⁠
+. Conversely, if there is no largest element, then the
+union
+⁠
+⋃
+S
+⁠
+contains the elements of all elements of
+⁠
+S
+⁠
+, and is therefore greater than or equal to each element. Since there is no largest element in
+⁠
+S
+⁠
+, for any element
+⁠
+x
+∈
+S
+⁠
+, there is another element
+⁠
+y
+∈
+S
+⁠
+such that
+⁠
+|
+x
+|
+<
+|
+y
+|
+⁠
+and
+⁠
+|
+y
+|
+≤
+|
+⋃
+S
+|
+⁠
+. Thus, for any
+⁠
+x
+∈
+S
+⁠
+,
+⁠
+|
+x
+|
+<
+|
+⋃
+S
+|
+⁠
+, and so
+⁠
+|
+⋃
+S
+|
+∉
+S
+⁠
+. Thus, the collection of all cardinal numbers is too large to form a set, and is a
+proper class
+.
+[
+108
+]
+Georg Cantor denoted  the collection of all cardinal numbers
+ת
+(
+tav
+, the last letter of the
+Hebrew alphabet
+), and considered it to be an "inconsistent multiplicity".
+[
+107
+]
+Cardinality of the continuum
+[
+edit
+]
+Main articles:
+Cardinality of the continuum
+and
+Continuum hypothesis
+The
+number line
+, containing all points in its continuum
+The
+real numbers
+⁠
+(
+ℝ
+)
+⁠
+formalize the intuitive notion of the
+continuum
+: the unbroken, gapless set of points on the
+number line
+.
+[
+109
+]
+There are numerous ways to construct and analyze the
+continuum in set theory
+, for example, sets of
+Cauchy sequences
+of rational numbers, or
+Dedekind cuts
+. However, a somewhat informal definition as the set of infinite sequences of digits, e.g.
+⁠
+0.1234...
+⁠
+, with the usual arithmetic and order is a popular and sufficient choice for basic arguments involving the continuum.
+[
+110
+]
+The cardinality of this set, denoted "
+⁠
+𝔠
+⁠
+" (a lowercase
+fraktur script
+"c"), turns out to be remarkably stable under various transformations.
+[
+111
+]
+First five iterations approaching the
+Cantor set
+For example, all intervals on the real line e.g.
+⁠
+[
+0
+,
+1
+]
+⁠
+, and
+⁠
+[
+0
+,
+2
+]
+⁠
+, have the same cardinality as the entire set
+⁠
+ℝ
+⁠
+. First,
+⁠
+f
+(
+x
+)
+=
+2
+x
+⁠
+is a bijection from
+⁠
+[
+0
+,
+1
+]
+⁠
+to
+⁠
+[
+0
+,
+2
+]
+⁠
+. The fact that two intervals of unequal length can be mapped one-to-one has been known, even if considered paradoxical, for thousands of years (cf.
+§
+Ancient history
+).
+[
+112
+]
+Further, the
+tangent function
+is a bijection from the interval
+⁠
+(
+−
+π
+2
+,
+π
+2
+)
+⁠
+to the whole real line. A more surprising example is the
+Cantor set
+, which is defined as follows: take the interval
+⁠
+[
+0
+,
+1
+]
+⁠
+and remove the middle third
+⁠
+(
+1
+3
+,
+2
+3
+)
+⁠
+, then remove the middle third of each of the two remaining segments, and continue removing middle thirds (see image). The Cantor set is the collection of points that survive this process. The remaining points are exactly those whose decimal expansion can be written in
+ternary
+without a 1. Reinterpreting these decimal expansions as
+binary
+(e.g. by replacing the 2s with 1s) gives a bijection between the Cantor set and the interval
+⁠
+[
+0
+,
+1
+]
+⁠
+. The Cantor set has a
+measure
+or "length" of zero, and yet is still equinumerous to the whole real line.
+[
+113
+]
+Three iterations of a
+Peano curve
+construction, whose
+limit
+is a
+space-filling curve
+In the other direction, into higher dimensions, one can find a bijective map between a one-dimensional line and a two-dimensional square. Given a point in the
+unit square
+in
+⁠
+ℝ
+2
+⁠
+(two-dimensional space)
+⁠
+(
+0.
+a
+1
+a
+2
+a
+3
+...
+,
+0.
+b
+1
+b
+2
+b
+3
+...
+)
+⁠
+, one can interleave their digits to get the unique number
+⁠
+0.
+a
+1
+b
+1
+a
+2
+b
+2
+...
+⁠
+in the
+unit interval
+⁠
+[
+0
+,
+1
+]
+⁠
+.
+[
+114
+]
+[
+f
+]
+Space-filling curves
+offer a more visual proof, giving a continuous map from the unit interval onto the unit square. Classical examples include the
+Peano curve
+and
+Hilbert curve
+. Although these maps are not bijective, they are indeed sufficient to show
+⁠
+|
+ℝ
+2
+|
+≤
+|
+ℝ
+|
+⁠
+with the converse being immediate. Both of these methods can be reused at each dimension to show that
+⁠
+|
+ℝ
+n
+|
+=
+|
+ℝ
+n
++
+1
+|
+⁠
+and thus
+⁠
+|
+ℝ
+|
+=
+|
+ℝ
+n
+|
+⁠
+for any dimension
+⁠
+n
+≥
+1
+⁠
+.
+[
+115
+]
+Further, the infinite
+cartesian product
+⁠
+ℝ
+∞
+⁠
+can also be shown to be equinumerous to
+⁠
+ℝ
+⁠
+by cardinal arithmetic:
+⁠
+|
+ℝ
+∞
+|
+=
+|
+ℝ
+|
+ℵ
+0
+=
+(
+2
+ℵ
+0
+)
+ℵ
+0
+=
+2
+(
+ℵ
+0
+⋅
+ℵ
+0
+)
+=
+2
+ℵ
+0
+=
+|
+ℝ
+|
+⁠
+.  Thus, the real numbers, all finite-dimensional real spaces, and the countable cartesian product have the same cardinality.
+[
+116
+]
+As shown in
+§
+Uncountable sets
+, the set of real numbers is strictly larger than the set of natural numbers. Specifically,
+⁠
+|
+ℝ
+|
+=
+|
+𝒫
+(
+ℕ
+)
+|
+⁠
+. The
+Continuum Hypothesis
+(CH) asserts that the real numbers have the next largest cardinality after the natural numbers, that is
+⁠
+|
+ℝ
+|
+=
+ℵ
+1
+⁠
+. As shown by
+Gödel
+and
+Cohen
+, the continuum hypothesis is
+independent
+of
+ZFC
+, a standard axiomatization of set theory; that is, it is impossible to prove the continuum hypothesis or its negation from ZFC—provided that ZFC is
+consistent
+, meaning it produces no contradictions.
+[
+117
+]
+ZFC imposes relatively little restriction on the cardinality of
+⁠
+ℝ
+⁠
+.
+Easton's theorem
+shows that ZFC only requires two conditions: that
+⁠
+|
+ℝ
+|
+>
+ℵ
+0
+⁠
+, and a limit on its
+cofinality
+(roughly, how difficult it is to approach
+⁠
+𝔠
+⁠
+from below) implying that
+⁠
+|
+ℝ
+|
+≠
+ℵ
+ω
+⁠
+, though this is not an upper bound as it does not disallow the possibility that
+⁠
+|
+ℝ
+|
+=
+ℵ
+ω
++
+1
+⁠
+.
+[
+118
+]
+The
+Generalized Continuum Hypothesis
+(GCH) extends this to all infinite cardinals, stating that
+⁠
+2
+ℵ
+α
+=
+ℵ
+α
++
+1
+⁠
+for every ordinal
+⁠
+α
+⁠
+. Research on CH and GCH continues independent of ZFC, especially in
+descriptive set theory
+and through the exploration of
+large cardinal axioms
+.
+[
+119
+]
+Without GCH, the cardinality of
+⁠
+ℝ
+⁠
+cannot be written in terms of specific alephs. The
+Beth numbers
+(
+⁠
+ℶ
+⁠
+, the second letter of the
+Hebrew alphabet
+) provide a concise notation for powersets of the real numbers starting from
+⁠
+ℶ
+0
+=
+|
+ℕ
+|
+⁠
+, then
+⁠
+ℶ
+1
+=
+2
+ℶ
+0
+=
+|
+ℝ
+|
+⁠
+, and
+⁠
+ℶ
+2
+=
+|
+𝒫
+(
+ℝ
+)
+|
+=
+2
+ℶ
+1
+⁠
+, and in general
+⁠
+ℶ
+n
++
+1
+=
+2
+ℶ
+n
+⁠
+and
+⁠
+ℶ
+λ
+=
+⋃
+α
+<
+λ
+ℶ
+α
+⁠
+if
+⁠
+λ
+⁠
+is a
+limit ordinal
+.
+[
+120
+]
+Alternative and additional axioms
+[
+edit
+]
+Around the turn of the 20th century, set theory turned to an axiomatic approach to avoid rampant foundational issues related to its naive study (cf.
+§
+Axiomatic set theory
+). The most common axiomatic set theory used today is
+Zermelo–Fraenkel set theory
+(ZFC). In this system, the relevant axioms include: the
+Axiom of Infinity
+, stating roughly "there is an infinite set", specifically, a set with cardinality of the natural numbers
+⁠
+ℕ
+⁠
+; the
+Axiom of power set
+, which says that, for any set
+⁠
+A
+⁠
+, the powerset
+⁠
+𝒫
+(
+A
+)
+⁠
+also exists; and the
+Axiom of Choice
+, explained below. ZFC has been criticized both for being too strong, and too weak. Similarly, there are many "natural extensions" of ZFC studied by set theorists. Thus, there exist many alternative systems of axioms each of which has implications to the standard theory of cardinality discussed above.
+[
+121
+]
+Without the axiom of choice
+[
+edit
+]
+For any infinite collection of "jars of marbles," the axiom of choice allows one to choose exactly one marble from each jar.
+The
+Axiom of Choice
+(AC) is a fundamental principle in the foundations of mathematics which has seen much controversy in its history. Informally, it states that given any collection of non-empty sets, it is possible to construct a new set by choosing one element from each set, even if the collection is infinite. The controversy over AC had mostly to do with the nature of how it chose these elements. Whereas most axioms seem to describe what sets are or allow one to construct explicit sets, AC does not tell you
+which
+set you have constructed, just that such a choice function exists, leaving the constructed set implicit. It is hardly controversial to modern mathematicians. However, because of its unique historical controversy it is often given special treatment not given to other axioms that basic proofs which use it ought to call it out.
+[
+122
+]
+The Axiom of Choice is very closely related to the nature of cardinality. AC imposes a strict structure on what cardinality can be and what it means to compare to sets. Assuming AC is false, cardinality has a much more intricate structure and resists the kind of linear order AC offers. For example, cardinal inequality does not treat injection and surjection equivalently. Specifically, there exists sets, such that there is a surjection from
+⁠
+A
+⁠
+onto
+⁠
+B
+⁠
+, but no injection from
+⁠
+B
+⁠
+into
+⁠
+A
+⁠
+. Thus injection is a strictly stronger notion, since, given an injection, it is always possible to find a surjection in the opposite direction. Similarly, although cardinal inequality maintains a partial order, there exist incomparable sets under cardinal inequality, that is, the
+law of trichotomy
+fails to hold, and there are sets such that none of
+⁠
+A
+<
+B
+⁠
+,
+⁠
+A
+∼
+B
+⁠
+,
+⁠
+A
+>
+B
+⁠
+hold. Both of these (trichotomy and that surjection implies injection) are equivalent to AC.
+[
+123
+]
+Because trichotomy does not hold and the aleph sequence has a natural well-order, there exist sets whose cardinality does not correspond to any aleph. As such, the cardinality function
+⁠
+A
+↦
+|
+A
+|
+⁠
+becomes somewhat more difficult to define. In fact, a cardinality function that maps each set to a unique "representative" of that cardinality
+—
+i.e. satisfying
+Hume's principle
+, and
+idempotence
+(
+⁠
+|
+|
+S
+|
+|
+=
+|
+S
+|
+⁠
+or
+⁠
+|
+S
+|
+∼
+S
+⁠
+)
+—
+is impossible without AC.
+[
+124
+]
+Set theories without AC address this by adopting the so-called
+Frege
+–
+Russell
+–
+Scott
+definition, introduced by
+Dana Scott
+, reminiscent of the
+Frege
+–
+Russell
+cardinal numbers. Under this definition, one considers the "Set of all sets" equinumerous with
+⁠
+A
+⁠
+, but applies
+Scott's trick
+to regularize these classes. Specifically, it reduces this class to only those sets of
+minimal rank
+; that is, those sets which appear earliest in the
+von Neumann hierarchy
+. Since the von Neumann hierarchy is well-ordered, there is a least rank, and since these sets all share that rank, their collection is bounded in the hierarchy and thus constitutes a set rather than a proper class.
+[
+125
+]
+Cardinal arithmetic is much more involved, losing many of its simplest identities. The identity
+⁠
+|
+A
+|
++
+|
+B
+|
+=
+max
+⁡
+(
+|
+A
+|
+,
+|
+B
+|
+)
+⁠
+requires a well-defined notion of "max" which requires all sets to be comparable, and therefore does not hold. Similarly, the proposition that
+A
+×
+A
+∼
+B
+×
+B
+⟹
+A
+∼
+B
+(the function which squares cardinals is injective), and even the statement that the
+arbitrary product
+of non-zero cardinal numbers always non-zero
+—
+called the
+Multiplicative axiom
+by Bertrand Russell
+—
+are both equivalent to AC.
+[
+126
+]
+Further, although the Generalized Continuum Hypothesis (GCH, that
+⁠
+ℵ
+α
+=
+ℶ
+α
+⁠
+for every
+⁠
+α
+⁠
+) is independent of ZFC, it can be shown ZF+GCH is sufficient to derive AC, and therefore, if AC is false, it follows that GCH does not hold.
+[
+127
+]
+Proper classes
+[
+edit
+]
+Some set theories include
+classes
+, which are collections of sets, which allows theories to discuss any collection of sets without running into issues
+self-reference
+(e.g.
+the set of all sets that do not contain themselves
+.). A class is called a proper class when, at least intuitively, it is "too large" to form a set. For example, the
+universe of all sets
+, the
+class of all cardinal numbers
+, and the
+class of all ordinal numbers
+are proper classes. Such set theories include
+Von Neumann–Bernays–Gödel set theory
+(NBG), and
+Morse–Kelley set theory
+(MK). Cantor originally called the size of these "too large" sets "
+absolute infinite
+", separating it from the transfinite. The former he characterized by its "inconsistency", causing paradoxes, and associated the concept with
+God
+.
+[
+128
+]
+Proper classes can, in a sense, be assigned cardinalities. The first to formally distinguish between sets and classes was
+John von Neumann
+, who formalized the notion of "too large to form sets". More accurately, he defined a class to be "too big" (a proper class) if and only if it was equinumerous with the whole universe of sets (cf.
+Axiom of limitation of size
+; used as an axiom in MK set theory, and derivable as a theorem in NBG). Thus, all proper classes have the same "size". The axiom has several implications, mostly relating to the
+limitation of size
+principles of early set theory. It implies the
+axiom of specification
+, the
+axiom of replacement
+, the
+axiom of union
+, and the
+axiom of global choice
+.
+[
+129
+]
+Large cardinals
+[
+edit
+]
+Large cardinal hierarchy, ordered from bottom to top in terms of strength
+Large cardinal axioms
+assert the existence of cardinal numbers which, as the name suggests, are very large
+—
+so large that they cannot be proven to exist within ZFC. For example, an
+inaccessible cardinal
+is, roughly, a cardinal that cannot be approached from below using basic set-theoretic operations such as unions, limits, and powersets (more formally, a
+regular
+,
+limit cardinal
+greater than
+⁠
+ℵ
+0
+⁠
+). Large cardinals are understood in terms of the
+Von Neumann hierarchy
+, denoted
+⁠
+V
+α
+⁠
+(for some ordinal
+⁠
+α
+⁠
+), which can be understood as the sets that can be obtained from the empty set, followed by recursively applying the powerset
+⁠
+α
+⁠
+times. Specifically,
+⁠
+V
+0
+=
+∅
+⁠
+,
+⁠
+V
+α
++
+1
+=
+𝒫
+(
+V
+α
+)
+⁠
+and
+⁠
+V
+λ
+=
+⋃
+α
+<
+λ
+V
+α
+⁠
+for a limit ordinal
+⁠
+λ
+⁠
+.
+[
+130
+]
+There exist
+many known properties defining large cardinals
+, which come seemingly in a linear hierarchy, in terms of consistency strength. As an analogy, in ZFC without the
+Axiom of Infinity
+can only prove the existence of finite sets. Therefore
+⁠
+V
+ω
+(
+=
+𝒫
+(
+∅
+)
+∪
+𝒫
+(
+𝒫
+(
+∅
+)
+)
+∪
+⋯
+)
+⁠
+, whose existence is provable in usual ZFC, can serve as a model of ZFC
+–
+Infinity, and thus if ZFC is consistent, ZFC
+–
+Infinity is consistent.
+[
+131
+]
+Analogously, ZFC
++
+"There exists an inaccessible cardinal" implies the consistency of ZFC, since if
+⁠
+κ
+⁠
+is inaccessible,
+⁠
+V
+κ
+⁠
+can serve as a model of ZFC (cf.
+Grothendieck universe
+). Stronger and stronger large cardinal axioms assert the existence of larger and larger cardinals, each of which proves the consistency of the weaker systems.
+[
+132
+]
+Large cardinals are at the forefront of set-theoretic research for both practical and philosophical reasons. In a practical sense, it is often the case that unproven or unprovable conjectures can be settled by sufficiently strong large cardinal axioms. For example, the existence of a
+measurable cardinal
+is inconsistent with
+Gödel's constructibility axiom
+. Similarly, the existence of a
+Reinhardt cardinal
+is inconsistent with the axiom of choice, which makes it a much more controversial large cardinal axiom. In a philosophical sense, according to a
+platonic
+view among set-theorists such as
+W. Hugh Woodin
+, these axioms simply extend the system to include sets that are "supposed" to be considered. That is, there is some fundamental
+universe of sets
+, which these axioms grant further access to.
+[
+133
+]
+For this reason, large cardinal axioms are generally given preference compared to other possible axioms of set theory. This view is controversial among a competing philosophy, sometimes called
+pluralism
+,
+[
+134
+]
+which posits that set theory should be understood as a
+multiverse
+of set theories, but no "absolute" or "true" model.
+[
+135
+]
+Determinacy
+[
+edit
+]
+Illustration of the
+Banach–Tarski paradox
+, which arises in ZFC, but is impossible in ZF+AD
+The
+Axiom of Determinacy
+(AD) asserts that
+certain kinds
+of
+mathematical games
+on the natural numbers are
+determined
+; that is, one player will always have a guaranteed winning strategy.
+[
+136
+]
+The first serious study of the consequences of AD started during the 1960s in
+descriptive set theory
+—
+which, roughly, studies the definable sets of the real numbers
+—
+after it was noticed that it leads to very nice regulatory properties of the real numbers.
+[
+137
+]
+However, it was shown that
+this axiom is inconsistent with AC
+and thus was never taken as a fundamental axiom of set theory.
+[
+138
+]
+AD is closely related to the cardinality of the real numbers, giving it a structure different from that under AC. Under AD, the real numbers cannot be well-ordered, meaning
+⁠
+ℝ
+⁠
+does not correspond to any aleph. Despite this, AD imposes a rigid structure on the real numbers, known as the
+perfect set property
+, implying that every set of real numbers is either countable, or has cardinality of exactly
+⁠
+2
+ℵ
+0
+⁠
+, equal to the whole real line. Similarly, it also implies that all sets of real numbers are
+Lebesgue measurable
+, eliminating the existence of sets whose size is non-zero, but cannot be assigned a length. Existence of such non-measurable sets allows the
+Banach–Tarski paradox
+, demonstrating that one can cut one sphere into finitely many pieces, smoothly rearrange them, and end with two solid spheres, which becomes impossible under AD.
+[
+139
+]
+On the other hand, due to the restrictions on what sets can exist, it implies that one can
+partition
+the real numbers into
+strictly
+more groups than there are real numbers. Specifically, one can find an injection to show that
+⁠
+|
+ℝ
+|
+≤
+|
+ℝ
+/
+ℚ
+|
+⁠
+(equivalence classes of reals, such that
+⁠
+x
+∼
+y
+⁠
+iff
+⁠
+x
+−
+y
+∈
+ℚ
+⁠
+). However, if an injection
+⁠
+F
+:
+ℝ
+/
+ℚ
+→
+ℝ
+⁠
+existed, then there is a linear order on
+⁠
+ℝ
+/
+ℚ
+⁠
+(given by
+⁠
+a
+≤
+b
+⁠
+if
+⁠
+F
+(
+a
+)
+≤
+F
+(
+b
+)
+⁠
+). This allows one to construct a set which cannot be assigned a measure, contradicting AD. Therefore no such injection could exist, and thus
+⁠
+|
+ℝ
+|
+<
+|
+ℝ
+/
+ℚ
+|
+⁠
+.
+[
+140
+]
+However, its relationship with large cardinals and the continuum hypothesis is still of heavy interest among set theorists such as
+Donald A. Martin
+,
+John R. Steel
+, and
+W. Hugh Woodin
+, at least in part because AD is equiconsistent with the large cardinal axiom that there exists infinitely many
+Woodin cardinals
+.
+[
+141
+]
+Skolem's paradox
+[
+edit
+]
+Main article:
+Skolem's paradox
+Illustration of the
+Löwenheim–Skolem theorem
+, where
+⁠
+ℳ
+⁠
+and
+⁠
+𝒩
+⁠
+are models of set theory, and
+⁠
+κ
+⁠
+is an arbitrary infinite cardinal number
+In
+model theory
+, a
+model
+corresponds to a specific interpretation of a
+formal language
+or
+theory
+. It consists of a
+domain
+(a set of objects) and an
+interpretation
+of the symbols in the language, such that the axioms of the theory are satisfied within this structure. In
+first-order logic
+, the
+Löwenheim–Skolem theorem
+states that if a countable theory has an infinite model, then it also has models of every other infinite cardinality. Applied to set theory, it asserts that
+Zermelo–Fraenkel set theory
+, which proves the existence of uncountable sets such as
+⁠
+𝒫
+(
+ℕ
+)
+⁠
+, nevertheless has a countable model. Thus,
+Skolem's paradox
+was posed as follows: how can it be that there exists a domain of set theory which only contains countably many objects, but is capable of
+satisfying
+the statement "there exists a set with uncountably many elements"?
+[
+142
+]
+Skolem's paradox does not only apply to ZFC, but
+any
+first-order set theory, if it is countable and
+consistent
+, has a model which is countable. A mathematical explanation of the paradox, showing that it is not a true contradiction in mathematics, was first given in 1922 by
+Thoralf Skolem
+, who asserted it as a reason against founding mathematics on first order logic. He explained that the countability or uncountability of a set is not
+absolute
+, but relative to the model in which the cardinality is measured. This is because, for example, if the set
+⁠
+X
+⁠
+is countable in a model of set theory then there is a bijection
+⁠
+f
+:
+ℕ
+↦
+X
+⁠
+. But a submodel containing
+⁠
+X
+⁠
+which excludes all such functions would thus contain no bijection between
+⁠
+X
+⁠
+and
+⁠
+ℕ
+⁠
+, and therefore
+⁠
+X
+⁠
+would be uncountable. In
+second-order
+and
+higher-order logics
+, the Löwenheim–Skolem theorem does not hold. This is due to the fact that second-order logic quantifies over all subsets of the domain. Skolem's work was harshly received by
+Ernst Zermelo
+, who argued against the limitations of first-order logic and Skolem's notion of "relativity", but the result quickly came to be accepted by the mathematical community.
+[
+143
+]
+History
+[
+edit
+]
+Ancient history
+[
+edit
+]
+Diagram of Aristotle's wheel as described in
+Mechanica
+From the 6th century BCE, the writings of
+Greek philosophers
+, such as
+Anaximander
+, discussed infinite sets or objects, however, those objects were generally viewed as paradoxical and imperfect (cf.
+Zeno's paradoxes
+).
+Aristotle
+distinguished between the notions of
+actual and potential infinity
+, arguing that Greek mathematicians understood the difference, and that they "do not need the [actual] infinite and do not use it." The Greek notion of number (
+αριθμός
+,
+arithmos
+) was used exclusively for a definite number of definite objects (i.e. finite numbers).
+[
+144
+]
+This was codified in
+Euclid's
+Elements
+, where the
+fifth common notion
+stated "The whole is greater than the part", called the
+Euclidean principle
+. This principle was the dominating philosophy in mathematics until the 19th century.
+[
+145
+]
+Around the 4th century BCE,
+Jaina mathematics
+were the first to discuss different sizes of infinity. They defined three major classes of number: enumerable (finite numbers), unenumerable (
+asamkhyata
+, roughly,
+countably infinite
+), and infinite (
+ananta
+, roughly,
+the continuum
+). Then they had five classes of infinite numbers: infinite in one direction, infinite in both directions, infinite in area, infinite everywhere, and infinite perpetually.
+[
+146
+]
+One of the earliest explicit uses of a one-to-one correspondence is recorded in
+Aristotle's
+Mechanics
+(
+c.
+350 BCE
+), known as
+Aristotle's wheel paradox
+. The paradox can be briefly described as follows: A wheel is depicted as two
+concentric circles
+. The larger, outer circle is tangent to a horizontal line (e.g. a road that it rolls on), while the smaller, inner circle is rigidly affixed to the larger.  Assuming the larger circle rolls along the line without slipping (or skidding) for one full revolution, the distances moved by both circles are the same: the
+circumference
+of the larger circle. Further, the lines traced by the bottom-most point of each is the same length.
+[
+147
+]
+Since the smaller wheel does not skip any points, and no point on the smaller wheel is used more than once, there is a one-to-one correspondence between the two circles.
+[
+148
+]
+Pre-Cantorian set theory
+[
+edit
+]
+Portrait of
+Galileo Galilei
+,
+c.
+1640
+(left).  Portrait of
+Bernard Bolzano
+1781–1848 (right).
+Galileo Galilei
+presented what was later coined
+Galileo's paradox
+in his book
+Two New Sciences
+(1638),
+[
+149
+]
+which was a seeming paradox in infinite sequences of numbers. It went as follows: for each
+perfect square
+⁠
+(
+n
+2
+)
+⁠
+1, 4, 9, 16, and so on, there is a unique
+square root
+⁠
+(
+n
+2
+=
+n
+)
+⁠
+1, 2, 3, 4, and so on. Therefore, there are as many perfect squares as there are square roots. However, every number is a square root, since it can be
+squared
+, but not every number is a perfect square. Moreover, the proportion of perfect squares as one passes larger values diminishes, and is eventually smaller than any given fraction. Galileo denied that this was fundamentally contradictory, however he concluded that this meant we could not compare the sizes of infinite sets, missing the opportunity to discover cardinality.
+[
+150
+]
+In
+A Treatise of Human Nature
+(1739),
+David Hume
+said "When two numbers are so combined, as that the one has always a unit answering to every unit of the other, we pronounce them equal"
+,
+[
+151
+]
+now called
+Hume's principle
+, which was used extensively by
+Gottlob Frege
+later during the rise of set theory.
+[
+152
+]
+Bernard Bolzano
+'s
+Paradoxes of the Infinite
+(
+Paradoxien des Unendlichen
+, 1851) is often considered the first systematic attempt to introduce the concept of sets into
+mathematical analysis
+. In this work, Bolzano defended the notion of
+actual infinity
+, presented an early formulation of what would later be recognized as one-to-one correspondence between infinite sets. He discussed examples such as the pairing between the
+intervals
+⁠
+[
+0
+,
+5
+]
+⁠
+and
+⁠
+[
+0
+,
+12
+]
+⁠
+by the relation
+⁠
+5
+y
+=
+12
+x
+⁠
+, and revisited Galileo's paradox. However, he too resisted saying that these sets were, in that sense, the same size. While
+Paradoxes of the Infinite
+anticipated several ideas central to later set theory, the work had little influence on contemporary mathematics, in part due to its
+posthumous publication
+and limited circulation.
+[
+153
+]
+Early set theory
+[
+edit
+]
+Georg Cantor
+[
+edit
+]
+refer to caption
+Georg Cantor
+,
+c.
+1870
+The concept of cardinality emerged nearly fully formed in the work of Georg Cantor during the 1870s and 1880s, in the context of
+mathematical analysis
+. In a series of papers beginning with
+On a Property of the Collection of All Real Algebraic Numbers
+(1874),
+[
+154
+]
+Cantor introduced the idea of comparing the sizes of infinite sets, through the notion of one-to-one correspondence.
+[
+155
+]
+He showed that the set of
+real numbers
+was, in this sense, strictly larger than the set of natural numbers
+using a nested intervals argument
+.
+[
+156
+]
+This result was later refined into the more widely known
+diagonal argument
+in 1891, published in
+Über eine elementare Frage der Mannigfaltigkeitslehre,
+[
+157
+]
+where he also proved the more general result (now called
+Cantor's Theorem
+) that the
+power set
+of any set is strictly larger than the set itself.
+[
+158
+]
+Cantor introduced the notion
+cardinal numbers
+together with
+ordinal numbers
+, which he viewed as abstractions of sets. For a given set
+⁠
+M
+⁠
+, he wrote
+⁠
+M
+‾
+⁠
+to mean the abstraction of that set from its elements, while maintaining their order, and cardinal numbers were a double abstraction, written
+⁠
+M
+⁠
+.
+[
+159
+]
+Specifically, his definition was "the general concept which, with the aid of our intelligence, results from a set when we abstract from the nature of its various elements and from the order of their being given."
+[
+160
+]
+This definition was considered to be imprecise, unclear, and purely psychological, and it would be some time before the concept was put on more rigorous footing.
+[
+161
+]
+He also introduced the
+Aleph sequence
+for infinite cardinal numbers. These notations appeared in correspondence and were formalized in his later writings, particularly the series
+Beiträge zur Begründung der transfiniten Mengenlehre
+(1895
+–
+1897).
+[
+162
+]
+In these works, Cantor developed an
+arithmetic of cardinal numbers
+, defining addition, multiplication, and exponentiation of cardinal numbers. This led to the formulation of the
+Continuum Hypothesis
+: whether
+⁠
+2
+ℵ
+0
+=
+ℵ
+1
+⁠
+. Cantor was unable to resolve CH and left it as an
+open problem
+.
+[
+163
+]
+Other contributors
+[
+edit
+]
+Parallel to Cantor's development,
+Richard Dedekind
+independently formulated many advanced theorems of set theory, and helped establish set-theoretic foundations of algebra and arithmetic.
+[
+164
+]
+Dedekind's
+The Nature and Meaning of Numbers
+[
+de
+]
+(1888)
+[
+165
+]
+emphasized structural properties over extensional definitions, and supported the bijective formulation of size and number. Dedekind was in correspondence with Cantor during the development of set theory; he supplied Cantor with a proof of the countability of the
+algebraic numbers
+, and gave feedback and modifications on Cantor's proofs before publishing.
+[
+166
+]
+After Cantor's 1883 proof that all finite-dimensional spaces
+⁠
+(
+ℝ
+n
+)
+⁠
+have the same cardinality,
+[
+167
+]
+in 1890,
+Giuseppe Peano
+introduced the
+Peano curve
+, which was a more visual proof that the
+unit interval
+⁠
+[
+0
+,
+1
+]
+⁠
+has the same cardinality as the
+unit square
+on
+⁠
+ℝ
+2
+⁠
+.
+[
+168
+]
+This created a new area of mathematical analysis studying what are now called
+space-filling curves
+.
+[
+169
+]
+In 1894, attempting  to formalize Cantor's "cardinal number", Peano introduced "definition by abstraction": if one can define an equivalence relation, then one may define "that property" which an equivalence class describes. However, this was received harshly by
+Russell
+for not considering that this property may not be unique.
+[
+170
+]
+German logician
+Gottlob Frege
+attempted to ground the concepts of number and arithmetic in logic using Cantor's theory of cardinality and
+Hume's principle
+in
+Die Grundlagen der Arithmetik
+(1884) and the subsequent
+Grundgesetze der Arithmetik
+(1893, 1903).
+[
+152
+]
+Frege defined cardinal numbers as
+equivalence classes
+of sets under equinumerosity. However, Frege's approach to set theory was later shown to be flawed. His approach was eventually reformalized by
+Bertrand Russell
+and
+Alfred Whitehead
+in
+Principia Mathematica
+(1910
+–
+1913, vol. II)
+[
+171
+]
+using a
+theory of types
+.
+[
+172
+]
+[
+g
+]
+This definition of cardinal numbers is now referred to as the
+Frege
+–
+Russell
+definition.
+[
+63
+]
+This definition was eventually superseded by the convention established by
+John von Neumann
+in 1928 which uses representatives to define cardinal numbers.
+[
+174
+]
+At the
+Paris
+conference of the
+International Congress of Mathematicians
+in 1900,
+David Hilbert
+, one of the most influential mathematicians of the time, gave a speech wherein he presented ten unsolved problems (of a total of 23, later published, now called
+Hilbert's problems
+). Of these, he placed "Cantor's problem" (now called the Continuum Hypothesis) as the first on the list. This list of problems would prove to be very influential in 20th century mathematics, and attracted a lot of attention from other mathematicians toward Cantor's theory of cardinality.
+[
+175
+]
+Axiomatic set theory
+[
+edit
+]
+Felix Hausdorff
+and
+Kurt Gödel
+In 1908,
+Ernst Zermelo
+proposed the first
+axiomatization
+of set theory, now called
+Zermelo set theory
+, primarily to support his earlier (1904) proof of the
+Well-ordering theorem
+, which showed that all cardinal numbers could be represented as
+Alephs
+, though the proof required a controversial principle now known as the
+Axiom of Choice
+(AC).
+[
+176
+]
+Zermelo's system was extended and formalized in
+first-order logic
+by
+Abraham Fraenkel
+and
+Thoralf Skolem
+in the 1920s to create the standard foundation of set theory, called
+Zermelo–Fraenkel set theory
+(ZFC, "C" for the Axiom of Choice). ZFC provided a rigorous foundation through which infinite cardinals could be systematically studied while avoiding the
+paradoxes of naive set theory
+.
+[
+121
+]
+Ignoring possible foundational issues, during the early 1900s,
+Felix Hausdorff
+began studying "exorbitant numbers": roughly, very large cardinal numbers, or what are now called
+inaccessible cardinals
+. This work was continued and popularized by several other influential set theorists such as
+Paul Mahlo
+—
+who introduced
+Mahlo cardinals
+—
+as well as
+Wacław Sierpiński
+, and
+Alfred Tarski
+. Their work would eventually be known collectively as the study of
+large cardinals
+.
+[
+177
+]
+[
+h
+]
+In 1940,
+Kurt Gödel
+showed that the Continuum Hypothesis (CH) cannot be
+disproved
+from the axioms of ZFC by showing that both CH and AC hold in his
+constructible universe
+: an
+inner model
+of ZFC. The existence of a model of ZFC in which additional axioms hold shows that the additional axioms are (relatively)
+consistent
+with ZFC.
+[
+179
+]
+In 1963,
+Paul Cohen
+showed that CH cannot be
+proven
+from the ZFC axioms, which showed that CH was
+independent
+from ZFC. To prove his result, Cohen developed the method of
+forcing
+, which has become a standard tool in set theory. Cohen was awarded the
+Fields Medal
+in 1966 for his proof.
+[
+180
+]
+See also
+[
+edit
+]
+Wikimedia Commons logo
+Wikimedia Commons has media related to
+Cardinality
+.
+Wikidata
+has the properties:
+group cardinality (P1164)
+(see
+uses
+)
+set cardinality (P2820)
+(see
+uses
+)
+Cardinal and Ordinal Numbers
+– 1958 book by Wacław Sierpiński
+Fuzzy set §
+Scalar cardinality
+Infinitary combinatorics
+Multiplicity (mathematics)
+Natural density
+Numerosity (mathematics)
+Subcountability
+References
+[
+edit
+]
+Notes
+[
+edit
+]
+↑
+The actually-infinite set of natural numbers is guaranteed to exist by the
+Axiom of Infinity
+.
+[
+5
+]
+↑
+Etymonline
+gives the year 1935,
+[
+13
+]
+however
+Oxford English Dictionary
+cites an earlier example from 1926 by
+C. H. Langford
+.
+[
+15
+]
+[
+16
+]
+↑
+Somewhat more formally, an equivalence relation, and the partitions it defines, must be sets. Since there is no
+set of all sets
+in standard set theory, equinumerosity is not a relation in the usual sense, but a
+predicate
+, defined formally as:
+[
+30
+]
+⁠
+A
+∼
+B
+⟺
+∃
+(
+f
+:
+A
+→
+B
+)
+(
+∀
+b
+∈
+B
+(
+∃
+!
+a
+∈
+A
+(
+f
+(
+a
+)
+=
+b
+)
+)
+⁠
+↑
+Under the axiom of choice, a surjection always implies an injection in the other direction. (cf.
+§
+Without the axiom of choice
+)
+↑
+The specific technique here is known as
+Currying
+↑
+Strictly speaking, this assumes that the decimal expansions given are always of the same form, always using either the terminating or non-terminating representation if there is a choice. This can be avoided by padding the digits with zeros as 0.a0b0... to regain injectivity regardless of the representation.
+↑
+Russell initially had difficulties accepting Cantor's and Frege's intuitions of cardinality.
+[
+173
+]
+↑
+Inaccessible cardinals were used as
+Grothendieck universes
+in
+category theory
+as an optional organizational tool to treat certain large categories as sets instead of proper classes.
+[
+178
+]
+Citations
+[
+edit
+]
+↑
+Hazewinkel 2013
+, p.
+24
+: "CARDINALITY, cardinal number, of a set A - That property of A which is inherent in any set B equivalent to A. Here two sets are called equivalent (or equipotent or of the same cardinality) if it is possible to construct a one-to-one correspondence between them."
+↑
+Clegg 2003
+, p.
+150
+Enderton 1977
+, pp.
+128–129
+Stewart 1995
+, p.
+127
+↑
+Bourbaki 1968
+, p.
+157
+Takeuti
+&
+Zaring 1982
+, p.
+83
+Tao 2022
+, pp.
+57–58
+↑
+Schumacher 1996
+, pp.
+23–35
+Stoll 1963
+, pp.
+1–5
+↑
+Hrbáček
+&
+Jech 2017
+, p.
+41
+↑
+Pinter 2014
+, Chapter 2: 2.1–2.9
+Schumacher 1996
+, pp.
+49–51
+↑
+Oxford English Dictionary
+, "cardinal (adj.), Etymology," March 2025,
+https://doi.org/10.1093/OED/1490074521
+.
+↑
+Harper, Douglas, "
+Origin and history of
+cardinal
+",
+Online Etymology Dictionary
+, accessed April 20, 2025.
+↑
+Oxford English Dictionary
+, "cardinal number (
+n.
+), sense 1," July 2023,
+https://doi.org/10.1093/OED/3193437451
+.
+↑
+Oxford English Dictionary
+, "ordinal (n.2)," ,
+https://doi.org/10.1093/OED/6032173309
+.
+↑
+Woodin
+&
+Winter 2024
+, Section 1: Introduction
+↑
+Ferreirós 2007
+, p.
+24
+Cantor 1932
+, p.
+151
+Steiner 1867
+1
+2
+Harper, Douglas, "
+Origin and history of
+cardinality
+",
+Online Etymology Dictionary
+, accessed April 20, 2025.
+↑
+Oxford English Dictionary
+, "cardinality (n.2), Etymology," March 2025,
+https://doi.org/10.1093/OED/5444748676
+.
+↑
+Oxford English Dictionary
+, "cardinality (n.2), sense 2," March 2025,
+https://doi.org/10.1093/OED/8293133300
+.
+↑
+Langford 1926
+, pp.
+116, 118
+↑
+Enderton 1977
+, pp.
+128–129
+Kleene 1952
+, p.
+3
+Suppes 1972
+, p.
+91
+Tao 2022
+, pp.
+57–58
+↑
+Halmos 1998
+, p.
+52
+Kleene 1952
+, p.
+9
+Kuratowski 1968
+, p.
+169
+Stoll 1963
+, p.
+79
+↑
+Enderton 1977
+, p.
+129
+Lévy 1979
+, p.
+76
+Pinter 2014
+, Page 2 of Chapter 7
+Suppes 1972
+, p.
+91
+↑
+⁠
+A
+∼
+B
+⁠
+[
+18
+]
+⁠
+A
+≈
+B
+⁠
+[
+19
+]
+↑
+Halmos 1998
+, p.
+52
+Kleene 1952
+, p.
+9
+Takeuti
+&
+Zaring 1982
+, p.
+83
+↑
+Russell
+&
+Whitehead 1925
+, p.
+419
+Stoll 1963
+, p.
+79
+↑
+Enderton 1977
+, p.
+129
+Lévy 1979
+, p.
+76
+Stoll 1963
+, p.
+79
+↑
+Bourbaki 1968
+, p.
+157
+Hrbáček
+&
+Jech 2017
+, p.
+65
+Pinter 2014
+, Page 2 of Chapter 7
+↑
+Krivine 1971
+, p.
+23
+Kuratowski 1968
+, p.
+169
+Suppes 1972
+, p.
+91
+↑
+Equivalent
+[
+21
+]
+Similar
+[
+22
+]
+Equinumerous
+[
+23
+]
+Equipotent
+[
+24
+]
+Equipollent
+[
+25
+]
+↑
+Abbott 2015
+, p.
+26
+↑
+Halmos 1998
+, p.
+52
+Pinter 2014
+, page 2 of chapter 7
+Schumacher 1996
+, pp.
+93–94
+Suppes 1972
+, p.
+92
+1
+2
+Bourbaki 1968
+, p.
+157
+Suppes 1972
+, p.
+92
+Hrbáček
+&
+Jech 2017
+, p.
+66
+↑
+Takeuti
+&
+Zaring 1982
+, p.
+83
+↑
+Abbott 2015
+, p.
+36
+1
+2
+Abbott 2015
+, p.
+32
+Dasgupta 2013
+, pp.
+109–111
+Hrbáček
+&
+Jech 2017
+, pp.
+66–68
+Jech 2008
+, pp.
+23–24
+↑
+Enderton 1977
+, p.
+145
+Lévy 1979
+, p.
+84
+Suppes 1972
+, p.
+94
+↑
+Halmos 1998
+, p.
+87
+Stoll 1963
+, p.
+81
+↑
+⁠
+A
+⪯
+B
+⁠
+[
+33
+]
+⁠
+A
+≲
+B
+⁠
+[
+34
+]
+↑
+Enderton 1977
+, p.
+145
+Halmos 1998
+, p.
+87
+Stoll 1963
+, p.
+81
+↑
+Halmos 1998
+, p.
+90
+Stoll 1963
+, p.
+82
+Suppes 1972
+, p.
+97
+↑
+Enderton 1977
+, pp.
+146–147
+Halmos 1998
+, p.
+87
+Hrbáček
+&
+Jech 2017
+, p.
+66
+↑
+Aigner
+&
+Ziegler 2018
+, pp.
+134–135
+Enderton 1977
+, pp.
+147–148
+Schumacher 1996
+, pp.
+104–105
+Stoll 1963
+, pp.
+81–82
+↑
+Enderton 1977
+, pp.
+151–153
+Halmos 1998
+, p.
+89
+Hartogs 1915
+, pp.
+438–443
+↑
+Halmos 1998
+, p.
+91
+Kuratowski 1968
+, p.
+174
+Stoll 1963
+, p.
+87
+Tao 2022
+, p.
+159
+↑
+Schumacher 1996
+, pp.
+93–99
+Kleene 1952
+, pp.
+3–4
+↑
+Aigner
+&
+Ziegler 2018
+, p.
+128
+Stewart 1995
+, pp.
+137–138
+Pinter 2014
+, Page 2 of chapter 7
+Stoll 1963
+, p.
+88
+↑
+Aigner
+&
+Ziegler 2018
+, pp.
+129–131
+↑
+Enderton 1977
+, pp.
+160–161
+Kleene 1952
+, pp.
+5–8
+Kuratowski 1968
+, pp.
+177–178
+Stoll 1963
+, pp.
+88–89
+1
+2
+Gamov 1947
+, pp.
+17–19
+Schumacher 1996
+, p.
+96
+Aigner
+&
+Ziegler 2018
+, pp.
+128–129
+↑
+Cantor 1891
+, pp.
+75–78
+English translation:
+Ewald 1996
+, pp.
+920–922
+↑
+Abbott 2015
+, pp.
+32–34
+↑
+Abbott 2015
+, p.
+33
+Kleene 1952
+, pp.
+6–7
+Pinter 2014
+, Page 3 of Chapter 7
+Schumacher 1996
+, p.
+101
+↑
+Aigner
+&
+Ziegler 2018
+, p.
+128
+Hrbáček
+&
+Jech 2017
+, pp.
+90–91
+1
+2
+Halmos 1998
+, p.
+93
+Hrbáček
+&
+Jech 2017
+, p.
+91
+↑
+Hrbáček
+&
+Jech 2017
+, p.
+91
+Enderton 1977
+, p.
+149
+↑
+Abbott 2015
+, pp.
+34–35
+Lévy 1979
+, p.
+87
+Stoll 1963
+, p.
+86
+Tao 2022
+, p.
+171
+↑
+Hrbáček
+&
+Jech 2017
+, p.
+65
+Lévy 1979
+, p.
+83
+Jech 2003
+, p.
+27
+↑
+Kleene 1952
+, p.
+9
+Krivine 1971
+, p.
+23
+Stoll 1963
+, p.
+80
+Suppes 1972
+, p.
+109
+↑
+Bourbaki 1968
+, p.
+158
+Enderton 1977
+, p.
+136
+Halmos 1998
+, p.
+94
+Schumacher 1996
+, p.
+103
+↑
+Halmos 1998
+, p.
+53
+Pinter 2014
+, Page 3 of Chaper 8
+Tao 2022
+, p.
+60
+↑
+⁠
+A
+⁠
+[
+55
+]
+⁠
+card
+⁡
+(
+A
+)
+⁠
+[
+56
+]
+⁠
+#
+A
+⁠
+[
+57
+]
+↑
+Kleene 1952
+, p.
+9
+Stoll 1963
+, p.
+80
+↑
+Pinter 2014
+, Page 2 of Chapter 8
+Suppes 1972
+, p.
+111
+↑
+Potter 2004
+, p.
+156
+↑
+Enderton 1977
+, p.
+136
+Halmos 1998
+, p.
+94
+Hrbáček
+&
+Jech 2017
+, p.
+68
+1
+2
+Kleene 1952
+, p.
+44
+Lévy 1979
+, p.
+84
+Suppes 1972
+, p.
+109
+↑
+Enderton 1977
+, p.
+137
+↑
+Lévy 1979
+, p.
+84
+Stoll 1963
+, p.
+80
+Dasgupta 2013
+, p.
+78
+1
+2
+Tao 2022
+, p.
+58
+Hashisaki
+&
+Peterson 1963
+, p.
+50
+↑
+Enderton 1977
+, pp.
+66–67, 70
+Halmos 1998
+, pp.
+46–49
+Hrbáček
+&
+Jech 2017
+, p.
+39
+Tao 2022
+, p.
+12
+↑
+Brualdi 2004
+, pp.
+1–4
+↑
+Halmos 1998
+, pp.
+52–53
+Hrbáček
+&
+Jech 2017
+, p.
+70
+Tao 2022
+, p.
+59
+↑
+Enderton 1977
+, pp.
+134–136
+Kuratowski 1968
+, p.
+102
+↑
+Brualdi 2004
+, p.
+45
+↑
+Brualdi 2004
+, p.
+46
+↑
+Hrbáček
+&
+Jech 2017
+, pp.
+71–72
+↑
+Brualdi 2004
+, p.
+160.
+↑
+Kuratowski 1968
+, p.
+103
+Lévy 1979
+, pp.
+79–80
+Suppes 1972
+, p.
+99
+1
+2
+Enderton 1977
+, p.
+137
+Halmos 1998
+, p.
+101
+Suppes 1972
+, p.
+156
+↑
+Enderton 1977
+, pp.
+212–213
+Jech 2003
+, pp.
+29–30
+↑
+Moschovakis 1994
+, p.
+199
+↑
+Enderton 1977
+, pp.
+8–9
+Halmos 1998
+, pp.
+74–76
+↑
+Halmos 1998
+, pp.
+74–80
+Lévy 1979
+, p.
+52
+↑
+Halmos 1998
+, pp.
+100–102
+↑
+Hrbáček
+&
+Jech 2017
+, pp.
+130–131
+Kuratowski 1968
+, p.
+277
+Suppes 1972
+, pp.
+128–129
+↑
+Hrbáček
+&
+Jech 2017
+, p.
+130
+Lévy 1979
+, p.
+89
+Suppes 1972
+, p.
+226
+↑
+Enderton 1977
+, p.
+214
+Jech 2003
+, pp.
+29–30
+↑
+Enderton 1977
+, pp.
+136, 197
+Halmos 1998
+, pp.
+75, 86
+↑
+Enderton 1977
+, p.
+197
+Hrbáček
+&
+Jech 2017
+, p.
+170
+Suppes 1972
+, p.
+236
+↑
+Lévy 1979
+, p.
+83
+Enderton 1977
+, pp.
+195–198
+↑
+Brualdi 2004
+, p.
+28
+Enderton 1977
+, p.
+139
+Halmos 1998
+, p.
+95
+Hrbáček
+&
+Jech 2017
+, p.
+93
+↑
+Brualdi 2004
+, pp.
+28–30
+Enderton 1977
+, p.
+139
+Halmos 1998
+, p.
+95
+Hrbáček
+&
+Jech 2017
+, p.
+94
+↑
+Bourbaki 1968
+, p.
+162
+Hrbáček
+&
+Jech 2017
+, p.
+94
+Krivine 1971
+, p.
+26
+Kuratowski 1968
+, pp.
+183–184, 198–202
+↑
+Enderton 1977
+, p.
+162
+Hrbáček
+&
+Jech 2017
+, p.
+94
+↑
+Hrbáček
+&
+Jech 2017
+, p.
+95
+Lévy 1979
+, p.
+98
+↑
+Bourbaki 1968
+, p.
+164
+Enderton 1977
+, p.
+141
+Hrbáček
+&
+Jech 2017
+, p.
+97
+Lévy 1979
+, p.
+98
+↑
+Hrbáček
+&
+Jech 2017
+, p.
+101
+Lévy 1979
+, p.
+99
+↑
+Enderton 1977
+, p.
+142
+Hrbáček
+&
+Jech 2017
+, p.
+95
+Kuratowski 1968
+, p.
+185
+↑
+Kuratowski 1968
+, p.
+187
+Lévy 1979
+, p.
+93
+↑
+Lévy 1979
+, p.
+93
+Enderton 1977
+, p.
+143
+1
+2
+Bourbaki 1968
+, p.
+188
+Enderton 1977
+, p.
+164
+1
+2
+Hrbáček
+&
+Jech 2017
+, p.
+95
+Krivine 1971
+, p.
+27
+Kuratowski 1968
+, p.
+185
+↑
+Kuratowski 1968
+, p.
+187
+Lévy 1979
+, p.
+95
+↑
+Hrbáček
+&
+Jech 2017
+, p.
+94
+Krivine 1971
+, p.
+26
+1
+2
+Enderton 1977
+, p.
+149
+Kuratowski 1968
+, p.
+187
+↑
+Hrbáček
+&
+Jech 2017
+, p.
+97
+Kuratowski 1968
+, p.
+185
+↑
+Enderton 1977
+, p.
+143
+Lévy 1979
+, p.
+95
+↑
+Bourbaki 1968
+, p.
+164
+Enderton 1977
+, p.
+143
+↑
+Kuratowski 1968
+, p.
+185
+Lévy 1979
+, p.
+98
+1
+2
+Ferreirós 2007
+, p.
+291
+↑
+Bourbaki 1968
+, pp.
+165, 328
+Hrbáček
+&
+Jech 2017
+, p.
+97
+Kuratowski 1968
+, pp.
+179–181
+↑
+Hashisaki
+&
+Peterson 1963
+, p.
+198
+↑
+Hashisaki
+&
+Peterson 1963
+, p.
+211
+Gamov 1947
+, p.
+19
+↑
+Dasgupta 2013
+, p.
+77
+↑
+Enderton 1977
+, p.
+131
+Gamov 1947
+, p.
+21
+↑
+Hrbáček
+&
+Jech 2017
+, pp.
+185–186
+Moschovakis 1994
+, pp.
+11–12
+Dasgupta 2013
+, pp.
+119–121
+↑
+Gamov 1947
+, p.
+21
+↑
+Farlow 2014
+, pp.
+132–135
+↑
+Hrbáček
+&
+Jech 2017
+, p.
+99
+↑
+Cohen 1963
+Cohen 1964
+↑
+Lévy 1979
+, p.
+181
+↑
+Heller
+&
+Woodin 2011
+, pp.
+2–3
+Kanamori 2003
+, p.
+XV
+↑
+Enderton 1977
+, p.
+214
+1
+2
+Ferreirós 2007
+, Chapter XI: Consolidation of Axiomatic Set Theory
+↑
+Bell 2021
+, Section 1. Origins and Chronology of the Axiom of Choice
+Jech 2008
+, pp.
+1–2
+Enderton 1977
+, pp.
+154, 155
+↑
+Bell 2021
+, Section 1. Origins and Chronology of the Axiom of Choice "AC4. Any surjective function has a right inverse."
+Enderton 1977
+, pp.
+151–153
+↑
+Jech 2008
+, pp.
+152–156
+Lévy 1969
+Pincus 1974
+↑
+Lévy 1979
+, p.
+84
+Dasgupta 2013
+, p.
+78
+↑
+Jech 2008
+, pp.
+157
+Enderton 1977
+, p.
+151
+↑
+Jech 2008
+, pp.
+159–161
+Bell 2021
+, Section 4. Mathematical Applications of the Axiom of Choice
+↑
+Heller
+&
+Woodin 2011
+, pp.
+40–41
+Felgner 2023
+, pp.
+214–215
+Ferreirós 2007
+, p.
+261
+↑
+Ferreirós 2007
+, p.
+379
+↑
+Heller
+&
+Woodin 2011
+, p.
+89
+↑
+Heller
+&
+Woodin 2011
+, pp.
+90–94, Chapter 4.2: The Realm of the Finite
+↑
+Koellner 2011
+, Section 3
+Heller
+&
+Woodin 2011
+↑
+Heller
+&
+Woodin 2011
+, pp.
+3–4
+↑
+Koellner 2014
+↑
+Heller
+&
+Woodin 2011
+, Chapter 4.4: The Generic Multiverse of Sets
+↑
+Koellner 2014
+, Section 3.1 Determinacy
+Kanamori 2003
+, pp.
+369–370
+↑
+Koellner 2014
+, Section 2.1 Historical Overview
+Kanamori 2003
+, p.
+XXI
+↑
+Koellner 2014
+, Section 2.1 Historical Overview
+↑
+Koellner 2014
+, Section 2.2.2 Regularity Properties
+Kanamori 2003
+, p.
+XXI
+↑
+Taylor
+&
+Wagon 2019
+↑
+Kanamori 2003
+, p.
+XXII
+↑
+Bays 2025
+↑
+van Dalen
+&
+Ebbinghaus 2000
+Bays 2025
+Bourbaki 1968
+, pp.
+340–341
+↑
+Mayberry 2011
+, p.
+21
+↑
+Ferreirós 2007
+, pp.
+189, 233
+Mayberry 2011
+, p.
+61
+Stewart 1995
+, p.
+135
+↑
+Joseph 2010
+, pp.
+349–351
+O'Connor
+&
+Robertson 2000
+↑
+Drabkin 1950
+, pp.
+162–198
+↑
+Pickover 2014
+, p.
+54
+Darling 2008
+, p.
+24
+Farlow 2014
+, pp.
+92–95
+↑
+Galilei 1914
+, pp.
+31–33
+↑
+Bourbaki 1968
+, p.
+323
+Enderton 1977
+, p.
+131
+Kleene 1952
+, p.
+3
+Schumacher 1996
+, pp.
+92–93
+↑
+Hume 1739
+, Part III. Of Knowledge and Probability: Sect. I. Of Knowledge
+1
+2
+Frege 1884
+, IV. Der Begriff der Anzahl § 63.
+Demopoulos 1997
+, Introduction
+Boolos 1996
+, Chapter IX. The Consistency of Frege's
+Foundations of Arithmetic
+↑
+Bolzano 1950
+↑
+Cantor 1984
+, pp.
+19–24
+↑
+Ferreirós 2007
+, p.
+171
+↑
+Ferreirós 2007
+, p.
+177
+↑
+Cantor 1891
+, pp.
+72–78
+↑
+Bourbaki 1968
+, pp.
+324–326
+Ferreirós 2007
+, pp.
+286–288
+↑
+Kleene 1952
+, p.
+9
+Stoll 1963
+, p.
+80
+Takeuti
+&
+Zaring 1982
+, p.
+82
+↑
+Stoll 1963
+, p.
+80
+↑
+Imprecise -
+Stoll 1963
+, p.
+80
+Unclear -
+Skolem 1962
+, p.
+3
+Psychological -
+Takeuti
+&
+Zaring 1982
+, p.
+82
+↑
+Cantor 1895
+, pp.
+481–512
+↑
+Ferreirós 2007
+, pp.
+172, 177
+↑
+Bourbaki 1968
+, p.
+321
+Ferreirós 2007
+, pp.
+81–82
+↑
+Dedekind 1961
+↑
+Bourbaki 1968
+, pp.
+324–326
+Ferreirós 2007
+, pp.
+172–176, 178–179
+Reck 2023
+↑
+Cantor 1883
+↑
+Peano 1890
+↑
+Farlow 2014
+, p.
+132
+.
+↑
+Felgner 2023
+, p.
+187
+Russell 2010
+, p.
+114 "Now this definition by abstraction, and generally the process employed in such definitions, suffers from an absolutely fatal formal defect: it does not show that only one object satisfies the definition."
+↑
+Russell
+&
+Whitehead 1973
+.
+↑
+Bourbaki 1968
+, pp.
+331–332
+Takeuti
+&
+Zaring 1982
+, pp.
+1–3
+↑
+Anellis et al. 1984
+, pp.
+1–11
+Russell 1907
+, pp.
+29–53
+↑
+Stoll 1963
+, p.
+80
+Kleene 1952
+, p.
+9
+↑
+Bourbaki 1968
+, p.
+327
+Ferreirós 2007
+, pp.
+iiiv, 301, 312
+↑
+Bourbaki 1968
+, p.
+325
+↑
+Ferreirós 2007
+, p.
+334
+Kanamori 2003
+, p.
+XVI
+↑
+McLarty 2010
+↑
+Gödel 1938
+↑
+Cohen 1963
+Cohen 2008
+Primary sources
+[
+edit
+]
+Bolzano, Bernard
+(1950) [1851]. Přihonský, František (ed.).
+Paradoxes Of The Infinite
+. Translated by Steele, Donald A. London: Routledge and Kegan Paul.
+Cantor, Georg (1984) [1872–1884].
+"Ueber eine Eigenschaft des Inbegriffes aller reellen algebraischen Zahlen"
+.
+Über unendliche, lineare Punktmannigfaltigkeiten: Arbeiten zur Mengenlehre aus den Jahren 1872–1884
+. Teubner-Archiv zur Mathematik (in German).
+2
+. Vienna: Springer.
+doi
+:
+10.1007/978-3-7091-9516-1_2
+.
+ISBN
+978-3-7091-9516-1
+. Retrieved
+2025-05-24
+.
+{{
+cite journal
+}}
+:  CS1 maint: periodical has ISBN (
+link
+)
+Cantor, Georg (1883). "Ueber unendliche, lineare Punktmannichfaltigkeiten".
+Mathematische Annalen
+(in German).
+21
+(4):
+545–
+591.
+doi
+:
+10.1007/BF01446819
+.
+ISSN
+1432-1807
+.
+Cantor, Georg
+(1891).
+"Ueber eine elementare Frage der Mannigfaltigkeitslehre"
+.
+Jahresbericht der Deutschen Mathematiker-Vereinigung
+.
+1
+:
+75–
+78.
+Cantor, Georg (1895).
+"Beiträge zur Begründung der transfiniten Mengenlehre"
+.
+Mathematische Annalen
+(in German).
+46
+(4).
+doi
+:
+10.1007/BF02124929
+.
+ISSN
+1432-1807
+.
+Cantor, Georg
+(1932).
+Zermelo, Ernst
+(ed.).
+Gesammelte Abhandlungen
+. Berlin: Springer.
+doi
+:
+10.1007/978-3-662-00274-2
+.
+ISBN
+978-3-662-00254-4
+.
+{{
+cite book
+}}
+:  CS1 maint: ignored ISBN errors (
+link
+)
+Cohen, P. J. (1963).
+"The Independence of the Continuum Hypothesis"
+.
+Proceedings of the National Academy of Sciences of the United States of America
+.
+50
+(6):
+1143–
+1148.
+Bibcode
+:
+1963PNAS...50.1143C
+.
+doi
+:
+10.1073/pnas.50.6.1143
+.
+ISSN
+0027-8424
+.
+PMC
+221287
+.
+PMID
+16578557
+.
+Cohen, Paul J. (1964).
+"The Independence of the Continuum Hypothesis, II"
+.
+Proceedings of the National Academy of Sciences of the United States of America
+.
+51
+(1):
+105–
+110.
+Bibcode
+:
+1964PNAS...51..105C
+.
+doi
+:
+10.1073/pnas.51.1.105
+.
+JSTOR
+72252
+.
+PMC
+300611
+.
+PMID
+16591132
+.
+Dedekind, Richard
+(1961) [1888].
+Was sind und was sollen die Zahlen?
+(in German). Vieweg+Teubner Verlag Wiesbaden.
+doi
+:
+10.1007/978-3-663-02788-1
+.
+Ewald, William B., ed. (1996).
+From Immanuel Kant to David Hilbert: A Source Book in the Foundations of Mathematics
+. Vol.
+2. Oxford University Press.
+ISBN
+0-19-850536-1
+.
+Gödel, Kurt (1938).
+"The Consistency of the Axiom of Choice and of the Generalized Continuum-Hypothesis"
+.
+Proceedings of the National Academy of Sciences
+.
+24
+(12):
+556–
+557.
+Bibcode
+:
+1938PNAS...24..556G
+.
+doi
+:
+10.1073/pnas.24.12.556
+.
+PMC
+1077160
+.
+PMID
+16577857
+.
+Frege, Gottlob (1884).
+"IV. Der Begriff der Anzahl § 63. Die Möglichkeit der eindeutigen Zuordnung als solches. Logisches Bedenken, dass die Gleichheit für diesen Fall besonders erklärt wird"
+.
+Die Grundlagen der Arithmetik
+–
+via Project Gutenberg.
+§63. Ein solches Mittel nennt schon Hume: »Wenn zwei Zahlen so combinirt werden, dass die eine immer eine Einheit hat, die jeder Einheit der andern entspricht, so geben wir sie als gleich an.«
+Galilei, Galileo
+(1914) [1638].
+Dialogues Concerning Two New Sciences
+(PDF)
+. Translated by Crew, Henry; De Salvio, Alfonso. New York:
+The Macmillan Company
+.
+Hartogs, Friedrich M.
+(1915).
+Felix Klein
+;
+Walther von Dyck
+;
+David Hilbert
+;
+Otto Blumenthal
+(eds.).
+"Über das Problem der Wohlordnung"
+.
+Mathematische Annalen
+.
+76
+(4). Leipzig:
+B.
+G. Teubner
+.
+doi
+:
+10.1007/bf01458215
+.
+ISSN
+0025-5831
+.
+S2CID
+121598654
+.
+Hume, David (1739).
+"Part III. Of Knowledge and Probability: Sect. I. Of Knowledge"
+.
+A Treatise of Human Nature
+–
+via Project Gutenberg.
+Langford, C. H.
+(1926).
+"Analytic Completeness of Sets of Postulates"
+.
+Proceedings of the London Mathematical Society
+.
+25
+(1).
+doi
+:
+10.1112/plms/s2-25.1.115
+–
+via
+Oxford Academic
+.
+Lévy, Azriel (1969),
+"The Definability of Cardinal Numbers"
+, in Bulloff, Jack J.; Holyoke, Thomas C.; Hahn, Samuel W. (eds.),
+Foundations of Mathematics
+, Berlin, Heidelberg: Springer, pp.
+15–
+38,
+doi
+:
+10.1007/978-3-642-86745-3_3
+,
+ISBN
+978-3-642-86747-7
+, archived from
+the original
+on 2023-03-11
+Peano, G. (1890). "Sur une courbe, qui remplit toute une aire plane".
+Mathematische Annalen
+(in French).
+36
+(1):
+157–
+160.
+doi
+:
+10.1007/BF01199438
+.
+ISSN
+1432-1807
+.
+Alt URL
+Pincus, David (1974).
+"Cardinal representatives"
+.
+Israel Journal of Mathematics
+.
+18
+(4):
+321–
+344.
+doi
+:
+10.1007/BF02760841
+.
+ISSN
+0021-2172
+.
+Russell, Bertrand
+(2010) [1903].
+The Principles of Mathematics
+. London:
+Routledge
+.
+ISBN
+978-0-203-86476-0
+.
+Russell, B. (1907).
+"On Some Difficulties in the Theory of Transfinite Numbers and Order Types"
+.
+Proceedings of the London Mathematical Society
+.
+s2-4
+(1):
+29–
+53.
+doi
+:
+10.1112/plms/s2-4.1.29
+.
+ISSN
+1460-244X
+.
+Russell, Bertrand
+;
+Whitehead, Alfred North
+(1925) [1910].
+Principia Mathematica
+. Vol.
+I (2nd
+ed.). London:
+Cambridge University Press
+.
+LCCN
+25015133
+.
+Russell, Bertrand
+;
+Whitehead, Alfred North
+(1973) [1927].
+Principia Mathematica
+(PDF)
+. Vol.
+II (2nd
+ed.). London:
+Cambridge University Press
+.
+ISBN
+0-521-06791-X
+.
+LCCN
+25015133
+.
+Skolem, Thoralf
+(1962).
+Abstract Set Theory
+.
+University of Notre Dame Press
+.
+Steiner, Jacob
+(1867).
+Vorlesungen über synthetische Geometrie / 1 Die Theorie der Kegelschnitte in elementarer Form
+. Ghent University. Leipzig: Teubner.
+Secondary and tertiary sources
+[
+edit
+]
+Abbott, Stephen (2015).
+Understanding Analysis
+.
+Undergraduate Texts in Mathematics
+(2nd
+ed.). New York:
+Springer Science+Business Media
+.
+doi
+:
+10.1007/978-1-4939-2712-8
+.
+ISBN
+978-1-4939-2711-1
+.
+ISSN
+0172-6056
+.
+LCCN
+2015937969
+.
+Aigner, Martin
+;
+Ziegler, Günter M.
+(2018).
+Proofs from THE BOOK
+(6th
+ed.). Berlin:
+Springer-Verlag
+.
+doi
+:
+10.1007/978-3-662-57265-8
+.
+ISBN
+978-3-662-57264-1
+.
+LCCN
+2018940433
+.
+Alt URL
+Anellis, Irving M.; et
+al. (AMS-IMS-SIAM Joint Summer Research Conference) (1984).
+Axiomatic Set Theory
+. Contemporary Mathematics. Providence:
+American Mathematical Society
+.
+ISBN
+0-8218-5026-1
+.
+LCCN
+84-18457
+.
+Bays, Timothy (2025).
+"Skolem's Paradox"
+. In Zalta, Edward N.; Nodelman, Uri (eds.).
+The Stanford Encyclopedia of Philosophy
+(Spring 2025
+ed.). Metaphysics Research Lab, Stanford University
+. Retrieved
+2025-04-13
+.
+Bell, John L.
+(2021).
+"The Axiom of Choice"
+. In
+Zalta, Edward N.
+(ed.).
+The Stanford Encyclopedia of Philosophy
+(Winter 2021
+ed.). Metaphysics Research Lab, Stanford University
+. Retrieved
+2026-05-02
+.
+Boolos, George
+(1996).
+Hart, W. D.
+(ed.).
+The Philosophy of Mathematics
+. New York:
+Oxford University Press
+.
+ISBN
+978-0-19-875119-9
+.
+LCCN
+95-49208
+.
+Bourbaki, Nicholas
+(1968).
+Theory of Sets
+.
+Éléments de mathématique
+. Paris:
+Éditions Hermann
+.
+LCCN
+68-25177
+.
+Brualdi, Richard A.
+(2004) [1977].
+Introductory combinatorics
+(4th
+ed.). Upper Saddle River:
+Pearson Education
+.
+ISBN
+0-13-100119-1
+.
+LCCN
+2004044455
+.
+Clegg, Brian
+(2003).
+A Brief History of Infinity
+. London:
+Constable & Robinson
+.
+ISBN
+978-1-84119-650-3
+.
+Cohen, Paul Joseph
+(2008) [1966].
+Set theory and the continuum hypothesis
+. Mineola, New York City: Dover Publications.
+ISBN
+978-0-486-46921-8
+.
+Darling, David
+(2008).
+"Aristotle's Wheel"
+.
+Universal Book of Mathematics
+. Hoboken:
+Wiley & Sons
+.
+ISBN
+978-0-470-30788-5
+.
+Dasgupta, Abhijit (2013).
+Set Theory: With an Introduction to Real Point Sets
+. New York:
+Birkhäuser
+.
+doi
+:
+10.1007/978-1-4614-8854-5
+.
+ISBN
+978-1-4614-8854-5
+.
+LCCN
+2013949160
+.
+Demopoulos, William (1997).
+Frege's Philosophy of Mathematics
+. Cambridge:
+Harvard University Press
+.
+ISBN
+978-0-674-31943-1
+.
+LCCN
+94-34381
+.
+Drabkin, Israel E. (1950). "Aristotle's Wheel: Notes on the History of a Paradox".
+Osiris
+.
+9
+.
+doi
+:
+10.1086/368528
+.
+JSTOR
+301848
+.
+S2CID
+144387607
+.
+Enderton, Herbert
+(1977).
+Elements of Set Theory
+. New York:
+Academic Press
+.
+ISBN
+0-12-238440-7
+.
+LCCN
+76-27438
+.
+Farlow, Stanley J.
+(2014).
+Paradoxes in Mathematics
+. Mineola:
+Dover Publications
+.
+ISBN
+978-0-486-49716-7
+.
+Felgner, Ulrich (2023).
+Philosophy of Mathematics in Antiquity and in Modern Times
+. Science Networks. Historical Studies. Cham:
+Birkhäuser
+.
+doi
+:
+10.1007/978-3-031-27304-9
+.
+ISBN
+978-3-031-27304-9
+.
+ISSN
+2296-6080
+.
+Ferreirós, José (2007).
+Labyrinth of Thought: A History of Set Theory and Its Role in Modern Mathematics
+. Science Networks - Historical Studies (2nd
+ed.). Basel:
+Birkhäuser
+.
+doi
+:
+10.1007/978-3-7643-8350-3
+.
+ISBN
+978-3-7643-8349-7
+.
+LCCN
+2007931860
+. Archived from
+the original
+on 2019-07-09.
+Alt URL
+Gamov, George
+(1947).
+One Two Three... Infinity
+. Viking Press.
+LCCN
+62-24541
+.
+Archived
+on 2016-01-06
+Gugenheimer, Heinrich Walter (1963).
+Differential Geometry
+. Courier Dover Publications. Archived from
+the original
+on 2019-07-18.
+Hashisaki, Joseph; Peterson, John (1963).
+Theory of Arithmetic
+. New York:
+John Wiley & Sons
+.
+LCCN
+63-11445
+.
+Halmos, Paul R.
+(1998) [1974].
+Naive Set Theory
+.
+Undergraduate Texts in Mathematics
+. New York:
+Springer Science+Business Media
+.
+doi
+:
+10.1007/978-1-4757-1645-0
+.
+ISBN
+978-0-387-90092-6
+.
+ISSN
+0172-6056
+. Archived from
+the original
+on 2023-01-12.
+Alt URL
+Hazewinkel, Michiel
+(2013) [1998].
+Encyclopaedia of Mathematics
+: C An updated and annotated translation of the Soviet 'Mathematical Encyclopaedia'
+. Vol.
+2. Dordrecht:
+Kluwer Academic Publishers
+. p.
+24.
+doi
+:
+10.1007/978-94-009-6000-8
+.
+ISBN
+978-94-009-6000-8
+.
+LCCN
+87-26437
+.
+Heller, Michael;
+Woodin, W. Hugh
+(2011).
+Infinity: New Research Frontiers
+. New York:
+Cambridge University Press
+.
+ISBN
+978-1-107-00387-3
+.
+LCCN
+2010049374
+.
+Hrbáček, Karel
+;
+Jech, Thomas
+(2017) [1999].
+Introduction to Set Theory
+(3rd, Revised and Expanded
+ed.). New York:
+CRC Press
+.
+doi
+:
+10.1201/9781315274096
+.
+ISBN
+978-0-82477915-3
+.
+LCCN
+99-15458
+.
+Jech, Thomas
+(2008) [1973].
+The Axiom of Choice
+. Dover Books on Mathematics.
+Dover Publications
+.
+ISBN
+978-0-486-46624-8
+.
+ISSN
+2693-051X
+.
+LCCN
+73-15535
+.
+Jech, Thomas
+(2003) [1997].
+Set Theory
+. Springer Monographs in Mathematics (3rd
+ed.). Berlin:
+Springer-Verlag
+.
+doi
+:
+10.1007/3-540-44761-X
+.
+ISBN
+978-3-540-44085-7
+.
+ISSN
+1439-7382
+.
+Joseph, George Gheverghese
+(2010).
+The Crest of the Peacock: Non-European Roots of Mathematics
+(3rd
+ed.). Princeton, New Jersey:
+Princeton University Press
+.
+ISBN
+978-0-691-13526-7
+. Archived from
+the original
+on 2024-08-05.
+Alt URL
+Kanamori, Akihiro
+(2003) [1994].
+The Higher Infinite: Large Cardinals in Set Theory from Their Beginnings
+. Springer Monographs in Mathematics (2nd
+ed.). Berlin:
+Springer-Verlag
+.
+doi
+:
+10.1007/978-3-540-88867-3
+.
+ISBN
+978-3-540-88866-6
+.
+ISSN
+1439-7382
+.
+LCCN
+2008940025
+.
+Kleene, Stephen Cole
+(1952).
+Introduction To Metamathematics
+. New York:
+D. Van Nostrand Company
+.
+Krivine, Jean-Louis (1971).
+Introduction to Axiomatic Set Theory
+. Synthese Library. New York:
+D. Reidel Publishing Company
+.
+doi
+:
+10.1007/978-94-010-3144-8
+.
+ISBN
+978-0-391-00179-4
+.
+ISSN
+0166-6991
+.
+LCCN
+71-146965
+. Archived from
+the original
+on 2014-08-06.
+Alt URL
+Koellner, Peter
+(2011).
+"Independence and Large Cardinals"
+. In
+Zalta, Edward N.
+(ed.).
+The Stanford Encyclopedia of Philosophy
+(Summer 2011
+ed.). Metaphysics Research Lab, Stanford University
+. Retrieved
+2025-07-08
+.
+Koellner, Peter
+(2014).
+"Large Cardinals and Determinacy"
+. In
+Zalta, Edward N.
+(ed.).
+The Stanford Encyclopedia of Philosophy
+(Spring 2014
+ed.). Metaphysics Research Lab, Stanford University
+. Retrieved
+2025-07-08
+.
+Kuratowski, Kazimierz
+(1968).
+Set Theory
+. Amsterdam:
+North Holland Publishing
+.
+LCCN
+67-21972
+.
+Lévy, Azriel
+(1979).
+Basic Set Theory
+. Perspectives in Mathematical Logic. Berlin:
+Springer-Verlag
+.
+ISBN
+3-540-08417-7
+.
+LCCN
+78-1917
+.
+Mayberry, John P.
+(2011).
+Foundations of Mathematics in the Theory of Sets
+. Encyclopedia of Mathematics and its Applications.
+Cambridge University Press
+.
+doi
+:
+10.1017/CBO9781139087124
+.
+ISBN
+978-0-521-17271-4
+.
+ISSN
+0953-4806
+.
+McLarty, Colin
+(September 2010).
+"What Does It Take to Prove Fermat's Last Theorem? Grothendieck and the Logic of Number Theory"
+.
+The Bulletin of Symbolic Logic
+.
+16
+(3):
+359–
+377.
+ISSN
+1079-8986
+–
+via JSTOR.
+Moschovakis, Yiannis N. (1994).
+Notes on Set Theory
+.
+Undergraduate Texts in Mathematics
+. New York:
+Springer-Verlag
+.
+ISBN
+978-0-387-94180-6
+.
+LCCN
+93-35825
+.
+O'Connor, John J.;
+Robertson, Edmund F.
+(2000).
+"MacTutor
+–
+Jaina mathematics"
+.
+MacTutor History of Mathematics Archive
+. Retrieved
+2025-06-09
+–
+via
+University of St Andrews
+, Scotland.
+Pickover, Clifford A.
+(2014).
+"Aristotle's Wheel Paradox"
+.
+The Math Book: 250 Milestones in the History of Mathematics
+. New York:
+Barnes & Noble
+.
+ISBN
+978-1-4351-4803-1
+.
+Pinter, Charles C. (2014) [1971].
+A Book of Set Theory
+. Dover Books on Mathematics. Mineola:
+Dover Publications
+.
+ISBN
+978-0-486-79549-2
+.
+ISSN
+2693-051X
+.
+LCCN
+2013024319
+. Archived from
+the original
+on 2024-08-04.
+Alt URL
+Potter, Michael (2004).
+Set Theory and its Philosophy: A Critical Introduction
+. Clarendon Press.
+ISBN
+978-0-19-155643-2
+.
+Reck, Erich (2023).
+"Dedekind's Contributions to the Foundations of Mathematics"
+. In Zalta, Edward N.; Nodelman, Uri (eds.).
+The Stanford Encyclopedia of Philosophy
+(Winter 2023
+ed.). Metaphysics Research Lab, Stanford University
+. Retrieved
+2025-07-11
+.
+Schumacher, Carol
+(1996).
+Chapter Zero: Fundamental Notions of Abstract Mathematics
+. Reading:
+Addison-Wesley
+.
+ISBN
+978-0-201-82653-1
+.
+LCCN
+95-22675
+.
+Stewart, Ian
+(1995) [1981].
+Concepts of modern mathematics
+. Dover Books on Mathematics. New York:
+Dover Publications
+.
+ISBN
+978-0-486-28424-8
+.
+ISSN
+2693-051X
+.
+LCCN
+94-39733
+.
+Stoll, Robert R. (1963).
+Set Theory and Logic
+. San Francisco:
+W. H. Freeman
+.
+LCCN
+63-8995
+.
+Suppes, Patrick
+(1972) [1960].
+Axiomatic Set Theory
+. Dover Books on Mathematics. New York:
+Dover Publications
+.
+ISBN
+0-486-61630-4
+.
+ISSN
+2693-051X
+.
+LCCN
+72-86226
+. Archived from
+the original
+on 2014-08-06.
+Alt URL
+Takeuti, Gaisi
+; Zaring, Wilson M. (1982).
+Introduction to Axiomatic Set Theory
+.
+Graduate Texts in Mathematics
+(2nd
+ed.). New York:
+Springer-Verlag
+.
+doi
+:
+10.1007/978-1-4613-8168-6
+.
+ISBN
+0-387-90683-5
+.
+ISSN
+0072-5285
+.
+LCCN
+81-8838
+. Archived from
+the original
+on 2014-08-06.
+Alt URL
+Tao, Terence
+(2022).
+Analysis I
+. Texts and Readings in Mathematics (4th
+ed.). Singapore:
+Springer Science+Business Media
+.
+doi
+:
+10.1007/978-3-662-00274-2
+.
+ISBN
+978-981-19-7261-4
+.
+ISSN
+2366-8717
+.
+Taylor, Alan D.; Wagon, Stan (2019). "A Paradox Arising from the Elimination of a Paradox".
+The American Mathematical Monthly
+.
+126
+(4):
+306–
+318.
+doi
+:
+10.1080/00029890.2019.1559416
+.
+ISSN
+0002-9890
+.
+JSTOR
+48661905
+.
+van Dalen, Dirk
+;
+Ebbinghaus, Heinz-Dieter
+(Jun 2000).
+"Zermelo and the Skolem Paradox"
+.
+The Bulletin of Symbolic Logic
+.
+6
+(2):
+145–
+161.
+doi
+:
+10.2307/421203
+.
+hdl
+:
+1874/27769
+.
+JSTOR
+421203
+.
+S2CID
+8530810
+.
+Woodin, Greg; Winter, Bodo (2024).
+"Numbers in Context: Cardinals, Ordinals, and Nominals in American English"
+.
+Cognitive Science
+.
+48
+(6) e13471.
+doi
+:
+10.1111/cogs.13471
+.
+PMC
+11475258
+.
+PMID
+38895756
+.
+v
+t
+e
+Mathematical logic
+General
+Axiom
+list
+Cardinality
+First-order logic
+Formal proof
+Formal semantics
+Foundations of mathematics
+Information theory
+Lemma
+Logical consequence
+Model
+Theorem
+Theory
+Type theory
+Theorems
+(
+list
+),
+paradoxes
+Gödel's completeness
+–
+incompleteness theorems
+Tarski's undefinability
+Banach–Tarski paradox
+Cantor's theorem
+–
+paradox
+–
+diagonal argument
+Compactness
+Halting problem
+Lindström's
+Löwenheim–Skolem
+Russell's paradox
+Logics
+Traditional
+Classical logic
+Logical truth
+Tautology
+Proposition
+Inference
+Logical equivalence
+Consistency
+Equiconsistency
+Argument
+Soundness
+Validity
+Syllogism
+Square of opposition
+Venn diagram
+Propositional
+Boolean algebra
+Boolean functions
+Logical connectives
+Propositional calculus
+Propositional formula
+Truth tables
+Many-valued logic
+3
+finite
+∞
+Predicate
+First-order
+list
+Second-order
+Monadic
+Higher-order
+Fixed-point
+Free
+Quantifiers
+Predicate
+Monadic predicate calculus
+Set theory
+Set
+hereditary
+Class
+(
+Ur-
+)
+Element
+Ordinal number
+Extensionality
+Forcing
+Relation
+equivalence
+partition
+Set operations:
+intersection
+union
+complement
+Cartesian product
+power set
+identities
+Types
+of
+sets
+Countable
+Uncountable
+Empty
+Inhabited
+Singleton
+Finite
+Infinite
+Transitive
+Ultrafilter
+Recursive
+Fuzzy
+Universal
+Universe
+constructible
+Grothendieck
+Von Neumann
+Maps
+,
+cardinality
+Function
+/
+Map
+domain
+codomain
+image
+In
+/
+Sur
+/
+Bi
+-jection
+Schröder–Bernstein theorem
+Isomorphism
+Gödel numbering
+Enumeration
+Large cardinal
+inaccessible
+Aleph number
+Operation
+binary
+Theories
+Zermelo–Fraenkel
+axiom of choice
+continuum hypothesis
+General
+Kripke–Platek
+Morse–Kelley
+Naive
+New Foundations
+Tarski–Grothendieck
+Von Neumann–Bernays–Gödel
+Ackermann
+Constructive
+Formal
+systems
+(
+list
+),
+language
+,
+syntax
+Alphabet
+Arity
+Automata
+Axiom schema
+Expression
+ground
+Extension
+by definition
+conservative
+Relation
+Formation rule
+Grammar
+Formula
+atomic
+closed
+ground
+open
+Free/bound variable
+Language
+Metalanguage
+Logical connective
+¬
+∨
+∧
+→
+↔
+=
+Predicate
+functional
+variable
+propositional variable
+Proof
+Quantifier
+∃
+!
+∀
+rank
+Sentence
+atomic
+spectrum
+Signature
+String
+Substitution
+Symbol
+function
+logical/constant
+non-logical
+variable
+Term
+Theory
+list
+Example
+axiomatic
+systems
+(
+list
+)
+of
+true arithmetic
+Peano
+second-order
+elementary function
+primitive recursive
+Robinson
+Skolem
+of the
+real numbers
+Tarski's axiomatization
+of
+Boolean algebras
+canonical
+minimal axioms
+of
+geometry
+Euclidean
+Elements
+Hilbert's
+Tarski's
+non-Euclidean
+Principia Mathematica
+Proof theory
+Formal proof
+Natural deduction
+Logical consequence
+Rule of inference
+Sequent calculus
+Theorem
+Systems
+axiomatic
+deductive
+Hilbert
+list
+Complete theory
+Independence
+(
+from ZFC
+)
+Proof of impossibility
+Ordinal analysis
+Reverse mathematics
+Self-verifying theories
+Model theory
+Interpretation
+function
+of models
+Model
+atomic
+equivalence
+finite
+prime
+saturated
+spectrum
+submodel
+Non-standard model
+of
+non-standard arithmetic
+Diagram
+elementary
+Categorical theory
+Model complete theory
+Satisfiability
+Semantics of logic
+Strength
+Theories of truth
+semantic
+Tarski's
+Kripke's
+T-schema
+Transfer principle
+Truth predicate
+Truth value
+Type
+Ultraproduct
+Validity
+Computability
+theory
+Church encoding
+Church–Turing thesis
+Computably enumerable
+Computable function
+Computable set
+Decision problem
+decidable
+undecidable
+P
+NP
+P versus NP problem
+Kolmogorov complexity
+Lambda calculus
+Primitive recursive function
+Recursion
+Recursive set
+Turing machine
+Type theory
+Related
+Abstract logic
+Algebraic logic
+Automated theorem proving
+Category theory
+Concrete
+/
+Abstract category
+Category of sets
+History of logic
+History of mathematical logic
+timeline
+Logicism
+Mathematical object
+Philosophy of mathematics
+Supertask
+icon
+Mathematics
+portal
+v
+t
+e
+Set theory
+Overview
+Set (mathematics)
+Venn diagram of set intersection
+Axioms
+Adjunction
+Choice
+countable
+dependent
+global
+Constructibility (V=L)
+Determinacy
+projective
+Extensionality
+Infinity
+Limitation of size
+Pairing
+Power set
+Regularity
+Union
+Martin's axiom
+Axiom schema
+replacement
+specification
+Operations
+Cartesian product
+Complement
+(i.e. set difference)
+De Morgan's laws
+Disjoint union
+Identities
+Intersection
+Power set
+Symmetric difference
+Union
+Concepts
+Methods
+Almost
+Cardinality
+Cardinal number
+(
+large
+)
+Class
+Constructible universe
+Continuum hypothesis
+Diagonal argument
+Element
+ordered pair
+tuple
+Family
+Forcing
+One-to-one correspondence
+Ordinal number
+Set-builder notation
+Transfinite induction
+Venn diagram
+Set
+types
+Amorphous
+Countable
+Empty
+Finite
+(
+hereditarily
+)
+Filter
+base
+subbase
+Ultrafilter
+Fuzzy
+Infinite
+(
+Dedekind-infinite
+)
+Recursive
+Singleton
+Subset
+·
+Superset
+Transitive
+Uncountable
+Universal
+Theories
+Alternative
+Axiomatic
+Constructive
+Naive
+Cantor's theorem
+Zermelo
+General
+Principia Mathematica
+New Foundations
+Zermelo–Fraenkel
+von Neumann–Bernays–Gödel
+Morse–Kelley
+Kripke–Platek
+Tarski–Grothendieck
+Paradoxes
+Problems
+Russell's paradox
+Suslin's problem
+Burali-Forti paradox
+Set theorists
+Paul Bernays
+Georg Cantor
+Paul Cohen
+Richard Dedekind
+Abraham Fraenkel
+Kurt Gödel
+Thomas Jech
+John von Neumann
+Willard Quine
+Bertrand Russell
+Thoralf Skolem
+Ernst Zermelo
+Authority control databases
+: National
+Edit this at Wikidata
+Poland
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Cardinality&oldid=1382811628
+"
+Categories
+:
+Cardinal numbers
+Basic concepts in infinite set theory
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Good articles
+Pages using multiple image with auto scaled images
+Commons category link from Wikidata
+CS1 maint: periodical has ISBN
+CS1 German-language sources (de)
+CS1 maint: ignored ISBN errors
+CS1 French-language sources (fr)
+Search
+Search
+Cardinality
+55 languages
+Add topic

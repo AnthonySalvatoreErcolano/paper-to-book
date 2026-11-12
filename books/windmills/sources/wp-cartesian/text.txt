@@ -1,0 +1,2746 @@
+Cartesian product - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Mathematical set formed from two given sets
+"Cartesian square" redirects here. For Cartesian squares in category theory, see
+Cartesian square (category theory)
+.
+Cartesian product of the sets {
+x
+,
+y
+,
+z
+} and {1,2,3}
+In
+mathematics
+, specifically
+set theory
+, the
+Cartesian product
+of two
+sets
+A
+and
+B
+, denoted
+A
+×
+B
+, is the set of all
+ordered pairs
+(
+a
+,
+b
+)
+where
+a
+is an element of
+A
+and
+b
+is an element of
+B
+.
+[
+1
+]
+In terms of
+set-builder notation
+, that is
+[
+2
+]
+[
+3
+]
+A
+×
+B
+=
+{
+(
+a
+,
+b
+)
+∣
+a
+∈
+A
+and
+b
+∈
+B
+}
+.
+A table can be created by taking the Cartesian product of a set of rows and a set of columns. If the Cartesian product
+rows
+×
+columns
+is taken, the cells of the table contain ordered pairs of the form
+(row value, column value)
+.
+[
+4
+]
+One can similarly define the Cartesian product of
+n
+sets, also known as an
+n
+-fold Cartesian product
+, which can be represented by an
+n
+-dimensional array, where each element is an
+n
+-
+tuple
+. An ordered pair is a
+2-tuple or couple
+. More generally still, one can define the Cartesian product of an
+indexed family
+of sets.
+The Cartesian product is named after
+René Descartes
+,
+[
+5
+]
+whose formulation of
+analytic geometry
+gave rise to the concept, which is further generalized in terms of
+direct product
+.
+Set-theoretic definition
+[
+edit
+]
+A rigorous definition of the Cartesian product requires a domain to be specified in the
+set-builder notation
+. In this case the domain would have to contain the Cartesian product itself. For defining the Cartesian product of the sets
+A
+and
+B
+, with the typical
+Kuratowski's definition
+of a pair
+(
+a
+,
+b
+)
+as
+{
+{
+a
+}
+,
+{
+a
+,
+b
+}
+}
+, an appropriate domain is the set
+𝒫
+(
+𝒫
+(
+A
+∪
+B
+)
+)
+where
+𝒫
+denotes the
+power set
+. Then the Cartesian product of the sets
+A
+and
+B
+would be defined as
+[
+6
+]
+A
+×
+B
+=
+{
+x
+∈
+𝒫
+(
+𝒫
+(
+A
+∪
+B
+)
+)
+∣
+∃
+a
+∈
+A
+∃
+b
+∈
+B
+:
+x
+=
+(
+a
+,
+b
+)
+}
+.
+Examples
+[
+edit
+]
+A deck of cards
+[
+edit
+]
+Standard 52-card deck
+An illustrative example is the
+standard 52-card deck
+. The
+standard playing card
+ranks {A, K, Q, J, 10, 9, 8, 7, 6, 5, 4, 3, 2} form a 13-element set. The card suits
+{♠,
+♥
+,
+♦
+, ♣
+} form a four-element set. The Cartesian product of these sets returns a 52-element set consisting of 52
+ordered pairs
+, which correspond to all 52 possible playing cards.
+Ranks
+×
+Suits
+returns a set of the form {(A,
+♠), (A,
+♥
+), (A,
+♦
+), (A,
+♣), (K,
+♠), ..., (3,
+♣), (2,
+♠), (2,
+♥
+), (2,
+♦
+), (2,
+♣)}.
+Suits
+×
+Ranks
+returns a set of the form {(♠,
+A), (♠,
+K), (♠,
+Q), (♠,
+J), (♠,
+10), ..., (♣,
+6), (♣,
+5), (♣,
+4), (♣,
+3), (♣,
+2)}.
+These two sets are distinct, even
+disjoint
+, but there is a natural
+bijection
+between them, under which (3,
+♣) corresponds to (♣,
+3) and so on.
+A two-dimensional coordinate system
+[
+edit
+]
+Cartesian coordinates of example points
+The main historical example is the
+Cartesian plane
+in
+analytic geometry
+. In order to represent geometrical shapes in a numerical way, and extract numerical information from shapes' numerical representations,
+René Descartes
+assigned to each point in the plane a pair of
+real numbers
+, called its
+coordinates
+. Usually, such a pair's first and second components are called its
+x
+and
+y
+coordinates, respectively (see picture). The set of all such pairs (i.e., the Cartesian product
+ℝ
+×
+ℝ
+, with
+ℝ
+denoting the real numbers) is thus assigned to the set of all points in the plane.
+[
+7
+]
+Most common implementation (set theory)
+[
+edit
+]
+Main article:
+Implementation of mathematics in set theory
+A formal definition of the Cartesian product from
+set-theoretical
+principles follows from a definition of
+ordered pair
+. The most common definition of ordered pairs,
+Kuratowski's definition
+, is
+(
+x
+,
+y
+)
+=
+{
+{
+x
+}
+,
+{
+x
+,
+y
+}
+}
+. Under this definition,
+(
+x
+,
+y
+)
+is an element of
+𝒫
+(
+𝒫
+(
+X
+∪
+Y
+)
+)
+, and
+X
+×
+Y
+is a subset of that set, where
+𝒫
+represents the
+power set
+operator. Therefore, the existence of the Cartesian product of any two sets in
+ZFC
+follows from the axioms of
+pairing
+,
+union
+,
+power set
+, and
+specification
+. Since
+functions
+are usually defined as a special case of
+relations
+, and relations are usually defined as subsets of the Cartesian product, the definition of the two-set Cartesian product is necessarily prior to most other definitions.
+Non-commutativity and non-associativity
+[
+edit
+]
+Let
+A
+,
+B
+, and
+C
+be sets.
+The Cartesian product
+A
+×
+B
+is not
+commutative
+,
+[
+4
+]
+A
+×
+B
+≠
+B
+×
+A
+,
+because the
+ordered pairs
+are reversed unless at least one of the following conditions is satisfied:
+[
+8
+]
+A
+is equal to
+B
+, or
+A
+or
+B
+is the
+empty set
+.
+For example:
+A
+= {1,2}
+;
+B
+= {3,4}
+A
+×
+B
+= {1,2} × {3,4} = {(1,3), (1,4), (2,3), (2,4)}
+B
+×
+A
+= {3,4} × {1,2} = {(3,1), (3,2), (4,1), (4,2)}
+A
+=
+B
+= {1,2}
+A
+×
+B
+=
+B
+×
+A
+= {1,2} × {1,2} = {(1,1), (1,2), (2,1), (2,2)}
+A
+= {1,2};
+B
+= ∅
+A
+×
+B
+= {1,2} × ∅ = ∅
+B
+×
+A
+= ∅ × {1,2} = ∅
+Strictly speaking, the Cartesian product is not
+associative
+(unless one of the involved sets is empty).
+(
+A
+×
+B
+)
+×
+C
+≠
+A
+×
+(
+B
+×
+C
+)
+If for example
+A
+= {1}
+, then
+(
+A
+×
+A
+) ×
+A
+= {((1, 1), 1)} ≠
+{(1, (1, 1))} =
+A
+× (
+A
+×
+A
+)
+.
+Intersections, unions, and subsets
+[
+edit
+]
+See also:
+List of set identities and relations
+Example sets
+A
+= [1,4]
+,
+B
+= [2,5]
+, and
+C
+= [4,7]
+, demonstrating
+A
+× (
+B
+∩
+C
+)
+= (
+A
+×
+B
+) ∩ (
+A
+×
+C
+)
+,
+A
+× (
+B
+∪
+C
+) = (
+A
+×
+B
+) ∪ (
+A
+×
+C
+)
+, and
+A
+× (
+B
+\
+C
+) = (
+A
+×
+B
+) \ (
+A
+×
+C
+)
+Example sets
+A
+= [2,5]
+,
+B
+= [3,7]
+,
+C
+= [1,3]
+,
+D
+= [2,4]
+, demonstrating
+(
+A
+∩
+B
+) × (
+C
+∩
+D
+)
+= (
+A
+×
+C
+) ∩ (
+B
+×
+D
+)
+.
+(
+A
+∪
+B
+) × (
+C
+∪
+D
+)
+≠ (
+A
+×
+C
+) ∪ (
+B
+×
+D
+)
+can be seen from the same example.
+The Cartesian product satisfies the following property with respect to
+intersections
+(see middle picture).
+(
+A
+∩
+B
+)
+×
+(
+C
+∩
+D
+)
+=
+(
+A
+×
+C
+)
+∩
+(
+B
+×
+D
+)
+In most cases, the above statement is not true if we replace intersection with
+union
+(see rightmost picture).
+(
+A
+∪
+B
+)
+×
+(
+C
+∪
+D
+)
+≠
+(
+A
+×
+C
+)
+∪
+(
+B
+×
+D
+)
+In fact, we have that:
+(
+A
+×
+C
+)
+∪
+(
+B
+×
+D
+)
+=
+[
+(
+A
+∖
+B
+)
+×
+C
+]
+∪
+[
+(
+A
+∩
+B
+)
+×
+(
+C
+∪
+D
+)
+]
+∪
+[
+(
+B
+∖
+A
+)
+×
+D
+]
+For the set difference, we also have the following identity:
+(
+A
+×
+C
+)
+∖
+(
+B
+×
+D
+)
+=
+[
+A
+×
+(
+C
+∖
+D
+)
+]
+∪
+[
+(
+A
+∖
+B
+)
+×
+C
+]
+Here are some rules demonstrating distributivity with other operators (see leftmost picture):
+[
+8
+]
+A
+×
+(
+B
+∩
+C
+)
+=
+(
+A
+×
+B
+)
+∩
+(
+A
+×
+C
+)
+,
+A
+×
+(
+B
+∪
+C
+)
+=
+(
+A
+×
+B
+)
+∪
+(
+A
+×
+C
+)
+,
+A
+×
+(
+B
+∖
+C
+)
+=
+(
+A
+×
+B
+)
+∖
+(
+A
+×
+C
+)
+,
+(
+A
+×
+B
+)
+∁
+=
+(
+A
+∁
+×
+B
+∁
+)
+∪
+(
+A
+∁
+×
+B
+)
+∪
+(
+A
+×
+B
+∁
+)
+,
+where
+A
+∁
+denotes the
+absolute complement
+of
+A
+.
+Other properties related with
+subsets
+are:
+if
+A
+⊆
+B
+, then
+A
+×
+C
+⊆
+B
+×
+C
+;
+if both
+A
+,
+B
+≠
+∅︀
+, then
+A
+×
+B
+⊆
+C
+×
+D
+⟺
+A
+⊆
+C
+and
+B
+⊆
+D
+.
+[
+9
+]
+Cardinality
+[
+edit
+]
+See also:
+Cardinal arithmetic
+The
+cardinality
+of a set is the number of elements of the set. For example, defining two sets:
+A
+= {a, b}
+and
+B
+= {5, 6}
+. Both set
+A
+and set
+B
+consist of two elements each. Their Cartesian product, written as
+A
+×
+B
+, results in a new set which has the following elements:
+A
+×
+B
+= {(a,5), (a,6), (b,5), (b,6)}
+.
+where each element of
+A
+is paired with each element of
+B
+, and where each pair makes up one element of the output set.
+The number of values in each element of the resulting set is equal to the number of sets whose Cartesian product is being taken; 2 in this case.
+The cardinality of the output set is equal to the product of the cardinalities of all the input sets. That is,
+|
+A
+×
+B
+|
+=
+|
+A
+|
+·
+|
+B
+|
+.
+[
+4
+]
+In this case,
+|
+A
+×
+B
+|
+= 4
+Similarly,
+|
+A
+×
+B
+×
+C
+|
+=
+|
+A
+|
+·
+|
+B
+|
+·
+|
+C
+|
+and so on.
+The set
+A
+×
+B
+is
+infinite
+if either
+A
+or
+B
+is infinite, and the other set is not the empty set.
+[
+10
+]
+Cartesian products of several sets
+[
+edit
+]
+n
+-ary Cartesian product
+[
+edit
+]
+The Cartesian product can be generalized to the
+n
+-ary Cartesian product
+over
+n
+sets
+X
+1
+, ...,
+X
+n
+as the set
+X
+1
+×
+⋯
+×
+X
+n
+=
+{
+(
+x
+1
+,
+…
+,
+x
+n
+)
+∣
+x
+i
+∈
+X
+i
+for every
+i
+∈
+{
+1
+,
+…
+,
+n
+}
+}
+of
+n
+-tuples
+. If tuples are defined as
+nested ordered pairs
+, it can be identified with
+(
+X
+1
+× ... ×
+X
+n
+−1
+) ×
+X
+n
+. If a tuple is defined as a function on
+{1, 2, ...,
+n
+} that takes its value at
+i
+to be the
+i
+-th element of the tuple, then the Cartesian product
+X
+1
+× ... ×
+X
+n
+is the set of functions
+{
+x
+:
+{
+1
+,
+…
+,
+n
+}
+→
+X
+1
+∪
+⋯
+∪
+X
+n
+∣
+x
+(
+i
+)
+∈
+X
+i
+for every
+i
+∈
+{
+1
+,
+…
+,
+n
+}
+}
+.
+Cartesian
+n
+th power
+[
+edit
+]
+The
+Cartesian square
+of a set
+X
+is the Cartesian product
+X
+2
+=
+X
+×
+X
+.
+An example is the 2-dimensional
+plane
+R
+2
+=
+R
+×
+R
+where
+R
+is the set of
+real numbers
+:
+[
+1
+]
+R
+2
+is the set of all points
+(
+x
+,
+y
+)
+where
+x
+and
+y
+are real numbers (see the
+Cartesian coordinate system
+).
+The
+Cartesian
+n
+th power
+of a set
+X
+, denoted
+X
+n
+, can be defined as
+X
+n
+=
+X
+×
+X
+×
+⋯
+×
+X
+⏟
+n
+=
+{
+(
+x
+1
+,
+…
+,
+x
+n
+)
+∣
+x
+i
+∈
+X
+for every
+i
+∈
+{
+1
+,
+…
+,
+n
+}
+}
+.
+An example of this is
+R
+3
+=
+R
+×
+R
+×
+R
+, with
+R
+again the set of real numbers,
+[
+1
+]
+and more generally
+R
+n
+.
+The Cartesian
+n
+th power of a set
+X
+may be identified with the set of the functions mapping to
+X
+the
+n
+-tuples
+of elements of
+X
+. As a special case, the Cartesian 0th power of
+X
+is the
+singleton set
+, that has the
+empty function
+with
+codomain
+X
+as its unique element.
+Intersections, unions, complements and subsets
+[
+edit
+]
+Let Cartesian products be given
+A
+=
+A
+1
+×
+⋯
+×
+A
+n
+and
+B
+=
+B
+1
+×
+⋯
+×
+B
+n
+. Then
+A
+⊆
+B
+, if and only if
+A
+i
+⊆
+B
+i
+for all
+i
+=
+1
+,
+2
+,
+…
+,
+n
+;
+[
+11
+]
+A
+∩
+B
+=
+(
+A
+1
+∩
+B
+1
+)
+×
+⋯
+×
+(
+A
+n
+∩
+B
+n
+)
+, at the same time, if there exists at least one
+i
+such that
+A
+i
+∩
+B
+i
+=
+∅
+, then
+A
+∩
+B
+=
+∅
+;
+[
+11
+]
+A
+∪
+B
+⊆
+(
+A
+1
+∪
+B
+1
+)
+×
+⋯
+×
+(
+A
+n
+∪
+B
+n
+)
+, moreover, equality is possible only in the following cases:
+[
+12
+]
+A
+⊆
+B
+or
+B
+⊆
+A
+;
+for all
+i
+=
+1
+,
+2
+,
+…
+,
+n
+A
+i
+=
+B
+i
+except for one from
+i
+.
+The complement of a Cartesian product
+A
+=
+A
+1
+×
+⋯
+×
+A
+n
+can be calculated,
+[
+12
+]
+if a
+universe
+is defined
+U
+=
+X
+1
+×
+⋯
+×
+X
+n
+. To simplify the expressions, we introduce the following notation. Let us denote the Cartesian product as a tuple bounded by square brackets; this tuple includes the sets from which the Cartesian product is formed, e.g.:
+A
+=
+A
+1
+×
+A
+2
+×
+⋯
+×
+A
+n
+=
+[
+A
+1
+A
+2
+…
+A
+n
+]
+.
+In
+n-tuple algebra
+(NTA),
+[
+12
+]
+such a matrix-like representation of Cartesian products is called a
+C-n-tuple
+.
+With this in mind, the union of some Cartesian products given in the same universe can be expressed as a matrix bounded by square brackets, in which the rows represent the Cartesian products involved in the union:
+A
+∪
+B
+=
+(
+A
+1
+×
+A
+2
+×
+⋯
+×
+A
+n
+)
+∪
+(
+B
+1
+×
+B
+2
+×
+⋯
+×
+B
+n
+)
+=
+[
+A
+1
+A
+2
+…
+A
+n
+B
+1
+B
+2
+…
+B
+n
+]
+.
+Such a structure is called a
+C-system
+in NTA.
+Then the complement of the Cartesian product
+A
+will look like the following
+C
+-system expressed as a matrix of the dimension
+n
+×
+n
+:
+A
+∁
+=
+[
+A
+1
+∁
+X
+2
+⋯
+X
+n
+−
+1
+X
+n
+X
+1
+A
+2
+∁
+⋯
+X
+n
+−
+1
+X
+n
+⋮
+⋮
+⋮
+⋮
+X
+1
+X
+2
+⋯
+A
+n
+−
+1
+∁
+X
+n
+X
+1
+X
+2
+⋯
+X
+n
+−
+1
+A
+n
+∁
+]
+.
+The diagonal components of this matrix
+A
+i
+∁
+are equal correspondingly to
+X
+i
+∖
+A
+i
+.
+In NTA, a diagonal
+C
+-system
+A
+∁
+, that represents the complement of a
+C-n
+-tuple
+A
+, can be written concisely as a tuple of diagonal components bounded by inverted square brackets:
+A
+∁
+=
+]
+A
+1
+∁
+A
+2
+∁
+…
+A
+n
+∁
+[
+.
+This structure is called a
+D-n-tuple
+. Then the complement of the
+C
+-system
+R
+is a structure
+R
+∁
+, represented by a matrix of the same dimension and bounded by inverted square brackets, in which all components are equal to the complements of the components of the initial matrix
+R
+. Such a structure is called a
+D
+-system and is calculated, if necessary, as the intersection of the
+D-n
+-tuples contained in it. For instance, if the following
+C
+-system is given:
+R
+1
+=
+[
+A
+1
+A
+2
+…
+A
+n
+B
+1
+B
+2
+…
+B
+n
+]
+,
+then its complement will be the
+D
+-system
+R
+1
+∁
+=
+]
+A
+1
+∁
+A
+2
+∁
+…
+A
+n
+∁
+B
+1
+∁
+B
+2
+∁
+…
+B
+n
+∁
+[
+.
+Let us consider some new relations for structures with Cartesian products obtained in the process of studying the properties of NTA.
+[
+12
+]
+The structures defined in the same universe are called
+homotypic
+ones.
+The intersection of C-systems
+. Assume the homotypic
+C
+-systems are given
+P
+and
+Q
+. Their intersection will yield a
+C
+-system containing all non-empty intersections of each
+C-n
+-tuple from
+P
+with each
+C-n
+-tuple from
+Q
+.
+Checking the inclusion of a C-n-tuple into a D-n-tuple
+. For the
+C-n
+-tuple
+P
+=
+[
+P
+1
+P
+2
+⋯
+P
+N
+]
+and the
+D-n
+-tuple
+Q
+=
+]
+Q
+1
+Q
+2
+⋯
+Q
+N
+[
+holds
+P
+⊆
+Q
+, if and only if, at least for one
+i
+holds
+P
+i
+⊆
+Q
+i
+.
+Checking the inclusion of a C-n-tuple into a D-system
+. For the
+C-n
+-tuple
+P
+and the
+D
+-system
+Q
+is true
+P
+⊆
+Q
+, if and only if, for every
+D-n
+-tuple
+Q
+i
+from
+Q
+holds
+P
+⊆
+Q
+i
+.
+Infinite Cartesian products
+[
+edit
+]
+Main article:
+Direct product
+It is possible to define the Cartesian product of an arbitrary (possibly
+infinite
+)
+indexed family
+of sets. If
+I
+is any
+index set
+, and
+{
+X
+i
+}
+i
+∈
+I
+is a family of sets indexed by
+I
+, then the Cartesian product of the sets in
+{
+X
+i
+}
+i
+∈
+I
+is defined to be
+∏
+i
+∈
+I
+X
+i
+=
+{
+f
+:
+I
+→
+⋃
+i
+∈
+I
+X
+i
+|
+∀
+i
+∈
+I
+.
+f
+(
+i
+)
+∈
+X
+i
+}
+,
+that is, the set of all functions defined on the
+index set
+I
+such that the value of the function at a particular index
+i
+is an element of
+X
+i
+. Even if each of the
+X
+i
+is nonempty, the Cartesian product may be empty if the
+axiom of choice
+, which is equivalent to the statement that every such product is nonempty, is not assumed.
+∏
+i
+∈
+I
+X
+i
+may also be denoted
+𝖷
+i
+∈
+I
+X
+i
+.
+[
+13
+]
+For each
+j
+in
+I
+, the function
+π
+j
+:
+∏
+i
+∈
+I
+X
+i
+→
+X
+j
+,
+defined by
+π
+j
+(
+f
+)
+=
+f
+(
+j
+)
+is called the
+j
+-th
+projection map
+.
+Cartesian power
+is a Cartesian product where all the factors
+X
+i
+are the same set
+X
+. In this case,
+∏
+i
+∈
+I
+X
+i
+=
+∏
+i
+∈
+I
+X
+is the set of all functions from
+I
+to
+X
+, and is frequently denoted
+X
+I
+. This case is important in the study of
+cardinal exponentiation
+. An important special case is when the index set is
+ℕ
+, the
+natural numbers
+: this Cartesian product is the set of all infinite sequences with the
+i
+-th term in its corresponding set
+X
+i
+. For example, each element of
+∏
+n
+=
+1
+∞
+ℝ
+=
+ℝ
+×
+ℝ
+×
+⋯
+can be visualized as a
+vector
+with countably infinite real number components. This set is frequently denoted
+ℝ
+ω
+, or
+ℝ
+ℕ
+.
+Other forms
+[
+edit
+]
+Abbreviated form
+[
+edit
+]
+If several sets are being multiplied together (e.g.,
+X
+1
+,
+X
+2
+,
+X
+3
+, ...
+), then some authors
+[
+14
+]
+choose to abbreviate the Cartesian product as simply
+×
+X
+i
+.
+Cartesian product of functions
+[
+edit
+]
+If
+f
+is a function from
+X
+to
+A
+and
+g
+is a function from
+Y
+to
+B
+, then their Cartesian product
+f
+×
+g
+is a function from
+X
+×
+Y
+to
+A
+×
+B
+with
+(
+f
+×
+g
+)
+(
+x
+,
+y
+)
+=
+(
+f
+(
+x
+)
+,
+g
+(
+y
+)
+)
+.
+This can be extended to
+tuples
+and infinite collections of functions.
+This is different from the standard Cartesian product of functions considered as sets.
+Cylinder
+[
+edit
+]
+Let
+A
+be a set and
+B
+⊆
+A
+. Then the
+cylinder
+of
+B
+with respect to
+A
+is the Cartesian product
+B
+×
+A
+of
+B
+and
+A
+.
+Normally,
+A
+is considered to be the
+universe
+of the context and is left away. For example, if
+B
+is a subset of the natural numbers
+ℕ
+, then the cylinder of
+B
+is
+B
+×
+ℕ
+.
+Definitions outside set theory
+[
+edit
+]
+Category theory
+[
+edit
+]
+Although the Cartesian product is traditionally applied to sets,
+category theory
+provides a more general interpretation of the
+product
+of mathematical structures. Product is the simplest example of categorical limit, where the indexing category is discrete. As category of sets can be identified with discrete categories and embedded this way as full subcategory of
+Cat
+the diagrams indexing products can be reduced to indexing sets matching the set-theoretic definition.
+Graph theory
+[
+edit
+]
+In
+graph theory
+, the
+Cartesian product of two graphs
+G
+and
+H
+is the graph denoted by
+G
+×
+H
+, whose
+vertex
+set is the (ordinary) Cartesian product
+V
+(
+G
+) ×
+V
+(
+H
+)
+and such that two vertices
+(
+u
+,
+v
+)
+and
+(
+u
+′,
+v
+′)
+are adjacent in
+G
+×
+H
+, if and only if
+u
+=
+u
+′
+and
+v
+is adjacent with
+v
+′ in
+H
+,
+or
+v
+=
+v
+′
+and
+u
+is adjacent with
+u
+′ in
+G
+. The Cartesian product of graphs is not a
+product
+in the sense of category theory. Instead, the categorical product is known as the
+tensor product of graphs
+.
+See also
+[
+edit
+]
+Axiom of power set
+(to prove the existence of the Cartesian product)
+Direct product
+Empty product
+Finitary relation
+Join (SQL) § Cross join
+Orders on the Cartesian product of totally ordered sets
+Outer product
+Product (category theory)
+Product topology
+Product type
+References
+[
+edit
+]
+1
+2
+3
+Weisstein, Eric W.
+"Cartesian Product"
+.
+MathWorld
+. Retrieved
+September 5,
+2020
+.
+↑
+Warner, S. (1990).
+Modern Algebra
+.
+Dover Publications
+. p.
+6.
+↑
+Nykamp, Duane.
+"Cartesian product definition"
+.
+Math Insight
+. Retrieved
+September 5,
+2020
+.
+1
+2
+3
+"Cartesian Product"
+.
+web.mnstate.edu
+. Archived from
+the original
+on July 18, 2020
+. Retrieved
+September 5,
+2020
+.
+↑
+"Cartesian"
+.
+Merriam-Webster.com
+. 2009
+. Retrieved
+December 1,
+2009
+.
+↑
+Corry, S.
+"A Sketch of the Rudiments of Set Theory"
+(PDF)
+. Retrieved
+May 5,
+2023
+.
+↑
+Goldberg, Samuel (1986).
+Probability: An Introduction
+. Dover Books on Mathematics. Courier Corporation. p.
+41.
+ISBN
+9780486652528
+.
+1
+2
+Singh, S. (August 27, 2009).
+Cartesian product
+. Retrieved from the Connexions Web site:
+http://cnx.org/content/m15207/1.5/
+↑
+Cartesian Product of Subsets. (February 15, 2011).
+ProofWiki
+. Retrieved 05:06, August 1, 2011 from
+https://proofwiki.org/w/index.php?title=Cartesian_Product_of_Subsets&oldid=45868
+Archived
+October 11, 2023, at the
+Wayback Machine
+↑
+Peter S. (1998). A Crash Course in the Mathematics of Infinite Sets.
+St. John's Review, 44
+(2), 35–59. Retrieved August 1, 2011, from
+http://www.mathpath.org/concepts/infinity.htm
+1
+2
+Bourbaki, N.
+(2006).
+Théorie des ensembles
+. Springer. pp.
+E II.34– E II.38.
+1
+2
+3
+4
+Kulik, B.; Fridman, A. (2022).
+Complicated Methods of Logical Analysis Based on Simple Mathematics
+. Cambridge Scholars Publishing.
+ISBN
+978-1-5275-8014-5
+.
+↑
+F. R. Drake,
+Set Theory: An Introduction to Large Cardinals
+, p. 24. Studies in Logic and the Foundations of Mathematics, vol. 76 (1978). ISBN 0-7204-2200-0.
+↑
+Osborne, M., and Rubinstein, A., 1994.
+A Course in Game Theory
+. MIT Press.
+External links
+[
+edit
+]
+Cartesian Product at ProvenMath
+"Direct product"
+,
+Encyclopedia of Mathematics
+, EMS Press, 2001 [1994]
+How to find the Cartesian Product, Education Portal Academy
+v
+t
+e
+Set theory
+Overview
+Set (mathematics)
+Venn diagram of set intersection
+Axioms
+Adjunction
+Choice
+countable
+dependent
+global
+Constructibility (V=L)
+Determinacy
+projective
+Extensionality
+Infinity
+Limitation of size
+Pairing
+Power set
+Regularity
+Union
+Martin's axiom
+Axiom schema
+replacement
+specification
+Operations
+Cartesian product
+Complement
+(i.e. set difference)
+De Morgan's laws
+Disjoint union
+Identities
+Intersection
+Power set
+Symmetric difference
+Union
+Concepts
+Methods
+Almost
+Cardinality
+Cardinal number
+(
+large
+)
+Class
+Constructible universe
+Continuum hypothesis
+Diagonal argument
+Element
+ordered pair
+tuple
+Family
+Forcing
+One-to-one correspondence
+Ordinal number
+Set-builder notation
+Transfinite induction
+Venn diagram
+Set
+types
+Amorphous
+Countable
+Empty
+Finite
+(
+hereditarily
+)
+Filter
+base
+subbase
+Ultrafilter
+Fuzzy
+Infinite
+(
+Dedekind-infinite
+)
+Recursive
+Singleton
+Subset
+·
+Superset
+Transitive
+Uncountable
+Universal
+Theories
+Alternative
+Axiomatic
+Constructive
+Naive
+Cantor's theorem
+Zermelo
+General
+Principia Mathematica
+New Foundations
+Zermelo–Fraenkel
+von Neumann–Bernays–Gödel
+Morse–Kelley
+Kripke–Platek
+Tarski–Grothendieck
+Paradoxes
+Problems
+Russell's paradox
+Suslin's problem
+Burali-Forti paradox
+Set theorists
+Paul Bernays
+Georg Cantor
+Paul Cohen
+Richard Dedekind
+Abraham Fraenkel
+Kurt Gödel
+Thomas Jech
+John von Neumann
+Willard Quine
+Bertrand Russell
+Thoralf Skolem
+Ernst Zermelo
+v
+t
+e
+Mathematical logic
+General
+Axiom
+list
+Cardinality
+First-order logic
+Formal proof
+Formal semantics
+Foundations of mathematics
+Information theory
+Lemma
+Logical consequence
+Model
+Theorem
+Theory
+Type theory
+Theorems
+(
+list
+),
+paradoxes
+Gödel's completeness
+–
+incompleteness theorems
+Tarski's undefinability
+Banach–Tarski paradox
+Cantor's theorem
+–
+paradox
+–
+diagonal argument
+Compactness
+Halting problem
+Lindström's
+Löwenheim–Skolem
+Russell's paradox
+Logics
+Traditional
+Classical logic
+Logical truth
+Tautology
+Proposition
+Inference
+Logical equivalence
+Consistency
+Equiconsistency
+Argument
+Soundness
+Validity
+Syllogism
+Square of opposition
+Venn diagram
+Propositional
+Boolean algebra
+Boolean functions
+Logical connectives
+Propositional calculus
+Propositional formula
+Truth tables
+Many-valued logic
+3
+finite
+∞
+Predicate
+First-order
+list
+Second-order
+Monadic
+Higher-order
+Fixed-point
+Free
+Quantifiers
+Predicate
+Monadic predicate calculus
+Set theory
+Set
+hereditary
+Class
+(
+Ur-
+)
+Element
+Ordinal number
+Extensionality
+Forcing
+Relation
+equivalence
+partition
+Set operations:
+intersection
+union
+complement
+Cartesian product
+power set
+identities
+Types
+of
+sets
+Countable
+Uncountable
+Empty
+Inhabited
+Singleton
+Finite
+Infinite
+Transitive
+Ultrafilter
+Recursive
+Fuzzy
+Universal
+Universe
+constructible
+Grothendieck
+Von Neumann
+Maps
+,
+cardinality
+Function
+/
+Map
+domain
+codomain
+image
+In
+/
+Sur
+/
+Bi
+-jection
+Schröder–Bernstein theorem
+Isomorphism
+Gödel numbering
+Enumeration
+Large cardinal
+inaccessible
+Aleph number
+Operation
+binary
+Theories
+Zermelo–Fraenkel
+axiom of choice
+continuum hypothesis
+General
+Kripke–Platek
+Morse–Kelley
+Naive
+New Foundations
+Tarski–Grothendieck
+Von Neumann–Bernays–Gödel
+Ackermann
+Constructive
+Formal
+systems
+(
+list
+),
+language
+,
+syntax
+Alphabet
+Arity
+Automata
+Axiom schema
+Expression
+ground
+Extension
+by definition
+conservative
+Relation
+Formation rule
+Grammar
+Formula
+atomic
+closed
+ground
+open
+Free/bound variable
+Language
+Metalanguage
+Logical connective
+¬
+∨
+∧
+→
+↔
+=
+Predicate
+functional
+variable
+propositional variable
+Proof
+Quantifier
+∃
+!
+∀
+rank
+Sentence
+atomic
+spectrum
+Signature
+String
+Substitution
+Symbol
+function
+logical/constant
+non-logical
+variable
+Term
+Theory
+list
+Example
+axiomatic
+systems
+(
+list
+)
+of
+true arithmetic
+Peano
+second-order
+elementary function
+primitive recursive
+Robinson
+Skolem
+of the
+real numbers
+Tarski's axiomatization
+of
+Boolean algebras
+canonical
+minimal axioms
+of
+geometry
+Euclidean
+Elements
+Hilbert's
+Tarski's
+non-Euclidean
+Principia Mathematica
+Proof theory
+Formal proof
+Natural deduction
+Logical consequence
+Rule of inference
+Sequent calculus
+Theorem
+Systems
+axiomatic
+deductive
+Hilbert
+list
+Complete theory
+Independence
+(
+from ZFC
+)
+Proof of impossibility
+Ordinal analysis
+Reverse mathematics
+Self-verifying theories
+Model theory
+Interpretation
+function
+of models
+Model
+atomic
+equivalence
+finite
+prime
+saturated
+spectrum
+submodel
+Non-standard model
+of
+non-standard arithmetic
+Diagram
+elementary
+Categorical theory
+Model complete theory
+Satisfiability
+Semantics of logic
+Strength
+Theories of truth
+semantic
+Tarski's
+Kripke's
+T-schema
+Transfer principle
+Truth predicate
+Truth value
+Type
+Ultraproduct
+Validity
+Computability
+theory
+Church encoding
+Church–Turing thesis
+Computably enumerable
+Computable function
+Computable set
+Decision problem
+decidable
+undecidable
+P
+NP
+P versus NP problem
+Kolmogorov complexity
+Lambda calculus
+Primitive recursive function
+Recursion
+Recursive set
+Turing machine
+Type theory
+Related
+Abstract logic
+Algebraic logic
+Automated theorem proving
+Category theory
+Concrete
+/
+Abstract category
+Category of sets
+History of logic
+History of mathematical logic
+timeline
+Logicism
+Mathematical object
+Philosophy of mathematics
+Supertask
+icon
+Mathematics
+portal
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Cartesian_product&oldid=1383904004
+"
+Categories
+:
+Axiom of choice
+Operations on sets
+Analytic geometry
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Use mdy dates from August 2017
+Pages using multiple image with auto scaled images
+Webarchive template wayback links
+Search
+Search
+Cartesian product
+66 languages
+Add topic

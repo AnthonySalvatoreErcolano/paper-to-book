@@ -1,0 +1,11 @@
+{
+ "id": "ml-zagier",
+ "type": "url",
+ "ref": "https://leanprover-community.github.io/mathlib4_docs/Archive/ZagierTwoSquares.html",
+ "why": "mathlib's formalisation of Zagier's proof",
+ "fetched": "2026-11-12T16:53:26Z",
+ "files": {
+  "raw.html": "ce9cb651fc2dcd3e382f9692b4f7e1b34acb9cb51f00e6e2beb801b48d46445d"
+ },
+ "final_url": "https://leanprover-community.github.io/mathlib4_docs/Archive/ZagierTwoSquares.html"
+}

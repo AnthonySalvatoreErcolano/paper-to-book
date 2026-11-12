@@ -23,7 +23,8 @@
   "ref": "https://en.wikipedia.org/wiki/Involution_(mathematics)",
   "why": "definition and properties of involutions",
   "requested": "2026-11-12T16:52:59Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-fixed-point",
@@ -31,7 +32,8 @@
   "ref": "https://en.wikipedia.org/wiki/Fixed_point_(mathematics)",
   "why": "fixed points",
   "requested": "2026-11-12T16:52:59Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-fermat-two-squares",
@@ -39,7 +41,8 @@
   "ref": "https://en.wikipedia.org/wiki/Fermat%27s_theorem_on_sums_of_two_squares",
   "why": "the theorem and Zagier's proof",
   "requested": "2026-11-12T16:52:59Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-modular",
@@ -47,7 +50,8 @@
   "ref": "https://en.wikipedia.org/wiki/Modular_arithmetic",
   "why": "congruence modulo n",
   "requested": "2026-11-12T16:52:59Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-parity",
@@ -55,7 +59,8 @@
   "ref": "https://en.wikipedia.org/wiki/Parity_(mathematics)",
   "why": "even and odd",
   "requested": "2026-11-12T16:52:59Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-prime",
@@ -63,7 +68,8 @@
   "ref": "https://en.wikipedia.org/wiki/Prime_number",
   "why": "primes",
   "requested": "2026-11-12T16:52:59Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-euclidean-division",
@@ -71,7 +77,8 @@
   "ref": "https://en.wikipedia.org/wiki/Euclidean_division",
   "why": "division with remainder",
   "requested": "2026-11-12T16:52:59Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-divisor",
@@ -79,7 +86,8 @@
   "ref": "https://en.wikipedia.org/wiki/Divisor",
   "why": "divisibility",
   "requested": "2026-11-12T16:52:59Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-finite-set",
@@ -87,7 +95,8 @@
   "ref": "https://en.wikipedia.org/wiki/Finite_set",
   "why": "finite sets",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-cardinality",
@@ -95,7 +104,8 @@
   "ref": "https://en.wikipedia.org/wiki/Cardinality",
   "why": "cardinality",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-cartesian",
@@ -103,7 +113,8 @@
   "ref": "https://en.wikipedia.org/wiki/Cartesian_product",
   "why": "triples, products",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-composition",
@@ -111,7 +122,8 @@
   "ref": "https://en.wikipedia.org/wiki/Function_composition",
   "why": "composition",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-iterated",
@@ -119,7 +131,8 @@
   "ref": "https://en.wikipedia.org/wiki/Iterated_function",
   "why": "iterates f^n",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-bijection",
@@ -127,7 +140,8 @@
   "ref": "https://en.wikipedia.org/wiki/Bijection",
   "why": "bijections",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-inverse",
@@ -135,7 +149,8 @@
   "ref": "https://en.wikipedia.org/wiki/Inverse_function",
   "why": "inverses",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-permutation",
@@ -143,7 +158,8 @@
   "ref": "https://en.wikipedia.org/wiki/Permutation",
   "why": "permutations of a finite set",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-periodic-point",
@@ -151,7 +167,8 @@
   "ref": "https://en.wikipedia.org/wiki/Periodic_point",
   "why": "periodic points and least period",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-orbit",
@@ -159,7 +176,8 @@
   "ref": "https://en.wikipedia.org/wiki/Orbit_(dynamics)",
   "why": "orbits",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-square-number",
@@ -167,7 +185,8 @@
   "ref": "https://en.wikipedia.org/wiki/Square_number",
   "why": "squares",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-monus",
@@ -175,7 +194,8 @@
   "ref": "https://en.wikipedia.org/wiki/Monus",
   "why": "truncated subtraction on N",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-while",
@@ -183,7 +203,8 @@
   "ref": "https://en.wikipedia.org/wiki/While_loop",
   "why": "while loops",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-loop-invariant",
@@ -191,7 +212,8 @@
   "ref": "https://en.wikipedia.org/wiki/Loop_invariant",
   "why": "loop invariants",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-proof-assistant",
@@ -199,7 +221,8 @@
   "ref": "https://en.wikipedia.org/wiki/Proof_assistant",
   "why": "what a proof assistant is",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-hol",
@@ -207,7 +230,8 @@
   "ref": "https://en.wikipedia.org/wiki/HOL_(proof_assistant)",
   "why": "HOL4",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-unique",
@@ -215,7 +239,8 @@
   "ref": "https://en.wikipedia.org/wiki/Uniqueness_quantification",
   "why": "exists-unique",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-lambda",
@@ -223,7 +248,8 @@
   "ref": "https://en.wikipedia.org/wiki/Lambda_calculus",
   "why": "lambda abstraction, application by juxtaposition",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-set-builder",
@@ -231,7 +257,8 @@
   "ref": "https://en.wikipedia.org/wiki/Set-builder_notation",
   "why": "set comprehensions",
   "requested": "2026-11-12T16:53:00Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "wp-turnstile",
@@ -239,7 +266,8 @@
   "ref": "https://en.wikipedia.org/wiki/Turnstile_(symbol)",
   "why": "the turnstile",
   "requested": "2026-11-12T16:53:01Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "hammack-bop",
@@ -247,7 +275,8 @@
   "ref": "https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf",
   "why": "open textbook: sets, functions, divisibility, congruence, cardinality",
   "requested": "2026-11-12T16:53:01Z",
-  "done": false
+  "done": false,
+  "error": "SSLError: HTTPSConnectionPool(host='www.people.vcu.edu', port=443): Max retries exceeded with url: /~rhammack/BookOfProof/Main.pdf (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.people.vcu.edu'. (_ssl.c:1011)\")))"
  },
  {
   "id": "ml-function-basic",
@@ -255,7 +284,8 @@
   "ref": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Logic/Function/Basic.html",
   "why": "mathlib Function.Involutive",
   "requested": "2026-11-12T16:53:01Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "ml-periodic",
@@ -263,7 +293,8 @@
   "ref": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Dynamics/PeriodicPts/Defs.html",
   "why": "mathlib minimalPeriod",
   "requested": "2026-11-12T16:53:01Z",
-  "done": false
+  "done": true,
+  "error": null
  },
  {
   "id": "ml-zagier",
@@ -271,6 +302,7 @@
   "ref": "https://leanprover-community.github.io/mathlib4_docs/Archive/ZagierTwoSquares.html",
   "why": "mathlib's formalisation of Zagier's proof",
   "requested": "2026-11-12T16:53:01Z",
-  "done": false
+  "done": true,
+  "error": null
  }
 ]

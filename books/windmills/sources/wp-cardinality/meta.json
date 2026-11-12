@@ -1,0 +1,11 @@
+{
+ "id": "wp-cardinality",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Cardinality",
+ "why": "cardinality",
+ "fetched": "2026-11-12T16:53:19Z",
+ "files": {
+  "raw.html": "a57cb50a49f0cd11853763a8a127be995587b6183c4d526fa782ab2fc591d72f"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Cardinality"
+}

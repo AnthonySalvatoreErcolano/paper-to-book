@@ -1,0 +1,1549 @@
+Finite set - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Finite collection of distinct objects
+A finite set of polygons in an
+Euler diagram
+In
+mathematics
+, a
+finite set
+is a collection of finitely many different things; the things are called
+elements
+or
+members
+of the set and are typically
+mathematical objects
+, such as numbers, symbols, points in space, lines, other
+geometric shapes
+, variables, or other sets.
+Informally, a finite set is a set which one could in principle count and finish counting.  For example,
+{
+2
+,
+4
+,
+6
+,
+8
+,
+10
+}
+is a finite set with five elements. The number of elements of a finite set is a
+natural number
+(possibly zero) and is called the
+cardinality
+(or the
+cardinal number
+)
+of the set. A set that is not a finite set is called an
+infinite set
+. For example, the set
+{
+1
+,
+2
+,
+3
+,
+…
+}
+of all positive integers is infinite.
+Finite sets are particularly important in
+combinatorics
+, the mathematical study of
+counting
+. Many arguments involving finite sets rely on the
+pigeonhole principle
+, which states that there cannot exist an
+injective
+function
+from a larger finite set to a smaller finite set.
+Definition and terminology
+[
+edit
+]
+The
+natural numbers
+are defined abstractly by the
+Peano axioms
+, and can be constructed set-theoretically (for example, by the
+Von Neumann ordinals
+). Then, formally, a set
+S
+is called
+finite
+if there exists a
+bijection
+f
+:
+S
+→
+{
+1
+,
+2
+,
+⋯
+,
+n
+}
+for some natural number
+n
+, analogous to
+counting
+its elements. If
+S
+is
+empty
+, this is
+vacuously
+satisfied for
+n
+=
+0
+with the
+empty function
+. The number
+n
+is the set's cardinality, denoted as
+|
+S
+|
+.
+If a nonempty set is finite, its elements may be written in a
+sequence
+:
+x
+1
+,
+x
+2
+,
+…
+,
+x
+n
+(
+x
+i
+∈
+S
+,
+1
+≤
+i
+≤
+n
+)
+.
+If
+n
+≥ 2, then there are multiple such sequences.
+In
+combinatorics
+, a finite set with
+n
+elements is sometimes called an
+n
+-set
+and a
+subset
+with
+k
+elements is called a
+k
+-subset
+.  For example, the set
+{
+5
+,
+6
+,
+7
+}
+is a 3-set
+– a finite set with three elements
+– and
+{
+6
+,
+7
+}
+is a 2-subset of it.
+This notation
+{
+1
+,
+⋯
+,
+n
+}
+may be
+defined recursively
+as
+{
+1
+,
+⋯
+,
+n
+}
+=
+{
+∅
+(the empty set)
+if
+n
+=
+0
+{
+1
+,
+⋯
+,
+n
+−
+1
+}
+∪
+{
+n
+}
+if
+n
+≥
+1
+Basic properties
+[
+edit
+]
+Any
+proper subset
+of a finite set
+S
+is finite and has fewer elements than
+S
+itself.  As a consequence, there cannot exist a
+bijection
+between a finite set
+S
+and a proper subset of
+S
+.  Any set with this property is called
+Dedekind-finite
+.  Using the standard
+ZFC
+axioms for
+set theory
+, every Dedekind-finite set is also finite, but this implication cannot be
+proved
+in ZF (Zermelo–Fraenkel axioms without the
+axiom of choice
+) alone.
+The
+axiom of countable choice
+, a weak version of the axiom of choice, is sufficient to prove this equivalence.
+Any injective function between two finite sets of the same cardinality is also a
+surjective function
+(a surjection). Similarly, any surjection between two finite sets of the same cardinality is also an injection.
+The
+union
+of two finite sets is finite, with
+|
+S
+∪
+T
+|
+≤
+|
+S
+|
++
+|
+T
+|
+.
+In fact, by the
+inclusion–exclusion principle
+:
+|
+S
+∪
+T
+|
+=
+|
+S
+|
++
+|
+T
+|
+−
+|
+S
+∩
+T
+|
+.
+More generally, the union of any finite number of finite sets is finite.  The
+Cartesian product
+of finite sets is also finite, with:
+|
+S
+×
+T
+|
+=
+|
+S
+|
+×
+|
+T
+|
+.
+Similarly, the Cartesian product of finitely many finite sets is finite. A finite set with
+n
+elements has
+2
+n
+distinct subsets.  That is, the
+power set
+℘
+(
+S
+)
+of a finite set
+S
+is finite, with cardinality
+2
+|
+S
+|
+.
+Any subset of a finite set is finite. The set of values of a function when applied to elements of a finite set is finite.
+All finite sets are
+countable
+, but not all countable sets are finite. (Some authors, however, use "countable" to mean "countably infinite", so do not consider finite sets to be countable.)
+The
+free semilattice
+over a finite set is the set of its non-empty subsets, with the
+join operation
+being given by set union.
+Necessary and sufficient conditions for finiteness
+[
+edit
+]
+In
+Zermelo–Fraenkel set theory
+without the axiom of choice (ZF), the following conditions are all equivalent:
+[
+1
+]
+S
+is a finite set. That is,
+S
+can be placed into a one-to-one correspondence with the set of those natural numbers less than some specific natural number.
+(
+Kazimierz Kuratowski
+)
+S
+has all properties which can be proved by mathematical induction beginning with the empty set and adding one new element at a time.
+(
+Paul Stäckel
+)
+S
+can be given a
+total ordering
+which is
+well-ordered
+both forwards and backwards. That is, every non-empty subset of
+S
+has both a least and a greatest element in the subset.
+Every one-to-one function from
+℘
+(
+℘
+(
+S
+)
+)
+into itself is
+onto
+. That is, the
+powerset
+of the powerset of
+S
+is Dedekind-finite (see below).
+[
+2
+]
+Every surjective function from
+℘
+(
+℘
+(
+S
+)
+)
+onto itself is one-to-one.
+(
+Alfred Tarski
+) Every non-empty family of subsets of
+S
+has a
+minimal element
+with respect to inclusion.
+[
+3
+]
+(Equivalently, every non-empty family of subsets of
+S
+has a
+maximal element
+with respect to inclusion.)
+S
+can be well-ordered and any two well-orderings on it are
+order isomorphic
+. In other words, the well-orderings on
+S
+have exactly one
+order type
+.
+If the
+axiom of choice
+is also assumed (the
+axiom of countable choice
+is sufficient),
+[
+4
+]
+then the following conditions are all equivalent:
+S
+is a finite set.
+(
+Richard Dedekind
+) Every one-to-one function from
+S
+into itself is onto. A set with this property is called
+Dedekind-finite
+.
+Every surjective function from
+S
+onto itself is one-to-one.
+S
+is empty or every
+partial ordering
+of
+S
+contains a
+maximal element
+.
+Other concepts of finiteness
+[
+edit
+]
+In ZF set theory without the
+axiom of choice
+, the following concepts of finiteness for a set
+S
+are distinct. They are arranged in strictly decreasing order of strength, i.e. if a set
+S
+meets a criterion in the list then it meets all of the following criteria. In the absence of the axiom of choice the reverse implications are all unprovable, but if the axiom of choice is assumed then all of these concepts are equivalent.
+[
+5
+]
+(Note that none of these definitions need the set of finite
+ordinal numbers
+to be defined first; they are all pure "set-theoretic" definitions in terms of the equality and membership relations, not involving ω.)
+I-finite
+. Every non-empty set of subsets of
+S
+has a
+⊆
+-maximal element. (This is equivalent to requiring the existence of a
+⊆
+-minimal element. It is also equivalent to the standard numerical concept of finiteness.)
+Ia-finite
+. For every partition of
+S
+into two sets, at least one of the two sets is I-finite. (A set with this property which is not I-finite is called an
+amorphous set
+.
+[
+6
+]
+)
+II-finite
+. Every non-empty
+⊆
+-monotone set of subsets of
+S
+has a
+⊆
+-maximal element.
+III-finite
+. The power set
+℘
+(
+S
+)
+is Dedekind finite.
+IV-finite
+.
+S
+is Dedekind finite.
+V-finite
+.
+|
+S
+|
+=
+0
+or
+2
+⋅
+|
+S
+|
+>
+|
+S
+|
+.
+VI-finite
+.
+|
+S
+|
+=
+0
+or
+|
+S
+|
+=
+1
+or
+|
+S
+|
+2
+>
+|
+S
+|
+. (See
+Tarski's theorem about choice
+.)
+VII-finite
+.
+S
+is I-finite or not well-orderable.
+The forward implications (from strong to weak) are theorems within ZF. Counter-examples to the reverse implications (from weak to strong) in ZF with
+urelements
+are found using
+model theory
+.
+[
+7
+]
+Most of these finiteness definitions and their names are attributed to
+Tarski 1954
+by
+Howard
+&
+Rubin 1998
+, p.
+278
+. However, definitions I, II, III, IV and V were presented in
+Tarski 1924
+, pp.
+49, 93
+, together with proofs (or references to proofs) for the forward implications. At that time, model theory was not sufficiently advanced to find the counter-examples.
+Each of the properties I-finite thru IV-finite is a notion of smallness in the sense that any subset of a set with such a property will also have the property. This is not true for V-finite thru VII-finite because they may have countably infinite subsets.
+Uniqueness of cardinality
+[
+edit
+]
+An important property of finite sets is that, for example, if a set has cardinality 4, then it cannot also have cardinality 5. Intuitively meaning that a set cannot have both exactly 4 elements and exactly 5 elements. However, it is not so obviously proven. The following proof is adapted from
+Analysis I
+by
+Terence Tao
+.
+[
+8
+]
+Lemma: If a set
+X
+has cardinality
+n
+≥
+1
+,
+and
+x
+0
+∈
+X
+,
+then the set
+X
+−
+{
+x
+0
+}
+(i.e.
+X
+with the element
+x
+0
+removed) has cardinality
+n
+−
+1.
+Proof: Given
+X
+as above, since
+X
+has cardinality
+n
+,
+there is a bijection
+f
+from
+X
+to
+{
+1
+,
+2
+,
+…
+,
+n
+}
+.
+Then, since
+x
+0
+∈
+X
+,
+there must be some number
+f
+(
+x
+0
+)
+in
+{
+1
+,
+2
+,
+…
+,
+n
+}
+.
+We need to find a bijection from
+X
+−
+{
+x
+0
+}
+to
+{
+1
+,
+…
+n
+−
+1
+}
+(which may be empty). Define a function
+g
+such that
+g
+(
+x
+)
+=
+f
+(
+x
+0
+)
+if
+f
+(
+x
+)
+=
+n
+, and
+g
+(
+x
+)
+=
+f
+(
+x
+)
+otherwise. Then
+g
+is a bijection from
+X
+−
+{
+x
+0
+}
+to
+{
+1
+,
+…
+n
+−
+1
+}
+.
+Theorem: If a set
+X
+has cardinality
+n
+,
+then it cannot have any other cardinality. That is,
+X
+cannot also have cardinality
+m
+≠
+n
+.
+Proof: If
+X
+is empty (has cardinality 0), then there cannot exist a bijection from
+X
+to any nonempty set
+Y
+,
+since,
+vacuously
+, nothing can map to
+y
+0
+∈
+Y
+.
+Assume, by
+induction
+that the result has been proven up to some cardinality
+n
+.
+If
+X
+,
+has cardinality
+n
++
+1
+,
+assume it also has cardinality
+m
+.
+We want to show that
+m
+=
+n
++
+1.
+By the lemma above,
+X
+−
+{
+x
+0
+}
+must have cardinality
+n
+and
+m
+−
+1.
+Since, by induction, cardinality is unique for sets with cardinality
+n
+,
+it must be that
+m
+−
+1
+=
+n
+,
+and thus
+m
+=
+n
++
+1.
+See also
+[
+edit
+]
+FinSet
+Discrete point set
+Ordinal number
+Peano arithmetic
+Notes
+[
+edit
+]
+↑
+"Art of Problem Solving"
+,
+artofproblemsolving.com
+, retrieved
+2022-09-07
+↑
+The equivalence of the standard numerical definition of finite sets to the Dedekind-finiteness of the power set of the power set was shown in 1912 by
+Whitehead
+&
+Russell 2009
+, p.
+288
+. This Whitehead/Russell theorem is described in more modern language by
+Tarski 1924
+, pp.
+73–74
+.
+↑
+Tarski 1924
+, pp.
+48–58
+, demonstrated that his definition (which is also known as I-finite) is equivalent to Kuratowski's set-theoretical definition, which he then noted is equivalent to the standard numerical definition via the proof by
+Kuratowski 1920
+, pp.
+130–131
+.
+↑
+Herrlich, Horst (2006), "Proposition 4.13",
+Axiom of Choice
+, Lecture Notes in Mathematics, vol.
+1876, Springer, p.
+48,
+doi
+:
+10.1007/11601562
+,
+ISBN
+3-540-30989-6
+, retrieved
+18 July
+2023
+↑
+This list of 8 finiteness concepts is presented with this numbering scheme by both
+Howard
+&
+Rubin 1998
+, pp.
+278–280
+, and
+Lévy 1958
+, pp.
+2–3
+, although the details of the presentation of the definitions differ in some respects which do not affect the meanings of the concepts.
+↑
+de la Cruz, Dzhafarov
+&
+Hall (2006
+, p.
+8)
+↑
+Lévy 1958
+found counter-examples to each of the reverse implications in Mostowski models. Lévy attributes most of the results to earlier papers by Mostowski and Lindenbaum.
+↑
+Tao 2022
+, p.
+59.
+References
+[
+edit
+]
+Apostol, Tom M. (1974),
+Mathematical Analysis
+(2nd
+ed.), Menlo Park:
+Addison-Wesley
+,
+LCCN
+72011473
+Cohn, Paul Moritz, F.R.S. (1981),
+Universal Algebra
+, Dordrecht:
+D. Reidel
+,
+ISBN
+90-277-1254-9
+,
+LCCN
+80-29568
+{{
+citation
+}}
+:  CS1 maint: multiple names: authors list (
+link
+)
+Dedekind, Richard
+(2012),
+Was sind und was sollen die Zahlen?
+, Cambridge Library Collection (Paperback
+ed.), Cambridge, UK: Cambridge University Press,
+ISBN
+978-1-108-05038-8
+Dedekind, Richard
+(1963),
+Essays on the Theory of Numbers
+, Dover Books on Mathematics, Beman, Wooster Woodruff (Paperback
+ed.), Dover Publications Inc.,
+ISBN
+0-486-21010-3
+{{
+citation
+}}
+:
+ISBN / Date incompatibility (
+help
+)
+de la Cruz, Omar; Dzhafarov, Damir D.; Hall, Eric J. (2006),
+"Definitions of finiteness based on order properties"
+(PDF)
+,
+Fundamenta Mathematicae
+,
+189
+(2):
+155–
+172,
+doi
+:
+10.4064/fm189-2-5
+,
+MR
+2214576
+Herrlich, Horst
+(2006),
+Axiom of Choice
+, Lecture Notes in Math. 1876, Berlin:
+Springer-Verlag
+,
+ISBN
+3-540-30989-6
+Howard, Paul;
+Rubin, Jean E.
+(1998),
+Consequences of the axiom of choice
+, Providence, Rhode Island: American Mathematical Society,
+ISBN
+9780821809778
+Kuratowski, Kazimierz
+(1920),
+"Sur la notion d'ensemble fini"
+(PDF)
+,
+Fundamenta Mathematicae
+,
+1
+:
+129–
+131,
+doi
+:
+10.4064/fm-1-1-129-131
+,
+archived
+(PDF)
+from the original on 2011-05-15
+Labarre, Anthony E. Jr. (1968),
+Intermediate Mathematical Analysis
+, New York:
+Holt, Rinehart and Winston
+,
+LCCN
+68019130
+Lévy, Azriel
+(1958),
+"The independence of various definitions of finiteness"
+(PDF)
+,
+Fundamenta Mathematicae
+,
+46
+:
+1–
+13,
+doi
+:
+10.4064/fm-46-1-1-13
+,
+archived
+(PDF)
+from the original on 2003-07-05
+Rudin, Walter (1976),
+Principles Of Mathematical Analysis
+(3rd
+ed.), New York:
+McGraw-Hill
+,
+ISBN
+0-07-054235-X
+Suppes, Patrick
+(1972) [1960],
+Axiomatic Set Theory
+, Dover Books on Mathematics (Paperback
+ed.), Dover Publications Inc.,
+ISBN
+0-486-61630-4
+Tao, Terence
+(2022),
+Analysis I
+, Texts and Readings in Mathematics (4th
+ed.), Singapore:
+Springer Science+Business Media
+,
+doi
+:
+10.1007/978-3-662-00274-2
+,
+ISBN
+978-981-19-7261-4
+,
+ISSN
+2366-8717
+Tarski, Alfred
+(1924),
+"Sur les ensembles finis"
+(PDF)
+,
+Fundamenta Mathematicae
+,
+6
+:
+45–
+95,
+doi
+:
+10.4064/fm-6-1-45-95
+,
+archived
+(PDF)
+from the original on 2011-05-15
+Tarski, Alfred
+(1954), "Theorems on the existence of successors of cardinals, and the axiom of choice",
+Nederl. Akad. Wetensch. Proc. Ser. A, Indagationes Math.
+,
+16
+:
+26–
+32,
+doi
+:
+10.1016/S1385-7258(54)50005-3
+,
+MR
+0060555
+Whitehead, Alfred North
+;
+Russell, Bertrand
+(February 2009) [1912],
+Principia Mathematica
+, vol.
+Two, Merchant Books,
+ISBN
+978-1-60386-183-0
+External links
+[
+edit
+]
+Barile, Margherita
+,
+"Finite Set"
+,
+MathWorld
+v
+t
+e
+Mathematical logic
+General
+Axiom
+list
+Cardinality
+First-order logic
+Formal proof
+Formal semantics
+Foundations of mathematics
+Information theory
+Lemma
+Logical consequence
+Model
+Theorem
+Theory
+Type theory
+Theorems
+(
+list
+),
+paradoxes
+Gödel's completeness
+–
+incompleteness theorems
+Tarski's undefinability
+Banach–Tarski paradox
+Cantor's theorem
+–
+paradox
+–
+diagonal argument
+Compactness
+Halting problem
+Lindström's
+Löwenheim–Skolem
+Russell's paradox
+Logics
+Traditional
+Classical logic
+Logical truth
+Tautology
+Proposition
+Inference
+Logical equivalence
+Consistency
+Equiconsistency
+Argument
+Soundness
+Validity
+Syllogism
+Square of opposition
+Venn diagram
+Propositional
+Boolean algebra
+Boolean functions
+Logical connectives
+Propositional calculus
+Propositional formula
+Truth tables
+Many-valued logic
+3
+finite
+∞
+Predicate
+First-order
+list
+Second-order
+Monadic
+Higher-order
+Fixed-point
+Free
+Quantifiers
+Predicate
+Monadic predicate calculus
+Set theory
+Set
+hereditary
+Class
+(
+Ur-
+)
+Element
+Ordinal number
+Extensionality
+Forcing
+Relation
+equivalence
+partition
+Set operations:
+intersection
+union
+complement
+Cartesian product
+power set
+identities
+Types
+of
+sets
+Countable
+Uncountable
+Empty
+Inhabited
+Singleton
+Finite
+Infinite
+Transitive
+Ultrafilter
+Recursive
+Fuzzy
+Universal
+Universe
+constructible
+Grothendieck
+Von Neumann
+Maps
+,
+cardinality
+Function
+/
+Map
+domain
+codomain
+image
+In
+/
+Sur
+/
+Bi
+-jection
+Schröder–Bernstein theorem
+Isomorphism
+Gödel numbering
+Enumeration
+Large cardinal
+inaccessible
+Aleph number
+Operation
+binary
+Theories
+Zermelo–Fraenkel
+axiom of choice
+continuum hypothesis
+General
+Kripke–Platek
+Morse–Kelley
+Naive
+New Foundations
+Tarski–Grothendieck
+Von Neumann–Bernays–Gödel
+Ackermann
+Constructive
+Formal
+systems
+(
+list
+),
+language
+,
+syntax
+Alphabet
+Arity
+Automata
+Axiom schema
+Expression
+ground
+Extension
+by definition
+conservative
+Relation
+Formation rule
+Grammar
+Formula
+atomic
+closed
+ground
+open
+Free/bound variable
+Language
+Metalanguage
+Logical connective
+¬
+∨
+∧
+→
+↔
+=
+Predicate
+functional
+variable
+propositional variable
+Proof
+Quantifier
+∃
+!
+∀
+rank
+Sentence
+atomic
+spectrum
+Signature
+String
+Substitution
+Symbol
+function
+logical/constant
+non-logical
+variable
+Term
+Theory
+list
+Example
+axiomatic
+systems
+(
+list
+)
+of
+true arithmetic
+Peano
+second-order
+elementary function
+primitive recursive
+Robinson
+Skolem
+of the
+real numbers
+Tarski's axiomatization
+of
+Boolean algebras
+canonical
+minimal axioms
+of
+geometry
+Euclidean
+Elements
+Hilbert's
+Tarski's
+non-Euclidean
+Principia Mathematica
+Proof theory
+Formal proof
+Natural deduction
+Logical consequence
+Rule of inference
+Sequent calculus
+Theorem
+Systems
+axiomatic
+deductive
+Hilbert
+list
+Complete theory
+Independence
+(
+from ZFC
+)
+Proof of impossibility
+Ordinal analysis
+Reverse mathematics
+Self-verifying theories
+Model theory
+Interpretation
+function
+of models
+Model
+atomic
+equivalence
+finite
+prime
+saturated
+spectrum
+submodel
+Non-standard model
+of
+non-standard arithmetic
+Diagram
+elementary
+Categorical theory
+Model complete theory
+Satisfiability
+Semantics of logic
+Strength
+Theories of truth
+semantic
+Tarski's
+Kripke's
+T-schema
+Transfer principle
+Truth predicate
+Truth value
+Type
+Ultraproduct
+Validity
+Computability
+theory
+Church encoding
+Church–Turing thesis
+Computably enumerable
+Computable function
+Computable set
+Decision problem
+decidable
+undecidable
+P
+NP
+P versus NP problem
+Kolmogorov complexity
+Lambda calculus
+Primitive recursive function
+Recursion
+Recursive set
+Turing machine
+Type theory
+Related
+Abstract logic
+Algebraic logic
+Automated theorem proving
+Category theory
+Concrete
+/
+Abstract category
+Category of sets
+History of logic
+History of mathematical logic
+timeline
+Logicism
+Mathematical object
+Philosophy of mathematics
+Supertask
+icon
+Mathematics
+portal
+v
+t
+e
+Set theory
+Overview
+Set (mathematics)
+Venn diagram of set intersection
+Axioms
+Adjunction
+Choice
+countable
+dependent
+global
+Constructibility (V=L)
+Determinacy
+projective
+Extensionality
+Infinity
+Limitation of size
+Pairing
+Power set
+Regularity
+Union
+Martin's axiom
+Axiom schema
+replacement
+specification
+Operations
+Cartesian product
+Complement
+(i.e. set difference)
+De Morgan's laws
+Disjoint union
+Identities
+Intersection
+Power set
+Symmetric difference
+Union
+Concepts
+Methods
+Almost
+Cardinality
+Cardinal number
+(
+large
+)
+Class
+Constructible universe
+Continuum hypothesis
+Diagonal argument
+Element
+ordered pair
+tuple
+Family
+Forcing
+One-to-one correspondence
+Ordinal number
+Set-builder notation
+Transfinite induction
+Venn diagram
+Set
+types
+Amorphous
+Countable
+Empty
+Finite
+(
+hereditarily
+)
+Filter
+base
+subbase
+Ultrafilter
+Fuzzy
+Infinite
+(
+Dedekind-infinite
+)
+Recursive
+Singleton
+Subset
+·
+Superset
+Transitive
+Uncountable
+Universal
+Theories
+Alternative
+Axiomatic
+Constructive
+Naive
+Cantor's theorem
+Zermelo
+General
+Principia Mathematica
+New Foundations
+Zermelo–Fraenkel
+von Neumann–Bernays–Gödel
+Morse–Kelley
+Kripke–Platek
+Tarski–Grothendieck
+Paradoxes
+Problems
+Russell's paradox
+Suslin's problem
+Burali-Forti paradox
+Set theorists
+Paul Bernays
+Georg Cantor
+Paul Cohen
+Richard Dedekind
+Abraham Fraenkel
+Kurt Gödel
+Thomas Jech
+John von Neumann
+Willard Quine
+Bertrand Russell
+Thoralf Skolem
+Ernst Zermelo
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Finite_set&oldid=1382298021
+"
+Categories
+:
+Basic concepts in set theory
+Cardinal numbers
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+CS1 maint: multiple names: authors list
+CS1 errors: ISBN date
+Search
+Search
+Finite set
+49 languages
+Add topic

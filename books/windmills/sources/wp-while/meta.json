@@ -1,0 +1,11 @@
+{
+ "id": "wp-while",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/While_loop",
+ "why": "while loops",
+ "fetched": "2026-11-12T16:53:22Z",
+ "files": {
+  "raw.html": "7f404b201bc65037bd8e413cfbda42cf3f900e91bbb9e2b3e1bac3f343b91930"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/While_loop"
+}

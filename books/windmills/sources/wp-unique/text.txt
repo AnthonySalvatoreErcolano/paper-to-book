@@ -1,0 +1,812 @@
+Uniqueness quantification - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Logical quantifier
+"Unique (mathematics)" redirects here. For other uses, see
+Unique (disambiguation)
+.
+icon
+This article
+needs
+more citations
+.
+Please help
+improve this article
+by
+adding citations to reliable sources
+. Unsourced material may be challenged and
+removed
+.
+Find sources:
+"Uniqueness quantification"
+–
+news
+·
+newspapers
+·
+books
+·
+scholar
+·
+JSTOR
+(
+November 2024
+)
+(
+Learn how and when to remove this message
+)
+In
+mathematics
+and
+logic
+, the term "uniqueness" refers to the property of being the one and only object satisfying a certain condition.
+[
+1
+]
+This sort of
+quantification
+is known as
+uniqueness quantification
+or
+unique existential quantification
+, and is often denoted with the symbols "
+∃
+!"
+[
+2
+]
+or "∃
+=1
+". It is defined to mean
+there exists
+an object with the given property, and
+all objects
+with this property are
+equal
+.
+For example, the formal statement:
+∃
+!
+n
+∈
+ℕ
+(
+n
+−
+2
+=
+4
+)
+may be read as "there is exactly one natural number
+n
+such that
+⁠
+n
+−
+2
+=
+4
+⁠
+".
+Proving uniqueness
+[
+edit
+]
+The most common technique to prove the unique existence of an object is to first prove the existence of the entity with the desired condition, and then to prove that any two such entities (say,
+a
+and
+⁠
+b
+⁠
+) must be equal to each other (i.e.
+⁠
+a
+=
+b
+⁠
+).
+For example, to show that the equation
+x
++
+2
+=
+5
+has exactly one solution, one would first start by establishing that at least one solution exists, namely 3; the proof of this part is simply the verification that the equation below holds:
+3
++
+2
+=
+5.
+To establish the uniqueness of the solution, one would proceed by assuming that there are two solutions, namely
+a
+and
+⁠
+b
+⁠
+, satisfying
+⁠
+x
++
+2
+=
+5
+⁠
+. That is,
+a
++
+2
+=
+5
+and
+b
++
+2
+=
+5.
+Then since equality is a
+transitive relation
+,
+a
++
+2
+=
+b
++
+2.
+Subtracting 2 from both sides then yields:
+a
+=
+b
+,
+which completes the proof that 3 is the unique solution of
+x
++
+2
+=
+5
+.
+In general, both existence (there exists
+at least
+one object) and uniqueness (there exists
+at most
+one object) must be proven, in order to conclude that there exists exactly one object satisfying a said condition.
+An alternative way to prove uniqueness is to prove that there exists an object
+a
+satisfying the condition, and then to prove that every object satisfying the condition must be equal to
+⁠
+a
+⁠
+.
+Reduction to ordinary existential and universal quantification
+[
+edit
+]
+Uniqueness quantification can be expressed in terms of the
+existential
+and
+universal
+quantifiers of
+predicate logic
+, by defining the formula
+∃
+!
+x
+(
+P
+(
+x
+)
+)
+to mean
+[
+3
+]
+∃
+x
+(
+P
+(
+x
+)
+∧
+¬
+∃
+y
+(
+P
+(
+y
+)
+∧
+y
+≠
+x
+)
+)
+,
+which is logically equivalent to:
+∃
+x
+(
+P
+(
+x
+)
+∧
+∀
+y
+(
+P
+(
+y
+)
+→
+y
+=
+x
+)
+)
+.
+An equivalent definition that separates the notions of existence and uniqueness into two clauses, at the expense of brevity, is:
+∃
+x
+P
+(
+x
+)
+∧
+∀
+y
+∀
+z
+[
+(
+P
+(
+y
+)
+∧
+P
+(
+z
+)
+)
+→
+y
+=
+z
+]
+.
+Generalizations
+[
+edit
+]
+The uniqueness quantification can be generalized into
+counting quantification
+(or numerical quantification
+[
+4
+]
+). This includes both quantification of the form "exactly
+k
+objects exist such that
+..." as well as "infinitely many objects exist such that
+..." and "only finitely many objects exist such that
+...". The first of these forms is expressible using ordinary quantifiers, but the latter two cannot be expressed in ordinary
+first-order logic
+.
+[
+5
+]
+Uniqueness depends on a notion of
+equality
+. Loosening this to a coarser
+equivalence relation
+yields quantification of uniqueness
+up to
+that equivalence (under this framework, regular uniqueness is "uniqueness up to equality"). This is called
+essentially unique
+. For example, many concepts in
+category theory
+are defined to be unique up to
+isomorphism
+.
+The exclamation mark
+!
+can be also used as a separate quantification symbol, so
+⁠
+(
+∃
+!
+x
+.
+P
+(
+x
+)
+)
+↔
+(
+(
+∃
+x
+.
+P
+(
+x
+)
+)
+∧
+(
+!
+x
+.
+P
+(
+x
+)
+)
+)
+⁠
+, where
+⁠
+(
+!
+x
+.
+P
+(
+x
+)
+)
+:=
+(
+∀
+a
+∀
+b
+.
+P
+(
+a
+)
+∧
+P
+(
+b
+)
+→
+a
+=
+b
+)
+⁠
+. For example, it can be safely used in the
+replacement axiom
+, instead of
+∃
+!
+.
+See also
+[
+edit
+]
+Essentially unique
+Extension by definition
+One-hot
+Singleton (mathematics)
+Uniqueness theorem
+References
+[
+edit
+]
+↑
+Weisstein, Eric W.
+"Uniqueness Theorem"
+.
+mathworld.wolfram.com
+. Retrieved
+2019-12-15
+.
+↑
+"2.5 Uniqueness Arguments"
+.
+www.whitman.edu
+. Retrieved
+2019-12-15
+.
+↑
+Kleene, Stephen Cole
+(1967).
+Mathematical logic
+. New York: Wiley. p.
+154.
+ISBN
+978-0-471-49033-3
+.
+LCCN
+66-26747
+.
+↑
+Helman, Glen (August 1, 2013).
+"Numerical quantification"
+(PDF)
+.
+persweb.wabash.edu
+. Retrieved
+2019-12-14
+.
+↑
+This is a consequence of the
+compactness theorem
+.
+Bibliography
+[
+edit
+]
+Kleene, Stephen (1952).
+Introduction to Metamathematics
+. Ishi Press International. p.
+199.
+Andrews, Peter B. (2002).
+An introduction to mathematical logic and type theory to truth through proof
+(2nd
+ed.). Dordrecht: Kluwer Acad. Publ. p.
+233.
+ISBN
+1-4020-0763-9
+.
+v
+t
+e
+Mathematical logic
+General
+Axiom
+list
+Cardinality
+First-order logic
+Formal proof
+Formal semantics
+Foundations of mathematics
+Information theory
+Lemma
+Logical consequence
+Model
+Theorem
+Theory
+Type theory
+Theorems
+(
+list
+),
+paradoxes
+Gödel's completeness
+–
+incompleteness theorems
+Tarski's undefinability
+Banach–Tarski paradox
+Cantor's theorem
+–
+paradox
+–
+diagonal argument
+Compactness
+Halting problem
+Lindström's
+Löwenheim–Skolem
+Russell's paradox
+Logics
+Traditional
+Classical logic
+Logical truth
+Tautology
+Proposition
+Inference
+Logical equivalence
+Consistency
+Equiconsistency
+Argument
+Soundness
+Validity
+Syllogism
+Square of opposition
+Venn diagram
+Propositional
+Boolean algebra
+Boolean functions
+Logical connectives
+Propositional calculus
+Propositional formula
+Truth tables
+Many-valued logic
+3
+finite
+∞
+Predicate
+First-order
+list
+Second-order
+Monadic
+Higher-order
+Fixed-point
+Free
+Quantifiers
+Predicate
+Monadic predicate calculus
+Set theory
+Set
+hereditary
+Class
+(
+Ur-
+)
+Element
+Ordinal number
+Extensionality
+Forcing
+Relation
+equivalence
+partition
+Set operations:
+intersection
+union
+complement
+Cartesian product
+power set
+identities
+Types
+of
+sets
+Countable
+Uncountable
+Empty
+Inhabited
+Singleton
+Finite
+Infinite
+Transitive
+Ultrafilter
+Recursive
+Fuzzy
+Universal
+Universe
+constructible
+Grothendieck
+Von Neumann
+Maps
+,
+cardinality
+Function
+/
+Map
+domain
+codomain
+image
+In
+/
+Sur
+/
+Bi
+-jection
+Schröder–Bernstein theorem
+Isomorphism
+Gödel numbering
+Enumeration
+Large cardinal
+inaccessible
+Aleph number
+Operation
+binary
+Theories
+Zermelo–Fraenkel
+axiom of choice
+continuum hypothesis
+General
+Kripke–Platek
+Morse–Kelley
+Naive
+New Foundations
+Tarski–Grothendieck
+Von Neumann–Bernays–Gödel
+Ackermann
+Constructive
+Formal
+systems
+(
+list
+),
+language
+,
+syntax
+Alphabet
+Arity
+Automata
+Axiom schema
+Expression
+ground
+Extension
+by definition
+conservative
+Relation
+Formation rule
+Grammar
+Formula
+atomic
+closed
+ground
+open
+Free/bound variable
+Language
+Metalanguage
+Logical connective
+¬
+∨
+∧
+→
+↔
+=
+Predicate
+functional
+variable
+propositional variable
+Proof
+Quantifier
+∃
+!
+∀
+rank
+Sentence
+atomic
+spectrum
+Signature
+String
+Substitution
+Symbol
+function
+logical/constant
+non-logical
+variable
+Term
+Theory
+list
+Example
+axiomatic
+systems
+(
+list
+)
+of
+true arithmetic
+Peano
+second-order
+elementary function
+primitive recursive
+Robinson
+Skolem
+of the
+real numbers
+Tarski's axiomatization
+of
+Boolean algebras
+canonical
+minimal axioms
+of
+geometry
+Euclidean
+Elements
+Hilbert's
+Tarski's
+non-Euclidean
+Principia Mathematica
+Proof theory
+Formal proof
+Natural deduction
+Logical consequence
+Rule of inference
+Sequent calculus
+Theorem
+Systems
+axiomatic
+deductive
+Hilbert
+list
+Complete theory
+Independence
+(
+from ZFC
+)
+Proof of impossibility
+Ordinal analysis
+Reverse mathematics
+Self-verifying theories
+Model theory
+Interpretation
+function
+of models
+Model
+atomic
+equivalence
+finite
+prime
+saturated
+spectrum
+submodel
+Non-standard model
+of
+non-standard arithmetic
+Diagram
+elementary
+Categorical theory
+Model complete theory
+Satisfiability
+Semantics of logic
+Strength
+Theories of truth
+semantic
+Tarski's
+Kripke's
+T-schema
+Transfer principle
+Truth predicate
+Truth value
+Type
+Ultraproduct
+Validity
+Computability
+theory
+Church encoding
+Church–Turing thesis
+Computably enumerable
+Computable function
+Computable set
+Decision problem
+decidable
+undecidable
+P
+NP
+P versus NP problem
+Kolmogorov complexity
+Lambda calculus
+Primitive recursive function
+Recursion
+Recursive set
+Turing machine
+Type theory
+Related
+Abstract logic
+Algebraic logic
+Automated theorem proving
+Category theory
+Concrete
+/
+Abstract category
+Category of sets
+History of logic
+History of mathematical logic
+timeline
+Logicism
+Mathematical object
+Philosophy of mathematics
+Supertask
+icon
+Mathematics
+portal
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Uniqueness_quantification&oldid=1381306881
+"
+Categories
+:
+Quantifier (logic)
+1 (number)
+Mathematical terminology
+Uniqueness theorems
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Articles needing additional references from November 2024
+All articles needing additional references
+Search
+Search
+Uniqueness quantification
+20 languages
+Add topic

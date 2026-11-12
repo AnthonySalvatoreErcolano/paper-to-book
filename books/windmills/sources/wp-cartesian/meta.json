@@ -1,0 +1,11 @@
+{
+ "id": "wp-cartesian",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Cartesian_product",
+ "why": "triples, products",
+ "fetched": "2026-11-12T16:53:19Z",
+ "files": {
+  "raw.html": "a2aee476599033b8e63485ee07d8e98ca74e67682276de10666652c9ce38902b"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Cartesian_product"
+}

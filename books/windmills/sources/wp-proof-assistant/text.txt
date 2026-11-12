@@ -1,0 +1,1125 @@
+Proof assistant - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Interactive theorem prover software
+For verification in computer science, see
+Formal verification
+.
+Not to be confused with
+Interactive proof system
+.
+It has been suggested that  this article be
+split
+out into articles titled
+Interactive proof assistant
+and
+Automated proof checker
+. (
+Discuss
+)
+(
+November 2026
+)
+An interactive proof session in RocqIDE, showing the proof script on the left and the proof state on the right
+In
+computer science
+and
+mathematical logic
+, a
+proof assistant
+or
+interactive theorem prover
+is a software tool to assist with the development of
+formal proofs
+by human–machine collaboration. This involves some sort of interactive proof editor, or other
+interface
+, with which a human can guide the search for proofs, the details of which are stored in, and some steps provided by, a
+computer
+.
+A recent effort within this field is making these tools use
+artificial intelligence to automate the formalization
+of ordinary mathematics.
+[
+1
+]
+Automated proof checking
+[
+edit
+]
+Automated proof checking
+is the process of using software for checking
+proofs
+for correctness. It is one of the most developed fields in
+automated reasoning
+. Automated proof checking differs from
+automated theorem proving
+in that automated proof checking simply mechanically checks the formal workings of an existing proof, instead of trying to develop new proofs or theorems itself. Because of this, the task of automated proof verification is much simpler than that of automated theorem proving, allowing automated proof checking software to be much simpler than automated theorem proving software. Proofs which can be checked by small programs are described as meeting the
+de Bruijn criterion
+.
+Because of this small size, some automated proof checking systems can have less than a thousand lines of core code, and are thus themselves amenable to both hand-checking and automated software verification. The
+Mizar system
+,
+HOL Light
+, and
+Metamath
+are examples of automated proof checking systems. Automated proof checking can be done either as a batch operation, or interactively, as part of an
+interactive theorem proving
+system.
+Soundness
+[
+edit
+]
+Errors in proof checkers that allow false statements to be declared as proven true, known as
+soundness bugs
+. are the most serious kind of bug found in proof checkers. The presence of a soundness bug in a checker potentially invalidates every proof that has been checked with that system. This can be addressed by a number of means, including making the checkers as small as possible to minimize the attack surface, exposing the checkers' source code for public review, the use of multiple independently written proof checkers on the basis of the
+Swiss cheese principle
+, and the formal proving of proof checkers themselves.
+[
+2
+]
+Soundness bugs have been found (and subsequently fixed) in systems such as
+Rust
+'s type checker, and the kernel checkers in
+Lean
+,
+HOL Light
+and
+Rocq
+.
+[
+3
+]
+[
+4
+]
+History
+[
+edit
+]
+Automath
+, which was developed by
+Nicolaas Govert de Bruijn
+starting in 1967, is often considered the first proof checker and the first system to utilize the
+Curry–Howard correspondence
+between programs and proofs.
+[
+5
+]
+Automath was used by
+L. S. van Benthem Jutting
+in 1977 to formalize
+Edmund Landau
+'s
+Foundations of Analysis
+, which was the first formalization of the real numbers.
+[
+6
+]
+In 1973,
+Robert Boyer
+and
+J Moore
+published
+Proving Theorems about LISP Functions
+which aimed to verify programs, not mathematics.
+[
+7
+]
+Their theorem prover is now known as
+ACL2
+.
+In the 1970s,
+Edinburgh LCF
+introduced the idea of using a
+functional programming language
+as the metalanguage for a theorem prover, and led to the
+HOL
+family of proof assistants.
+[
+6
+]
+The 1990s saw the rise of
+Rocq
+, (then known as Coq), which has been used for many
+large-scale formalization projects
+. Since the late 2010s,
+Lean
+, a proof assistant strongly influenced by Rocq, has become another popular choice, especially for formalizing mathematics.
+System comparison
+[
+edit
+]
+See also:
+Dependent type §
+Comparison
+, and
+Automated theorem proving §
+Comparison
+Name
+Latest version
+Developer(s)
+Implementation language
+Features
+Higher-order logic
+Dependent types
+Small
+kernel
+Proof automation
+Proof by
+reflection
+Code generation
+ACL2
+8.3
+Matt Kaufmann
+,
+J Strother Moore
+Common Lisp
+No
+Untyped
+No
+Yes
+Yes
+[
+8
+]
+Already executable
+Agda
+2.8.0
+[
+9
+]
+Ulf Norell, Nils Anders Danielsson, and Andreas Abel (
+Chalmers
+and
+Gothenburg
+)
+[
+9
+]
+Haskell
+[
+9
+]
+Yes
+[
+citation needed
+]
+Yes
+[
+10
+]
+Yes
+[
+citation needed
+]
+Yes
+[
+citation needed
+]
+Partial
+[
+citation needed
+]
+Already executable
+[
+citation needed
+]
+Albatross
+0.4
+Helmut Brandl
+OCaml
+Yes
+No
+Yes
+Yes
+Unknown
+Not yet implemented
+F*
+repository
+Microsoft Research
+and
+INRIA
+F*
+Yes
+Yes
+No
+Yes
+Yes
+[
+11
+]
+Yes
+HOL Light
+repository
+John Harrison
+OCaml
+Yes
+No
+Yes
+Yes
+No
+No
+HOL4
+Kananaskis-13 (or repo)
+Michael Norrish, Konrad Slind, and others
+Standard ML
+Yes
+No
+Yes
+Yes
+No
+Yes
+Idris
+2 0.6.0
+Edwin Brady
+Idris
+Yes
+Yes
+Yes
+Unknown
+Partial
+Yes
+Isabelle
+Isabelle2025 (March 2025)
+Larry Paulson
+(
+Cambridge
+),
+Tobias Nipkow
+(
+München
+) and Makarius Wenzel
+Standard ML
+,
+Scala
+Yes
+No
+Yes
+Yes
+Yes
+Yes
+Lean
+4.35.0-rc2
+[
+12
+]
+Leonardo de Moura
+(
+AWS
+)
+C++
+, Lean
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+LEGO
+1.3.1
+Randy Pollack (
+Edinburgh
+)
+Standard ML
+Yes
+Yes
+Yes
+No
+No
+No
+Metamath
+0.198
+[
+13
+]
+Norman Megill
+ANSI C
+Mizar
+8.1.11
+Białystok University
+Free Pascal
+Partial
+Yes
+No
+No
+No
+No
+Nqthm
+NuPRL
+5
+Cornell University
+Common Lisp
+Yes
+Yes
+Yes
+Yes
+Unknown
+Yes
+PVS
+6.0
+SRI International
+Common Lisp
+Yes
+Yes
+No
+Yes
+No
+Unknown
+Rocq
+9.0
+INRIA
+OCaml
+Yes
+Yes
+Yes
+Yes
+Yes
+Yes
+Twelf
+1.7.1
+Frank Pfenning
+, Carsten Schürmann
+Standard ML
+Yes
+Yes
+Unknown
+No
+No
+Unknown
+ACL2
+– a programming language, a first-order logical theory, and a theorem prover (with both interactive and automatic modes) in the Boyer–Moore tradition.
+HOL theorem provers
+– A family of tools ultimately derived from the
+LCF theorem prover
+. In these systems, the logical core is a library of their programming language. Theorems represent new elements of the language and can only be introduced via "strategies" which guarantee logical correctness. Strategy composition gives users the ability to produce significant proofs with relatively few interactions with the system. Members of the family include:
+HOL4
+– The "primary descendant", still under active development. Support for both
+Moscow ML
+and
+Poly/ML
+. Has a
+BSD-style license
+.
+HOL Light
+– A thriving "minimalist fork".
+OCaml
+based.
+ProofPower – Went proprietary, then returned to open source. Based on
+Standard ML
+.
+IMPS, An Interactive Mathematical Proof System.
+[
+14
+]
+Isabelle
+is an interactive theorem prover where other systems can be encoded. Isabelle/HOL is its most popular instance, whose foundation is close to that of the HOL prover. Other instances include Isabelle/ZF and Isabelle/FOL
+[
+15
+]
+. The main code-base is BSD-licensed, but the Isabelle distribution bundles many add-on tools with different licenses.
+Jape
+– Java based.
+Lean
+is both an interactive theorem prover and a functional, dependently-typed programming language. It is based on the
+calculus of inductive constructions
+with non-cumulative universes. Since version 4 (released in 2023), it is self-hosting. It can be used to formalize mathematics (and has a large, coherent library for formal mathematics), but also for software and hardware verification.
+LEGO
+Matita
+– A light system based on the calculus of inductive constructions.
+MINLOG
+– A proof assistant based on first-order minimal logic.
+Mizar
+– A proof assistant based on first-order logic, in a
+natural deduction
+style, and
+Tarski–Grothendieck set theory
+.
+PhoX
+– A proof assistant based on higher-order logic which is eXtensible.
+Prototype Verification System
+(PVS) – a proof language and system based on higher-order logic.
+Rocq
+(formerly named
+Coq
+) – A popular interactive theorem prover based on the calculus of inductive constructions.
+Theorem Proving System
+(TPS) and ETPS – Interactive theorem provers also based on simply typed lambda calculus, but based on an independent
+formulation
+of the logical theory and independent implementation.
+User interfaces
+[
+edit
+]
+A commonly used front-end for proof assistants was the
+Emacs
+-based Proof General, developed at the
+University of Edinburgh
+. Nowadays, many provers include their own editor. Rocq includes RocqIDE, which is based on OCaml/
+Gtk
+. Isabelle includes Isabelle/jEdit, which is based on
+jEdit
+and the Isabelle/
+Scala
+infrastructure for document-oriented proof processing. More recently,
+Visual Studio Code
+extensions have been developed for Rocq,
+[
+16
+]
+Isabelle by Makarius Wenzel,
+[
+17
+]
+and for Lean 4 by the leanprover developers.
+[
+18
+]
+Formalization extent
+[
+edit
+]
+Freek Wiedijk has been keeping a ranking of proof assistants by the amount of formalized theorems out of a list of 100 well-known theorems. As of October 2026, only six systems have formalized proofs of more than 70% of the theorems, namely Lean, HOL Light, Isabelle, Rocq, Metamath and Mizar while only one of them have all 100%.
+[
+19
+]
+[
+20
+]
+Notable formalized proofs
+[
+edit
+]
+See also:
+Computer-assisted proof §
+Theorems proved with the help of computer programs
+The following is a list of notable proofs that have been formalized within proof assistants.
+Theorem
+Proof assistant
+Year
+Four color theorem
+[
+21
+]
+Rocq
+2005
+Feit–Thompson theorem
+[
+22
+]
+Rocq
+2012
+Fundamental group
+of the
+circle
+[
+23
+]
+Rocq
+2013
+Erdős–Graham problem
+[
+24
+]
+[
+25
+]
+Lean
+2022
+Polynomial Freiman-Ruzsa conjecture over
+𝔽
+2
+[
+26
+]
+Lean
+2023
+BB(5)
+= 47,176,870
+[
+27
+]
+Rocq
+2024
+See also
+[
+edit
+]
+Automated theorem proving
+– Subfield of automated reasoning and mathematical logic
+Computer-assisted proof
+– Mathematical proof at least partially generated by computer
+Formal verification
+– Proving or disproving the correctness of certain intended algorithms
+Prover9
+– is an
+automated theorem prover
+for
+first-order and equational logic
+QED manifesto
+– Proposal for a computer-based database of all mathematical knowledge
+Satisfiability modulo theories
+– Logical problem studied in computer science
+List of mathematical discoveries by artificial intelligence
+References
+[
+edit
+]
+↑
+Ornes, Stephen (August 27, 2020).
+"Quanta Magazine – How Close Are Computers to Automating Mathematical Reasoning?"
+.
+↑
+"What mathematicians should know about the Lean Theorem Prover: questions of reliability and AI"
+.
+What's new
+. 2026-10-09
+. Retrieved
+2026-11-12
+.
+↑
+Sim, Yusung; Ryu, Sukyoung; Hong, Jaemin (2026-10-01).
+"Rust's Type Checker Implementation Is Unsound: An Empirical Study on Soundness Bugs in rustc"
+.
+Proceedings of the ACM on Software Engineering
+.
+3
+(ISSTA). New York, NY, USA: Association for Computing Machinery: ISSTA129:2952–ISSTA129:2975.
+doi
+:
+10.1145/3832220
+.
+{{
+cite journal
+}}
+:
+|
+issue=
+has extra text (
+help
+)
+↑
+Bernstein, D. J.
+"Proofs: Reasons to be concerned"
+.
+cr.yp.to
+. Archived from
+the original
+on 2025-12-13
+. Retrieved
+2026-11-12
+.
+↑
+Geuvers, Herman (16 July 2009).
+"Proof Assistants: history, ideas and future"
+(PDF)
+.
+Sādhanā
+.
+34
+:
+3–
+25.
+doi
+:
+10.1007/s12046-009-0001-5
+.
+1
+2
+Paulson, Lawrence (2026-04-23).
+"Why not use Lean?"
+. Retrieved
+2026-04-23
+.
+↑
+Boyer, Robert; Moore, J. (1975).
+"Proving Theorems about LISP Functions"
+.
+Association for Computing Machinery
+.
+22
+:
+129–
+144.
+doi
+:
+10.1145/321864.321875
+.
+↑
+Hunt, Warren;
+Kaufmann, Matt
+; Krug, Robert Bellarmine; Moore, J.; Smith, Eric W. (2005).
+"Meta Reasoning in ACL2"
+(PDF)
+.
+Theorem Proving in Higher Order Logics
+. Lecture Notes in Computer Science. Vol.
+3603. pp.
+163–
+178.
+doi
+:
+10.1007/11541868_11
+.
+ISBN
+978-3-540-28372-0
+.
+1
+2
+3
+"agda/agda: Agda is a dependently typed programming language / interactive theorem prover"
+.
+GitHub
+. Retrieved
+31 July
+2024
+.
+↑
+"The Agda Wiki"
+. Retrieved
+31 July
+2024
+.
+↑
+Search for "proofs by reflection":
+arXiv
+:
+1803.06547
+↑
+"Lean 4 Releases Page"
+.
+GitHub
+. Retrieved
+22 September
+2026
+.
+↑
+"Release v0.198 metamath/Metamath-exe"
+.
+GitHub
+.
+↑
+Farmer, William M.; Guttman, Joshua D.; Thayer, F. Javier (1993).
+"IMPS: An interactive mathematical proof system"
+.
+Journal of Automated Reasoning
+.
+11
+(2):
+213–
+248.
+doi
+:
+10.1007/BF00881906
+.
+S2CID
+3084322
+. Retrieved
+22 January
+2020
+.
+↑
+Isabelle Documentation webpage. Retrieved 22 April 2026:
+https://isabelle.in.tum.de/documentation.html
+↑
+"coq-community/vscoq"
+. July 29, 2024
+–
+via GitHub.
+↑
+Wenzel, Makarius.
+"Isabelle"
+. Retrieved
+2 November
+2019
+.
+↑
+"VS Code Lean 4"
+.
+GitHub
+. Retrieved
+15 October
+2023
+.
+↑
+Wiedijk, Freek (22 September 2025).
+"Formalizing 100 Theorems"
+.
+↑
+Geuvers, Herman (February 2009).
+"Proof assistants: History, ideas and future"
+.
+Sādhanā
+.
+34
+(1):
+3–
+25.
+doi
+:
+10.1007/s12046-009-0001-5
+.
+hdl
+:
+2066/75958
+.
+S2CID
+14827467
+.
+↑
+Gonthier, Georges
+(2008),
+"Formal Proof—The Four-Color Theorem"
+(PDF)
+,
+Notices of the American Mathematical Society
+,
+55
+(11):
+1382–
+1393,
+MR
+2463991
+,
+archived
+(PDF)
+from the original on 2011-08-05
+↑
+"Feit thomson proved in coq - Microsoft Research Inria Joint Centre"
+. 2016-11-19. Archived from
+the original
+on 2016-11-19
+. Retrieved
+2023-12-07
+.
+↑
+Licata, Daniel R.; Shulman, Michael (2013). "Calculating the Fundamental Group of the Circle in Homotopy Type Theory".
+2013 28th Annual ACM/IEEE Symposium on Logic in Computer Science
+. pp.
+223–
+232.
+arXiv
+:
+1301.3443
+.
+doi
+:
+10.1109/lics.2013.28
+.
+ISBN
+978-1-4799-0413-6
+.
+S2CID
+5661377
+.
+↑
+"Math Problem 3,500 Years In The Making Finally Gets A Solution"
+.
+IFLScience
+. 2022-03-11
+. Retrieved
+2024-02-09
+.
+↑
+Avigad, Jeremy (2023). "Mathematics and the formal turn".
+arXiv
+:
+2311.00007
+[
+math.HO
+].
+↑
+Sloman, Leila (2023-12-06).
+"
+'A-Team' of Math Proves a Critical Link Between Addition and Sets"
+.
+Quanta Magazine
+. Retrieved
+2023-12-07
+.
+↑
+"We have proved "BB(5) = 47,176,870"
+"
+.
+The Busy Beaver Challenge
+. 2024-07-02
+. Retrieved
+2024-07-09
+.
+References
+[
+edit
+]
+Barendregt, Henk
+; Geuvers, Herman (2001).
+"18. Proof-assistants using Dependent Type Systems"
+(
+(PDF)
+)
+. In Robinson, Alan J. A.; Voronkov, Andrei (eds.).
+Handbook of Automated Reasoning
+. Vol.
+2. Elsevier. pp.
+1149–.
+ISBN
+978-0-444-50812-6
+. Archived from
+the original
+on 2007-07-27.
+Pfenning, Frank
+.
+"17. Logical frameworks"
+(PDF)
+.
+Handbook vol 2 2001
+. pp.
+1065–
+1148.
+Pfenning, Frank (1996). "The practice of logical frameworks". In Kirchner, H. (ed.).
+Trees in Algebra and Programming – CAAP '96
+. Lecture Notes in Computer Science. Vol.
+1059. Springer. pp.
+119–
+134.
+doi
+:
+10.1007/3-540-61064-2_33
+.
+ISBN
+3-540-61064-2
+.
+Constable, Robert L.
+(1998).
+"X. Types in computer science, philosophy and logic"
+. In Buss, S. R. (ed.).
+Handbook of Proof Theory
+. Studies in Logic. Vol.
+137. Elsevier. pp.
+683–
+786.
+ISBN
+978-0-08-053318-6
+.
+Wiedijk, Freek (2005).
+"The Seventeen Provers of the World"
+(PDF)
+. Radboud University Nijmegen.
+External links
+[
+edit
+]
+This article's
+use of
+external links
+may not follow Wikipedia's policies or guidelines
+.
+Please
+improve this article
+by removing
+excessive
+or
+inappropriate
+external links, and converting useful links where appropriate into
+footnote references
+.
+(
+December 2022
+)
+(
+Learn how and when to remove this message
+)
+Theorem Prover Museum
+"Introduction"
+in
+Certified Programming with Dependent Types
+.
+Introduction to the Coq Proof Assistant
+(with a general introduction to interactive theorem proving)
+Interactive Theorem Proving for Agda Users
+A list of theorem proving tools
+Catalogues
+Digital Math by Category: Tactic Provers
+Automated Deduction Systems and Groups
+Theorem Proving and Automated Reasoning Systems
+Database of Existing Mechanized Reasoning Systems
+NuPRL: Other Systems
+"Specific Logical Frameworks and Implementations"
+. Archived from
+the original
+on 10 April 2022
+. Retrieved
+15 February
+2024
+.
+(By Frank Pfenning).
+DMOZ
+:
+Science: Math: Logic and Foundations: Computational Logic: Logical Frameworks
+v
+t
+e
+Industrial and applied mathematics
+Computational
+Algorithms
+design
+analysis
+Automata theory
+Artificial intelligence
+Automated theorem proving
+Coding theory
+Computational geometry
+Constraint satisfaction
+Constraint programming
+Computational logic
+Cryptography
+Computational group theory
+Information theory
+Statistics
+Mathematical
+software
+Arbitrary-precision arithmetic
+Finite element analysis
+Tensor software
+Interactive geometry software
+Optimization software
+Statistical software
+Numerical-analysis software
+Numerical libraries
+Proof assistants
+Solvers
+Discrete
+Computer algebra
+Computational number theory
+Combinatorics
+Graph theory
+Discrete geometry
+Analysis
+Approximation theory
+Clifford analysis
+Clifford algebra
+Differential equations
+Ordinary differential equations
+Partial differential equations
+Stochastic differential equations
+Differential geometry
+Differential forms
+Gauge theory
+Geometric analysis
+Dynamical systems
+Chaos theory
+Control theory
+Functional analysis
+Operator algebra
+Operator theory
+Harmonic analysis
+Fourier analysis
+Multilinear algebra
+Exterior
+Geometric
+Tensor
+Vector
+Multivariable calculus
+Exterior
+Geometric
+Tensor
+Vector
+Numerical analysis
+Numerical linear algebra
+Numerical methods for ordinary differential equations
+Numerical methods for partial differential equations
+Validated numerics
+Variational calculus
+Probability theory
+Distributions
+(
+random variables
+)
+Stochastic processes
+/
+analysis
+Path integral
+Stochastic variational calculus
+Mathematical
+physics
+Analytical mechanics
+Lagrangian
+Hamiltonian
+Field theory
+Classical
+Conformal
+Effective
+Gauge
+Quantum
+Statistical
+Topological
+Perturbation theory
+in quantum mechanics
+Potential theory
+String theory
+Bosonic
+Topological
+Supersymmetry
+Supersymmetric quantum mechanics
+Supersymmetric theory of stochastic dynamics
+Algebraic
+structures
+Algebra of physical space
+Particle physics and representation theory
+Feynman integral
+Poisson algebra
+Quantum group
+Renormalization group
+Spacetime algebra
+Superalgebra
+Supersymmetry algebra
+Decision sciences
+Game theory
+Operations research
+Optimization
+Social choice theory
+Statistics
+Mathematical economics
+Mathematical finance
+Other applications
+Biology
+Chemistry
+Psychology
+Sociology
+"
+The Unreasonable Effectiveness of Mathematics in the Natural Sciences
+"
+Related
+Mathematics
+Organizations
+Society for Industrial and Applied Mathematics
+Japan Society for Industrial and Applied Mathematics
+Société de Mathématiques Appliquées et Industrielles
+International Council for Industrial and Applied Mathematics
+European Community on Computational Methods in Applied Sciences
+Category
+Mathematics portal
+/
+outline
+/
+topics list
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Proof_assistant&oldid=1385250536
+"
+Categories
+:
+Argument technology
+Automated theorem proving
+Proof assistants
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Articles proposed for splitting from November 2026
+All articles proposed for splitting
+CS1 errors: extra text: issue
+All articles with unsourced statements
+Articles with unsourced statements from July 2024
+Wikipedia external links cleanup from December 2022
+Search
+Search
+Proof assistant
+11 languages
+Add topic

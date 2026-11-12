@@ -1,0 +1,1555 @@
+Bijection - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+One-to-one correspondence
+"One-to-one correspondence" redirects here. For one-to-one function, see
+injective function
+.
+A bijective function,
+f
+:
+X
+→
+Y
+, where set X is {1, 2, 3, 4} and set Y is {D, C, B, A}. For example,
+f
+(1) = D.
+Function
+x
+↦
+f
+(
+x
+)
+History of the function concept
+Types by
+domain
+and
+codomain
+X
+→
+𝔹
+𝔹
+→
+X
+𝔹
+n
+→
+X
+X
+→
+ℤ
+ℤ
+→
+X
+X
+→
+ℝ
+ℝ
+→
+X
+ℝ
+n
+→
+X
+X
+→
+ℂ
+ℂ
+→
+X
+ℂ
+n
+→
+X
+Classes/properties
+Constant
+Identity
+Linear
+Polynomial
+Rational
+Algebraic
+Analytic
+Smooth
+Continuous
+Measurable
+Injective
+Surjective
+Bijective
+Constructions
+Restriction
+Composition
+λ
+Inverse
+Generalizations
+Relation
+(
+Binary relation
+)
+Set-valued
+Multivalued
+Partial
+Implicit
+Space
+Higher-order
+Morphism
+Functor
+List of specific functions
+v
+t
+e
+In
+mathematics
+, a
+bijection
+,
+bijective function
+, or
+one-to-one correspondence
+is a
+function
+between two
+sets
+such that each element of the second set (the
+codomain
+) is the image of exactly one element of the first set (the
+domain
+). Given a function
+f
+:
+A
+→
+B
+, the image of an
+element
+a
+∈
+A
+is the element
+f
+(
+a
+)
+∈
+B
+in the codomain. The pre-image of an element
+b
+∈
+B
+is any element
+a
+∈
+A
+in the domain such that
+f
+(
+a
+)
+=
+b
+. Equivalently, a bijection is a
+relation
+between two sets such that each element of either set is paired with exactly one element of the other set.
+A function is bijective if and only if it is
+invertible
+; that is, a function
+f
+:
+X
+→
+Y
+is bijective if and only if there is a function
+g
+:
+Y
+→
+X
+,
+the
+inverse
+of
+f
+, such that each of the two ways for
+composing
+the two functions produces an
+identity function
+:
+g
+(
+f
+(
+x
+)
+)
+=
+x
+for each
+x
+in
+X
+and
+f
+(
+g
+(
+y
+)
+)
+=
+y
+for each
+y
+in
+Y
+.
+For example, the
+multiplication by two
+defines a bijection from the
+integers
+to the
+even numbers
+, which has the
+division by two
+as its inverse function.
+A function is bijective if and only if it is both
+injective
+(or
+one-to-one
+)—meaning that each element in the codomain is mapped from at most one element of the domain—and
+surjective
+(or
+onto
+)—meaning that each element of the codomain is mapped from at least one element of the domain. The term
+one-to-one correspondence
+must not be confused with
+one-to-one function
+, which means injective but not necessarily surjective.
+The elementary operation of
+counting
+establishes a bijection from some
+finite set
+to the first
+natural numbers
+(1, 2, 3, ...)
+, up to the number of elements in the counted set. It results that two finite sets have the same number of elements if and only if there exists a bijection between them. More generally, two sets are said to have the same
+cardinal number
+if there exists a bijection between them.
+A bijective function from a set to itself is also called a
+permutation
+,
+[
+1
+]
+and the set of all permutations of a set forms its
+symmetric group
+.
+Some bijections with further properties have received specific names, which include
+automorphisms
+,
+isomorphisms
+,
+homeomorphisms
+,
+diffeomorphisms
+,
+permutations
+, and most
+geometric transformations
+.
+Galois correspondences
+are bijections between sets of
+mathematical objects
+of apparently very different nature.
+Definition
+[
+edit
+]
+For a
+binary relation
+pairing elements of set
+X
+with elements of set
+Y
+to be a bijection, four properties must hold:
+each element of
+X
+must be paired with at least one element of
+Y
+,
+no element of
+X
+may be paired with more than one element of
+Y
+,
+each element of
+Y
+must be paired with at least one element of
+X
+, and
+no element of
+Y
+may be paired with more than one element of
+X
+.
+Satisfying properties (1) and (2) means that a pairing is a
+function
+with
+domain
+X
+. It is more common to see properties (1) and (2) written as a single statement: Every element of
+X
+is paired with exactly one element of
+Y
+. Functions which satisfy property (3) are said to be "
+onto
+Y
+" and are called
+surjections
+(or
+surjective functions
+). Functions which satisfy property (4) are said to be "
+one-to-one functions
+" and are called
+injections
+(or
+injective functions
+).
+[
+2
+]
+With this terminology, a bijection is a function which is both a surjection and an injection, or using other words, a bijection is a function which is both "one-to-one" and "onto".
+[
+3
+]
+Examples
+[
+edit
+]
+Batting line-up of a baseball or cricket team
+[
+edit
+]
+Consider the
+batting line-up
+of a baseball or
+cricket
+team (or any list of all the players of any sports team where every player holds a specific spot in a line-up). The set
+X
+will be the players on the team (of size nine in the case of baseball) and the set
+Y
+will be the positions in the batting order (1st, 2nd, 3rd, etc.) The "pairing" is given by which player is in what position in this order. Property (1) is satisfied since each player is somewhere in the list. Property (2) is satisfied since no player bats in two (or more) positions in the order. Property (3) says that for each position in the order, there is some player batting in that position and property (4) states that two or more players are never batting in the same position in the list.
+Seats and students of a classroom
+[
+edit
+]
+In a classroom, there are a certain number of seats. A group of students enter the room and the instructor asks them to be seated. After a quick look around the room, the instructor declares that there is a bijection between the set of students and the set of seats, where each student is paired with the seat they are sitting in. What the instructor observed in order to reach this conclusion was that:
+Every student was in a seat (there was no one standing),
+No student was in more than one seat,
+Every seat had someone sitting there (there were no empty seats), and
+No seat had more than one student in it.
+The instructor was able to conclude that there were just as many seats as there were students, without having to count either set.
+Fingerprints
+[
+edit
+]
+Consider a sample of 100 distinct individuals and the corresponding set of their
+fingerprints
+. Assuming that no two individuals in that sample share the same fingerprint, the set is one-to-one (injective). Furthermore, there aren’t any fingerprints without an individual; the set is onto (surjective). Since both sets have the same
+cardinality
+and the sets are injective and surjective, then it follows there’s a bijection between the set of individuals and their fingerprints.
+More mathematical examples
+[
+edit
+]
+n mod 2 + (-1)^(n+1) n
+Bijection from the natural numbers to the integers, which maps 2
+n
+to −
+n
+and 2
+n
++ 1 to
+n+1
+, for
+n
+≥ 0.
+For any set
+X
+, the
+identity function
+1
+X
+:
+X
+→
+X
+,
+1
+X
+(
+x
+) =
+x
+is bijective.
+The
+multiplicative inverse
+function gives a bijection of the
+unit interval
+(0, 1) with the semi-infinite interval (1, +∞).
+The function
+f
+:
+R
+→
+R
+,
+f
+(
+x
+) = 2
+x
++ 1 is bijective, since for each
+y
+there is a unique
+x
+= (
+y
+− 1)/2 such that
+f
+(
+x
+) =
+y
+. More generally, any
+linear function
+over the reals,
+f
+:
+R
+→
+R
+,
+f
+(
+x
+) =
+ax
++
+b
+(where
+a
+is non-zero) is a bijection. Each real number
+y
+is obtained from (or paired with) the real number
+x
+= (
+y
+−
+b
+)/
+a
+.
+The function
+f
+:
+R
+→ (−π/2, π/2), given by
+f
+(
+x
+) = arctan(
+x
+) is bijective, since each real number
+x
+is paired with exactly one angle
+y
+in the interval (−π/2,
+π/2) so that tan(
+y
+) =
+x
+(that is,
+y
+= arctan(
+x
+)). If the
+codomain
+(−π/2,
+π/2) was made larger to include an integer multiple of π/2, then this function would no longer be onto (surjective), since there is no real number which could be paired with the multiple of π/2 by this arctan function.
+The
+exponential function
+,
+g
+:
+R
+→
+R
+,
+g
+(
+x
+) = e
+x
+, is not bijective: for instance, there is no
+x
+in
+R
+such that
+g
+(
+x
+) = −1, showing that
+g
+is not onto (surjective). However, if the codomain is restricted to the positive real numbers
+ℝ
++
+≡
+(
+0
+,
+∞
+)
+, then
+g
+would be bijective; its inverse (see below) is the
+natural logarithm
+function ln.
+The function
+h
+:
+R
+→
+R
++
+,
+h
+(
+x
+) =
+x
+2
+is not bijective: for instance,
+h
+(−1) =
+h
+(1) = 1, showing that
+h
+is not one-to-one (injective). However, if the
+domain
+is restricted to
+ℝ
+0
++
+≡
+[
+0
+,
+∞
+)
+, then
+h
+would be bijective; its inverse is the positive square root function.
+By
+Schröder–Bernstein theorem
+, given any two sets
+X
+and
+Y
+, and two injective functions
+f
+:
+X → Y
+and
+g
+:
+Y → X
+, there exists a bijective function
+h
+:
+X → Y
+.
+Every map from
+the empty set
+to itself is a bijection.
+Inverses
+[
+edit
+]
+A bijection
+f
+with domain
+X
+(indicated by
+f
+:
+X → Y
+in
+functional notation
+) also defines a
+converse relation
+starting in
+Y
+and going to
+X
+(by turning the arrows around). The process of "turning the arrows around" for an arbitrary function does not,
+in general
+, yield a function, but properties (3) and (4) of a bijection say that this inverse relation is a function with domain
+Y
+. Moreover, properties (1) and (2) then say that this inverse
+function
+is a surjection and an injection, that is, the
+inverse function
+exists and is also a bijection. Functions that have inverse functions are said to be
+invertible
+. A function is invertible if and only if it is a bijection.
+Stated in concise mathematical notation, a function
+f
+:
+X → Y
+is bijective if and only if it satisfies the condition
+for every
+y
+in
+Y
+there is a unique
+x
+in
+X
+with
+y
+=
+f
+(
+x
+).
+Continuing with the baseball batting line-up example, the function that is being defined takes as input the name of one of the players and outputs the position of that player in the batting order. Since this function is a bijection, it has an inverse function which takes as input a position in the batting order and outputs the player who will be batting in that position.
+Composition
+[
+edit
+]
+A bijection composed of an injection (X → Y) and a surjection (Y → Z).
+The
+composition
+g
+∘
+f
+of two bijections
+f
+:
+X
+→
+Y
+and
+g
+:
+Y
+→
+Z
+is a bijection, whose inverse is given by
+g
+∘
+f
+is
+(
+g
+∘
+f
+)
+−
+1
+=
+(
+f
+−
+1
+)
+∘
+(
+g
+−
+1
+)
+.
+Conversely, if the composition
+g
+∘
+f
+of two functions is bijective, it only follows that
+f
+is
+injective
+and
+g
+is
+surjective
+.
+Cardinality
+[
+edit
+]
+If
+X
+and
+Y
+are
+finite sets
+, then there exists a bijection between the two sets
+X
+and
+Y
+if and only if
+X
+and
+Y
+have the same number of elements. Indeed, in
+axiomatic set theory
+, this is taken as the definition of "same number of elements" (
+equinumerosity
+), and generalizing this definition to
+infinite sets
+leads to the concept of
+cardinal number
+, a way to distinguish the various sizes of infinite sets.
+Any
+infinite set
+that has a bijection to the
+natural numbers
+is said to be countably infinite. Likewise, any infinite set that has a bijection with the
+integers
+or the
+rational numbers
+is also countably infinite, since they also have a bijection to the natural numbers. This concept is integral to determining if some functions are countable.
+For example, the set of all even integers f(n)=2n is countably infinite because there’s a bijection between the even integers and the natural numbers.
+Properties
+[
+edit
+]
+A function
+f
+:
+R
+→
+R
+is bijective if and only if its
+graph
+meets every horizontal and vertical line exactly once.
+If
+X
+is a set, then the bijective functions from
+X
+to itself, together with the operation of functional composition (
+∘
+), form a
+group
+, the
+symmetric group
+of
+X
+, which is denoted variously by S(
+X
+),
+S
+X
+, or
+X
+! (
+X
+factorial
+).
+Bijections preserve
+cardinalities
+of sets: for a subset
+A
+of the domain with cardinality |
+A
+| and subset
+B
+of the codomain with cardinality |
+B
+|, one has the following equalities:
+|
+f
+(
+A
+)| = |
+A
+| and |
+f
+−1
+(
+B
+)| = |
+B
+|.
+If
+X
+and
+Y
+are
+finite sets
+with the same cardinality, and
+f
+:
+X → Y
+, then the following are equivalent:
+f
+is a bijection.
+f
+is a
+surjection
+.
+f
+is an
+injection
+.
+For a finite set
+S
+, there is a bijection between the set of possible
+total orderings
+of the elements and the set of bijections from
+S
+to
+S
+.  That is to say, the number of
+permutations
+of elements of
+S
+is the same as the number of total orderings of that set—namely,
+n
+!.
+Category theory
+[
+edit
+]
+Bijections are precisely the
+isomorphisms
+in the
+category
+Set
+of
+sets
+and set functions.  However, the bijections are not always the isomorphisms for more complex categories.  For example, in the category
+Grp
+of
+groups
+, the morphisms must be
+homomorphisms
+since they must preserve the group structure, so the isomorphisms are
+group isomorphisms
+which are bijective homomorphisms.
+Generalization to partial functions
+[
+edit
+]
+The notion of one-to-one correspondence generalizes to
+partial functions
+, where they are called
+partial bijections
+, although partial bijections are only required to be injective. The reason for this relaxation is that a (proper) partial function is already undefined for a portion of its domain; thus there is no compelling reason to constrain its inverse to be a
+total function
+, i.e. defined everywhere on its domain. The set of all partial bijections on a given base set is called the
+symmetric inverse semigroup
+.
+[
+4
+]
+Another way of defining the same notion is to say that a partial bijection from
+A
+to
+B
+is any relation
+R
+(which turns out to be a partial function) with the property that
+R
+is the
+graph of
+a bijection
+f
+:
+A
+′
+→
+B
+′
+, where
+A
+′
+is a
+subset
+of
+A
+and
+B
+′
+is a subset of
+B
+.
+[
+5
+]
+When the partial bijection is on the same set, it is sometimes called a
+one-to-one partial
+transformation
+.
+[
+6
+]
+An example is the
+Möbius transformation
+simply defined on the complex plane, rather than its completion to the extended complex plane.
+[
+7
+]
+Gallery
+[
+edit
+]
+The sets X = {1, 2, 3} and Y = {A, B, C, D}, and a function mapping 1 to D, 2 to B, and 3 to A.
+An injective non-surjective function (injection, not a bijection)
+The sets X = {1, 2, 3, 4} and Y = {A, B, C, D}, and a function mapping 1 to D, 2 to B, 3 to C, and 4 to A.
+An injective surjective function (
+bijection
+)
+The sets X = {1, 2, 3, 4} and Y = {B, C, D}, and a function mapping 1 to D, 2 to B, 3 to C, and 4 to C.
+A non-injective surjective function (surjection, not a bijection)
+The sets X = {1, 2, 3, 4} and Y = {A, B, C, D}, and a function mapping 1 to D, 2 to B, 3 to C, and 4 to C.
+A non-injective non-surjective function (also not a bijection)
+See also
+[
+edit
+]
+icon
+Mathematics portal
+Ax–Grothendieck theorem
+Bijection, injection and surjection
+Bijective numeration
+Bijective proof
+Category theory
+Multivalued function
+Notes
+[
+edit
+]
+↑
+Hall 1959
+, p.
+3
+↑
+There are names associated to properties (1) and (2) as well. A relation which satisfies property (1) is called a
+total relation
+and a relation satisfying (2) is a
+single valued relation
+.
+↑
+"Bijection, Injection, And Surjection | Brilliant Math & Science Wiki"
+.
+brilliant.org
+. Retrieved
+7 December
+2019
+.
+↑
+Christopher Hollings (16 July 2014).
+Mathematics across the Iron Curtain: A History of the Algebraic Theory of Semigroups
+. American Mathematical Society. p.
+251.
+ISBN
+978-1-4704-1493-1
+.
+↑
+Francis Borceux (1994).
+Handbook of Categorical Algebra: Volume 2, Categories and Structures
+. Cambridge University Press. p.
+289.
+ISBN
+978-0-521-44179-7
+.
+↑
+Pierre A. Grillet (1995).
+Semigroups: An Introduction to the Structure Theory
+. CRC Press. p.
+228.
+ISBN
+978-0-8247-9662-4
+.
+↑
+John Meakin (2007). "Groups and semigroups: connections and contrasts". In C.M. Campbell; M.R. Quick; E.F. Robertson; G.C. Smith (eds.).
+Groups St Andrews 2005 Volume 2
+. Cambridge University Press. p.
+367.
+ISBN
+978-0-521-69470-4
+.
+preprint
+citing
+Lawson, M. V. (1998).
+"The Möbius Inverse Monoid"
+.
+Journal of Algebra
+.
+200
+(2):
+428–
+438.
+doi
+:
+10.1006/jabr.1997.7242
+.
+References
+[
+edit
+]
+This topic is a basic concept in set theory and can be found in any text which includes an introduction to set theory. Almost all texts that deal with an introduction to writing proofs will include a section on set theory, so the topic may be found in any of these:
+Hall, Marshall Jr.
+(1959).
+The Theory of Groups
+. MacMillan.
+Wolf (1998).
+Proof, Logic and Conjecture: A Mathematician's Toolbox
+. Freeman.
+Sundstrom (2003).
+Mathematical Reasoning: Writing and Proof
+. Prentice-Hall.
+Smith; Eggen; St.Andre (2006).
+A Transition to Advanced Mathematics (6th Ed.)
+. Thomson (Brooks/Cole).
+Schumacher (1996).
+Chapter Zero: Fundamental Notions of Abstract Mathematics
+. Addison-Wesley.
+O'Leary (2003).
+The Structure of Proof: With Logic and Set Theory
+. Prentice-Hall.
+Morash.
+Bridge to Abstract Mathematics
+. Random House.
+Maddox (2002).
+Mathematical Thinking and Writing
+. Harcourt/ Academic Press.
+Lay (2001).
+Analysis with an introduction to proof
+. Prentice Hall.
+Gilbert; Vanstone (2005).
+An Introduction to Mathematical Thinking
+. Pearson Prentice-Hall.
+Fletcher; Patty.
+Foundations of Higher Mathematics
+. PWS-Kent.
+Iglewicz; Stoyle.
+An Introduction to Mathematical Reasoning
+. MacMillan.
+Devlin, Keith (2004).
+Sets, Functions, and Logic: An Introduction to Abstract Mathematics
+. Chapman & Hall/ CRC Press.
+D'Angelo; West (2000).
+Mathematical Thinking: Problem Solving and Proofs
+. Prentice Hall.
+Cupillari
+(1989).
+The Nuts and Bolts of Proofs
+. Wadsworth.
+ISBN
+9780534103200
+.
+Bond.
+Introduction to Abstract Mathematics
+. Brooks/Cole.
+Barnier; Feldman (2000).
+Introduction to Advanced Mathematics
+. Prentice Hall.
+Ash.
+A Primer of Abstract Mathematics
+. MAA.
+Lay, Steven R.
+Analysis with an Introduction to Proof
+. 5th ed., Pearson, 2014.
+Tao, Terence.
+Analysis I
+. 3rd ed., Hindustan Book Agency, 2016.
+External links
+[
+edit
+]
+Wikimedia Commons logo
+Wikimedia Commons has media related to
+Bijectivity
+.
+"Bijection"
+,
+Encyclopedia of Mathematics
+, EMS Press, 2001 [1994]
+Weisstein, Eric W.
+"Bijection"
+.
+MathWorld
+.
+Earliest Uses of Some of the Words of Mathematics: entry on Injection, Surjection and Bijection has the history of Injection and related terms.
+v
+t
+e
+Set theory
+Overview
+Set (mathematics)
+Venn diagram of set intersection
+Axioms
+Adjunction
+Choice
+countable
+dependent
+global
+Constructibility (V=L)
+Determinacy
+projective
+Extensionality
+Infinity
+Limitation of size
+Pairing
+Power set
+Regularity
+Union
+Martin's axiom
+Axiom schema
+replacement
+specification
+Operations
+Cartesian product
+Complement
+(i.e. set difference)
+De Morgan's laws
+Disjoint union
+Identities
+Intersection
+Power set
+Symmetric difference
+Union
+Concepts
+Methods
+Almost
+Cardinality
+Cardinal number
+(
+large
+)
+Class
+Constructible universe
+Continuum hypothesis
+Diagonal argument
+Element
+ordered pair
+tuple
+Family
+Forcing
+One-to-one correspondence
+Ordinal number
+Set-builder notation
+Transfinite induction
+Venn diagram
+Set
+types
+Amorphous
+Countable
+Empty
+Finite
+(
+hereditarily
+)
+Filter
+base
+subbase
+Ultrafilter
+Fuzzy
+Infinite
+(
+Dedekind-infinite
+)
+Recursive
+Singleton
+Subset
+·
+Superset
+Transitive
+Uncountable
+Universal
+Theories
+Alternative
+Axiomatic
+Constructive
+Naive
+Cantor's theorem
+Zermelo
+General
+Principia Mathematica
+New Foundations
+Zermelo–Fraenkel
+von Neumann–Bernays–Gödel
+Morse–Kelley
+Kripke–Platek
+Tarski–Grothendieck
+Paradoxes
+Problems
+Russell's paradox
+Suslin's problem
+Burali-Forti paradox
+Set theorists
+Paul Bernays
+Georg Cantor
+Paul Cohen
+Richard Dedekind
+Abraham Fraenkel
+Kurt Gödel
+Thomas Jech
+John von Neumann
+Willard Quine
+Bertrand Russell
+Thoralf Skolem
+Ernst Zermelo
+v
+t
+e
+Mathematical logic
+General
+Axiom
+list
+Cardinality
+First-order logic
+Formal proof
+Formal semantics
+Foundations of mathematics
+Information theory
+Lemma
+Logical consequence
+Model
+Theorem
+Theory
+Type theory
+Theorems
+(
+list
+),
+paradoxes
+Gödel's completeness
+–
+incompleteness theorems
+Tarski's undefinability
+Banach–Tarski paradox
+Cantor's theorem
+–
+paradox
+–
+diagonal argument
+Compactness
+Halting problem
+Lindström's
+Löwenheim–Skolem
+Russell's paradox
+Logics
+Traditional
+Classical logic
+Logical truth
+Tautology
+Proposition
+Inference
+Logical equivalence
+Consistency
+Equiconsistency
+Argument
+Soundness
+Validity
+Syllogism
+Square of opposition
+Venn diagram
+Propositional
+Boolean algebra
+Boolean functions
+Logical connectives
+Propositional calculus
+Propositional formula
+Truth tables
+Many-valued logic
+3
+finite
+∞
+Predicate
+First-order
+list
+Second-order
+Monadic
+Higher-order
+Fixed-point
+Free
+Quantifiers
+Predicate
+Monadic predicate calculus
+Set theory
+Set
+hereditary
+Class
+(
+Ur-
+)
+Element
+Ordinal number
+Extensionality
+Forcing
+Relation
+equivalence
+partition
+Set operations:
+intersection
+union
+complement
+Cartesian product
+power set
+identities
+Types
+of
+sets
+Countable
+Uncountable
+Empty
+Inhabited
+Singleton
+Finite
+Infinite
+Transitive
+Ultrafilter
+Recursive
+Fuzzy
+Universal
+Universe
+constructible
+Grothendieck
+Von Neumann
+Maps
+,
+cardinality
+Function
+/
+Map
+domain
+codomain
+image
+In
+/
+Sur
+/
+Bi
+-jection
+Schröder–Bernstein theorem
+Isomorphism
+Gödel numbering
+Enumeration
+Large cardinal
+inaccessible
+Aleph number
+Operation
+binary
+Theories
+Zermelo–Fraenkel
+axiom of choice
+continuum hypothesis
+General
+Kripke–Platek
+Morse–Kelley
+Naive
+New Foundations
+Tarski–Grothendieck
+Von Neumann–Bernays–Gödel
+Ackermann
+Constructive
+Formal
+systems
+(
+list
+),
+language
+,
+syntax
+Alphabet
+Arity
+Automata
+Axiom schema
+Expression
+ground
+Extension
+by definition
+conservative
+Relation
+Formation rule
+Grammar
+Formula
+atomic
+closed
+ground
+open
+Free/bound variable
+Language
+Metalanguage
+Logical connective
+¬
+∨
+∧
+→
+↔
+=
+Predicate
+functional
+variable
+propositional variable
+Proof
+Quantifier
+∃
+!
+∀
+rank
+Sentence
+atomic
+spectrum
+Signature
+String
+Substitution
+Symbol
+function
+logical/constant
+non-logical
+variable
+Term
+Theory
+list
+Example
+axiomatic
+systems
+(
+list
+)
+of
+true arithmetic
+Peano
+second-order
+elementary function
+primitive recursive
+Robinson
+Skolem
+of the
+real numbers
+Tarski's axiomatization
+of
+Boolean algebras
+canonical
+minimal axioms
+of
+geometry
+Euclidean
+Elements
+Hilbert's
+Tarski's
+non-Euclidean
+Principia Mathematica
+Proof theory
+Formal proof
+Natural deduction
+Logical consequence
+Rule of inference
+Sequent calculus
+Theorem
+Systems
+axiomatic
+deductive
+Hilbert
+list
+Complete theory
+Independence
+(
+from ZFC
+)
+Proof of impossibility
+Ordinal analysis
+Reverse mathematics
+Self-verifying theories
+Model theory
+Interpretation
+function
+of models
+Model
+atomic
+equivalence
+finite
+prime
+saturated
+spectrum
+submodel
+Non-standard model
+of
+non-standard arithmetic
+Diagram
+elementary
+Categorical theory
+Model complete theory
+Satisfiability
+Semantics of logic
+Strength
+Theories of truth
+semantic
+Tarski's
+Kripke's
+T-schema
+Transfer principle
+Truth predicate
+Truth value
+Type
+Ultraproduct
+Validity
+Computability
+theory
+Church encoding
+Church–Turing thesis
+Computably enumerable
+Computable function
+Computable set
+Decision problem
+decidable
+undecidable
+P
+NP
+P versus NP problem
+Kolmogorov complexity
+Lambda calculus
+Primitive recursive function
+Recursion
+Recursive set
+Turing machine
+Type theory
+Related
+Abstract logic
+Algebraic logic
+Automated theorem proving
+Category theory
+Concrete
+/
+Abstract category
+Category of sets
+History of logic
+History of mathematical logic
+timeline
+Logicism
+Mathematical object
+Philosophy of mathematics
+Supertask
+icon
+Mathematics
+portal
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Bijection&oldid=1378996430
+"
+Category
+:
+Bijections
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Use dmy dates from July 2022
+Commons category link is on Wikidata
+Search
+Search
+Bijection
+58 languages
+Add topic

@@ -1,0 +1,11 @@
+{
+ "id": "ml-periodic",
+ "type": "url",
+ "ref": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Dynamics/PeriodicPts/Defs.html",
+ "why": "mathlib minimalPeriod",
+ "fetched": "2026-11-12T16:53:25Z",
+ "files": {
+  "raw.html": "e3645cd12ba6c2f57ac8baf8c2ebf5b9a3bbe437c9eb7d63264409242583810d"
+ },
+ "final_url": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Dynamics/PeriodicPts/Defs.html"
+}

@@ -1,0 +1,1206 @@
+Euclidean division - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Division with remainder of integers
+This article is about division of integers. For polynomials, see
+Euclidean division of polynomials
+. For other domains, see
+Euclidean domain
+.
+17 is divided into 3 groups of 5, with 2 as leftover. Here, the dividend is 17, the divisor is 3, the quotient is 5, and the remainder is 2 (which is strictly smaller than the divisor 3), or more symbolically, 17 = (3
+×
+5) + 2.
+In
+arithmetic
+,
+Euclidean division
+– or
+division with remainder
+– is the process of
+dividing
+one
+integer
+(the dividend) by another (the divisor), in a way that produces an integer
+quotient
+and a natural number
+remainder
+strictly smaller than the
+absolute value
+of the divisor. A fundamental property is that the quotient and the remainder exist and are unique, under some conditions. Because of this uniqueness,
+Euclidean division
+is often considered without referring to any method of computation, and without explicitly computing the quotient and the remainder. The methods of computation are called
+integer division algorithms
+, the best known of which being
+long division
+.
+Euclidean division, and algorithms to compute it, are fundamental for many questions concerning integers, such as the
+Euclidean algorithm
+for finding the
+greatest common divisor
+of two integers,
+[
+1
+]
+and
+modular arithmetic
+, for which only remainders are considered.
+[
+2
+]
+The operation consisting of computing only the remainder is called the
+modulo operation
+,
+[
+3
+]
+and is used often in both mathematics and computer science.
+The pie has 9 slices, so each of the 4 people receives 2 slices and 1 is left over.
+Division theorem
+[
+edit
+]
+Euclidean division is based on the following result, which is sometimes called
+Euclid's division lemma
+.
+Given two integers
+a
+and
+b
+, with
+b
+≠
+0
+, there exist
+unique
+integers
+q
+and
+r
+such that
+a
+=
+b
+q
++
+r
+,
+and
+0
+≤
+r
+<
+|
+b
+|
+,
+where
+|
+b
+|
+denotes the
+absolute value
+of
+b
+.
+[
+4
+]
+In the above theorem, each of the four integers has a name of its own:
+a
+is called the
+dividend
+,
+b
+is called the
+divisor
+,
+q
+is called the
+quotient
+and
+r
+is called the
+remainder
+.
+The computation of the quotient and the remainder from the dividend and the divisor is called
+division
+, or in case of ambiguity,
+Euclidean division
+. The theorem is frequently referred to as the
+division algorithm
+(although it is a theorem and not an algorithm), because its proof as given below lends itself to a simple division algorithm for computing
+q
+and
+r
+(see the section
+Proof
+for more).
+Division is not defined in the case where
+b
+=
+0
+; see
+division by zero
+.
+For the remainder and the
+modulo operation
+, there are conventions other than
+0
+≤
+r
+<
+|
+b
+|
+, see
+§
+Other intervals for the remainder
+.
+Generalization
+[
+edit
+]
+Main articles:
+Euclidean division of polynomials
+and
+Euclidean domain
+Although originally restricted to integers, Euclidean division and the division theorem can be generalized to
+univariate polynomials
+over a
+field
+and to Euclidean domains.
+In the case of
+univariate polynomials
+, the main difference is that the inequalities
+0
+≤
+r
+<
+|
+b
+|
+are replaced with
+r
+=
+0
+or
+deg
+⁡
+r
+<
+deg
+⁡
+b
+,
+where
+deg
+denotes the
+polynomial degree
+.
+In the generalization to Euclidean domains, the inequality becomes
+r
+=
+0
+or
+f
+(
+r
+)
+<
+f
+(
+b
+)
+,
+where
+f
+denote a specific function from the domain to the natural numbers called a "Euclidean function".
+The uniqueness of the quotient and the remainder  remains true for polynomials, but it is false in general.
+History
+[
+edit
+]
+icon
+This section
+needs
+more citations
+.
+Please help
+improve this section
+by
+adding citations to reliable sources
+. Unsourced material may be challenged and
+removed
+.
+Find sources:
+"Euclidean division"
+–
+news
+·
+newspapers
+·
+books
+·
+scholar
+·
+JSTOR
+(
+September 2016
+)
+(
+Learn how and when to remove this message
+)
+Although "Euclidean division" is named after
+Euclid
+, it seems that he did not know the existence and uniqueness theorem, and that the only computation method that he knew was the
+division by repeated subtraction
+.
+[
+citation needed
+]
+Before the invention of
+Hindu–Arabic numeral system
+, which was introduced in Europe during the 13th century by
+Fibonacci
+, division was extremely difficult, and only the best mathematicians were able to do it
+[
+citation needed
+]
+. Presently, most
+division algorithms
+, including
+long division
+, are based on this numeral system or its variants, such as
+binary numerals
+. A notable exception is
+Newton–Raphson division
+, which is independent from any
+numeral system
+.
+The term "Euclidean division" was introduced during the 20th century as a shorthand for "division of
+Euclidean rings
+". It has been rapidly adopted by mathematicians for distinguishing this division from the other kinds of
+division
+of numbers.
+[
+citation needed
+]
+Intuitive example
+[
+edit
+]
+Suppose that a pie has 9 slices and they are to be divided evenly among 4 people. Using Euclidean division, 9 divided by 4 is 2 with remainder 1. In other words, each person receives 2 slices of pie, and there is 1 slice left over.
+This can be confirmed using multiplication, the inverse of division: if each of the 4 people received 2 slices, then 4
+×
+2 = 8 slices were given out in total. Adding the 1 slice remaining, the result is 9 slices. In summary: 9 = 4 × 2 + 1.
+In general, if the number of slices is denoted
+a
+and the number of people is denoted
+b
+, then one can divide the pie evenly among the people such that each person receives
+q
+slices (the quotient), with some number of slices
+r
+<
+b
+being the leftover (the remainder). In which case, the equation
+a
+=
+b
+q
++
+r
+holds.
+If 9 slices were divided among 3 people instead of 4, then each would receive 3 and no slice would be left over, which means that the remainder would be zero, leading to the conclusion that 3
+evenly divides
+9, or that 3
+divides
+9.
+Euclidean division can also be extended to negative dividend (or negative divisor) using the same formula; for example −9 = 4 × (−3) + 3, which means that −9 divided by 4 is −3 with remainder 3.
+Examples
+[
+edit
+]
+If
+a
+= 7 and
+b
+= 3, then
+q
+= 2 and
+r
+= 1, since 7 = 3 × 2 + 1.
+If
+a
+= 7 and
+b
+= −3, then
+q
+= −2 and
+r
+= 1, since 7 = −3 × (−2) + 1.
+If
+a
+= −7 and
+b
+= 3, then
+q
+= −3 and
+r
+= 2, since −7 = 3 × (−3) + 2.
+If
+a
+= −7 and
+b
+= −3, then
+q
+= 3 and
+r
+= 2, since −7 = −3 × 3 + 2.
+Proof
+[
+edit
+]
+The following proof of the division theorem relies on the fact that a decreasing sequence of non-negative integers stops eventually. It is separated into two parts: one for existence and another for uniqueness of
+q
+and
+r
+. Other proofs use the
+well-ordering principle
+(i.e., the assertion that every
+non-empty set
+of
+non-negative integers
+has a smallest element) to make the reasoning simpler, but have the disadvantage of not providing directly an algorithm for solving the division (see
+§
+Effectiveness
+for more).
+[
+5
+]
+Existence
+[
+edit
+]
+For proving the existence of Euclidean division, one can suppose
+b
+>
+0
+,
+since, if
+b
+<
+0
+,
+the equality
+a
+=
+b
+q
++
+r
+can be rewritten
+a
+=
+(
+−
+b
+)
+(
+−
+q
+)
++
+r
+.
+So, if the latter equality is a Euclidean division with
+−
+b
+>
+0
+,
+the former is also a Euclidean division.
+Given
+b
+>
+0
+and
+a
+,
+there are integers
+q
+1
+and
+r
+1
+≥
+0
+such that
+a
+=
+b
+q
+1
++
+r
+1
+;
+for example,
+q
+1
+=
+0
+and
+r
+1
+=
+a
+if
+a
+≥
+0
+,
+and otherwise
+q
+1
+=
+a
+and
+r
+1
+=
+a
+−
+a
+b
+.
+Let
+q
+and
+r
+be such a pair of numbers for which
+r
+is nonnegative and minimal. If
+r
+<
+b
+,
+we have Euclidean division. Thus, we have to prove that, if
+r
+≥
+b
+,
+then
+r
+is not minimal. Indeed, if
+r
+≥
+b
+,
+one has
+a
+=
+b
+(
+q
++
+1
+)
++
+(
+r
+−
+b
+)
+,
+with
+0
+≤
+r
+−
+b
+<
+r
+,
+and
+r
+is not minimal
+This proves the existence in all cases. This provides also an
+algorithm
+for computing the quotient and the remainder, by starting from
+q
+=
+0
+(if
+a
+≥
+0
+) and adding
+1
+to it until
+a
+−
+b
+q
+<
+b
+.
+However, this algorithm is not efficient, since its number of steps is of the order of
+a
+/
+b
+Uniqueness
+[
+edit
+]
+The pair of integers
+r
+and
+q
+such that
+a
+=
+b
+q
++
+r
+is unique, in the sense that there can be no other pair of integers that satisfy the same condition in the Euclidean division theorem. In other words, if we have another division of
+a
+by
+b
+, say
+a
+=
+b
+q
+′
++
+r
+′
+with
+0
+≤
+r
+′
+<
+|
+b
+|
+, then we must have that
+q
+′
+=
+q
+and
+r
+′
+=
+r
+.
+To prove this statement, we first start with the assumptions that
+0
+≤
+r
+<
+|
+b
+|
+0
+≤
+r
+′
+<
+|
+b
+|
+a
+=
+b
+q
++
+r
+a
+=
+b
+q
+′
++
+r
+′
+Subtracting the two equations yields
+b
+(
+q
+−
+q
+′
+)
+=
+r
+′
+−
+r
+.
+So
+b
+is a divisor of
+r
+′
+−
+r
+. As
+|
+r
+′
+−
+r
+|
+<
+|
+b
+|
+by the above inequalities, one gets
+r
+′
+−
+r
+=
+0
+,
+and
+b
+(
+q
+−
+q
+′
+)
+=
+0
+.
+Since
+b
+≠
+0
+, we get that
+r
+=
+r
+′
+and
+q
+=
+q
+′
+, which proves the uniqueness part of the Euclidean division theorem.
+Effectiveness
+[
+edit
+]
+In general, an existence proof does not provide an algorithm for computing the existing quotient and remainder, but the above proof does immediately provide an algorithm (see
+Division by repeated subtraction
+), even though it is not a very efficient one as it requires as many steps as the size of the quotient. This is related to the fact that it uses only additions, subtractions and comparisons of integers, without involving multiplication, nor any particular representation of the integers such as decimal notation.
+In terms of decimal notation,
+long division
+provides a much more efficient algorithm for solving Euclidean divisions. Its generalization to
+binary
+and
+hexadecimal
+notation provides further flexibility and possibility for computer implementation. However, for large inputs, algorithms that reduce division to multiplication, such as
+Newton–Raphson division
+, are usually preferred, because they only need a time which is proportional to the time of the multiplication needed to verify the result—independently of the
+multiplication algorithm
+which is used (for more, see
+Fast division methods
+).
+Variants
+[
+edit
+]
+The Euclidean division admits a number of variants, some of which are listed below.
+Other intervals for the remainder
+[
+edit
+]
+See also:
+Modulo operation §
+Variants of the definition
+In Euclidean division with
+d
+as divisor, the remainder is supposed to belong to the
+interval
+[0,
+d
+)
+of length
+|
+d
+|
+. Any other interval of the same length may be used. More precisely, given integers
+m
+,
+a
+,
+d
+with
+m
+>
+0
+, there exist unique integers
+q
+and
+r
+with
+d
+≤
+r
+<
+m
++
+d
+such that
+a
+=
+m
+q
++
+r
+.
+In particular, if
+d
+=
+−
+⌊
+m
+2
+⌋
+then
+−
+⌊
+m
+2
+⌋
+≤
+r
+<
+m
+−
+⌊
+m
+2
+⌋
+. This division is called the
+centered division
+, and its remainder
+r
+is called the
+centered remainder
+or the
+least absolute remainder
+.
+This is used for approximating
+real numbers
+: Euclidean division defines
+truncation
+, and centered division defines
+rounding
+.
+Montgomery division
+[
+edit
+]
+Main article:
+Montgomery modular multiplication
+Given integers
+a
+,
+m
+and
+R
+,
+with
+m
+>
+0
+and
+gcd
+⁡
+(
+R
+,
+m
+)
+=
+1
+,
+let
+R
+−
+1
+be the
+modular multiplicative inverse
+of
+R
+(i.e.,
+0
+<
+R
+−
+1
+<
+m
+with
+R
+−
+1
+R
+−
+1
+being a multiple of
+m
+), then there exist unique integers
+q
+and
+r
+with
+0
+≤
+r
+<
+m
+such that
+a
+=
+m
+q
++
+R
+−
+1
+⋅
+r
+.
+This result generalizes Hensel's odd division (1900).
+[
+6
+]
+The value
+r
+is the
+N
+-residue defined in
+Montgomery reduction
+.
+In Euclidean domains
+[
+edit
+]
+See also:
+Polynomial long division
+,
+Polynomial greatest common divisor §
+Euclidean division
+, and
+Polynomial greatest common divisor §
+Pseudo-remainder sequences
+Euclidean domains
+(also known as
+Euclidean rings
+)
+[
+7
+]
+are defined as
+integral domains
+which support the following generalization of Euclidean division:
+Given an element
+a
+and a non-zero element
+b
+in a Euclidean domain
+R
+equipped with a
+Euclidean function
+d
+(also known as a
+Euclidean valuation
+[
+8
+]
+or
+degree function
+[
+7
+]
+), there exist
+q
+and
+r
+in
+R
+such that
+a
+=
+b
+q
++
+r
+and either
+r
+=
+0
+or
+d
+(
+r
+)
+<
+d
+(
+b
+)
+.
+Uniqueness of
+q
+and
+r
+is not required.
+[
+1
+]
+It occurs only in exceptional cases, typically for
+univariate polynomials
+, and for integers, if the further condition
+r
+≥
+0
+is added.
+Examples of Euclidean domains include
+fields
+,
+polynomial rings
+in one variable over a field, and the
+Gaussian integers
+. The Euclidean division of polynomials has been the object of specific developments.
+See also
+[
+edit
+]
+Euclid's lemma
+Euclidean algorithm
+References
+[
+edit
+]
+Citations
+[
+edit
+]
+1
+2
+"Division and Euclidean algorithms"
+.
+www-groups.mcs.st-andrews.ac.uk
+. Archived from
+the original
+on 2021-05-06
+. Retrieved
+2019-11-15
+.
+↑
+"What is modular arithmetic?"
+.
+Khan Academy
+. Retrieved
+2019-11-15
+.
+↑
+"Fun With Modular Arithmetic – BetterExplained"
+.
+betterexplained.com
+. Retrieved
+2019-11-15
+.
+↑
+Burton, David M. (2010).
+Elementary Number Theory
+. McGraw-Hill. pp.
+17–
+19.
+ISBN
+978-0-07-338314-9
+.
+↑
+Durbin, John R. (1992).
+Modern Algebra
+: an Introduction
+(3rd
+ed.). New York: Wiley. p.
+63.
+ISBN
+0-471-51001-7
+.
+↑
+Haining Fan; Ming Gu; Jiaguang Sun; Kwok-Yan Lam (2012). "Obtaining More Karatsuba-Like Formulae over the Binary Field".
+IET Information Security
+.
+6
+(1):
+14–
+19.
+CiteSeerX
+10.1.1.215.1576
+.
+doi
+:
+10.1049/iet-ifs.2010.0114
+.
+{{
+cite journal
+}}
+:
+Cite uses deprecated parameter
+|
+citeseerx=
+(
+help
+)
+1
+2
+Rotman 2006
+, p. 267
+↑
+Fraleigh 1993
+, p. 376
+Works cited
+[
+edit
+]
+Fraleigh, John B. (1993),
+A First Course in Abstract Algebra
+(5th
+ed.), Addison-Wesley,
+ISBN
+978-0-201-53467-2
+Rotman, Joseph J. (2006),
+A First Course in Abstract Algebra with Applications
+(3rd
+ed.), Prentice-Hall,
+ISBN
+978-0-13-186267-8
+v
+t
+e
+Number-theoretic
+algorithms
+Primality tests
+AKS
+APR
+Baillie–PSW
+Elliptic curve
+Pocklington
+Fermat
+Lucas
+Lucas–Lehmer
+Lucas–Lehmer–Riesel
+Proth's theorem
+Pépin's
+Quadratic Frobenius
+Solovay–Strassen
+Miller–Rabin
+Prime-generating
+Sieve of Atkin
+Sieve of Eratosthenes
+Sieve of Pritchard
+Sieve of Sundaram
+Wheel factorization
+Integer factorization
+Continued fraction (CFRAC)
+Dixon's
+Lenstra elliptic curve (ECM)
+Euler's
+Pollard's rho
+p
+− 1
+p
++ 1
+Quadratic sieve (QS)
+General number field sieve (GNFS)
+Special number field sieve (SNFS)
+Rational sieve
+Fermat's
+Shanks's square forms
+Trial division
+Shor's
+Multiplication
+Ancient Egyptian
+Long
+Karatsuba
+Toom–Cook
+Schönhage–Strassen
+Fürer's
+Euclidean
+division
+Binary
+Chunking
+Fourier
+Goldschmidt
+Newton-Raphson
+Long
+Short
+SRT
+Discrete logarithm
+Baby-step giant-step
+Pollard rho
+Pollard kangaroo
+Pohlig–Hellman
+Index calculus
+Function field sieve
+Greatest common divisor
+Binary
+Euclidean
+Extended Euclidean
+Lehmer's
+Modular square root
+Cipolla
+Pocklington's
+Tonelli–Shanks
+Berlekamp
+Other algorithms
+Chakravala
+Cornacchia
+Exponentiation by squaring
+Integer square root
+Integer relation
+(
+LLL
+;
+KZ
+)
+Modular exponentiation
+Montgomery reduction
+Schoof
+Trachtenberg system
+Italics
+indicate that algorithm is for numbers of special forms
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Euclidean_division&oldid=1379429974
+"
+Category
+:
+Division (mathematics)
+Hidden categories:
+Articles with short description
+Short description matches Wikidata
+Articles needing additional references from September 2016
+All articles needing additional references
+All articles with unsourced statements
+Articles with unsourced statements from November 2019
+Articles with unsourced statements from March 2025
+CS1 errors: deprecated parameters
+Articles containing proofs
+Search
+Search
+Euclidean division
+33 languages
+Add topic

@@ -1,0 +1,11 @@
+{
+ "id": "wp-turnstile",
+ "type": "url",
+ "ref": "https://en.wikipedia.org/wiki/Turnstile_(symbol)",
+ "why": "the turnstile",
+ "fetched": "2026-11-12T16:53:24Z",
+ "files": {
+  "raw.html": "d44ea065e46d9af76e48fc4bb676e735d797cfd1095c341b36b083dea91cb409"
+ },
+ "final_url": "https://en.wikipedia.org/wiki/Turnstile_(symbol)"
+}
