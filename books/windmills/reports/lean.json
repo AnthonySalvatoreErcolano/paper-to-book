@@ -1,0 +1,38 @@
+{
+ "checked": "2026-11-12T17:04:09Z",
+ "build_ok": true,
+ "files": {
+  "Names.lean": {
+   "ok": true,
+   "errors": [],
+   "sorry": [],
+   "warnings": []
+  }
+ },
+ "names": {
+  "Dvd.dvd": true,
+  "Equiv.Perm": true,
+  "Equiv.Perm.card_fixedPoints_modEq": true,
+  "Even": true,
+  "ExistsUnique": true,
+  "Finset.card": true,
+  "Function.Bijective": true,
+  "Function.Involutive": true,
+  "Function.IsFixedPt": true,
+  "Function.IsPeriodicPt": true,
+  "Function.LeftInverse": true,
+  "Function.comp": true,
+  "Function.fixedPoints": true,
+  "Function.minimalPeriod": true,
+  "Function.periodicOrbit": true,
+  "IsSquare": true,
+  "Nat.ModEq": true,
+  "Nat.Prime": true,
+  "Nat.Prime.sq_add_sq": true,
+  "Nat.div_add_mod": true,
+  "Nat.iterate": true,
+  "Nat.sub_eq_zero_of_le": true,
+  "Odd": true,
+  "Set.Finite": true
+ }
+}
