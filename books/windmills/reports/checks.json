@@ -1,0 +1,10 @@
+{
+ "checked": "2026-11-12T17:20:21Z",
+ "checks": {
+  "ch01_examples.py": {
+   "ok": true,
+   "stdout": "ok   17 = 3*5 + 2, quotient 5, remainder 2\nok   12 = 4*3 so 3 | 12; 3 does not divide 13\nok   primes below 30\nok   7 prime, none of 2..6 divides it\nok   5,13,17,29 are 4k+1 primes\nok   3,7,11,19,23 are 4k+3 primes\nok   every odd prime below 10^5 is 1 or 3 mod 4\nok   first squares\nok   13 = 3^2+2^2, 29 = 5^2+2^2, 2 = 1^2+1^2\nok   3, 7, 11 are not sums of two squares\nok   squares up to 11 are 0,1,4,9\nok   29 = 4*7+1, 61 = 4*15+1\nok   5,13,17,29,37,41 are sums of two squares\nok   odd squares are odd (k < 10^4)\n",
+   "stderr": ""
+  }
+ }
+}
