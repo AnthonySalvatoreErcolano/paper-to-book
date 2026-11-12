@@ -2,9 +2,12 @@
  "nodes": [
   {
    "id": "b-algebra",
-   "title": "High-school algebra",
+   "title": "Arithmetic and high-school algebra",
    "terms": [
-    "algebra"
+    "algebra",
+    "arithmetic",
+    "addition",
+    "subtraction"
    ],
    "requires": [],
    "chapter": null,
@@ -142,25 +145,6 @@
     "§2"
    ],
    "notes": ""
-  },
-  {
-   "id": "monus",
-   "title": "Subtraction on natural numbers (truncated)",
-   "terms": [
-    "truncated subtraction",
-    "monus",
-    "subtraction"
-   ],
-   "requires": [
-    "b-algebra"
-   ],
-   "chapter": 1,
-   "baseline": false,
-   "mathlib": [
-    "Nat.sub_eq_zero_of_le"
-   ],
-   "in_paper": [],
-   "notes": "The paper works only in ℕ, where y − z is 0 whenever y ≤ z; the Zagier map's cases depend on this."
   },
   {
    "id": "congruence",

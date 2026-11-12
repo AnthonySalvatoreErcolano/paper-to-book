@@ -1,5 +1,5 @@
 {
- "checked": "2026-11-12T17:06:06Z",
+ "checked": "2026-11-12T17:14:25Z",
  "order": [
   "b-algebra",
   "b-proof",
@@ -8,7 +8,6 @@
   "division",
   "prime",
   "square",
-  "monus",
   "while-loop",
   "proof-assistant",
   "turnstile",
@@ -85,12 +84,6 @@
    }
   },
   "square": {
-   "defined": true,
-   "edges": {
-    "b-algebra": true
-   }
-  },
-  "monus": {
    "defined": true,
    "edges": {
     "b-algebra": true

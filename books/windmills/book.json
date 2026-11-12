@@ -6,16 +6,18 @@
  },
  "paper_source": "paper",
  "baseline": [
+  "arithmetic (addition, subtraction, multiplication)",
   "high-school algebra",
   "basic proof writing (induction, contradiction)",
   "sets and functions"
  ],
  "created": "2026-11-12T16:48:40Z",
  "status": {
-  "stage": 4,
-  "map_approved": false,
+  "stage": 5,
+  "map_approved": true,
   "chapters_approved": [],
-  "note": "checkpoint 1: map published for review",
-  "map_artifact": "https://claude.ai/artifact/SQVR4s8gYRDQJrzgUggAae"
+  "note": "map approved (natural-number subtraction removed: basic arithmetic assumed); writing chapter 1",
+  "map_artifact": "https://claude.ai/artifact/SQVR4s8gYRDQJrzgUggAae",
+  "map_approved_on": "2026-11-12"
  }
 }

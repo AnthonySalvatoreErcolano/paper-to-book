@@ -37,6 +37,8 @@ function Meta(m)
   for k, v in pairs(p.ledger_source or {}) do status.src[k] = str(v) end
   for k, v in pairs(p.ledger_locator or {}) do status.loc[k] = str(v) end
   for k, v in pairs(p.source_label or {}) do status.label[k] = str(v) end
+  status.quote = {}
+  for k, v in pairs(p.ledger_quote or {}) do status.quote[k] = str(v) end
   return m
 end
 
@@ -92,6 +94,20 @@ function Div(el)
     local term
     el:walk({Strong = function(s) if not term then term = str(s) end end})
     if term then table.insert(blocks, texb("\\index{" .. esc(term) .. "}")) end
+  end
+  -- an empty quote block is filled with the ledger's verified quotation, verbatim
+  if cls == "quote" and #el.content == 0 and ledger and status.quote[ledger] then
+    local q = status.quote[ledger]
+    if status.ledger_ok[ledger] then
+      local ok, doc = pcall(pandoc.read, q, "markdown+tex_math_dollars")
+      if ok and doc.blocks[1] then
+        for _, b in ipairs(doc.blocks) do table.insert(blocks, b) end
+      else
+        table.insert(blocks, pandoc.Para({pandoc.Str(q)}))
+      end
+    else
+      table.insert(blocks, texb("\\srcbad{" .. esc(ledger) .. "}"))
+    end
   end
   for _, b in ipairs(el.content) do table.insert(blocks, b) end
   table.insert(blocks, texb("\\end{" .. env .. "}"))
