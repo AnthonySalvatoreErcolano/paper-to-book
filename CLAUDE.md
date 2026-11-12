@@ -44,6 +44,7 @@ This file is the contract for every session that works here. Follow it exactly.
 | — | **Checkpoint 2** | `p2b.py build <slug>` → `build/book.pdf`; send to user | user approves each chapter |
 | 6 | The paper | `p2b.py build` appends the paper with a reader's guide and per-page margin notes linking concepts to chapters | |
 | 7 | Refine later | any edit → re-run ledger/Lean/checks → rebuild | |
+| 8 | Hand off | every `build` also writes the editable LaTeX project; send `<slug>-latex.zip` with the PDF | |
 
 `books/<slug>/book.json` records the current stage and approvals (`status`). Update it as you go,
 and read it first when resuming a book.
@@ -99,6 +100,8 @@ books/<slug>/
   chapters/NN-*.md
   checks/*.py        computational checks (run in CI)
   reports/           ledger.json, map.json, lean.json, checks.json, review-chNN.md
-  build/             map.html, book.tex, book.pdf
+  build/             map.html, book.tex, book.pdf,
+                     latex/ + <slug>-latex.zip: editable LaTeX project (main.tex, p2bbook.sty,
+                     chapters/*.tex, paper.pdf) that compiles on its own with XeLaTeX
 lean/Books/<Slug>/ChNN.lean
 ```

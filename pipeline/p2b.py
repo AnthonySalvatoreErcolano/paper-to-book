@@ -640,6 +640,64 @@ def cmd_build(a):
             die("xelatex failed:\n" + r.stdout[-3000:])
         subprocess.run(["makeindex", "-q", "book.idx"], cwd=bdir, capture_output=True)
     print(f"wrote {(bdir / 'book.pdf').relative_to(ROOT)}")
+    export_latex(d, bdir, tex, chapters, body, paper_part, paper_pdf, title)
+
+
+def export_latex(d, bdir, tex, chapters, body, paper_part, paper_pdf, title):
+    """An editable LaTeX project that compiles on its own: main.tex, the layout in
+    p2bbook.sty, one file per chapter, the paper as its own part, and the paper's PDF."""
+    out = bdir / "latex"
+    if out.exists():
+        shutil.rmtree(out)
+    (out / "chapters").mkdir(parents=True)
+    pre, rest = tex.split("\\begin{document}", 1)
+    lines = pre.splitlines()
+    k = next(i for i, l in enumerate(lines) if l.startswith("\\documentclass"))
+    cls, pre = "\n".join(lines[:k + 1]), "\n".join(lines[k + 1:])
+    (out / "p2bbook.sty").write_text(
+        "% Layout and macros for this book (fonts, environments, source notes, the paper's HOL4 notation).\n"
+        "\\NeedsTeXFormat{LaTeX2e}\\ProvidesPackage{p2bbook}\n" + pre.replace("\\makeatletter", "").replace("\\makeatother", "")
+        + "\n\\endinput\n", encoding="utf-8")
+    names = []
+    for ch, tex_ch in zip(chapters, body):
+        name = ch.stem
+        names.append(name)
+        (out / "chapters" / f"{name}.tex").write_text(
+            f"% {ch.name}: generated from books/{d.name}/chapters/{ch.name}; edit freely.\n" + tex_ch, encoding="utf-8")
+    if paper_pdf:
+        shutil.copy(paper_pdf, out / "paper.pdf")
+        paper_part = paper_part.replace(str(paper_pdf.resolve()), "paper.pdf")
+    (out / "chapters" / "paper.tex").write_text("% The paper, with its reader's guide.\n" + paper_part, encoding="utf-8")
+    body_inc = "\n".join(f"\\include{{chapters/{n}}}" for n in names)
+    main = rest.replace("\n".join(body), body_inc, 1).replace(paper_part if not paper_pdf else
+                        paper_part.replace("paper.pdf", str(paper_pdf.resolve())), "\\include{chapters/paper}", 1)
+    (out / "main.tex").write_text(cls + "\n\\usepackage{p2bbook}\n\\begin{document}" + main, encoding="utf-8")
+    (out / "README.txt").write_text(f"""{title}: LaTeX source
+
+Compile with XeLaTeX (it uses system OpenType fonts):
+
+    xelatex main
+    xelatex main
+    makeindex main
+    xelatex main
+
+Needs a TeX distribution with XeLaTeX and the TeX Gyre and Latin Modern fonts
+(TeX Live or MiKTeX both include them; on MiKTeX, missing packages install on first run).
+
+  main.tex           title page, contents, order of the parts, sources list, index
+  p2bbook.sty        fonts, page layout, environments, source-note markers, HOL4 notation
+  chapters/*.tex     one file per chapter: edit or add chapters here, then \\include them in main.tex
+  chapters/paper.tex the paper, page by page, with its reader's guide
+  paper.pdf          the paper as published
+
+This is a snapshot. The Markdown chapters in the paper-to-book repository remain the
+source the pipeline checks; edits made here are not re-checked against the ledger or Lean.
+""", encoding="utf-8")
+    zpath = bdir / f"{d.name}-latex.zip"
+    if zpath.exists():
+        zpath.unlink()
+    shutil.make_archive(str(zpath.with_suffix("")), "zip", out)
+    print(f"wrote {zpath.relative_to(ROOT)} (editable LaTeX project)")
 
 
 MARKER = re.compile(r"\\(srcnote|srccitenote)\{")

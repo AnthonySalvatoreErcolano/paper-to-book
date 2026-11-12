@@ -1,0 +1,68 @@
+% paper-to-book template (filled in by pipeline/p2b.py build)
+\documentclass[11pt,letterpaper,openright]{book}
+\usepackage{p2bbook}
+\begin{document}
+\frontmatter
+\begin{titlepage}\centering
+\vspace*{2in}{\Huge Windmills: A Prerequisite Book\par}\vspace{0.4in}
+{\Large A prerequisite book for Windmills of the minds: an algorithm for Fermat's Two Squares Theorem\par}\vspace{0.2in}{\large Hing Lun Chan\par}
+\vfill{\small Assumed background: arithmetic (addition, subtraction, multiplication); high-school algebra; basic proof writing (induction, contradiction); sets and functions\par}
+\vspace{0.3in}{\footnotesize Built with paper-to-book. Every definition and theorem is tagged in the margin
+with its source; quotations are checked automatically against the retrieved sources, and
+statements marked \textsf{Lean \checkmk} are verified against Lean's mathlib.\par}
+\end{titlepage}
+\tableofcontents
+\chapter*{How to read this book}\addcontentsline{toc}{chapter}{How to read this book}
+The chapters build, in order, everything the paper uses that goes beyond the assumed background.
+Each definition, theorem and quotation, and each paragraph that cites a source, begins with a
+small grey number in brackets, such as \textcolor{srcgray}{\footnotesize[1]}, referring to the note
+with the same number at the foot of the page. The note says where it comes from. These numbers
+are never part of the mathematics; they always stand in front of what they refer to, set apart by
+a space. The notes may say:
+\begin{itemize}
+\item \srcok{source}{§} --- quoted from a retrieved source, and the quotation was checked automatically;
+\item \leanok{name} --- the statement matches a declaration in Lean's mathlib that compiles;
+\item \leanpending{name} --- a formal counterpart exists but has not been checked yet;
+\item \derivedtag{sources} --- not stated in any source, but proved in this book from the sourced results named, with the proof given and checked in Lean;
+\item \unsourced{} or \srcbad{id} --- not backed by a checked source: treat with suspicion.
+\end{itemize}
+Shaded boxes are definitions; passages with a grey bar on the left are verbatim quotations;
+blue boxes show where the idea appears in the paper. The last part is the paper itself.
+\mainmatter
+\include{chapters/01-whole-numbers}
+\include{chapters/paper}
+\backmatter
+\chapter{Sources}
+Every source used, as retrieved for this book. The identifiers in the margins refer to this list.
+\begin{description}\item[\texttt{ml-function-basic}] https://leanprover-community.github.io/mathlib4\_docs/Mathlib/Logic/Function/Basic.html. \url{https://leanprover-community.github.io/mathlib4_docs/Mathlib/Logic/Function/Basic.html} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{ml-periodic}] https://leanprover-community.github.io/mathlib4\_docs/Mathlib/Dynamics/PeriodicPts/Defs.html. \url{https://leanprover-community.github.io/mathlib4_docs/Mathlib/Dynamics/PeriodicPts/Defs.html} --- 3 of 3 quotations verified (retrieved 2026-11-12).
+\item[\texttt{paper}] Windmills of the minds: an algorithm for Fermat's Two Squares Theorem. \url{arXiv:2112.02556} --- 48 of 48 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-bijection}] https://en.wikipedia.org/wiki/Bijection. \url{https://en.wikipedia.org/wiki/Bijection} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-cardinality}] https://en.wikipedia.org/wiki/Cardinality. \url{https://en.wikipedia.org/wiki/Cardinality} --- 2 of 2 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-cartesian}] https://en.wikipedia.org/wiki/Cartesian\_product. \url{https://en.wikipedia.org/wiki/Cartesian_product} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-composition}] https://en.wikipedia.org/wiki/Function\_composition. \url{https://en.wikipedia.org/wiki/Function_composition} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-divisor}] https://en.wikipedia.org/wiki/Divisor. \url{https://en.wikipedia.org/wiki/Divisor} --- 3 of 3 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-euclidean-division}] https://en.wikipedia.org/wiki/Euclidean\_division. \url{https://en.wikipedia.org/wiki/Euclidean_division} --- 3 of 3 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-fermat-two-squares}] https://en.wikipedia.org/wiki/Fermat\%27s\_theorem\_on\_sums\_of\_two\_squares. \url{https://en.wikipedia.org/wiki/Fermat%27s_theorem_on_sums_of_two_squares} --- 4 of 4 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-finite-set}] https://en.wikipedia.org/wiki/Finite\_set. \url{https://en.wikipedia.org/wiki/Finite_set} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-fixed-point}] https://en.wikipedia.org/wiki/Fixed\_point\_(mathematics). \url{https://en.wikipedia.org/wiki/Fixed_point_(mathematics)} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-hol}] https://en.wikipedia.org/wiki/HOL\_(proof\_assistant). \url{https://en.wikipedia.org/wiki/HOL_(proof_assistant)} --- 2 of 2 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-inverse}] https://en.wikipedia.org/wiki/Inverse\_function. \url{https://en.wikipedia.org/wiki/Inverse_function} --- 2 of 2 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-involution}] https://en.wikipedia.org/wiki/Involution\_(mathematics). \url{https://en.wikipedia.org/wiki/Involution_(mathematics)} --- 9 of 9 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-iterated}] https://en.wikipedia.org/wiki/Iterated\_function. \url{https://en.wikipedia.org/wiki/Iterated_function} --- 2 of 2 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-lambda}] https://en.wikipedia.org/wiki/Lambda\_calculus. \url{https://en.wikipedia.org/wiki/Lambda_calculus} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-loop-invariant}] https://en.wikipedia.org/wiki/Loop\_invariant. \url{https://en.wikipedia.org/wiki/Loop_invariant} --- 2 of 2 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-modular}] https://en.wikipedia.org/wiki/Modular\_arithmetic. \url{https://en.wikipedia.org/wiki/Modular_arithmetic} --- 3 of 3 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-orbit}] https://en.wikipedia.org/wiki/Orbit\_(dynamics). \url{https://en.wikipedia.org/wiki/Orbit_(dynamics)} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-parity}] https://en.wikipedia.org/wiki/Parity\_(mathematics). \url{https://en.wikipedia.org/wiki/Parity_(mathematics)} --- 5 of 5 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-periodic-point}] https://en.wikipedia.org/wiki/Periodic\_point. \url{https://en.wikipedia.org/wiki/Periodic_point} --- 3 of 3 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-permutation}] https://en.wikipedia.org/wiki/Permutation. \url{https://en.wikipedia.org/wiki/Permutation} --- 2 of 2 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-prime}] https://en.wikipedia.org/wiki/Prime\_number. \url{https://en.wikipedia.org/wiki/Prime_number} --- 4 of 4 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-proof-assistant}] https://en.wikipedia.org/wiki/Proof\_assistant. \url{https://en.wikipedia.org/wiki/Proof_assistant} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-set-builder}] https://en.wikipedia.org/wiki/Set-builder\_notation. \url{https://en.wikipedia.org/wiki/Set-builder_notation} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-square-number}] https://en.wikipedia.org/wiki/Square\_number. \url{https://en.wikipedia.org/wiki/Square_number} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-turnstile}] https://en.wikipedia.org/wiki/Turnstile\_(symbol). \url{https://en.wikipedia.org/wiki/Turnstile_(symbol)} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-unique}] https://en.wikipedia.org/wiki/Uniqueness\_quantification. \url{https://en.wikipedia.org/wiki/Uniqueness_quantification} --- 1 of 1 quotations verified (retrieved 2026-11-12).
+\item[\texttt{wp-while}] https://en.wikipedia.org/wiki/While\_loop. \url{https://en.wikipedia.org/wiki/While_loop} --- 1 of 1 quotations verified (retrieved 2026-11-12).\end{description}
+\printindex
+\end{document}

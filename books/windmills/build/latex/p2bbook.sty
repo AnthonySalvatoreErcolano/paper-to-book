@@ -1,0 +1,133 @@
+% Layout and macros for this book (fonts, environments, source notes, the paper's HOL4 notation).
+\NeedsTeXFormat{LaTeX2e}\ProvidesPackage{p2bbook}
+\usepackage[inner=1.1in,outer=1.1in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{fontspec}
+\usepackage{unicode-math}
+% one typeface throughout: TeX Gyre Termes, a free clone of Times (Times New Roman itself is
+% a licensed font). Maths symbols come from Latin Modern Math, with its letters and digits in Termes.
+\setmainfont{TeX Gyre Termes}
+\setsansfont{TeX Gyre Termes}
+\setmonofont{TeX Gyre Termes}
+\setmathfont{Latin Modern Math}
+\setmathfont[range={up/{latin,Latin,num}}]{texgyretermes-regular.otf}
+\setmathfont[range={it/{latin,Latin}}]{texgyretermes-italic.otf}
+\setmathfont[range={bfup/{latin,Latin,num}}]{texgyretermes-bold.otf}
+\setmathfont[range={bfit/{latin,Latin}}]{texgyretermes-bolditalic.otf}
+\newfontfamily\symbolfont{Latin Modern Math}\newcommand{\checkmk}{{\symbolfont ✓}}\newcommand{\crossmk}{{\symbolfont ✗}}
+\usepackage{emptypage}
+\usepackage{footmisc}  % note numbers run on through each chapter
+\usepackage{microtype}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{longtable,booktabs,array,calc}
+\usepackage{enumitem}
+\usepackage{marginnote}
+\usepackage{pdfpages}
+\usepackage{tikz}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+\usepackage{imakeidx}
+\makeindex[intoc,columns=2]
+\usepackage[hidelinks]{hyperref}
+\usepackage{bookmark}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\pandocbounded}[1]{#1}
+
+\definecolor{unsourced}{RGB}{190,20,20}
+\definecolor{srcgray}{RGB}{105,105,105}
+\definecolor{leangreen}{RGB}{20,120,60}
+\definecolor{quotebar}{RGB}{170,170,170}
+
+% ---- margin tags: where each statement comes from ----
+% ---- source notes: a marker in the text, the note at the foot of the page ----
+% Notes raised inside a box are queued and set when the outermost box closes, so they
+% land at the foot of the page instead of inside the box.
+% Markers are grey numbers in brackets, on the line (never raised, so never mistaken for an
+% exponent), always placed in front of what they refer to, followed by a clear gap.
+% The note at the foot of the page starts with the same bracketed number.
+\newcount\bdepth
+\newcounter{pendingnotes}
+
+\renewcommand\@makefntext[1]{\noindent\scriptsize\raggedright
+  \makebox[2.2em][l]{\normalfont\textcolor{srcgray}{[\@thefnmark]}}#1}
+\newcommand{\srcmark}{\stepcounter{footnote}\protected@xdef\@thefnmark{\thefootnote}%
+  \mbox{\normalfont\textcolor{srcgray}{\footnotesize[\thefootnote]}}\hspace{0.9em}\ignorespaces}
+\newcommand{\bpush}{\global\advance\bdepth 1\relax}
+\newcommand{\bpop}{\global\advance\bdepth -1\relax\ifnum\bdepth=0 \flushsrcnotes\fi}
+\newcommand{\srcnote}[1]{\srcmark\stepcounter{pendingnotes}%
+  \expandafter\gdef\csname pnote@\arabic{pendingnotes}\endcsname{#1}%
+  \expandafter\xdef\csname pnum@\arabic{pendingnotes}\endcsname{\arabic{footnote}}\ignorespaces}
+\newcommand{\flushsrcnotes}{\ifnum\value{pendingnotes}>0 \@tempcnta=0
+  \loop\advance\@tempcnta 1
+    \footnotetext[\csname pnum@\the\@tempcnta\endcsname]{\csname pnote@\the\@tempcnta\endcsname}%
+  \ifnum\@tempcnta<\value{pendingnotes}\repeat
+  \setcounter{pendingnotes}{0}\fi}
+\newcommand{\srccitenote}[1]{\ifnum\bdepth=0 \srcmark\footnotetext[\arabic{footnote}]{#1}\ignorespaces\else\srcnote{#1}\fi}
+
+\newcommand{\srcok}[3]{\textcolor{srcgray}{\textsf{Source:} \texttt{#1}\ifx&#2&\else, #2\fi}}
+\newcommand{\srcbad}[1]{\textcolor{unsourced}{\textbf{\textsf{LEDGER CHECK FAILED}} (#1)}}
+\newcommand{\unsourced}{\textcolor{unsourced}{\textbf{\textsf{UNSOURCED}}}}
+\newcommand{\leanok}[1]{\textcolor{leangreen}{\textsf{Lean \checkmk} \texttt{\detokenize{#1}}}}
+\newcommand{\leanbad}[1]{\textcolor{unsourced}{\textsf{Lean \crossmk} \texttt{\detokenize{#1}}}}
+\newcommand{\leanpending}[1]{\textcolor{srcgray}{\textsf{not yet formally checked:} \texttt{\detokenize{#1}}}}
+\newcommand{\srccite}[2]{\textcolor{srcgray}{\textsf{Source:} \texttt{#1}\ifx&#2&\else, #2\fi}}
+\newcommand{\derivedtag}[1]{\textcolor{srcgray}{\textsf{Derived here} from #1}}
+
+% ---- the paper's HOL4 notation, so quotations from its LaTeX source print as in the paper ----
+\providecommand{\HOLinline}[1]{\ensuremath{#1}}
+\providecommand{\HOLFreeVar}[1]{\mathit{#1}}
+\providecommand{\HOLBoundVar}[1]{\mathit{#1}}
+\providecommand{\HOLConst}[1]{\textsf{#1}}
+\providecommand{\HOLSymConst}[1]{#1}
+\providecommand{\HOLNumLit}[1]{#1}
+\providecommand{\HOLKeyword}[1]{\textbf{\textsf{#1}}}
+\providecommand{\HOLFieldName}[1]{\textsf{#1}}
+\providecommand{\HOLTokenExists}{\exists}\providecommand{\HOLTokenForall}{\forall}\providecommand{\HOLTokenUnique}{\exists!}
+\providecommand{\HOLTokenConj}{\land}\providecommand{\HOLTokenDisj}{\lor}\providecommand{\HOLTokenNeg}{\lnot}
+\providecommand{\HOLTokenImp}{\Rightarrow}\providecommand{\HOLTokenEquiv}{\Leftrightarrow}\providecommand{\HOLTokenLambda}{\lambda}
+\providecommand{\HOLTokenIn}{\in}\providecommand{\HOLTokenNotIn}{\notin}\providecommand{\HOLTokenLt}{<}\providecommand{\HOLTokenLeq}{\le}
+\providecommand{\HOLTokenNotEqual}{\neq}\providecommand{\HOLTokenCompose}{\circ}\providecommand{\HOLTokenTurnstile}{\vdash}
+\providecommand{\HOLTokenDefEquality}{\mathrel{\stackrel{\scriptscriptstyle\mathrm{def}}{=}}}
+\providecommand{\HOLTokenLeftbrace}{\{}\providecommand{\HOLTokenRightbrace}{\}}\providecommand{\HOLTokenBar}{\mid}
+\providecommand{\HOLTokenEmpty}{\emptyset}
+
+% ---- environments ----
+\theoremstyle{plain}
+\newtheorem{btheorem}{Theorem}[chapter]
+\newtheorem{blemma}[btheorem]{Lemma}
+\newtheorem{bproposition}[btheorem]{Proposition}
+\newtheorem{bcorollary}[btheorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{bdefinitioninner}[btheorem]{Definition}
+\newtheorem{bexample}[btheorem]{Example}
+\newtheorem{bexercise}{Exercise}[chapter]
+\theoremstyle{remark}
+\newtheorem{bremark}[btheorem]{Remark}
+\newenvironment{bdefinition}[1][]{\begin{tcolorbox}[enhanced,breakable,colback=black!3,colframe=black!3,
+  boxrule=0pt,left=6pt,right=6pt,top=2pt,bottom=2pt,arc=0pt]\ifx&#1&\begin{bdefinitioninner}\else\begin{bdefinitioninner}[#1]\fi}
+  {\end{bdefinitioninner}\end{tcolorbox}}
+\newenvironment{bquote}{\begin{tcolorbox}[enhanced,breakable,colback=white,colframe=white,boxrule=0pt,
+  borderline west={1.6pt}{0pt}{quotebar},left=10pt,right=4pt,top=1pt,bottom=1pt,arc=0pt,fontupper=\small\itshape]}
+  {\end{tcolorbox}}
+\newenvironment{binpaper}{\begin{tcolorbox}[enhanced,breakable,colback=blue!3,colframe=blue!25,boxrule=0.4pt,
+  left=6pt,right=6pt,top=3pt,bottom=3pt,arc=1pt,title={\small\textsf{In the paper}},fonttitle=\color{black},
+  colbacktitle=blue!8,coltitle=black]\small}{\end{tcolorbox}}
+
+% ---- the paper's pages: note column on the right ----
+\newcommand{\papernote}[1]{\begin{tikzpicture}[remember picture,overlay]
+  \draw[black!30,line width=0.4pt] ([xshift=1.1in,yshift=0.72in]current page.south west) -- ([xshift=-1.1in,yshift=0.72in]current page.south east);
+  \node[anchor=north,text width=6.3in,font=\scriptsize,align=center]
+    at ([yshift=0.66in]current page.south) {#1};
+  \end{tikzpicture}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\small\scshape\leftmark}
+\fancyhead[RO]{\small\scshape\rightmark}
+\fancyfoot[LE,RO]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhfoffset[LE,RO]{0pt}
+
+\title{Windmills: A Prerequisite Book}
+\endinput
