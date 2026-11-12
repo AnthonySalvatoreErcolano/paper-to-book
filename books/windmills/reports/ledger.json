@@ -1,0 +1,842 @@
+{
+ "checked": "2026-11-12T16:57:20Z",
+ "entries": {
+  "L001": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-divisor",
+   "node": "divisibility",
+   "from": null,
+   "to": null
+  },
+  "L002": {
+   "ok": true,
+   "problems": [],
+   "kind": "theorem",
+   "source": "wp-euclidean-division",
+   "node": "division",
+   "from": null,
+   "to": null
+  },
+  "L003": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-parity",
+   "node": "parity",
+   "from": null,
+   "to": null
+  },
+  "L004": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-parity",
+   "node": null,
+   "from": "parity",
+   "to": "divisibility"
+  },
+  "L005": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-prime",
+   "node": "prime",
+   "from": null,
+   "to": null
+  },
+  "L006": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-square-number",
+   "node": "square",
+   "from": null,
+   "to": null
+  },
+  "L007": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-monus",
+   "node": "monus",
+   "from": null,
+   "to": null
+  },
+  "L008": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-modular",
+   "node": "congruence",
+   "from": null,
+   "to": null
+  },
+  "L009": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-modular",
+   "node": null,
+   "from": "congruence",
+   "to": "divisibility"
+  },
+  "L010": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-modular",
+   "node": null,
+   "from": "congruence",
+   "to": "division"
+  },
+  "L011": {
+   "ok": true,
+   "problems": [],
+   "kind": "theorem",
+   "source": "paper",
+   "node": "squares-mod-4",
+   "from": null,
+   "to": null
+  },
+  "L012": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "squares-mod-4",
+   "to": "square"
+  },
+  "L013": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "squares-mod-4",
+   "to": "division"
+  },
+  "L014": {
+   "ok": true,
+   "problems": [],
+   "kind": "theorem",
+   "source": "wp-fermat-two-squares",
+   "node": "two-squares",
+   "from": null,
+   "to": null
+  },
+  "L015": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-fermat-two-squares",
+   "node": null,
+   "from": "two-squares",
+   "to": "prime"
+  },
+  "L016": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-fermat-two-squares",
+   "node": null,
+   "from": "two-squares",
+   "to": "congruence"
+  },
+  "L017": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-fermat-two-squares",
+   "node": null,
+   "from": "two-squares",
+   "to": "square"
+  },
+  "L018": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-finite-set",
+   "node": "finite-set",
+   "from": null,
+   "to": null
+  },
+  "L019": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-cardinality",
+   "node": "cardinality",
+   "from": null,
+   "to": null
+  },
+  "L020": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-cardinality",
+   "node": null,
+   "from": "cardinality",
+   "to": "finite-set"
+  },
+  "L021": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-cartesian",
+   "node": "triples",
+   "from": null,
+   "to": null
+  },
+  "L022": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-set-builder",
+   "node": "set-builder",
+   "from": null,
+   "to": null
+  },
+  "L023": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-composition",
+   "node": "composition",
+   "from": null,
+   "to": null
+  },
+  "L024": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-iterated",
+   "node": "iterate",
+   "from": null,
+   "to": null
+  },
+  "L025": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-iterated",
+   "node": null,
+   "from": "iterate",
+   "to": "composition"
+  },
+  "L026": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-bijection",
+   "node": "bijection",
+   "from": null,
+   "to": null
+  },
+  "L027": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-inverse",
+   "node": "inverse",
+   "from": null,
+   "to": null
+  },
+  "L028": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-inverse",
+   "node": null,
+   "from": "inverse",
+   "to": "bijection"
+  },
+  "L029": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-permutation",
+   "node": "permutation",
+   "from": null,
+   "to": null
+  },
+  "L030": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-permutation",
+   "node": null,
+   "from": "permutation",
+   "to": "bijection"
+  },
+  "L031": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-involution",
+   "node": "involution",
+   "from": null,
+   "to": null
+  },
+  "L032": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "ml-function-basic",
+   "node": "involution",
+   "from": null,
+   "to": null
+  },
+  "L033": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-involution",
+   "node": null,
+   "from": "involution",
+   "to": "inverse"
+  },
+  "L034": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-fixed-point",
+   "node": "fixed-point",
+   "from": null,
+   "to": null
+  },
+  "L035": {
+   "ok": true,
+   "problems": [],
+   "kind": "theorem",
+   "source": "wp-involution",
+   "node": "involution-parity",
+   "from": null,
+   "to": null
+  },
+  "L036": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-involution",
+   "node": null,
+   "from": "involution-parity",
+   "to": "involution"
+  },
+  "L037": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-involution",
+   "node": null,
+   "from": "involution-parity",
+   "to": "fixed-point"
+  },
+  "L038": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-involution",
+   "node": null,
+   "from": "involution-parity",
+   "to": "cardinality"
+  },
+  "L039": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-involution",
+   "node": null,
+   "from": "involution-parity",
+   "to": "parity"
+  },
+  "L040": {
+   "ok": true,
+   "problems": [],
+   "kind": "theorem",
+   "source": "wp-involution",
+   "node": "two-involutions",
+   "from": null,
+   "to": null
+  },
+  "L041": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-involution",
+   "node": null,
+   "from": "two-involutions",
+   "to": "involution-parity"
+  },
+  "L042": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-periodic-point",
+   "node": "periodic-point",
+   "from": null,
+   "to": null
+  },
+  "L043": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-periodic-point",
+   "node": null,
+   "from": "periodic-point",
+   "to": "iterate"
+  },
+  "L044": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-periodic-point",
+   "node": "least-period",
+   "from": null,
+   "to": null
+  },
+  "L045": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "ml-periodic",
+   "node": "least-period",
+   "from": null,
+   "to": null
+  },
+  "L046": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "ml-periodic",
+   "node": null,
+   "from": "least-period",
+   "to": "periodic-point"
+  },
+  "L047": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-orbit",
+   "node": "orbit",
+   "from": null,
+   "to": null
+  },
+  "L048": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "ml-periodic",
+   "node": null,
+   "from": "orbit",
+   "to": "least-period"
+  },
+  "L049": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-while",
+   "node": "while-loop",
+   "from": null,
+   "to": null
+  },
+  "L050": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-loop-invariant",
+   "node": "loop-invariant",
+   "from": null,
+   "to": null
+  },
+  "L051": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-loop-invariant",
+   "node": null,
+   "from": "loop-invariant",
+   "to": "while-loop"
+  },
+  "L052": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-proof-assistant",
+   "node": "proof-assistant",
+   "from": null,
+   "to": null
+  },
+  "L053": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-hol",
+   "node": "hol4",
+   "from": null,
+   "to": null
+  },
+  "L054": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "wp-hol",
+   "node": null,
+   "from": "hol4",
+   "to": "proof-assistant"
+  },
+  "L055": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-turnstile",
+   "node": "turnstile",
+   "from": null,
+   "to": null
+  },
+  "L056": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-unique",
+   "node": "unique-exists",
+   "from": null,
+   "to": null
+  },
+  "L057": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "wp-lambda",
+   "node": "lambda",
+   "from": null,
+   "to": null
+  },
+  "L058": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "paper",
+   "node": "p-notation",
+   "from": null,
+   "to": null
+  },
+  "L059": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-notation",
+   "to": "turnstile"
+  },
+  "L060": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-notation",
+   "to": "hol4"
+  },
+  "L061": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-notation",
+   "to": "unique-exists"
+  },
+  "L062": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-notation",
+   "to": "lambda"
+  },
+  "L063": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-notation",
+   "to": "set-builder"
+  },
+  "L064": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "paper",
+   "node": "p-windmill",
+   "from": null,
+   "to": null
+  },
+  "L065": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-windmill",
+   "to": "square"
+  },
+  "L066": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-windmill",
+   "to": "triples"
+  },
+  "L067": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "paper",
+   "node": "p-mills",
+   "from": null,
+   "to": null
+  },
+  "L068": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-mills",
+   "to": "p-windmill"
+  },
+  "L069": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-mills",
+   "to": "finite-set"
+  },
+  "L070": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "paper",
+   "node": "p-flip",
+   "from": null,
+   "to": null
+  },
+  "L071": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-flip",
+   "to": "triples"
+  },
+  "L072": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "paper",
+   "node": "p-zagier",
+   "from": null,
+   "to": null
+  },
+  "L073": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-zagier",
+   "to": "triples"
+  },
+  "L074": {
+   "ok": true,
+   "problems": [],
+   "kind": "theorem",
+   "source": "paper",
+   "node": "p-involutions",
+   "from": null,
+   "to": null
+  },
+  "L075": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-involutions",
+   "to": "p-flip"
+  },
+  "L076": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-involutions",
+   "to": "involution"
+  },
+  "L077": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-involutions",
+   "to": "p-mills"
+  },
+  "L078": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-involutions",
+   "to": "p-zagier"
+  },
+  "L079": {
+   "ok": true,
+   "problems": [],
+   "kind": "theorem",
+   "source": "paper",
+   "node": "p-existence",
+   "from": null,
+   "to": null
+  },
+  "L080": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-existence",
+   "to": "two-involutions"
+  },
+  "L081": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-existence",
+   "to": "prime"
+  },
+  "L082": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-existence",
+   "to": "p-involutions"
+  },
+  "L083": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-existence",
+   "to": "two-squares"
+  },
+  "L084": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "paper",
+   "node": "p-algorithm",
+   "from": null,
+   "to": null
+  },
+  "L085": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-algorithm",
+   "to": "while-loop"
+  },
+  "L086": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-algorithm",
+   "to": "p-involutions"
+  },
+  "L087": {
+   "ok": true,
+   "problems": [],
+   "kind": "definition",
+   "source": "paper",
+   "node": "p-orbits",
+   "from": null,
+   "to": null
+  },
+  "L088": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-orbits",
+   "to": "least-period"
+  },
+  "L089": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-orbits",
+   "to": "iterate"
+  },
+  "L090": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-orbits",
+   "to": "orbit"
+  },
+  "L091": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-orbits",
+   "to": "composition"
+  },
+  "L092": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-orbits",
+   "to": "p-involutions"
+  },
+  "L093": {
+   "ok": true,
+   "problems": [],
+   "kind": "edge",
+   "source": "paper",
+   "node": null,
+   "from": "p-algorithm",
+   "to": "loop-invariant"
+  }
+ }
+}

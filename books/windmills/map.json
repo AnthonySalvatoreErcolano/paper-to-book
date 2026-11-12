@@ -1,0 +1,867 @@
+{
+ "nodes": [
+  {
+   "id": "b-algebra",
+   "title": "High-school algebra",
+   "terms": [
+    "algebra"
+   ],
+   "requires": [],
+   "chapter": null,
+   "baseline": true,
+   "mathlib": [],
+   "in_paper": [],
+   "notes": ""
+  },
+  {
+   "id": "b-proof",
+   "title": "Proof by induction and contradiction",
+   "terms": [
+    "proof"
+   ],
+   "requires": [],
+   "chapter": null,
+   "baseline": true,
+   "mathlib": [],
+   "in_paper": [],
+   "notes": ""
+  },
+  {
+   "id": "b-sets",
+   "title": "Sets and functions",
+   "terms": [
+    "set",
+    "function",
+    "domain"
+   ],
+   "requires": [],
+   "chapter": null,
+   "baseline": true,
+   "mathlib": [],
+   "in_paper": [],
+   "notes": ""
+  },
+  {
+   "id": "divisibility",
+   "title": "Divisibility",
+   "terms": [
+    "divisible",
+    "divides",
+    "divisor",
+    "multiple"
+   ],
+   "requires": [
+    "b-algebra"
+   ],
+   "chapter": 1,
+   "baseline": false,
+   "mathlib": [
+    "Dvd.dvd"
+   ],
+   "in_paper": [],
+   "notes": ""
+  },
+  {
+   "id": "division",
+   "title": "Division with remainder",
+   "terms": [
+    "remainder",
+    "mod",
+    "division",
+    "quotient"
+   ],
+   "requires": [
+    "b-algebra"
+   ],
+   "chapter": 1,
+   "baseline": false,
+   "mathlib": [
+    "Nat.div_add_mod"
+   ],
+   "in_paper": [],
+   "notes": ""
+  },
+  {
+   "id": "parity",
+   "title": "Even and odd numbers",
+   "terms": [
+    "even",
+    "odd",
+    "parity"
+   ],
+   "requires": [
+    "divisibility"
+   ],
+   "chapter": 1,
+   "baseline": false,
+   "mathlib": [
+    "Even",
+    "Odd"
+   ],
+   "in_paper": [
+    "§1.3"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "prime",
+   "title": "Prime numbers",
+   "terms": [
+    "prime"
+   ],
+   "requires": [
+    "b-algebra"
+   ],
+   "chapter": 1,
+   "baseline": false,
+   "mathlib": [
+    "Nat.Prime"
+   ],
+   "in_paper": [
+    "§1",
+    "§2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "square",
+   "title": "Square numbers",
+   "terms": [
+    "square"
+   ],
+   "requires": [
+    "b-algebra"
+   ],
+   "chapter": 1,
+   "baseline": false,
+   "mathlib": [
+    "IsSquare"
+   ],
+   "in_paper": [
+    "§1.3",
+    "§2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "monus",
+   "title": "Subtraction on natural numbers (truncated)",
+   "terms": [
+    "truncated subtraction",
+    "monus",
+    "subtraction"
+   ],
+   "requires": [
+    "b-algebra"
+   ],
+   "chapter": 1,
+   "baseline": false,
+   "mathlib": [
+    "Nat.sub_eq_zero_of_le"
+   ],
+   "in_paper": [],
+   "notes": "The paper works only in ℕ, where y − z is 0 whenever y ≤ z; the Zagier map's cases depend on this."
+  },
+  {
+   "id": "congruence",
+   "title": "Congruence modulo m",
+   "terms": [
+    "congruent",
+    "congruence",
+    "mod"
+   ],
+   "requires": [
+    "divisibility",
+    "division"
+   ],
+   "chapter": 2,
+   "baseline": false,
+   "mathlib": [
+    "Nat.ModEq"
+   ],
+   "in_paper": [
+    "§1.3",
+    "§2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "squares-mod-4",
+   "title": "Squares leave remainder 0 or 1 on division by 4",
+   "terms": [
+    "remainder 0 or 1"
+   ],
+   "requires": [
+    "square",
+    "division"
+   ],
+   "chapter": 2,
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§4.2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "two-squares",
+   "title": "Fermat's two squares theorem (statement)",
+   "terms": [
+    "two squares",
+    "sum of two squares"
+   ],
+   "requires": [
+    "prime",
+    "congruence",
+    "square"
+   ],
+   "chapter": 2,
+   "baseline": false,
+   "mathlib": [
+    "Nat.Prime.sq_add_sq"
+   ],
+   "in_paper": [
+    "§1",
+    "§2",
+    "§4"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "finite-set",
+   "title": "Finite sets",
+   "terms": [
+    "finite set",
+    "finite"
+   ],
+   "requires": [
+    "b-sets"
+   ],
+   "chapter": 3,
+   "baseline": false,
+   "mathlib": [
+    "Set.Finite"
+   ],
+   "in_paper": [
+    "§1.3",
+    "§2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "cardinality",
+   "title": "Cardinality (number of elements)",
+   "terms": [
+    "cardinality",
+    "number of elements"
+   ],
+   "requires": [
+    "finite-set"
+   ],
+   "chapter": 3,
+   "baseline": false,
+   "mathlib": [
+    "Finset.card"
+   ],
+   "in_paper": [
+    "§1.3"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "triples",
+   "title": "Cartesian products and triples",
+   "terms": [
+    "cartesian product",
+    "ordered pairs",
+    "triple"
+   ],
+   "requires": [
+    "b-sets"
+   ],
+   "chapter": 3,
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "set-builder",
+   "title": "Set-builder notation",
+   "terms": [
+    "set-builder",
+    "set by a property",
+    "comprehensions"
+   ],
+   "requires": [
+    "b-sets"
+   ],
+   "chapter": 3,
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§1.3",
+    "§2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "composition",
+   "title": "Composition of functions",
+   "terms": [
+    "composition",
+    "composing"
+   ],
+   "requires": [
+    "b-sets"
+   ],
+   "chapter": 4,
+   "baseline": false,
+   "mathlib": [
+    "Function.comp"
+   ],
+   "in_paper": [
+    "§6"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "iterate",
+   "title": "Iterating a function",
+   "terms": [
+    "iterate",
+    "iterated",
+    "iteration"
+   ],
+   "requires": [
+    "composition"
+   ],
+   "chapter": 4,
+   "baseline": false,
+   "mathlib": [
+    "Nat.iterate"
+   ],
+   "in_paper": [
+    "§1.3",
+    "§6"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "bijection",
+   "title": "Bijections",
+   "terms": [
+    "bijection",
+    "bijective",
+    "one-to-one correspondence"
+   ],
+   "requires": [
+    "b-sets"
+   ],
+   "chapter": 4,
+   "baseline": false,
+   "mathlib": [
+    "Function.Bijective"
+   ],
+   "in_paper": [
+    "§1.3"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "inverse",
+   "title": "Inverse functions",
+   "terms": [
+    "inverse"
+   ],
+   "requires": [
+    "bijection"
+   ],
+   "chapter": 4,
+   "baseline": false,
+   "mathlib": [
+    "Function.LeftInverse"
+   ],
+   "in_paper": [
+    "§2.2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "permutation",
+   "title": "Permutations",
+   "terms": [
+    "permutation"
+   ],
+   "requires": [
+    "bijection"
+   ],
+   "chapter": 4,
+   "baseline": false,
+   "mathlib": [
+    "Equiv.Perm"
+   ],
+   "in_paper": [
+    "§6"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "involution",
+   "title": "Involutions",
+   "terms": [
+    "involution",
+    "involutive",
+    "self-inverse"
+   ],
+   "requires": [
+    "inverse"
+   ],
+   "chapter": 5,
+   "baseline": false,
+   "mathlib": [
+    "Function.Involutive"
+   ],
+   "in_paper": [
+    "§1",
+    "§2.2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "fixed-point",
+   "title": "Fixed points",
+   "terms": [
+    "fixed point",
+    "fixes"
+   ],
+   "requires": [
+    "b-sets"
+   ],
+   "chapter": 5,
+   "baseline": false,
+   "mathlib": [
+    "Function.IsFixedPt",
+    "Function.fixedPoints"
+   ],
+   "in_paper": [
+    "§1",
+    "§2.2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "involution-parity",
+   "title": "Fixed points of an involution have the parity of the set",
+   "terms": [
+    "same parity"
+   ],
+   "requires": [
+    "involution",
+    "fixed-point",
+    "cardinality",
+    "parity"
+   ],
+   "chapter": 5,
+   "baseline": false,
+   "mathlib": [
+    "Equiv.Perm.card_fixedPoints_modEq"
+   ],
+   "in_paper": [
+    "§2.2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "two-involutions",
+   "title": "Two involutions of one finite set: fixed points of equal parity",
+   "terms": [
+    "fixes have the same parity",
+    "all the involutions"
+   ],
+   "requires": [
+    "involution-parity"
+   ],
+   "chapter": 5,
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§2.2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "periodic-point",
+   "title": "Periodic points",
+   "terms": [
+    "periodic point",
+    "periodic"
+   ],
+   "requires": [
+    "iterate"
+   ],
+   "chapter": 6,
+   "baseline": false,
+   "mathlib": [
+    "Function.IsPeriodicPt"
+   ],
+   "in_paper": [
+    "§6"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "least-period",
+   "title": "The least period",
+   "terms": [
+    "least period",
+    "minimal period",
+    "period"
+   ],
+   "requires": [
+    "periodic-point"
+   ],
+   "chapter": 6,
+   "baseline": false,
+   "mathlib": [
+    "Function.minimalPeriod"
+   ],
+   "in_paper": [
+    "§6"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "orbit",
+   "title": "Orbits",
+   "terms": [
+    "orbit"
+   ],
+   "requires": [
+    "least-period"
+   ],
+   "chapter": 6,
+   "baseline": false,
+   "mathlib": [
+    "Function.periodicOrbit"
+   ],
+   "in_paper": [
+    "§6"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "while-loop",
+   "title": "WHILE loops",
+   "terms": [
+    "while loop",
+    "loop",
+    "while"
+   ],
+   "requires": [
+    "b-proof"
+   ],
+   "chapter": 7,
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§5",
+    "§7"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "loop-invariant",
+   "title": "Loop invariants",
+   "terms": [
+    "loop invariant",
+    "invariant"
+   ],
+   "requires": [
+    "while-loop",
+    "b-proof"
+   ],
+   "chapter": 7,
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§3.3",
+    "§7"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "proof-assistant",
+   "title": "Proof assistants",
+   "terms": [
+    "proof assistant",
+    "theorem prover",
+    "theorem proving"
+   ],
+   "requires": [
+    "b-proof"
+   ],
+   "chapter": 8,
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§1"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "hol4",
+   "title": "HOL4 and higher-order logic",
+   "terms": [
+    "hol4",
+    "higher order logic",
+    "higher-order logic"
+   ],
+   "requires": [
+    "proof-assistant"
+   ],
+   "chapter": 8,
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§1.3"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "turnstile",
+   "title": "The turnstile ⊢",
+   "terms": [
+    "turnstile"
+   ],
+   "requires": [
+    "b-proof"
+   ],
+   "chapter": 8,
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§1.3"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "unique-exists",
+   "title": "'There exists exactly one' (∃!)",
+   "terms": [
+    "uniqueness quantification",
+    "exactly one",
+    "quantifiers"
+   ],
+   "requires": [
+    "b-proof"
+   ],
+   "chapter": 8,
+   "baseline": false,
+   "mathlib": [
+    "ExistsUnique"
+   ],
+   "in_paper": [
+    "§1.3",
+    "§2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "lambda",
+   "title": "λ-abstraction and application",
+   "terms": [
+    "abstraction",
+    "application",
+    "lambda"
+   ],
+   "requires": [
+    "b-sets"
+   ],
+   "chapter": 8,
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§1.3"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "p-notation",
+   "title": "The paper's notation (§1.3)",
+   "terms": [
+    "hol4 theorems"
+   ],
+   "requires": [
+    "turnstile",
+    "hol4",
+    "unique-exists",
+    "lambda",
+    "set-builder"
+   ],
+   "chapter": "the paper",
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§1.3"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "p-windmill",
+   "title": "Windmills x² + 4yz",
+   "terms": [
+    "windmill"
+   ],
+   "requires": [
+    "square",
+    "triples"
+   ],
+   "chapter": "the paper",
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§2.1"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "p-mills",
+   "title": "The mills of n",
+   "terms": [
+    "mills"
+   ],
+   "requires": [
+    "p-windmill",
+    "finite-set"
+   ],
+   "chapter": "the paper",
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§2.1"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "p-flip",
+   "title": "The flip map",
+   "terms": [
+    "flip map",
+    "flip"
+   ],
+   "requires": [
+    "triples"
+   ],
+   "chapter": "the paper",
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§3.1"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "p-zagier",
+   "title": "The Zagier map",
+   "terms": [
+    "zagier map"
+   ],
+   "requires": [
+    "triples"
+   ],
+   "chapter": "the paper",
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§3.2"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "p-involutions",
+   "title": "Flip and Zagier are involutions of mills n",
+   "terms": [
+    "is an involution on",
+    "two involutions",
+    "zagier map"
+   ],
+   "requires": [
+    "p-flip",
+    "p-zagier",
+    "p-mills",
+    "involution"
+   ],
+   "chapter": "the paper",
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§3"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "p-existence",
+   "title": "Zagier's existence proof",
+   "terms": [
+    "two squares existence"
+   ],
+   "requires": [
+    "p-involutions",
+    "two-involutions",
+    "two-squares",
+    "prime"
+   ],
+   "chapter": "the paper",
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§4.1"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "p-algorithm",
+   "title": "The two-squares algorithm",
+   "terms": [
+    "while loop",
+    "flip fixed point"
+   ],
+   "requires": [
+    "p-involutions",
+    "while-loop",
+    "loop-invariant"
+   ],
+   "chapter": "the paper",
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§5",
+    "§7"
+   ],
+   "notes": ""
+  },
+  {
+   "id": "p-orbits",
+   "title": "Orbits of two composed involutions",
+   "terms": [
+    "period of function iteration"
+   ],
+   "requires": [
+    "least-period",
+    "orbit",
+    "composition",
+    "p-involutions"
+   ],
+   "chapter": "the paper",
+   "baseline": false,
+   "mathlib": [],
+   "in_paper": [
+    "§6"
+   ],
+   "notes": ""
+  }
+ ]
+}

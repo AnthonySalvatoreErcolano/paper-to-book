@@ -183,7 +183,7 @@ def fetch_one(slug, req):
             except tarfile.ReadError:
                 (sdir / "main.tex").write_bytes(gzip.decompress(src) if src[:2] == b"\x1f\x8b" else src)
             meta["latex"] = sorted(str(p.relative_to(out)) for p in sdir.rglob("*.tex"))
-            texts.append("\n".join(p.read_text(encoding="utf-8", errors="replace") for p in sorted(sdir.rglob("*.tex"))))
+            texts.append(latex_text(sdir))
         except Exception as e:                                  # some papers have PDF only
             meta["latex_error"] = str(e)
         (out / "text.txt").write_text("\n\n".join(texts), encoding="utf-8")
@@ -211,6 +211,33 @@ def fetch_one(slug, req):
                          f"{p.get('year')} | {json.dumps(p.get('externalIds'))} | {(p.get('openAccessPdf') or {}).get('url')}")
         (out / "text.txt").write_text("\n".join(lines), encoding="utf-8")
     save_json(out / "meta.json", meta)
+
+
+def strip_comments(tex):
+    """LaTeX comments never appear in the published paper, so they must not be quotable."""
+    return re.sub(r"(?<!\\)%.*", "", tex)
+
+
+def latex_text(sdir):
+    return "\n".join(strip_comments(p.read_text(encoding="utf-8", errors="replace")) for p in sorted(sdir.rglob("*.tex")))
+
+
+def cmd_retext(a):
+    """Rebuild a source's text.txt from its raw files (after a change to text extraction)."""
+    out = book_dir(a.slug) / "sources" / a.id
+    meta = load_json(out / "meta.json")
+    parts = []
+    for name in ("paper.pdf", "raw.pdf"):
+        if (out / name).exists():
+            parts.append(pdf_text((out / name).read_bytes()))
+    if (out / "raw.html").exists():
+        parts.append(html_text((out / "raw.html").read_bytes()))
+    if (out / "src").exists():
+        parts.append(latex_text(out / "src"))
+    (out / "text.txt").write_text("\n\n".join(parts), encoding="utf-8")
+    meta["retexted"] = now()
+    save_json(out / "meta.json", meta)
+    print(f"rebuilt sources/{a.id}/text.txt ({sum(len(x.split()) for x in parts)} words)")
 
 
 def cmd_fetch(a):
@@ -689,6 +716,7 @@ def main():
     p = sp.add_parser("request"); p.add_argument("slug"); p.add_argument("type"); p.add_argument("ref")
     p.add_argument("--why", required=True); p.add_argument("--id")
     p = sp.add_parser("fetch"); p.add_argument("slug", nargs="?"); p.add_argument("--all", action="store_true")
+    p = sp.add_parser("retext"); p.add_argument("slug"); p.add_argument("id")
     for name in ("extract", "ledger", "map", "build", "status"):
         sp.add_parser(name).add_argument("slug")
     p = sp.add_parser("lean-names"); p.add_argument("slug", nargs="?"); p.add_argument("--all", action="store_true")
@@ -697,7 +725,7 @@ def main():
     a = ap.parse_args()
     {"new": cmd_new, "request": cmd_request, "fetch": cmd_fetch, "extract": cmd_extract, "ledger": cmd_ledger,
      "map": cmd_map, "lean-names": cmd_lean_names, "lean-report": cmd_lean_report, "checks": cmd_checks,
-     "build": cmd_build, "status": cmd_status}[a.cmd](a)
+     "build": cmd_build, "status": cmd_status, "retext": cmd_retext}[a.cmd](a)
 
 
 if __name__ == "__main__":

@@ -304,5 +304,13 @@
   "requested": "2026-11-12T16:53:01Z",
   "done": true,
   "error": null
+ },
+ {
+  "id": "hammack-bop2",
+  "type": "pdf",
+  "ref": "https://richardhammack.github.io/BookOfProof/Main.pdf",
+  "why": "open textbook: sets, functions, divisibility, congruence, cardinality",
+  "requested": "2026-11-12T16:55:26Z",
+  "done": false
  }
 ]

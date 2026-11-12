@@ -12,8 +12,9 @@
  ],
  "created": "2026-11-12T16:48:40Z",
  "status": {
-  "stage": 1,
+  "stage": 4,
   "map_approved": false,
-  "chapters_approved": []
+  "chapters_approved": [],
+  "note": "map drafted; awaiting checkpoint 1"
  }
 }

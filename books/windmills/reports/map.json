@@ -1,0 +1,335 @@
+{
+ "checked": "2026-11-12T16:57:20Z",
+ "order": [
+  "b-algebra",
+  "b-proof",
+  "b-sets",
+  "divisibility",
+  "division",
+  "prime",
+  "square",
+  "monus",
+  "while-loop",
+  "proof-assistant",
+  "turnstile",
+  "unique-exists",
+  "finite-set",
+  "triples",
+  "set-builder",
+  "composition",
+  "bijection",
+  "fixed-point",
+  "lambda",
+  "parity",
+  "congruence",
+  "squares-mod-4",
+  "loop-invariant",
+  "hol4",
+  "cardinality",
+  "p-windmill",
+  "p-flip",
+  "p-zagier",
+  "iterate",
+  "inverse",
+  "permutation",
+  "two-squares",
+  "p-notation",
+  "p-mills",
+  "periodic-point",
+  "involution",
+  "least-period",
+  "involution-parity",
+  "p-involutions",
+  "orbit",
+  "two-involutions",
+  "p-algorithm",
+  "p-orbits",
+  "p-existence"
+ ],
+ "problems": [],
+ "nodes": {
+  "b-algebra": {
+   "defined": true,
+   "edges": {}
+  },
+  "b-proof": {
+   "defined": true,
+   "edges": {}
+  },
+  "b-sets": {
+   "defined": true,
+   "edges": {}
+  },
+  "divisibility": {
+   "defined": true,
+   "edges": {
+    "b-algebra": true
+   }
+  },
+  "division": {
+   "defined": true,
+   "edges": {
+    "b-algebra": true
+   }
+  },
+  "parity": {
+   "defined": true,
+   "edges": {
+    "divisibility": true
+   }
+  },
+  "prime": {
+   "defined": true,
+   "edges": {
+    "b-algebra": true
+   }
+  },
+  "square": {
+   "defined": true,
+   "edges": {
+    "b-algebra": true
+   }
+  },
+  "monus": {
+   "defined": true,
+   "edges": {
+    "b-algebra": true
+   }
+  },
+  "congruence": {
+   "defined": true,
+   "edges": {
+    "divisibility": true,
+    "division": true
+   }
+  },
+  "squares-mod-4": {
+   "defined": true,
+   "edges": {
+    "square": true,
+    "division": true
+   }
+  },
+  "two-squares": {
+   "defined": true,
+   "edges": {
+    "prime": true,
+    "congruence": true,
+    "square": true
+   }
+  },
+  "finite-set": {
+   "defined": true,
+   "edges": {
+    "b-sets": true
+   }
+  },
+  "cardinality": {
+   "defined": true,
+   "edges": {
+    "finite-set": true
+   }
+  },
+  "triples": {
+   "defined": true,
+   "edges": {
+    "b-sets": true
+   }
+  },
+  "set-builder": {
+   "defined": true,
+   "edges": {
+    "b-sets": true
+   }
+  },
+  "composition": {
+   "defined": true,
+   "edges": {
+    "b-sets": true
+   }
+  },
+  "iterate": {
+   "defined": true,
+   "edges": {
+    "composition": true
+   }
+  },
+  "bijection": {
+   "defined": true,
+   "edges": {
+    "b-sets": true
+   }
+  },
+  "inverse": {
+   "defined": true,
+   "edges": {
+    "bijection": true
+   }
+  },
+  "permutation": {
+   "defined": true,
+   "edges": {
+    "bijection": true
+   }
+  },
+  "involution": {
+   "defined": true,
+   "edges": {
+    "inverse": true
+   }
+  },
+  "fixed-point": {
+   "defined": true,
+   "edges": {
+    "b-sets": true
+   }
+  },
+  "involution-parity": {
+   "defined": true,
+   "edges": {
+    "involution": true,
+    "fixed-point": true,
+    "cardinality": true,
+    "parity": true
+   }
+  },
+  "two-involutions": {
+   "defined": true,
+   "edges": {
+    "involution-parity": true
+   }
+  },
+  "periodic-point": {
+   "defined": true,
+   "edges": {
+    "iterate": true
+   }
+  },
+  "least-period": {
+   "defined": true,
+   "edges": {
+    "periodic-point": true
+   }
+  },
+  "orbit": {
+   "defined": true,
+   "edges": {
+    "least-period": true
+   }
+  },
+  "while-loop": {
+   "defined": true,
+   "edges": {
+    "b-proof": true
+   }
+  },
+  "loop-invariant": {
+   "defined": true,
+   "edges": {
+    "while-loop": true,
+    "b-proof": true
+   }
+  },
+  "proof-assistant": {
+   "defined": true,
+   "edges": {
+    "b-proof": true
+   }
+  },
+  "hol4": {
+   "defined": true,
+   "edges": {
+    "proof-assistant": true
+   }
+  },
+  "turnstile": {
+   "defined": true,
+   "edges": {
+    "b-proof": true
+   }
+  },
+  "unique-exists": {
+   "defined": true,
+   "edges": {
+    "b-proof": true
+   }
+  },
+  "lambda": {
+   "defined": true,
+   "edges": {
+    "b-sets": true
+   }
+  },
+  "p-notation": {
+   "defined": true,
+   "edges": {
+    "turnstile": true,
+    "hol4": true,
+    "unique-exists": true,
+    "lambda": true,
+    "set-builder": true
+   }
+  },
+  "p-windmill": {
+   "defined": true,
+   "edges": {
+    "square": true,
+    "triples": true
+   }
+  },
+  "p-mills": {
+   "defined": true,
+   "edges": {
+    "p-windmill": true,
+    "finite-set": true
+   }
+  },
+  "p-flip": {
+   "defined": true,
+   "edges": {
+    "triples": true
+   }
+  },
+  "p-zagier": {
+   "defined": true,
+   "edges": {
+    "triples": true
+   }
+  },
+  "p-involutions": {
+   "defined": true,
+   "edges": {
+    "p-flip": true,
+    "p-zagier": true,
+    "p-mills": true,
+    "involution": true
+   }
+  },
+  "p-existence": {
+   "defined": true,
+   "edges": {
+    "p-involutions": true,
+    "two-involutions": true,
+    "two-squares": true,
+    "prime": true
+   }
+  },
+  "p-algorithm": {
+   "defined": true,
+   "edges": {
+    "p-involutions": true,
+    "while-loop": true,
+    "loop-invariant": true
+   }
+  },
+  "p-orbits": {
+   "defined": true,
+   "edges": {
+    "least-period": true,
+    "orbit": true,
+    "composition": true,
+    "p-involutions": true
+   }
+  }
+ }
+}
